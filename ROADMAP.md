@@ -1,4 +1,4 @@
-# 📍 The Frontend System Design Roadmap
+# 📍 The Frontend Interview Prep Roadmap
 
 A **Beginner → Advanced** path through the whole repo. Don't read top-to-bottom randomly — follow a track below, then use the section tables to go deep.
 

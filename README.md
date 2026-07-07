@@ -1,15 +1,15 @@
 <div align="center">
 
-# 🎨 Frontend System Design
+# 🎨 Frontend Interview Prep
 
-### The open-source handbook for cracking frontend interviews — from SDE-2 to Staff & FAANG.
+### The open-source handbook for cracking frontend interviews — system design, machine coding & every core topic. From SDE-2 to Staff & FAANG.
 
 Every topic is an **interview-worthy question** with a **difficulty label**, a **time estimate**, **tags**, and links to the **best resource on the internet** to learn it from. No fluff. Just prepare, and go.
 
 <br/>
 
-[![Stars](https://img.shields.io/github/stars/sumitsingh4411/frontend-system-design?style=for-the-badge&logo=github&color=f9d949)](https://github.com/sumitsingh4411/frontend-system-design/stargazers)
-[![Forks](https://img.shields.io/github/forks/sumitsingh4411/frontend-system-design?style=for-the-badge&logo=github&color=57a6ff)](https://github.com/sumitsingh4411/frontend-system-design/network/members)
+[![Stars](https://img.shields.io/github/stars/sumitsingh4411/frontend-interview-prep?style=for-the-badge&logo=github&color=f9d949)](https://github.com/sumitsingh4411/frontend-interview-prep/stargazers)
+[![Forks](https://img.shields.io/github/forks/sumitsingh4411/frontend-interview-prep?style=for-the-badge&logo=github&color=57a6ff)](https://github.com/sumitsingh4411/frontend-interview-prep/network/members)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
