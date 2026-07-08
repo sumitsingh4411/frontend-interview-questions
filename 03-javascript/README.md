@@ -8,6 +8,8 @@ The language, deeply. These are the questions that get asked in *every* frontend
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 548 JavaScript questions →](question-bank.md)** · [Output-based set (with answers)](output-based-questions.md)
+
 ⭐ **Flagship:** [Promise polyfills + debounce/throttle deep-dive](promise-polyfills-and-throttle-debounce.md) · [Output-based questions **with answers**](output-based-questions.md)
 
 ## Core language

@@ -8,6 +8,8 @@ The framework most FAANG frontend loops assume. They'll ask *how it works*, not 
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full topic bank — 75 React topics →](question-bank.md)**
+
 ⭐ **Flagship:** [Build a Virtualized List](build-a-virtualized-list.md)
 
 ## Fundamentals & rendering

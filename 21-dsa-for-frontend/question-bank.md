@@ -1,0 +1,1008 @@
+<div align="center">
+
+# 🧠 DSA for Frontend — Full Question Bank
+
+**963 questions**, curated from real interview prep sheets. Prompts only — work the answers using the linked sections.
+
+<a href="README.md">⬅ Back to DSA for Frontend</a> &nbsp;·&nbsp; <a href="../README.md">Home</a>
+
+</div>
+
+Data-structures & algorithms problems relevant to frontend loops. Focus on arrays, strings, hashmaps, recursion and trees first.
+
+> 🟢 Easy · 🟡 Medium · 🔴 Hard. This is the exhaustive bank; the section [README](README.md) has the curated highlights with resources.
+
+**Jump to:** [General](#general) · [Graph](#graph) · [Linked List](#linked-list) · [Sliding Window](#sliding-window) · [Stack](#stack) · [Tree](#tree)
+
+---
+
+### General  
+<sub>954 questions</sub>
+
+- 🟢 Hash Maps
+- 🟢 Hash Sets
+- 🟢 Binary Search
+- 🟢 Two Pointers
+- 🟢 Sliding Window
+- 🟢 Prefix Sum
+- 🟢 Linked Lists
+- 🟢 Fast & Slow Pointer
+- 🟢 Binary Tree
+- 🟢 Dynamic Programming
+- 🟢 Bit Manipulation
+- 🟢 Company-Specific
+- 🟢 1D DP
+- 🟡 Difference Array
+- 🟡 Monotonic Stack
+- 🟡 Monotonic Queue
+- 🟡 Priority Queue
+- 🟡 Shortest Path
+- 🟡 Topological Sort
+- 🟡 Union Find (Disjoint Set)
+- 🟡 Minimum Spanning Tree
+- 🟡 Bellman Ford
+- 🟡 Floyd Warshall
+- 🟡 2D DP
+- 🟡 Design Problems
+- 🟢 Two Sum
+- 🟢 Best Time to Buy and Sell Stock
+- 🟢 Contains Duplicate
+- 🟡 Product of Array Except Self
+- 🟡 Maximum Subarray
+- 🟡 Maximum Product Subarray
+- 🟡 Find Minimum in Rotated Sorted Array
+- 🟡 Search in Rotated Sorted Array
+- 🟡 Container With Most Water
+- 🟡 Sum of Two Integers
+- 🟢 Number of 1 Bits
+- 🟢 Counting Bits
+- 🟢 Missing Number
+- 🟢 Reverse Bits
+- 🟢 Climbing Stairs
+- 🟡 Coin Change
+- 🟡 Longest Increasing Subsequence
+- 🟡 Longest Common Subsequence
+- 🟡 Word Break
+- 🟡 Combination Sum IV
+- 🟡 House Robber
+- 🟡 House Robber II
+- 🟡 Decode Ways
+- 🟡 Unique Paths
+- 🟡 Jump Game
+- 🟡 Clone Graph
+- 🟡 Course Schedule
+- 🟡 Pacific Atlantic Water Flow
+- 🟡 Number of Islands
+- 🟡 Longest Consecutive Sequence
+- 🔴 Alien Dictionary
+- 🟡 Graph Valid Tree
+- 🟡 Number of Connected Components in an Undirected Graph
+- 🟡 Insert Interval
+- 🟡 Merge Intervals
+- 🟡 Non-overlapping Intervals
+- 🟢 Meeting Rooms
+- 🟡 Meeting Rooms II
+- 🟢 Reverse a Linked List
+- 🟢 Detect Cycle in a Linked List
+- 🟢 Merge Two Sorted Lists
+- 🔴 Merge K Sorted Lists
+- 🟡 Remove Nth Node From End of List
+- 🟡 Reorder List
+- 🟡 Set Matrix Zeroes
+- 🟡 Spiral Matrix
+- 🟡 Rotate Image
+- 🟡 Word Search
+- 🟡 Longest Substring Without Repeating Characters
+- 🟡 Longest Repeating Character Replacement
+- 🔴 Minimum Window Substring
+- 🟢 Valid Anagram
+- 🟡 Group Anagrams
+- 🟢 Valid Parentheses
+- 🟢 Valid Palindrome
+- 🟡 Longest Palindromic Substring
+- 🟡 Palindromic Substrings
+- 🟡 Encode and Decode Strings
+- 🟢 Maximum Depth of Binary Tree
+- 🟢 Same Tree
+- 🟢 Invert/Flip Binary Tree
+- 🔴 Binary Tree Maximum Path Sum
+- 🟡 Binary Tree Level Order Traversal
+- 🔴 Serialize and Deserialize Binary Tree
+- 🟢 Subtree of Another Tree
+- 🟡 Construct Binary Tree from Preorder and Inorder Traversal
+- 🟡 Validate Binary Search Tree
+- 🟡 Kth Smallest Element in a BST
+- 🟡 Lowest Common Ancestor of a Binary Search Tree
+- 🟡 Implement Trie (Prefix Tree)
+- 🟡 Design Add and Search Words Data Structure
+- 🔴 Word Search II
+- 🔴 Merge K Sorted Lists (heap variant)
+- 🟡 Top K Frequent Elements
+- 🔴 Find Median from Data Stream
+- 🟡 Best Time to Buy and Sell Stock II
+- 🟡 Rotate Array
+- 🟢 Majority Element
+- 🟢 Find All Numbers Disappeared in an Array
+- 🟡 Two Sum II - Input Array Is Sorted
+- 🟡 Next Permutation
+- 🔴 Trapping Rain Water
+- 🔴 First Missing Positive
+- 🟡 Gas Station
+- 🟡 Reverse Integer
+- 🟢 Power of Two
+- 🟢 Single Number
+- 🟡 Bitwise AND of Numbers Range
+- 🟡 Best Time to Buy and Sell Stock with Cooldown
+- 🟡 Partition Equal Subset Sum
+- 🟡 Target Sum
+- 🟡 Maximal Square
+- 🔴 Edit Distance
+- 🔴 Burst Balloons
+- 🟡 Perfect Squares
+- 🟡 Palindromic Substrings (DP variant)
+- 🟡 Unique Paths II
+- 🟡 Minimum Path Sum
+- 🟡 Rotting Oranges
+- 🟡 Network Delay Time
+- 🟡 Cheapest Flights Within K Stops
+- 🟡 Redundant Connection
+- 🔴 Word Ladder
+- 🟡 Accounts Merge
+- 🟡 Surrounded Regions
+- 🔴 Reconstruct Itinerary
+- 🔴 Minimum Interval to Include Each Query
+- 🔴 Employee Free Time
+- 🟡 Add Two Numbers
+- 🟡 Copy List with Random Pointer
+- 🟡 Sort List
+- 🟢 Palindrome Linked List
+- 🟡 LRU Cache
+- 🟡 Swap Nodes in Pairs
+- 🟡 Search a 2D Matrix
+- 🟡 Search a 2D Matrix II
+- 🟡 Game of Life
+- 🟡 String to Integer (atoi)
+- 🟢 Implement strStr()
+- 🔴 Word Break II
+- 🔴 Basic Calculator
+- 🟡 Decode String
+- 🟡 Multiply Strings
+- 🟡 Simplify Path
+- 🟡 Letter Combinations of a Phone Number
+- 🟢 Diameter of Binary Tree
+- 🟢 Symmetric Tree
+- 🟡 Path Sum II
+- 🟡 Binary Tree Right Side View
+- 🟡 Flatten Binary Tree to Linked List
+- 🟡 Populating Next Right Pointers in Each Node
+- 🟡 Count Complete Tree Nodes
+- 🟡 Delete Node in a BST
+- 🟡 Binary Tree Zigzag Level Order Traversal
+- 🟡 Kth Largest Element in an Array
+- 🟡 K Closest Points to Origin
+- 🟡 Task Scheduler
+- 🟡 Subsets II
+- 🟡 Combination Sum
+- 🟡 Generate Parentheses
+- 🟡 Palindrome Partitioning
+- 🟡 Insert Delete GetRandom O(1)
+- 🟡 Design Twitter
+- 🟡 Time Based Key-Value Store
+- 🟡 Daily Temperatures
+- 🟡 Evaluate Reverse Polish Notation
+- 🟡 Min Stack
+- 🔴 Largest Rectangle in Histogram
+- 🟡 Valid Sudoku
+- 🟡 Permutation in String
+- 🔴 Sliding Window Maximum
+- 🟡 Car Fleet
+- 🟡 Koko Eating Bananas
+- 🔴 Median of Two Sorted Arrays
+- 🟢 Reverse Linked List
+- 🟢 Linked List Cycle
+- 🟡 Find the Duplicate Number
+- 🔴 Reverse Nodes in k-Group
+- 🟢 Invert Binary Tree
+- 🟢 Balanced Binary Tree
+- 🟡 Count Good Nodes in Binary Tree
+- 🟢 Kth Largest Element in a Stream
+- 🟢 Last Stone Weight
+- 🟡 Combination Sum II
+- 🟡 Max Area of Island
+- 🟡 Walls and Gates
+- 🟡 Course Schedule II
+- 🟡 Min Cost to Connect All Points
+- 🔴 Swim in Rising Water
+- 🟢 Min Cost Climbing Stairs
+- 🟡 Coin Change II
+- 🔴 Interleaving String
+- 🔴 Longest Increasing Path in a Matrix
+- 🔴 Distinct Subsequences
+- 🔴 Regular Expression Matching
+- 🟡 Jump Game II
+- 🟡 Hand of Straights
+- 🟡 Merge Triplets to Form Target Triplet
+- 🟡 Partition Labels
+- 🟡 Valid Parenthesis String
+- 🟢 Happy Number
+- 🟢 Plus One
+- 🟡 Pow(x, n)
+- 🟡 Detect Squares
+- 🟢 Flood Fill
+- 🟢 Implement Queue using Stacks
+- 🟢 First Bad Version
+- 🟢 Ransom Note
+- 🟢 Longest Palindrome
+- 🟢 Add Binary
+- 🟢 Middle of the Linked List
+- 🟡 01 Matrix
+- 🟡 Lowest Common Ancestor of a Binary Tree
+- 🟡 Sort Colors
+- 🟡 Find All Anagrams in a String
+- 🟡 Minimum Height Trees
+- 🔴 Maximum Profit in Job Scheduling
+- 🟢 Roman to Integer
+- 🟢 Longest Common Prefix
+- 🟢 Move Zeroes
+- 🟢 Squares of a Sorted Array
+- 🟢 Merge Sorted Array
+- 🟢 Remove Duplicates from Sorted Array
+- 🟢 Search Insert Position
+- 🟡 Odd Even Linked List
+- 🟢 Path Sum
+- 🟢 Convert Sorted Array to Binary Search Tree
+- 🟡 Asteroid Collision
+- 🟢 Next Greater Element I
+- 🔴 Sudoku Solver
+- 🟡 Reorganize String
+- 🔴 Sliding Window Median
+- 🟡 Basic Calculator II
+- 🟢 Excel Sheet Column Number
+- 🟢 Remove Element
+- 🟡 Remove Duplicates from Sorted Array II
+- 🟡 Integer to Roman
+- 🟢 Length of Last Word
+- 🟡 Reverse Words in a String
+- 🟡 Zigzag Conversion
+- 🟢 Find the Index of the First Occurrence in a String
+- 🔴 Text Justification
+- 🟢 Is Subsequence
+- 🟡 Minimum Size Subarray Sum
+- 🔴 Substring with Concatenation of All Words
+- 🟢 Isomorphic Strings
+- 🟢 Word Pattern
+- 🟢 Contains Duplicate II
+- 🟢 Summary Ranges
+- 🟡 Minimum Number of Arrows to Burst Balloons
+- 🟡 Reverse Linked List II
+- 🟡 Remove Duplicates from Sorted List II
+- 🟡 Rotate List
+- 🟡 Partition List
+- 🟡 Populating Next Right Pointers in Each Node II
+- 🟡 Sum Root to Leaf Numbers
+- 🟡 Binary Search Tree Iterator
+- 🟡 Average of Levels in Binary Tree
+- 🟢 Minimum Absolute Difference in BST
+- 🟡 Evaluate Division
+- 🟡 Snakes and Ladders
+- 🟡 Minimum Genetic Mutation
+- 🔴 N-Queens II
+- 🟡 Construct Quad Tree
+- 🟡 Maximum Sum Circular Subarray
+- 🟡 Find Peak Element
+- 🟡 Find First and Last Position of Element in Sorted Array
+- 🟡 Find K Pairs with Smallest Sums
+- 🟡 Single Number II
+- 🟢 Palindrome Number
+- 🟡 Factorial Trailing Zeroes
+- 🔴 Max Points on a Line
+- 🔴 Best Time to Buy and Sell Stock III
+- 🔴 Best Time to Buy and Sell Stock IV
+- 🟢 Selection Sort
+- 🟢 Bubble Sort
+- 🟢 Insertion Sort
+- 🟡 Merge Sort
+- 🟡 Recursive Bubble Sort
+- 🟡 Quick Sort
+- 🟢 Largest Element in an Array
+- 🟢 Second Largest Element in an Array
+- 🟢 Check if Array is Sorted
+- 🟢 Left Rotate an Array by One Place
+- 🟡 Left Rotate an Array by D Places
+- 🟢 Move Zeroes to End
+- 🟢 Union of Two Sorted Arrays
+- 🟢 Maximum Consecutive Ones
+- 🟡 Longest Subarray with Sum K (positives)
+- 🟡 Sort an Array of 0s, 1s and 2s
+- 🟢 Majority Element (>n/2 times)
+- 🟡 Maximum Subarray (Kadane's Algorithm)
+- 🟡 Rearrange Array Elements by Sign
+- 🟢 Leaders in an Array
+- 🟡 Rotate Matrix by 90 Degrees
+- 🟡 Print the Matrix in Spiral Manner
+- 🟡 Count Subarrays with Given Sum
+- 🟢 Pascal's Triangle
+- 🟡 Majority Element II (>n/3 times)
+- 🟡 3 Sum
+- 🟡 4 Sum
+- 🟡 Largest Subarray with 0 Sum
+- 🔴 Count Subarrays with Given XOR
+- 🟡 Merge Overlapping Subintervals
+- 🔴 Merge Two Sorted Arrays Without Extra Space
+- 🔴 Find the Repeating and Missing Number
+- 🔴 Count Inversions
+- 🔴 Reverse Pairs
+- 🟢 Lower Bound / Upper Bound
+- 🟢 Floor and Ceil in Sorted Array
+- 🟡 First and Last Occurrence in Sorted Array
+- 🟢 Number of Occurrences
+- 🟡 Search in Rotated Sorted Array II (with duplicates)
+- 🟢 Find Square Root of a Number
+- 🟡 Find Nth Root of a Number
+- 🟡 Minimum Days to Make M Bouquets
+- 🔴 Aggressive Cows
+- 🔴 Book Allocation Problem
+- 🔴 Kth Element of Two Sorted Arrays
+- 🟡 Row with Maximum 1s
+- 🟡 Search in a 2D Matrix
+- 🟢 Check if a String is Palindrome
+- 🟢 Check if One String is a Rotation of Another
+- 🟢 Check if Two Strings are Anagrams
+- 🟡 Sort Characters by Frequency
+- 🟢 Maximum Nesting Depth of Parentheses
+- 🟡 Roman Number to Integer and Vice Versa
+- 🟡 Implement atoi
+- 🟡 Count and Say
+- 🟡 Compare Version Numbers
+- 🟢 Find the Middle of Linked List
+- 🟢 Merge Two Sorted Linked Lists
+- 🟡 Remove Nth Node from End of Linked List
+- 🟡 Add Two Numbers as Linked Lists
+- 🟢 Delete a Given Node When Node is Given
+- 🟡 Find Intersection Point of Two Linked Lists
+- 🟢 Detect a Cycle in a Linked List
+- 🔴 Reverse a Linked List in Groups of Size K
+- 🟡 Detect the Starting Point of the Loop
+- 🟡 Check if Linked List is Palindrome
+- 🟡 Find the Length of the Loop
+- 🟡 Rotate a Linked List
+- 🔴 Flattening of a Linked List
+- 🔴 Clone a Linked List with Random Pointers
+- 🟡 Print Subsequences of a String
+- 🟡 Generate All Binary Strings
+- 🟡 Subset Sum I
+- 🔴 Kth Permutation Sequence
+- 🟢 Check if the Ith Bit is Set
+- 🟢 Check if a Number is Odd
+- 🟢 Check if a Number is a Power of 2
+- 🟢 Count the Number of Set Bits
+- 🟡 Power Set Using Bitmasking
+- 🟢 Minimum Bit Flips to Convert Number
+- 🟡 Two Numbers Appearing Odd Number of Times (XOR)
+- 🟢 Implement Stack Using Arrays
+- 🟢 Implement Queue Using Arrays
+- 🟡 Implement Min Stack
+- 🟢 Next Greater Element
+- 🟡 Next Smaller Element
+- 🟡 Sum of Subarray Minimums
+- 🟡 Max Consecutive Ones III
+- 🟡 Fruits into Basket (Longest Substring with 2 Distinct)
+- 🟢 Introduction to Priority Queues / Heaps
+- 🟡 Sort a K-Sorted Array
+- 🔴 Merge K Sorted Arrays
+- 🟢 Assign Cookies
+- 🟡 Fractional Knapsack Problem
+- 🟡 Minimum Number of Platforms Required
+- 🟡 Job Sequencing Problem
+- 🟡 N Meetings in One Room
+- 🟡 Level Order Traversal of Binary Tree
+- 🟡 Preorder, Inorder, Postorder Traversal (Iterative)
+- 🟢 Height of a Binary Tree
+- 🟡 Check if Binary Tree is Balanced
+- 🔴 Maximum Path Sum in Binary Tree
+- 🟡 Zig-Zag Traversal of Binary Tree
+- 🟡 Boundary Traversal of Binary Tree
+- 🟡 Vertical Order Traversal of Binary Tree
+- 🟡 Top View of Binary Tree
+- 🟡 Bottom View of Binary Tree
+- 🟢 Symmetric Binary Tree
+- 🟡 Root to Node Path in Binary Tree
+- 🟡 Lowest Common Ancestor in Binary Tree
+- 🟡 Maximum Width of Binary Tree
+- 🔴 Construct Binary Tree from Inorder and Preorder
+- 🟡 Morris Inorder Traversal
+- 🟡 Count Nodes in a Complete Binary Tree
+- 🟢 Search in a Binary Search Tree
+- 🟢 Ceil and Floor in a BST
+- 🟡 Insert a Given Node in BST
+- 🟡 Delete a Node in BST
+- 🟡 Kth Smallest/Largest Element in BST
+- 🟡 Validate a BST
+- 🟢 LCA in a Binary Search Tree
+- 🟡 Construct a BST from a Preorder Traversal
+- 🟢 Two Sum in BST
+- 🔴 Recover BST
+- 🔴 Largest BST in Binary Tree
+- 🟢 Graph Representation (Adjacency List/Matrix)
+- 🟢 BFS Traversal of Graph
+- 🟢 DFS Traversal of Graph
+- 🟡 Number of Provinces (Connected Components)
+- 🟡 Rotten Oranges (Multi-source BFS)
+- 🟢 Flood Fill Algorithm
+- 🟡 Cycle Detection in Undirected Graph (BFS/DFS)
+- 🟡 Cycle Detection in Directed Graph (DFS)
+- 🟡 Topological Sort (BFS - Kahn's Algorithm)
+- 🟡 Bipartite Graph Check
+- 🟡 Shortest Path in Undirected Graph with Unit Weights
+- 🟡 Shortest Path in Directed Acyclic Graph
+- 🟡 Dijkstra's Algorithm
+- 🟡 Bellman Ford Algorithm
+- 🟡 Floyd Warshall Algorithm
+- 🟡 Minimum Spanning Tree (Prim's Algorithm)
+- 🟡 Disjoint Set (Union by Rank/Size)
+- 🟡 Kruskal's Algorithm
+- 🔴 Number of Islands II (Online Queries)
+- 🔴 Strongly Connected Components (Kosaraju's Algorithm)
+- 🔴 Bridges in Graph
+- 🟢 Frog Jump
+- 🟡 Ninja's Training (DP on Grids)
+- 🟡 Unique Paths in a Grid
+- 🟡 Minimum Path Sum in a Grid
+- 🟡 Triangle - Fixed Starting Point
+- 🟡 Subset Sum Equal to Target
+- 🟡 0/1 Knapsack
+- 🟡 Coin Change (Minimum Coins)
+- 🟡 Unbounded Knapsack
+- 🟡 Longest Palindromic Subsequence
+- 🔴 Wildcard Matching
+- 🔴 Best Time to Buy and Sell Stock (DP variants I-IV)
+- 🔴 Matrix Chain Multiplication
+- 🔴 Palindrome Partitioning II (Minimum Cuts)
+- 🟡 Implement Trie (Insert, Search, StartsWith)
+- 🟡 Implement Trie II (Prefix Count)
+- 🟡 Longest String with All Prefixes
+- 🔴 Number of Distinct Substrings Using Trie
+- 🔴 Maximum XOR of Two Numbers Using Trie
+- 🟢 Swap Two Numbers Without Temp Variable
+- 🟢 Check Prime Number
+- 🟢 Print All Divisors of a Number
+- 🟢 GCD and LCM of Two Numbers
+- 🟢 Print Fibonacci Series
+- 🟢 Reverse an Array
+- 🟢 Find Maximum and Minimum in an Array
+- 🟢 Kth Largest and Smallest Element
+- 🟡 Sort an Array of 0s, 1s, 2s
+- 🟢 Move Negative Numbers to One Side
+- 🟢 Union and Intersection of Two Sorted Arrays
+- 🟢 Cyclically Rotate an Array by One
+- 🟡 Kadane's Algorithm - Maximum Subarray Sum
+- 🟡 Minimize the Maximum Difference Between Heights
+- 🟡 Minimum Jumps to Reach End of Array
+- 🟡 Find Duplicate in Array of N+1 Integers
+- 🔴 Count Inversions in an Array
+- 🟢 Find All Pairs with Given Sum
+- 🟡 Common Elements in Three Sorted Arrays
+- 🟡 Rearrange Alternating Positive and Negative Items
+- 🟡 Subarray with Sum Equal to Zero
+- 🟡 Longest Consecutive Subsequence
+- 🟡 Elements Appearing More Than N/K Times
+- 🟡 Chocolate Distribution Problem
+- 🟡 Smallest Subarray with Sum Greater Than Given Value
+- 🟡 Three-Way Partitioning of an Array
+- 🟡 Minimum Swaps to Bring Elements Less Than K Together
+- 🔴 Median of Two Sorted Arrays of Different Sizes
+- 🟡 Spiral Traversal of a Matrix
+- 🟡 Search an Element in a Row-Column Sorted Matrix
+- 🟡 Median in a Row-Wise Sorted Matrix
+- 🔴 Maximum Size Rectangle of 1s in Binary Matrix
+- 🔴 Kth Smallest Element in Row-Column Sorted Matrix
+- 🟢 Reverse a String (Words Order)
+- 🟢 Check if String is a Palindrome
+- 🟢 Find Duplicate Characters in a String
+- 🟢 Check if a String is Rotation of Another
+- 🟡 Longest Recurring Subsequence in a String
+- 🟡 Print All Subsequences of a String
+- 🟡 Print All Permutations of a String
+- 🔴 Find Next Greater Number with Same Digits
+- 🟢 Balanced Parenthesis Check
+- 🟡 Word Break Problem
+- 🔴 Rabin-Karp Pattern Search Algorithm
+- 🔴 KMP Pattern Matching Algorithm
+- 🟡 Minimum Bracket Reversals to Balance an Expression
+- 🔴 Count Palindromic Subsequences
+- 🟡 Find First and Last Position in Sorted Array
+- 🟡 Search in a Rotated Sorted Array
+- 🟢 Square Root of an Integer
+- 🟢 Find the Majority Element
+- 🟡 Searching in an Array Where Adjacent Differ by At Most K
+- 🟡 Find Four Elements That Sum to a Given Value
+- 🟡 Maximum Sum with No Two Adjacent Elements
+- 🟡 Print All Subarrays with Sum Zero
+- 🟡 Sort Array According to Count of Set Bits
+- 🟡 Minimum Swaps Required to Sort an Array
+- 🔴 Aggressive Cows Problem
+- 🟢 Reverse a Linked List (Iterative & Recursive)
+- 🔴 Reverse a Linked List in Groups of Given Size
+- 🟡 Detect and Remove Loop in a Linked List
+- 🟡 Find Starting Point of the Loop
+- 🟢 Remove Duplicates from Sorted Linked List
+- 🟡 Add 1 to a Number Represented as Linked List
+- 🟡 Add Two Numbers Represented by Linked Lists
+- 🟡 Intersection Point of Two Linked Lists
+- 🔴 Merge Sort for Linked Lists
+- 🟢 Find the Middle of a Linked List
+- 🟡 Check if a Linked List is a Palindrome
+- 🟢 Reverse a Doubly Linked List
+- 🔴 Clone a Linked List with Next and Random Pointer
+- 🔴 Merge K Sorted Linked Lists
+- 🔴 Flatten a Linked List
+- 🟢 Implement Stack Using Array
+- 🟢 Implement Queue Using Array
+- 🟡 Design a Stack with getMin() in O(1)
+- 🟢 Find the Next Greater Element
+- 🟡 The Celebrity Problem
+- 🟡 Evaluation of Postfix Expression
+- 🟡 Merge Overlapping Intervals
+- 🔴 Largest Rectangular Area in Histogram
+- 🟡 Implement LRU Cache
+- 🟡 Rotting Oranges (Minimum Time)
+- 🟡 First Negative Integer in Every Window of Size K
+- 🟡 Level Order Traversal
+- 🟢 Diameter of a Binary Tree
+- 🟢 Mirror of a Binary Tree
+- 🟡 Left View and Right View of a Tree
+- 🟡 Top View and Bottom View of a Tree
+- 🟡 Zig-Zag Traversal of a Binary Tree
+- 🟡 Check if a Tree is Balanced
+- 🟡 Boundary Traversal of a Binary Tree
+- 🔴 Construct Tree from Inorder and Preorder
+- 🔴 Maximum Sum of Non-Adjacent Nodes
+- 🟡 Find LCA in a Binary Tree
+- 🟢 Find a Value in a BST
+- 🟡 Delete a Node in a BST
+- 🟢 Find Min and Max Value in a BST
+- 🟡 Check if a Tree is a BST
+- 🟢 Find LCA of Two Nodes in a BST
+- 🔴 Merge Two BSTs
+- 🟡 Find Kth Largest/Smallest Element in a BST
+- 🔴 Largest BST in a Binary Tree
+- 🟡 Activity Selection Problem
+- 🔴 Huffman Coding
+- 🟡 Minimum Number of Coins Problem
+- 🟡 Minimum Platforms Problem
+- 🟡 Buy Maximum Stocks with Daily Limit
+- 🔴 Minimize Cash Flow Among Friends
+- 🟡 Rat in a Maze Problem
+- 🔴 N-Queens Problem
+- 🟡 Word Break Using Backtracking
+- 🟡 M-Coloring Problem
+- 🟡 Print All Palindromic Partitions of a String
+- 🟡 Subset Sum Problem
+- 🔴 The Knight's Tour Problem
+- 🟡 Implement a Max Heap / Min Heap
+- 🟡 Heap Sort
+- 🟡 K Largest Elements in an Array
+- 🔴 Median in a Stream of Integers
+- 🟡 Connect N Ropes with Minimum Cost
+- 🟢 Create a Graph and Print It
+- 🟢 Implement BFS and DFS
+- 🟡 Detect Cycle in a Directed Graph
+- 🟡 Detect Cycle in an Undirected Graph
+- 🔴 Alien Dictionary Character Order
+- 🟡 Implement Dijkstra's Algorithm
+- 🟡 Implement Kruskal's Algorithm
+- 🟡 Implement Prim's Algorithm
+- 🟡 Implement Bellman-Ford Algorithm
+- 🟡 Implement Floyd-Warshall Algorithm
+- 🟡 Check Whether a Graph is Bipartite
+- 🟡 Coin Change Problem
+- 🟡 0/1 Knapsack Problem
+- 🔴 Egg Dropping Problem
+- 🟡 Maximum Size Square Sub-Matrix with All 1s
+- 🟡 Minimum Cost Path Problem
+- 🟡 Partition Problem
+- 🔴 Optimal Strategy for a Game
+- 🔴 Word Wrap Problem
+- 🔴 Boolean Parenthesization Problem
+- 🟢 Count Set Bits in an Integer
+- 🟡 Find the Two Non-Repeating Elements
+- 🟢 Check if a Number is a Power of Two
+- 🟡 Divide Two Integers Without / or *
+- 🟡 Power Set Using Bit Manipulation
+- 🟡 Subarray Sum Equals K
+- 🟡 Longest Palindromic Substring (DP)
+- 🟡 Palindromic Substrings (DP)
+- 🟡 Maximum Subarray (Greedy/Kadane)
+- 🟢 Reverse the array
+- 🟢 Find the maximum and minimum element in an array
+- 🟡 Find the Kth max and min element of an array
+- 🟡 Given an array of 0s, 1s and 2s, sort it without using any sorting algorithm
+- 🟢 Move all the negative elements to one side of the array
+- 🟢 Find the Union and Intersection of two sorted arrays
+- 🟢 Write a program to cyclically rotate an array by one
+- 🟡 Find largest sum contiguous subarray
+- 🟡 Minimise the maximum difference between heights
+- 🟡 Minimum number of jumps to reach end of an array
+- 🟡 Find duplicate in an array of N+1 integers
+- 🔴 Merge two sorted arrays without using extra space
+- 🟡 Kadane's Algorithm
+- 🟢 Find all pairs of integers in array whose sum equals a given number
+- 🟡 Find common elements in 3 sorted arrays
+- 🟡 Rearrange the array alternately in positive and negative with O(1) extra space
+- 🟡 Find if there is any subarray with sum equal to 0
+- 🟡 Find factorial of a large number
+- 🟡 Find maximum product subarray
+- 🟡 Find longest consecutive subsequence
+- 🟡 Given an array of size n and a number k, find all elements appearing more than n/k times
+- 🔴 Maximum profit by buying and selling a share at most twice
+- 🟢 Find whether an array is a subset of another array
+- 🟡 Find the triplet that sums to a given value
+- 🔴 Trapping Rain Water problem
+- 🟡 Smallest subarray with sum greater than a given value
+- 🟡 Three-way partitioning of an array around a given value
+- 🟡 Minimum swaps required to bring elements less equal K together
+- 🟡 Minimum number of operations required to make an array palindrome
+- 🔴 Median of two sorted arrays of equal size
+- 🟡 Spiral traversal on a matrix
+- 🟡 Search an element in a matrix
+- 🔴 Find median in a row-wise sorted matrix
+- 🟡 Find the row with maximum number of 1s
+- 🟡 Print elements in sorted order using a row-column wise sorted matrix
+- 🔴 Maximum size rectangle of all 1s in a binary matrix
+- 🔴 Find a specific pair in a matrix
+- 🟡 Rotate a matrix by 90 degrees
+- 🔴 Kth smallest element in a row-column wise sorted matrix
+- 🟡 Common elements in all rows of a given matrix
+- 🟢 Reverse a string
+- 🟢 Check whether a string is a palindrome or not
+- 🟢 Why strings are immutable in Java
+- 🟢 Check whether one string is a rotation of another
+- 🟡 Check whether a string is a valid shuffle of two strings
+- 🟡 Count and Say problem
+- 🟡 Find the longest palindrome in a string (Longest Palindromic Substring)
+- 🟡 Find the longest recurring subsequence in a string
+- 🟡 Print all permutations of a given string
+- 🟡 Split a binary string into two substrings with equal 0s and 1s
+- 🔴 Find the next greater number with the same set of digits
+- 🟢 Balanced Parenthesis problem
+- 🔴 Rabin-Karp algorithm
+- 🔴 KMP algorithm
+- 🟢 Convert a sentence into its equivalent mobile numeric keypad sequence
+- 🟡 Minimum number of bracket reversals needed to balance an expression
+- 🔴 Count all palindromic subsequences in a given string
+- 🟡 Count occurrences of a given string in a 2D character array
+- 🟡 Search a word in a 2D grid of characters
+- 🔴 Boyer-Moore algorithm for pattern searching
+- 🟢 Convert Roman numerals to decimal
+- 🟡 Number of flips to make a binary string alternate
+- 🟢 Find the first repeated word in a string
+- 🟡 Minimum number of swaps for bracket balancing
+- 🟡 Find the longest common subsequence between two strings
+- 🟡 Generate all possible valid IP addresses from a given string
+- 🔴 Find the smallest window that contains all characters of the string itself
+- 🟡 Rearrange characters in a string so no two adjacent are same
+- 🔴 Minimum characters to be added at front to make a string palindrome
+- 🟡 Given a sequence of words, print all anagrams together
+- 🔴 Find the smallest window in a string containing all characters of another string
+- 🟡 Recursively remove all adjacent duplicates
+- 🔴 String matching where one string contains wildcard characters
+- 🟡 Find number of customers who could not get a computer
+- 🔴 Transform one string to another using minimum number of given operations
+- 🟢 Check if two given strings are isomorphic to each other
+- 🔴 Recursively print all sentences that can be formed from a list of word lists
+- 🟡 Find first and last positions of an element in a sorted array
+- 🟢 Find a fixed point (value equal to index) in a given array
+- 🟢 Maximum and minimum of an array using minimum number of comparisons
+- 🔴 Optimum location of point to minimize total distance
+- 🟡 Find the repeating and the missing number
+- 🟡 Searching in an array where adjacent elements differ by at most k
+- 🟡 Find a pair with a given difference
+- 🟡 Maximum sum such that no two elements are adjacent
+- 🟡 Count triplets with sum smaller than a given value
+- 🟢 Merge two sorted arrays
+- 🟡 Print all subarrays with sum equal to zero
+- 🟡 Product array puzzle
+- 🟡 Sort an array according to the count of set bits
+- 🟡 Minimum number of swaps required to sort the array
+- 🟡 Bishu and Soldiers
+- 🟡 Rasta and Kheshtak
+- 🟡 Kth smallest number
+- 🟢 Find the pivot element in a sorted array
+- 🟡 Job Scheduling Algorithm
+- 🟢 Missing Number in an Arithmetic Progression
+- 🔴 Smallest number with at least n trailing zeroes in factorial
+- 🔴 Painter's Partition Problem
+- 🔴 ROTI - Prata SPOJ
+- 🔴 DoubleHelix SPOJ
+- 🟡 Subset Sums
+- 🔴 Find the inversion count
+- 🔴 Implement merge sort in-place
+- 🟡 Partitioning and sorting arrays with many repeated entries
+- 🟢 Reverse the linked list (iterative and recursive)
+- 🔴 Reverse a linked list in groups of a given size
+- 🟢 Detect loop in a linked list
+- 🟡 Delete loop in a linked list
+- 🟡 Find the starting point of the loop
+- 🟢 Remove duplicates in a sorted linked list
+- 🟡 Remove duplicates in an unsorted linked list
+- 🟢 Move the last element to the front of a linked list
+- 🟡 Add 1 to a number represented as a linked list
+- 🟡 Intersection of two sorted linked lists
+- 🔴 Quicksort for linked lists
+- 🟢 Find the middle element of a linked list
+- 🟢 Check if a linked list is a circular linked list
+- 🟡 Split a circular linked list into two halves
+- 🟡 Check whether a singly linked list is a palindrome
+- 🟡 Deletion from a circular linked list
+- 🟡 Find pairs with a given sum in a doubly linked list
+- 🔴 Count triplets in a sorted doubly linked list whose sum equals a given value X
+- 🔴 Sort a k-sorted doubly linked list
+- 🟡 Rotate a doubly linked list by N nodes
+- 🔴 Rotate a doubly linked list in groups of a given size
+- 🟡 Can we reverse a linked list in less than O(n) time
+- 🟢 Why is Quicksort preferred for arrays and Merge Sort for linked lists
+- 🟡 Sort a linked list of 0s, 1s and 2s
+- 🟡 Multiply two numbers represented by linked lists
+- 🟡 Delete nodes which have a greater value on the right side
+- 🟡 Segregate even and odd nodes in a linked list
+- 🟢 Find the nth node from the end of a linked list
+- 🟡 Find the first non-repeating character from a stream of characters
+- 🟡 Reverse level order traversal
+- 🟢 Height of a tree
+- 🟢 Diameter of a tree
+- 🟢 Mirror of a tree
+- 🟢 Inorder traversal (recursive and iterative)
+- 🟢 Preorder traversal (recursive and iterative)
+- 🟢 Postorder traversal (recursive and iterative)
+- 🟡 Left view of a tree
+- 🟡 Right view of a tree
+- 🟡 Top view of a tree
+- 🟡 Bottom view of a tree
+- 🟡 Check if a tree is balanced or not
+- 🟡 Diagonal traversal of a binary tree
+- 🟡 Construct a binary tree from a string with bracket representation
+- 🔴 Convert a binary tree into a doubly linked list
+- 🟡 Convert a binary tree into a sum tree
+- 🔴 Construct a binary tree from inorder and preorder traversal
+- 🔴 Find minimum swaps required to convert a binary tree into a BST
+- 🟡 Check if a binary tree is a sum tree or not
+- 🟢 Check if all leaf nodes are at the same level
+- 🔴 Check if a binary tree contains duplicate subtrees of size 2 or more
+- 🟢 Check if two trees are mirrors of each other
+- 🟡 Sum of nodes on the longest path from root to leaf node
+- 🟡 Check if a given graph is a tree or not
+- 🟡 Find the largest subtree sum in a tree
+- 🔴 Maximum sum of nodes in a binary tree such that no two are adjacent
+- 🔴 Print all K sum paths in a binary tree
+- 🟡 Find the distance between two nodes in a binary tree
+- 🟡 Find the Kth ancestor of a node in a binary tree
+- 🔴 Find all duplicate subtrees in a binary tree
+- 🟡 Tree isomorphism problem
+- 🟡 Deletion of a node in a BST
+- 🟡 Find inorder successor and inorder predecessor in a BST
+- 🟡 Check if a tree is a BST or not
+- 🟡 Populate inorder successor of all nodes
+- 🟡 Convert a binary tree into a BST
+- 🟡 Convert a normal BST into a balanced BST
+- 🟡 Find the Kth largest element in a BST
+- 🟡 Find the Kth smallest element in a BST
+- 🔴 Count pairs from two BSTs whose sum equals a given value X
+- 🔴 Find the median of a BST in O(n) time and O(1) space
+- 🟡 Count BST nodes that lie in a given range
+- 🔴 Replace every element with the least greater element on its right
+- 🟡 Given n appointments, find the conflicting appointments
+- 🟡 Check if a given preorder traversal is a valid BST
+- 🟡 Check whether a BST contains a dead end
+- 🔴 Find the largest BST in a binary tree
+- 🟡 Flatten a BST to a sorted list
+- 🟡 Water Connection Problem
+- 🟡 Greedy algorithm to find the minimum number of coins
+- 🔴 Maximum trains for which stoppage can be provided
+- 🟡 Buy maximum stocks if i stocks can be bought on the i-th day
+- 🟡 Find the minimum and maximum amount to buy all N candies
+- 🔴 Minimize cash flow among a given set of friends who have borrowed money from each other
+- 🟡 Minimum cost to cut a board into squares
+- 🟡 Check if it is possible to survive on an island
+- 🟡 Find maximum meetings in one room
+- 🟡 Maximum product subset of an array
+- 🟢 Maximize array sum after K negations
+- 🟡 Maximize the sum of arr[i] * i
+- 🟡 Maximum sum of absolute difference of an array
+- 🟡 Maximize sum of consecutive differences in a circular array
+- 🟡 Minimum sum of absolute difference of pairs of two arrays
+- 🟡 Program for Shortest Job First (SJF) CPU scheduling
+- 🟡 Program for Least Recently Used (LRU) page replacement algorithm
+- 🟢 Smallest subset with sum greater than all other elements
+- 🔴 DEFKIN - Defense of a Kingdom
+- 🔴 DIEHARD - Die Hard
+- 🔴 GERGOVIA - Wine trading in Gergovia
+- 🟡 Picking Up Chicks
+- 🔴 CHOCOLA - Chocolate
+- 🔴 ARRANGE - Arranging Amplifiers
+- 🔴 K Centers Problem
+- 🟡 Minimum cost of ropes
+- 🟡 Find smallest number with given number of digits and sum of digits
+- 🔴 Find maximum sum possible equal to the sum of three stacks
+- 🔴 Printing all solutions in the N-Queens Problem
+- 🟡 Word Break Problem using Backtracking
+- 🔴 Remove Invalid Parentheses
+- 🔴 Tug of War
+- 🔴 Find the shortest safe route in a path with landmines
+- 🟡 Combinational Sum
+- 🔴 Find the maximum number possible by doing at most K swaps
+- 🔴 Find if there is a path of more than k length from a source
+- 🔴 Longest possible route in a matrix with hurdles
+- 🟡 Print all possible paths from top-left to bottom-right of an m x n matrix
+- 🔴 Partition a set into K subsets with equal sum
+- 🔴 Find the Kth permutation sequence of the first N natural numbers
+- 🟢 Implement a stack from scratch
+- 🟢 Implement a queue from scratch
+- 🟡 Implement two stacks in an array
+- 🟡 Find the middle element of a stack
+- 🔴 Implement N stacks in an array
+- 🟢 Check for balanced parentheses in an expression
+- 🟢 Reverse a string using a stack
+- 🟡 Design a stack that supports getMin() in O(1) time and O(1) extra space
+- 🔴 Arithmetic expression evaluation
+- 🟡 Insert an element at the bottom of a stack without using any other data structure
+- 🟡 Reverse a stack using recursion
+- 🟡 Sort a stack using recursion
+- 🔴 Largest rectangular area in a histogram
+- 🔴 Length of the longest valid substring
+- 🟡 Check whether an expression contains a redundant bracket
+- 🟡 Implement a stack using a queue
+- 🟡 Implement a stack using a deque
+- 🟡 Stack permutations (check if an array is a stack permutation of another)
+- 🟡 Implement a queue using a stack
+- 🔴 Implement N queues in an array
+- 🟡 Implement a circular queue
+- 🔴 LRU Cache implementation
+- 🟡 Reverse a queue using recursion
+- 🟡 Reverse the first K elements of a queue
+- 🟡 Interleave the first half of a queue with the second half
+- 🟡 Find the first circular tour that visits all petrol pumps
+- 🟡 Minimum time required to rot all oranges
+- 🟡 Distance of the nearest cell having 1 in a binary matrix
+- 🟡 Check if all levels of two trees are anagrams of each other
+- 🔴 Sum of minimum and maximum elements of all subarrays of size K
+- 🔴 Minimum sum of squares of character counts after removing K characters
+- 🟡 Queue-based approach for the first non-repeating character in a stream
+- 🟡 Implement a max-heap / min-heap using arrays and recursion
+- 🟡 Sort an array using a heap (Heap Sort)
+- 🔴 Maximum of all subarrays of size K
+- 🟡 Kth smallest and largest element in an unsorted array
+- 🟡 Merge two binary max heaps
+- 🔴 Kth largest sum among continuous subarrays
+- 🟡 Reorganize a string so no two adjacent characters are the same
+- 🔴 Smallest range covering elements from K lists
+- 🔴 Find the median in a stream of integers
+- 🟡 Check if a binary tree is a heap
+- 🟡 Convert a BST into a min heap
+- 🟡 Convert a min heap to a max heap
+- 🟡 Rearrange characters in a string so no two adjacent are the same
+- 🟡 Minimum sum of two numbers formed from the digits of an array
+- 🟢 Implement the BFS algorithm
+- 🟢 Implement the DFS algorithm
+- 🟡 Detect a cycle in a directed graph using BFS/DFS
+- 🟡 Detect a cycle in an undirected graph using BFS/DFS
+- 🔴 Search in a maze
+- 🟡 Minimum steps by a Knight
+- 🟡 Clone a graph
+- 🟡 Making wired connections
+- 🟡 Implement Topological Sort
+- 🔴 Minimum time for each job to be completed given by a Directed Acyclic Graph
+- 🟡 Find whether it is possible to finish all tasks from given dependencies
+- 🟡 Find the number of islands
+- 🔴 Given a sorted dictionary of an alien language, find the order of characters
+- 🔴 Total number of spanning trees in a graph
+- 🔴 Travelling Salesman Problem
+- 🔴 Graph Colouring Problem
+- 🟡 Snake and Ladders Problem
+- 🔴 Find bridges in a graph
+- 🔴 Count strongly connected components (Kosaraju's Algorithm)
+- 🟡 Check whether a graph is bipartite or not
+- 🟡 Detect a negative cycle in a graph
+- 🔴 Longest path in a Directed Acyclic Graph
+- 🟡 Journey to the Moon
+- 🔴 Oliver and the Game
+- 🟡 Water Jug problem using BFS
+- 🟡 M-Colouring Problem
+- 🔴 Minimum edges to reverse to make a path from source to destination
+- 🔴 Paths to travel each node using each edge (Seven Bridges)
+- 🔴 Vertex Cover Problem
+- 🔴 Chinese Postman / Route Inspection Problem
+- 🔴 Number of triangles in a directed and undirected graph
+- 🔴 Minimize the cashflow among friends who have borrowed money from each other
+- 🔴 Two Clique Problem
+- 🟡 Construct a trie from scratch
+- 🔴 Find the shortest unique prefix for every word in a given list
+- 🟡 Word Break Problem using Trie
+- 🟡 Given a sequence of words, print all anagrams together (Trie solution)
+- 🟡 Implement a Phone Directory
+- 🟡 Print unique rows in a given boolean matrix
+- 🟡 Knapsack Problem
+- 🟡 Binomial Coefficient Problem
+- 🟡 Permutation Coefficient Problem
+- 🟡 Program for the Nth Catalan Number
+- 🟡 Friends Pairing Problem
+- 🟡 Gold Mine Problem
+- 🔴 Assembly Line Scheduling Problem
+- 🟡 Painting the Fence Problem
+- 🟡 Maximize the Cut Segments
+- 🟡 Longest Repeated Subsequence
+- 🟡 Space Optimized Solution of LCS
+- 🔴 LCS of three strings
+- 🟡 Maximum Sum Increasing Subsequence
+- 🔴 Count all subsequences having a product less than K
+- 🟡 Longest subsequence where adjacent elements differ by one
+- 🟡 Maximum subsequence sum such that no three are consecutive
+- 🟡 Maximum Length Chain of Pairs
+- 🟡 Maximum sum of pairs with a specific difference
+- 🟡 Min Cost Path Problem
+- 🟡 Maximum difference of zeros and ones in a binary string
+- 🟡 Minimum number of jumps to reach the end
+- 🔴 Minimum cost to fill a given weight in a bag
+- 🔴 Minimum removals from array to make max-min <= K
+- 🟡 Longest Common Substring
+- 🟡 Count the number of ways to reach a given score in a game
+- 🔴 Count balanced binary trees of height h
+- 🟡 Largest sum contiguous subarray
+- 🟡 Smallest sum contiguous subarray
+- 🟡 Unbounded Knapsack (repetition of items allowed)
+- 🔴 Largest Independent Set Problem
+- 🟡 Longest alternating subsequence
+- 🔴 Weighted Job Scheduling
+- 🟡 Coin game winner where every player has three choices
+- 🔴 Count derangements (permutations where no element appears in its original position)
+- 🔴 Maximum profit from buying/selling a share at most twice
+- 🔴 Optimal Binary Search Tree
+- 🔴 Palindrome Partitioning Problem
+- 🟡 Mobile Numeric Keypad Problem
+- 🔴 Largest rectangular sub-matrix whose sum is 0
+- 🔴 Largest area rectangular sub-matrix with equal number of 1s and 0s
+- 🔴 Maximum sum rectangle in a 2D matrix
+- 🔴 Maximum profit from buying/selling a share at most K times
+- 🔴 Find if a string is an interleaving of two other strings
+- 🟡 Maximum Length of Pair Chain
+- 🟡 Find the two non-repeating elements in an array of repeating elements
+- 🟢 Count the number of bits to be flipped to convert A to B
+- 🟡 Count total set bits in all numbers from 1 to n
+- 🟢 Program to check whether a number is a power of two
+- 🟢 Find the position of the only set bit
+- 🟡 Copy set bits in a range
+- 🟡 Divide two integers without using multiplication, division, or mod operators
+- 🟡 Calculate the square of a number without using *, / and pow()
+- 🟡 Power Set
+
+### Graph  
+<sub>1 questions</sub>
+
+- 🟡 Number of Connected Components
+
+### Linked List  
+<sub>2 questions</sub>
+
+- 🟢 Detect Cycle in Linked List
+- 🟡 Remove Nth Node From End
+
+### Sliding Window  
+<sub>2 questions</sub>
+
+- 🟡 Longest Substring Without Repeating
+- 🟡 Longest Repeating Char Replacement
+
+### Stack  
+<sub>1 questions</sub>
+
+- 🟡 Minimum Stack
+
+### Tree  
+<sub>3 questions</sub>
+
+- 🟡 Lowest Common Ancestor of BST
+- 🟡 Kth Smallest Element in BST
+- 🟡 Construct Binary Tree from Preorder
+
+---
+
+_Sourced & de-duplicated from interview-prep sheets. Found a duplicate or error? [Open a PR](../CONTRIBUTING.md)._

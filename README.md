@@ -16,7 +16,7 @@
 &nbsp;
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-0d1117?style=flat-square&labelColor=0d1117&color=bb9af7)](CONTRIBUTING.md)
 
-`21 sections`&nbsp;&nbsp;•&nbsp;&nbsp;`700+ questions`&nbsp;&nbsp;•&nbsp;&nbsp;`17 worked solutions`&nbsp;&nbsp;•&nbsp;&nbsp;`16 company guides`
+`21 sections`&nbsp;&nbsp;•&nbsp;&nbsp;`3,000+ questions`&nbsp;&nbsp;•&nbsp;&nbsp;`17 worked solutions`&nbsp;&nbsp;•&nbsp;&nbsp;`16 company guides`
 
 <br/>
 
@@ -139,6 +139,8 @@ Fast answers to the most-searched questions.
 ---
 
 ## 📚 Explore the full handbook
+
+> 🗂️ **Full question banks** (exhaustive lists, curated from real prep sheets): [1,200+ Machine Coding](16-machine-coding/question-bank.md) · [548 JavaScript](03-javascript/question-bank.md) · [353 System Design](15-system-design/question-bank.md) · [900+ DSA](21-dsa-for-frontend/question-bank.md) · [React](06-react/question-bank.md)
 
 **🧱 Core foundations**
 
