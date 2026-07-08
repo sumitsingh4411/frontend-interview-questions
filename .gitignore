@@ -25,6 +25,7 @@ Thumbs.db
 # Agent / tooling caches
 .agent-cache/
 .cache/
+.claude/
 
 # Env
 .env
