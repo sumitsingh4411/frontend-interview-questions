@@ -4,7 +4,7 @@ The language, deeply. These are the questions that get asked in *every* frontend
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
-⭐ **Flagship:** [Promise polyfills + debounce/throttle deep-dive](promise-polyfills-and-throttle-debounce.md)
+⭐ **Flagship:** [Promise polyfills + debounce/throttle deep-dive](promise-polyfills-and-throttle-debounce.md) · [Output-based questions **with answers**](output-based-questions.md)
 
 ## Core language
 
@@ -106,6 +106,8 @@ The exact questions asked in real JavaScript interviews. Answer out loud, then v
 ## 🧩 Output-based & "predict the output" questions
 
 The trick questions that separate people who *know* JS from people who *use* JS.
+
+> 📖 **Want the answers + explanations?** See the full worked set → [output-based-questions.md](output-based-questions.md)
 
 1. What logs? `console.log(1); setTimeout(()=>console.log(2)); Promise.resolve().then(()=>console.log(3)); console.log(4);`
 2. `for (var i=0;i<3;i++) setTimeout(()=>console.log(i))` — output? Fix with `let`.

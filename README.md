@@ -73,6 +73,7 @@ Backend system design has [`system-design-primer`](https://github.com/donnemarti
 | 18 | [Design Patterns](18-design-patterns/) | Observer, factory, strategy, DI… in frontend |
 | 19 | [Build Your Own](19-build-your-own/) | Clone React, Redux, Router, a Virtual DOM… |
 | 20 | [Company Guides](20-company-guides/) | What Google, Meta, Netflix… actually ask |
+| 21 | [DSA for Frontend](21-dsa-for-frontend/) | Arrays, trees, recursion + frontend-flavored problems |
 
 ---
 
@@ -100,8 +101,10 @@ These are **fully-solved**, end-to-end — the gold standard for how to answer i
 
 ### 🔬 Deep Dives
 - [JS: Promise polyfills + debounce/throttle](03-javascript/promise-polyfills-and-throttle-debounce.md) 🟡
+- [JS: Output-based questions (with answers)](03-javascript/output-based-questions.md) 🟡
 - [React: Build a Virtualized List](06-react/build-a-virtualized-list.md) 🔴
 - [Patterns: Event Bus / Observer](18-design-patterns/observer-event-bus.md) 🟡
+- [DSA for Frontend](21-dsa-for-frontend/) 🟡
 
 ---
 
@@ -129,7 +132,7 @@ Good first contributions:
 
 ## 🔎 Topics covered
 
-A complete **frontend interview preparation** resource and **frontend interview questions** bank covering: **frontend system design**, **machine coding** rounds, **JavaScript interview questions**, **React interview questions**, **TypeScript**, **CSS** and **HTML**, **browser internals**, **web performance** (Core Web Vitals — LCP, CLS, INP), **accessibility (a11y)**, **web security** (XSS, CSRF, CSP), **networking** (HTTP, WebSocket, GraphQL), **state management**, **testing**, and **design patterns** — plus **company-wise interview guides** for Google, Meta, Amazon, Netflix, Airbnb, Uber, Stripe, Microsoft, Atlassian, LinkedIn, Apple, Cloudflare, DoorDash, Pinterest, and Dropbox. Whether you're preparing for **SDE-2, Senior, Staff, or FAANG frontend interviews**, follow the [roadmap](ROADMAP.md) and work through every topic that matters.
+A complete **frontend interview preparation** resource and **frontend interview questions** bank covering: **frontend system design**, **machine coding** rounds, **JavaScript interview questions**, **React interview questions**, **TypeScript**, **CSS** and **HTML**, **browser internals**, **web performance** (Core Web Vitals — LCP, CLS, INP), **accessibility (a11y)**, **web security** (XSS, CSRF, CSP), **networking** (HTTP, WebSocket, GraphQL), **state management**, **testing**, **design patterns**, **DSA for frontend** (data structures & algorithms), and **JavaScript output-based ("guess the output") questions** — plus **company-wise interview guides** for Google, Meta, Amazon, Netflix, Airbnb, Uber, Stripe, Microsoft, Atlassian, LinkedIn, Apple, Cloudflare, DoorDash, Pinterest, and Dropbox. Whether you're preparing for **SDE-2, Senior, Staff, or FAANG frontend interviews**, follow the [roadmap](ROADMAP.md) and work through every topic that matters.
 
 ## 📄 License
 

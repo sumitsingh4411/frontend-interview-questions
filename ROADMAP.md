@@ -65,6 +65,7 @@ This is what the interview actually tests. Do these last, do them a lot.
 - **[Frontend System Design](15-system-design/)** 🔴 — 200+ "Design X" problems + flagships
 - **[Machine Coding](16-machine-coding/)** 🔴 — 300+ build-this-component problems + flagships
 - **[Company Guides](20-company-guides/)** 🔴 — what each company actually asks
+- **[DSA for Frontend](21-dsa-for-frontend/)** 🟡 — arrays, trees, recursion + frontend-flavored problems (flatten, DOM traversal, LRU)
 
 ## 🛠️ Stage 5 — Master (optional, for Staff)
 
