@@ -48,6 +48,17 @@
 3. Practice [system design](../15-system-design/) with a stopwatch — clarify → design → deep dive in 35 min.
 4. Prepare 3 impact stories for behavioral.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** get a working version fast, then iterate · clarify the *product* problem · control re-renders · discuss data fetching, caching, pagination · talk while you code.
+**🔴 Avoid:** over-planning before writing code · premature abstraction · ignoring loading/error/empty states · coding in silence.
+
+## 📝 Sample interviewer prompts
+
+- "Build a comment thread with replies, then add optimistic posting."
+- "How would you scale this list to 10,000 items?"
+- "Design the news feed — start by clarifying requirements."
+
 ---
 
 > _Interviewed at Meta? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

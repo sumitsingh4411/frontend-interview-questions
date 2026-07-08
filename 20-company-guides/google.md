@@ -48,6 +48,17 @@
 3. Do 3 accessible components with keyboard support.
 4. 3 mock system designs, focusing on perf + a11y trade-offs.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** clarify requirements before coding · reason about the platform (DOM, event loop) · make it keyboard-accessible · name performance trade-offs · write clean framework-agnostic code.
+**🔴 Avoid:** reaching for a framework when vanilla is enough · skipping accessibility · ignoring edge cases (empty/error/loading) · over-engineering a simple ask.
+
+## 📝 Sample interviewer prompts
+
+- "Implement an accessible autocomplete **without a library**."
+- "How would you make this component fully keyboard-navigable?"
+- "Walk me through what happens from typing a URL to first paint."
+
 ---
 
 > _Interviewed at Google? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

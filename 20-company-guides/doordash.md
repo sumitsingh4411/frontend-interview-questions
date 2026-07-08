@@ -45,6 +45,17 @@
 3. Practice mobile-web [performance](../09-performance/).
 4. Do an ordering/logistics system design.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** nail conversion flows (cart/checkout) with correct edge cases · handle real-time order tracking · optimistic UI · mobile-web performance.
+**🔴 Avoid:** broken edge cases in checkout · ignoring real-time/optimistic updates · slow, heavy mobile pages.
+
+## 📝 Sample interviewer prompts
+
+- "Build a **cart** with add/remove and live totals."
+- "Design live order tracking on a map."
+- "Build an address autocomplete."
+
 ---
 
 > _Interviewed at DoorDash? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

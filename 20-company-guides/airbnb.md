@@ -43,6 +43,17 @@
 3. Practice design-system / component-library architecture.
 4. Prepare core-values behavioral stories.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** handle **all states** (empty/loading/error) · clean, reusable component API · full keyboard + ARIA · pixel-level care · think design-system reuse.
+**🔴 Avoid:** skipping edge/loading states · building inaccessible custom controls (divs with onClick) · messy prop APIs · ignoring visual polish.
+
+## 📝 Sample interviewer prompts
+
+- "Build a **date-range picker**, fully keyboard accessible."
+- "Build a photo carousel with swipe and screen-reader support."
+- "How would you turn this into a reusable design-system component?"
+
 ---
 
 > _Interviewed at Airbnb? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

@@ -46,6 +46,17 @@
 3. Do a couple "bug squash" style exercises in unfamiliar code.
 4. Review idempotency/retries and payment UX.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** read the provided API docs fast · obsess over correctness and edge cases · great form/validation UX · handle errors, retries, idempotency.
+**🔴 Avoid:** ignoring error/edge states · sloppy money/precision handling · not actually reading the docs given · skipping validation.
+
+## 📝 Sample interviewer prompts
+
+- "Integrate this paginated API and render the results."
+- "Build a payment form with validation and clear error states."
+- "Here's a small app with a bug — find and fix it."
+
 ---
 
 > _Interviewed at Stripe? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

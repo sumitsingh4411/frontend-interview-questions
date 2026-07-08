@@ -91,6 +91,31 @@ The most-asked React interview questions. Say your answer, then verify against t
 24. What is the difference between **`useEffect` cleanup** and unmount?
 25. What are **compound components** and render props?
 
+## ⚛️ Advanced & scenario questions
+
+The "how would you actually build/fix this" questions senior React interviews lean on.
+
+1. A component **re-renders too often** — how do you diagnose and fix it?
+2. Why does my **`useEffect` run twice** in development (StrictMode)?
+3. What is a **stale closure** in `useEffect` and how do you fix it?
+4. How do you **fetch data** in React and avoid **race conditions**?
+5. How do you build a **debounced search** input?
+6. When do **`useMemo`/`useCallback` actually help** — and when do they hurt?
+7. How do you **share state** across the tree without prop drilling?
+8. How would you build an **infinite scroll / virtualized list**? → [flagship](build-a-virtualized-list.md)
+9. How do you **persist state to localStorage** with a custom hook?
+10. How does changing a **`key`** reset a component's state? Give an example.
+11. How do you **prevent a memory leak** from a subscription/timer in a component?
+12. How do you **code-split** a route or heavy component?
+13. **Controlled vs uncontrolled** form — build both.
+14. How do you **test** a component with React Testing Library?
+15. How do you implement a **global store without Redux** (Context/Zustand/`useSyncExternalStore`)?
+16. How do you handle **error states** and error boundaries in a data-fetching UI?
+17. What's the difference between **`useEffect` and `useLayoutEffect`** in practice?
+18. How do you **optimize a list** of thousands of rows?
+19. How would you implement **optimistic updates** for a like button?
+20. How do you avoid **prop drilling** vs when is it actually fine?
+
 ---
 
 **Related:** [13-state-management](../13-state-management/) · [07-nextjs](../07-nextjs/) · [09-performance](../09-performance/) · [19-build-your-own](../19-build-your-own/)

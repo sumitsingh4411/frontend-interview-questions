@@ -45,6 +45,17 @@
 3. Build feed-adjacent components (infinite list, comments).
 4. Practice a feed system design under time.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** design feeds with virtualization + caching · handle a11y and i18n · optimize image/render performance · prevent layout shift.
+**🔴 Avoid:** unbounded DOM growth on long feeds · ignoring accessibility/i18n · CLS from late-loading media.
+
+## 📝 Sample interviewer prompts
+
+- "Build an **infinite-scroll feed**."
+- "How do you keep memory bounded at 5,000 posts?"
+- "Design the notifications system."
+
 ---
 
 > _Interviewed at LinkedIn? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

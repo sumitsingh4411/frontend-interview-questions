@@ -45,6 +45,17 @@
 3. Build data-heavy components (grid, live list).
 4. Practice a live-tracking system design.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** handle real-time updates + reconnect/backoff · manage complex, frequently-updating state · plan for flaky networks and offline · keep the map/list performant.
+**🔴 Avoid:** ignoring message ordering/dedupe · no retry/offline handling · blocking the UI on the network · unbounded re-renders on every update.
+
+## 📝 Sample interviewer prompts
+
+- "Build a live-updating trips list."
+- "Design rider↔driver live tracking on a map."
+- "How do you keep a WebSocket stream ordered and duplicate-free across reconnects?"
+
 ---
 
 > _Interviewed at Uber? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

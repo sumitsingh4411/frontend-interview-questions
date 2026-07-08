@@ -45,6 +45,17 @@
 3. Study design-system component APIs.
 4. Prepare Atlassian-values behavioral stories.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** build incrementally and narrate · handle drag-and-drop + complex state cleanly · think reusable components · bring genuine values examples.
+**🔴 Avoid:** big-bang coding with no working checkpoints · inaccessible drag-and-drop · generic/rehearsed values answers.
+
+## 📝 Sample interviewer prompts
+
+- "Build a **Kanban board** with drag-and-drop."
+- "Now add keyboard support to your drag-and-drop."
+- "Tell me about a time you balanced craft against a deadline."
+
 ---
 
 > _Interviewed at Atlassian? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

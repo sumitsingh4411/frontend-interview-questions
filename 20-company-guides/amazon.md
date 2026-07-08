@@ -47,6 +47,17 @@
 3. Build 4 components clean, with edge cases + a11y.
 4. 2 mock system designs framed around customer impact.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** tie technical decisions to **customer impact** · have crisp STAR stories for each Leadership Principle · handle edge cases · keep code readable and correct.
+**🔴 Avoid:** vague/rehearsed behavioral answers · ignoring Leadership Principles · over-clever code · no metrics/outcomes in your stories.
+
+## 📝 Sample interviewer prompts
+
+- "Tell me about a time you took **ownership** of a hard problem end-to-end."
+- "Build a product listing with sorting and filtering."
+- "How do you guarantee correctness in a checkout form?"
+
 ---
 
 > _Interviewed at Amazon? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

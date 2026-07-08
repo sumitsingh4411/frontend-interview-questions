@@ -45,6 +45,17 @@
 3. Balance DSA with 3–4 accessible components.
 4. Prepare growth-mindset behavioral stories.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** lead with accessibility (ARIA, keyboard, focus) · strong TypeScript typing · clean fundamentals · growth-mindset behavioral stories.
+**🔴 Avoid:** inaccessible components · `any`-everywhere typing · ignoring keyboard users · fixed-mindset answers.
+
+## 📝 Sample interviewer prompts
+
+- "Build an accessible **modal** with a focus trap."
+- "Type this component's props and hooks properly."
+- "Make this tree view fully keyboard-navigable."
+
 ---
 
 > _Interviewed at Microsoft? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

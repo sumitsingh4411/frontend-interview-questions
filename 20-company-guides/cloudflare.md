@@ -46,6 +46,17 @@
 3. Build data-dense components (grid, charts).
 4. Practice a dashboard system design.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** show real networking depth (caching, HTTP/2-3, CDN, edge) · optimize performance · handle data-dense dashboards with virtualization.
+**🔴 Avoid:** shallow networking knowledge · ignoring caching strategy · slow, unvirtualized data tables.
+
+## 📝 Sample interviewer prompts
+
+- "Design an analytics dashboard with real-time metrics."
+- "Walk me through HTTP caching end to end (`Cache-Control`, `ETag`)."
+- "Build a virtualized metrics table."
+
 ---
 
 > _Interviewed at Cloudflare? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

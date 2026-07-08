@@ -158,6 +158,41 @@
 | Virtual DOM diff / `createElement` | 🔴 | 1h | [Build your own](../19-build-your-own/) |
 | `useState`/`useEffect` (mini React) | 🔴 | 1h | [Build your own](../19-build-your-own/) |
 
+## 🧰 More UI components
+
+| Component | Difficulty | Time | Resource |
+|-----------|:----------:|:----:|----------|
+| Segmented control | 🟢 | 30m | [ARIA radio](https://www.w3.org/WAI/ARIA/apg/patterns/radio/) |
+| Chips / tag list | 🟢 | 30m | [GreatFrontEnd](https://www.greatfrontend.com/questions/js) |
+| Avatar group (with overflow) | 🟢 | 30m | [BFE.dev](https://bigfrontend.dev/) |
+| Progress steps / timeline | 🟡 | 45m | [GreatFrontEnd](https://www.greatfrontend.com/questions/js) |
+| Notification badge | 🟢 | 20m | [Notification flagship](../15-system-design/design-notification-system.md) |
+| Copy-to-clipboard button | 🟢 | 20m | [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API) |
+| Read more / truncate text | 🟢 | 30m | [BFE.dev](https://bigfrontend.dev/) |
+| Segmented progress (stories) | 🟡 | 45m | [GreatFrontEnd](https://www.greatfrontend.com/questions/js) |
+| Cookie-consent banner | 🟢 | 30m | [Security](../10-security/) |
+| Onboarding tour / coach-marks | 🟡 | 45m | [BFE.dev](https://bigfrontend.dev/) |
+| Theme (dark mode) toggle | 🟢 | 30m | [CSS theming](../05-css/) |
+| Virtual keyboard | 🟡 | 45m | [BFE.dev](https://bigfrontend.dev/) |
+| Emoji picker | 🟡 | 45m | [Autocomplete flagship](autocomplete-component.md) |
+| Multi-step checkout | 🔴 | 1h | [State](../13-state-management/) |
+| Comment box with @mentions | 🟡 | 45m | [Autocomplete flagship](autocomplete-component.md) |
+
+## 🔁 Async & data components
+
+| Component | Difficulty | Time | Resource |
+|-----------|:----------:|:----:|----------|
+| Debounced search box | 🟡 | 30m | [Autocomplete flagship](autocomplete-component.md) |
+| Infinite scroll (IntersectionObserver) | 🟡 | 45m | [News Feed flagship](../15-system-design/design-news-feed.md) |
+| Paginated table with API | 🟡 | 45m | [Data Grid flagship](data-grid.md) |
+| Poll for updates (with backoff) | 🟡 | 45m | [Networking](../12-networking/) |
+| Retry-on-error wrapper | 🟡 | 30m | [Patterns](../17-interview-patterns/) |
+| Optimistic like button | 🟡 | 30m | [Patterns](../17-interview-patterns/) |
+| File upload with progress | 🔴 | 1h | [Patterns](../17-interview-patterns/) |
+| Image lazy-loader | 🟡 | 30m | [Performance](../09-performance/) |
+| Autosave / draft form | 🟡 | 45m | [debounce flagship](../03-javascript/promise-polyfills-and-throttle-debounce.md) |
+| Live search results dropdown | 🟡 | 45m | [Autocomplete flagship](autocomplete-component.md) |
+
 **Related:** [15-system-design](../15-system-design/) · [11-accessibility](../11-accessibility/) · [14-testing](../14-testing/)
 
 _This list grows with the community — [add a component](../CONTRIBUTING.md) or turn one into a full flagship._

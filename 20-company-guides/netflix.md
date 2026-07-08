@@ -46,6 +46,17 @@
 3. Practice senior-level system design with explicit trade-offs.
 4. Prepare deep-dive stories on past high-impact work.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** show senior autonomy in ambiguity · obsess over performance and startup time · know media/streaming (ABR, buffering) · justify every trade-off crisply.
+**🔴 Avoid:** needing hand-holding · hand-waving on performance · shallow system design · not owning the decision.
+
+## 📝 Sample interviewer prompts
+
+- "Design a video player with **adaptive bitrate** and captions."
+- "How would you cut startup time on a media-heavy page?"
+- "Walk me through a hard trade-off you owned end-to-end."
+
 ---
 
 > _Interviewed at Netflix? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

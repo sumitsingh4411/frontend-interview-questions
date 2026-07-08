@@ -44,6 +44,17 @@
 3. Build a masonry/gallery component.
 4. Practice a visual-feed system design.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** implement masonry with variable-height virtualization · optimize images (lazy, `srcset`, formats) · prevent CLS · keep infinite feeds smooth.
+**🔴 Avoid:** loading all images upfront · layout shift from unsized media · unbounded DOM on long feeds.
+
+## 📝 Sample interviewer prompts
+
+- "Build a **masonry grid** with virtualization."
+- "How do you prevent layout shift (CLS) on an image feed?"
+- "Design the Pinterest home feed."
+
 ---
 
 > _Interviewed at Pinterest? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

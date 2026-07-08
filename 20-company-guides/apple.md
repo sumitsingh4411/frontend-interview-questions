@@ -43,6 +43,17 @@
 3. Build to a high polish/detail bar.
 4. Clarify the team's loop with your recruiter early.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** be fluent in vanilla JS/CSS · sweat the details (pixels, edge cases) · keep animations smooth at 60fps · clarify the team's expectations early.
+**🔴 Avoid:** depending on a framework for everything · sloppy visual details · janky/expensive animations.
+
+## 📝 Sample interviewer prompts
+
+- "Build a carousel in **vanilla JS** (no framework)."
+- "Animate this transition smoothly at 60fps — how?"
+- "Explain the browser rendering pipeline."
+
 ---
 
 > _Interviewed at Apple? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

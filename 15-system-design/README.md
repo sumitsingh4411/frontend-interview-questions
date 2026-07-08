@@ -148,6 +148,42 @@ The main event. "Design X" — where you drive the whole conversation: requireme
 | Design a Multi-step wizard / form flow | 🟡 | 45m | [State machines](../17-interview-patterns/) |
 | Design a Global search (⌘K palette) | 🔴 | 1h | [Command palette](../16-machine-coding/) |
 
+## 🔐 Auth & Account
+
+| Problem | Difficulty | Time | Resource |
+|---------|:----------:|:----:|----------|
+| Design a Login / Signup flow | 🟡 | 45m | [Security](../10-security/) |
+| Design OAuth login (Google/GitHub) | 🔴 | 1h | [Security: OAuth](../10-security/) |
+| Design a 2FA / OTP flow | 🟡 | 45m | [Security](../10-security/) |
+| Design token refresh / session management | 🔴 | 1h | [Security: auth](../10-security/) |
+| Design a password reset flow | 🟢 | 30m | [Security](../10-security/) |
+| Design a role-based access (RBAC) UI | 🟡 | 45m | [Security: authz](../10-security/) |
+
+## 🛠️ Developer & Tooling Products
+
+| Problem | Difficulty | Time | Resource |
+|---------|:----------:|:----:|----------|
+| Design a code sandbox (CodePen/CodeSandbox) | 🔴 | 1.5h | [Build your own](../19-build-your-own/) |
+| Design a CI/CD pipeline dashboard | 🟡 | 1h | [15-system-design](README.md) |
+| Design a documentation site with search | 🟡 | 1h | [Autocomplete flagship](design-autocomplete.md) |
+| Design a status page | 🟢 | 30m | [Real-time pattern](../17-interview-patterns/) |
+| Design a feature-flag dashboard | 🔴 | 1h | [Architecture](../08-architecture/) |
+| Design an error-monitoring UI (Sentry) | 🔴 | 1h | [Architecture](../08-architecture/) |
+| Design a design-system docs (Storybook) | 🟡 | 1h | [Architecture](../08-architecture/) |
+
+## 🌍 More Real-World Apps
+
+| Problem | Difficulty | Time | Resource |
+|---------|:----------:|:----:|----------|
+| Design a multi-tenant SaaS dashboard | 🔴 | 1.5h | [Architecture](../08-architecture/) |
+| Design a Job board | 🟡 | 1h | [Pattern](../17-interview-patterns/) |
+| Design a Booking / reservation system | 🔴 | 1.5h | [State](../13-state-management/) |
+| Design a Quiz / exam platform | 🟡 | 1h | [State machines](../17-interview-patterns/) |
+| Design a Resume builder | 🟡 | 1h | [Machine coding](../16-machine-coding/) |
+| Design an Image annotation tool | 🔴 | 1.5h | [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) |
+| Design a real-time collaborative cursor | 🔴 | 1h | [Google Docs flagship](design-google-docs.md) |
+| Design a Airbnb-style map + list sync | 🔴 | 1.5h | [15-system-design](README.md) |
+
 **Related:** [17-interview-patterns](../17-interview-patterns/) · [16-machine-coding](../16-machine-coding/) · [09-performance](../09-performance/)
 
 _This list grows with the community — [add a "Design X"](../CONTRIBUTING.md) or turn one into a full flagship._

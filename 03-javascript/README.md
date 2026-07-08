@@ -103,6 +103,43 @@ The exact questions asked in real JavaScript interviews. Answer out loud, then v
 29. How does **`Array.prototype.reduce`** work — implement it.
 30. What is the output? (event-loop / closure / hoisting trick questions)
 
+## 🧩 Output-based & "predict the output" questions
+
+The trick questions that separate people who *know* JS from people who *use* JS.
+
+1. What logs? `console.log(1); setTimeout(()=>console.log(2)); Promise.resolve().then(()=>console.log(3)); console.log(4);`
+2. `for (var i=0;i<3;i++) setTimeout(()=>console.log(i))` — output? Fix with `let`.
+3. What does **`[1,2,3].map(parseInt)`** return and why?
+4. Why is **`0.1 + 0.2 === 0.3`** false?
+5. What is **`typeof null`**, `typeof NaN`, `typeof function(){}`?
+6. `[] == ![]` — true or false? Walk through the coercion.
+7. Arrow vs regular function: what is **`this`** in each here?
+8. Predict the output with **hoisting** (function vs `var` declarations).
+9. `console.log("b" + "a" + +"a" + "a")` — what prints?
+10. What's the order of **`async`/`await` + `.then` + `setTimeout`** logs?
+11. `{} + []` vs `[] + {}` — explain.
+12. Does modifying a copied object mutate the original? (reference vs value)
+
+## 💻 "Implement this" coding challenges
+
+Classic implement-from-scratch prompts — see the [flagship](promise-polyfills-and-throttle-debounce.md) and [machine-coding utilities](../16-machine-coding/#-js-utilities-implement-these).
+
+1. Implement **`debounce`** and **`throttle`**.
+2. Implement **`Promise.all`**, `allSettled`, `race`, `any`.
+3. Implement **`Array.prototype.map` / `filter` / `reduce`**.
+4. Implement **`Function.prototype.bind`**.
+5. Implement **`deepClone`** (handle cycles).
+6. Implement **`curry`**, `pipe`, `compose`.
+7. Implement **`memoize`**.
+8. Implement an **EventEmitter** (`on`/`off`/`emit`/`once`).
+9. Implement **`flatten`** for a nested array.
+10. Implement **`retry`** with exponential backoff.
+11. Implement **`once`** (call a function at most once).
+12. Implement a **promise-based `sleep(ms)`**.
+13. Implement **`groupBy`** / `chunk` / `uniqBy`.
+14. Implement an **LRU cache**.
+15. Implement a **promise concurrency limiter** (pool).
+
 ---
 
 **Related:** [02-browser](../02-browser/) · [04-typescript](../04-typescript/) · [18-design-patterns](../18-design-patterns/) · [16-machine-coding](../16-machine-coding/#-js-utilities-implement-these)

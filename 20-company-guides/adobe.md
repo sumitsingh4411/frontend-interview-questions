@@ -45,6 +45,17 @@
 3. Review [JS internals](../03-javascript/) deeply.
 4. Study a collaborative-editor [design](../15-system-design/design-google-docs.md).
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** model complex editor state cleanly · implement undo/redo · keep canvas/transform work performant · show deep JS fundamentals.
+**🔴 Avoid:** shallow state modeling · ignoring performance on heavy canvases · weak grasp of closures/prototypes/events.
+
+## 📝 Sample interviewer prompts
+
+- "Build a drawing canvas with **undo/redo**."
+- "How would you model selection and transforms in an editor?"
+- "Implement an event bus for tools to communicate."
+
 ---
 
 > _Interviewed at Adobe? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._

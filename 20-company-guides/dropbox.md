@@ -45,6 +45,17 @@
 3. Study [offline/sync patterns](../17-interview-patterns/).
 4. Practice a file-browser system design.
 
+## 🟢 Green flags · 🔴 Red flags
+
+**🟢 Do:** render large file trees with virtualization · build chunked/resumable uploads with progress + retry · handle sync/offline and conflicts.
+**🔴 Avoid:** rendering huge trees fully · uploads with no progress/retry · ignoring conflict resolution.
+
+## 📝 Sample interviewer prompts
+
+- "Build a **file explorer** tree view."
+- "Build a resumable file upload with a progress bar."
+- "Design offline sync for a file browser."
+
 ---
 
 > _Interviewed at Dropbox? Add the questions you got (role + year) via a [PR](../CONTRIBUTING.md)._
