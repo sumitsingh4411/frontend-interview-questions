@@ -1,0 +1,177 @@
+<div align="center">
+
+# Company Specific
+
+<sub>⚡ JavaScript · **159 questions**</sub>
+
+<a href="README.md">⬅ Bank index</a> &nbsp;·&nbsp; <a href="../README.md">JavaScript</a> &nbsp;·&nbsp; <a href="../../README.md">Home</a>
+
+</div>
+
+> 🟢 Easy · 🟡 Medium · 🔴 Hard · prompts only — work the answers using the section guides.
+
+---
+
+- 🟡 Implement a debounce function and explain how Google-scale search-as-you-type UIs use it.
+- 🔴 Explain how you'd architect a client-side module system for a very large monorepo web app.
+- 🟡 Implement a function to flatten a deeply nested array without recursion (using a stack).
+- 🔴 Explain the Event Loop and predict output for a mixed Promise/setTimeout snippet.
+- 🔴 Design a client-side caching layer for an API-heavy dashboard, including cache invalidation strategy.
+- 🔴 Implement a Trie and use it to power an autocomplete suggestion engine.
+- 🟡 Explain how you'd optimize a page for Largest Contentful Paint (LCP) on a slow 3G connection.
+- 🟡 Write a polyfill for `Array.prototype.reduce`.
+- 🔴 Explain trade-offs between client-side rendering and server-side rendering for a search-results page.
+- 🟡 Behavioral: Tell me about a time you had to make a difficult trade-off between shipping speed and code quality.
+- 🔴 Explain how React's reconciliation algorithm (Fiber) relates to plain JS closures and the call stack.
+- 🔴 Implement a simplified Virtual DOM diffing function for a list of keyed elements.
+- 🔴 Design the data-fetching and caching layer for a social media feed with infinite scroll.
+- 🟡 Implement `useDebounce` and `useThrottle` custom hooks.
+- 🔴 Explain how you'd detect and fix a memory leak in a single-page app with long user sessions.
+- 🟡 Implement a function to deep-compare two React props objects for a custom `shouldComponentUpdate`.
+- 🔴 Explain closures in the context of React hooks — what is a 'stale closure' bug?
+- 🟡 Design a notifications badge/counter system that stays in sync across multiple open tabs.
+- 🔴 Implement an LRU cache to back an image-preview cache in a photo-sharing feed.
+- 🟡 Behavioral: Describe a time you influenced a technical decision across multiple teams.
+- 🔴 Implement a rate limiter to throttle checkout API calls during a flash sale.
+- 🔴 Design the frontend architecture for a product listing page handling millions of SKUs with filters.
+- 🔴 Implement a retry-with-backoff utility for flaky payment API calls.
+- 🟡 Explain how you'd implement client-side A/B testing without harming Core Web Vitals.
+- 🟡 Write an algorithm to find the top K best-selling products from a large in-memory array.
+- 🔴 Explain your approach to debugging a checkout flow that intermittently double-submits orders.
+- 🟡 Implement a shopping cart's quantity debounced update, batching rapid clicks into a single API call.
+- 🔴 Design an offline-tolerant cart that syncs to the server once connectivity is restored.
+- 🟡 Leadership Principle style: Tell me about a time you disagreed with a decision but committed to it anyway.
+- 🔴 Explain how you'd instrument frontend performance metrics (RUM) at Amazon's scale.
+- 🟢 Explain the differences between `var`, `let`, and `const` and how TypeScript (used heavily at Microsoft) builds on top of them.
+- 🔴 Design a plugin/extension architecture (similar to VS Code extensions) using an event-driven pub/sub model.
+- 🔴 Explain how Web Workers could be used to keep a rich text editor (like Word Online) responsive during spellcheck.
+- 🔴 Implement a deep-diff algorithm to support real-time collaborative editing conflict detection.
+- 🟡 Explain accessibility (ARIA roles, focus management) considerations for a custom dropdown component.
+- 🔴 Debug a scenario where IndexedDB writes silently fail in a PWA offline mode.
+- 🟢 Implement a memoized Fibonacci function and discuss space/time trade-offs.
+- 🟡 Explain how you would design telemetry collection in the browser without blocking the main thread.
+- 🟡 Behavioral: Describe how you handled ambiguous requirements on a cross-team project.
+- 🔴 Design a client-side video player state machine (buffering, playing, paused, error, ended).
+- 🟡 Explain how you'd implement adaptive prefetching of the next episode's metadata using IntersectionObserver.
+- 🔴 Implement a circuit breaker for a flaky recommendations API call.
+- 🔴 Explain how Netflix-style A/B testing frameworks might hook into a JS rendering pipeline at the edge.
+- 🔴 Debug a memory leak in a long-running single-page app that never navigates away (like a TV app).
+- 🔴 Implement a virtualized horizontally-scrolling row of movie posters ('infinite carousel').
+- 🔴 Explain how Service Workers could support offline playback queuing of downloaded content.
+- 🟡 Implement a throttled analytics-beacon sender batching UI interaction events.
+- 🔴 Explain trade-offs of client-side vs server-side rendering for a content-browsing homepage.
+- 🟡 Behavioral: Tell me about a time you had to make a decision with incomplete data.
+- 🔴 Design a real-time driver-location-tracking UI using WebSockets, including reconnection handling.
+- 🟡 Implement a debounce/throttle hybrid for map drag-to-search 'search this area' functionality.
+- 🔴 Explain how you'd batch and deduplicate rapid location updates before rendering on a map.
+- 🔴 Design an offline-tolerant ride-request flow for spotty network conditions (e.g., underground).
+- 🔴 Implement a rate limiter for a surge-pricing polling mechanism.
+- 🔴 Debug a race condition where a cancelled ride request UI still shows as 'in progress'.
+- 🟡 Explain how you would keep a live ETA counter accurate and performant using timers.
+- 🔴 Design a micro-frontend split between the Rider app and Driver app shared component library.
+- 🟡 Implement geofencing logic client-side to detect when a device enters/exits a zone from coordinate updates.
+- 🟡 Behavioral: Describe a high-pressure production incident you helped resolve.
+- 🔴 Design a search-results page with filters, pagination, and URL-synced state.
+- 🟡 Implement an image lazy-loading gallery using IntersectionObserver for listing photos.
+- 🟡 Explain how you'd design a date-range picker component's internal state management.
+- 🔴 Implement debounced address autocomplete with request cancellation on fast typing.
+- 🟡 Design a booking flow that must survive a page refresh mid-checkout (persist to storage).
+- 🔴 Debug a hydration mismatch bug between server-rendered and client-rendered listing prices.
+- 🟡 Explain how you'd internationalize currency and date formatting using the Intl API.
+- 🟡 Implement a rating/review star component supporting keyboard accessibility.
+- 🟡 Explain a caching strategy for host-listing data that's viewed repeatedly but changes infrequently.
+- 🟡 Behavioral: Tell me about a time you advocated for the user during a product trade-off discussion.
+- 🔴 Explain how you would build a secure payment form that isolates card data using iframes (Stripe Elements style).
+- 🔴 Implement idempotency-key generation client-side to prevent duplicate payment submissions.
+- 🔴 Explain CSP configuration needed to safely embed a third-party payment iframe.
+- 🔴 Implement retry-with-backoff for a webhook-status polling mechanism.
+- 🔴 Design client-side validation for a credit card form (Luhn check, expiry, CVC) without leaking full PANs to JS memory longer than needed.
+- 🟡 Debug a race condition where double-clicking 'Pay Now' triggers two charge requests.
+- 🟡 Explain how you'd design error handling and user messaging for declined-card scenarios across locales.
+- 🟡 Implement a masked input component for credit card number formatting as the user types.
+- 🔴 Explain SameSite cookie considerations for a payment flow embedded cross-origin.
+- 🟡 Behavioral: Tell me about a time correctness/security trumped shipping speed for you.
+- 🔴 Design a browser-based canvas editor's undo/redo stack (command pattern).
+- 🟡 Implement a debounced auto-save feature for a design document editor.
+- 🔴 Explain how Web Workers could offload heavy image-filter computations off the main thread.
+- 🟡 Implement a color-picker component with keyboard accessibility and ARIA live region updates.
+- 🔴 Explain memory management concerns when working with large `ArrayBuffer`/`ImageData` objects in a browser editor.
+- 🔴 Design a plugin architecture for third-party filters/extensions in a web-based creative tool.
+- 🔴 Debug a canvas rendering performance issue during rapid brush-stroke input.
+- 🟡 Implement a deep-clone utility preserving `ArrayBuffer` data for a document 'duplicate' feature.
+- 🔴 Explain how you'd implement collaborative cursors (multiple users editing) using WebSockets.
+- 🟡 Behavioral: Describe a time you balanced creative/design constraints with engineering feasibility.
+- 🔴 Design a Kanban board's drag-and-drop reordering logic and optimistic UI updates.
+- 🔴 Implement optimistic updates with rollback-on-failure for a task status change.
+- 🔴 Explain how you'd architect a plugin/marketplace system (like Jira/Confluence apps) using iframes or Web Components.
+- 🔴 Implement a real-time collaborative comment thread using WebSockets with conflict handling.
+- 🔴 Debug stale UI state after a background sync updates a ticket another user is viewing.
+- 🟡 Explain how you'd implement keyboard shortcuts globally without conflicting with browser defaults.
+- 🟡 Design a notification/activity feed with read/unread state synced across devices.
+- 🟡 Implement a rich-text editor's mention (`@user`) autocomplete dropdown.
+- 🟡 Explain your approach to feature-flagging a risky UI change safely across teams.
+- 🟡 Behavioral: Tell me about a time you had to push back on scope creep near a deadline.
+- 🔴 Explain performance-first principles you'd apply building a JS web app that must feel 'native' on iOS Safari.
+- 🔴 Implement smooth 60fps scroll-linked animations using `requestAnimationFrame`.
+- 🟡 Explain accessibility (VoiceOver) considerations for custom interactive components.
+- 🔴 Debug jank caused by layout thrashing during a scroll event handler.
+- 🔴 Design a media-heavy product page (like apple.com) optimized for LCP and CLS.
+- 🟡 Implement lazy-loading of below-the-fold `<video>` content with autoplay-on-visibility.
+- 🔴 Explain how you'd detect and gracefully handle Safari-specific API differences (e.g., IndexedDB quirks).
+- 🔴 Implement a pinch-to-zoom / gesture handler using pointer events.
+- 🟡 Explain privacy-conscious analytics design (minimal data collection) for a client-side tracker.
+- 🟡 Behavioral: Describe your attention to detail on a pixel-perfect UI implementation.
+- 🔴 Design a live order-tracking map UI with WebSocket-driven courier location updates.
+- 🟡 Implement a debounced restaurant-search-as-you-type with cancellation of stale requests.
+- 🟡 Explain how you'd cache and invalidate a restaurant menu that changes infrequently but must reflect live item availability.
+- 🔴 Debug a race condition between 'add to cart' clicks and a menu refresh overwriting cart state.
+- 🔴 Implement a retry mechanism for order-status polling with exponential backoff.
+- 🔴 Design an offline-tolerant checkout that queues an order if connectivity briefly drops.
+- 🟡 Explain how you'd batch multiple rapid quantity-stepper clicks into a single cart-update API call.
+- 🟡 Implement a countdown ETA timer synced against server time rather than client clock drift.
+- 🟡 Explain performance considerations for rendering a long, filterable restaurant list.
+- 🟡 Behavioral: Tell me about a time you shipped an MVP under time pressure and what you'd improve later.
+- 🔴 Design an infinite-scrolling professional feed with ad-slot injection at intervals.
+- 🟡 Implement a 'seen/unseen' notification badge synced across tabs using the storage event.
+- 🟡 Explain how you'd implement a mentions/hashtag autocomplete in a post-composer textbox.
+- 🟡 Debug duplicate analytics events firing due to an event listener attached multiple times.
+- 🔴 Design a connections-graph visualization that stays performant with thousands of nodes.
+- 🟡 Implement lazy-loaded profile images with a blurred low-res placeholder (LQIP pattern).
+- 🟡 Explain how you'd throttle 'typing indicator' events in a messaging feature.
+- 🟡 Design client-side rate limiting for connection-request spam prevention.
+- 🟡 Explain accessibility considerations for an infinite feed for screen-reader users.
+- 🟡 Behavioral: Describe a time you mentored a junior engineer through a difficult bug.
+- 🔴 Design a masonry-grid image layout that virtualizes off-screen pins for performance.
+- 🟡 Implement lazy-loading and blur-up placeholders for a pin image grid.
+- 🟡 Explain how you'd debounce and batch 'save pin' clicks to avoid duplicate API writes.
+- 🔴 Design infinite scroll with dynamic re-layout as new image dimensions load in.
+- 🟡 Debug Cumulative Layout Shift caused by images without explicit width/height loading late.
+- 🔴 Implement client-side image dominant-color extraction for placeholder backgrounds using Canvas.
+- 🟡 Explain caching strategy for a personalized recommendation feed that updates periodically.
+- 🟡 Implement a search-and-filter combo (boards + pins) with combined debounced queries.
+- 🔴 Explain how Service Workers could support an offline 'saved pins' view.
+- 🟡 Behavioral: Tell me about a time you improved a metric (engagement/performance) with a frontend change.
+- 🔴 Design a browser-based design canvas's layer/z-index management system.
+- 🔴 Implement undo/redo for a design editor using the command pattern with a history stack.
+- 🔴 Explain how you'd offload expensive image filter rendering to a Web Worker without blocking drag interactions.
+- 🔴 Implement snapping/alignment guide logic when dragging design elements near each other.
+- 🔴 Debug a performance regression when rendering hundreds of draggable elements on a canvas.
+- 🔴 Explain real-time collaborative editing conflict resolution for two users moving the same element.
+- 🟡 Implement a debounced auto-save for a design project to avoid excessive network writes.
+- 🟡 Explain accessibility trade-offs in a highly visual, drag-and-drop-centric editor.
+- 🟡 Implement export-to-image functionality using the Canvas API's `toBlob`/`toDataURL`.
+- 🟡 Behavioral: Tell me about a time you simplified a complex UI interaction based on user feedback.
+- 🔴 Implement a streaming UI that renders tokens from a server-sent event / ReadableStream response incrementally.
+- 🟡 Explain how you'd cancel an in-flight streaming completion request cleanly using AbortController.
+- 🔴 Design a chat interface's message list virtualization for very long conversations.
+- 🔴 Implement client-side rate limiting/backoff for a chat app hitting API rate limits.
+- 🟡 Explain how you'd debounce 'typing...' indicator broadcasts in a multi-user chat.
+- 🔴 Debug a race condition where a regenerated response overlaps with a still-streaming previous response.
+- 🟡 Design optimistic UI updates for sending a chat message before server confirmation.
+- 🔴 Implement markdown-to-DOM incremental rendering as streamed text arrives, safely avoiding XSS.
+- 🔴 Explain how Web Workers could tokenize/highlight code blocks without blocking the main thread during streaming.
+- 🟡 Behavioral: Tell me about a time you had to design UI for a fundamentally new kind of interaction pattern.
+
+---
+
+_Part of the [⚡ JavaScript question bank](README.md). Spot an error or duplicate? [Open a PR](../../CONTRIBUTING.md)._

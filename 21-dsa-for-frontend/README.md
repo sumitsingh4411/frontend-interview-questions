@@ -8,7 +8,7 @@ Yes, frontend interviews have a DSA round — but it's a **specific slice**. You
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
-> 📚 **[Full question bank — 900+ DSA problems →](question-bank.md)**
+> 📚 **[Full question bank — 900+ DSA problems, bucketed into 20 patterns →](question-bank/README.md)**
 
 ### 🎯 How DSA shows up in frontend loops
 - **Phone screens** — one array/string/hashmap problem, often with a UI twist.

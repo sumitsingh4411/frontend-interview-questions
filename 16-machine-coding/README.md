@@ -8,7 +8,7 @@
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
-> 📚 **[Full question bank — 1,200+ machine-coding problems by category →](question-bank.md)**
+> 📚 **[Full question bank — 1,200+ machine-coding problems across 28 categories →](question-bank/README.md)**
 
 ### ⏱️ How to nail a machine-coding round
 - **Clarify** the spec + edge cases first (empty, loading, error, long text, keyboard).

@@ -8,7 +8,7 @@ The main event. "Design X" — where you drive the whole conversation: requireme
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
-> 📚 **[Full question bank — 353 system-design questions by area →](question-bank.md)**
+> 📚 **[Full question bank — 353 system-design questions across 19 areas →](question-bank/README.md)**
 
 ### 🧠 How to approach any "Design X"
 1. **Clarify requirements** (functional + non-functional) — don't skip this, it's graded.

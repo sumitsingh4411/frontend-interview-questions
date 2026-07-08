@@ -140,7 +140,7 @@ Fast answers to the most-searched questions.
 
 ## 📚 Explore the full handbook
 
-> 🗂️ **Full question banks** (exhaustive lists, curated from real prep sheets): [1,200+ Machine Coding](16-machine-coding/question-bank.md) · [548 JavaScript](03-javascript/question-bank.md) · [353 System Design](15-system-design/question-bank.md) · [900+ DSA](21-dsa-for-frontend/question-bank.md) · [React](06-react/question-bank.md)
+> 🗂️ **Full question banks** (exhaustive lists by category, curated from real prep sheets): [1,200+ Machine Coding](16-machine-coding/question-bank/README.md) · [548 JavaScript](03-javascript/question-bank/README.md) · [353 System Design](15-system-design/question-bank/README.md) · [900+ DSA](21-dsa-for-frontend/question-bank/README.md) · [React](06-react/question-bank.md)
 
 **🧱 Core foundations**
 

@@ -1,0 +1,256 @@
+<div align="center">
+
+# Arrays & Hashing
+
+<sub>🧠 DSA for Frontend · **238 questions**</sub>
+
+<a href="README.md">⬅ Bank index</a> &nbsp;·&nbsp; <a href="../README.md">DSA for Frontend</a> &nbsp;·&nbsp; <a href="../../README.md">Home</a>
+
+</div>
+
+> 🟢 Easy · 🟡 Medium · 🔴 Hard · prompts only — work the answers using the section guides.
+
+---
+
+- 🟢 Two Sum
+- 🟢 Contains Duplicate
+- 🟡 Product of Array Except Self
+- 🟡 Maximum Subarray
+- 🟡 Maximum Product Subarray
+- 🟡 Longest Consecutive Sequence
+- 🟡 Rotate Array
+- 🟢 Majority Element
+- 🟢 Find All Numbers Disappeared in an Array
+- 🔴 First Missing Positive
+- 🟡 Path Sum II
+- 🟡 Populating Next Right Pointers in Each Node
+- 🟡 Car Fleet
+- 🔴 Reverse Nodes in k-Group
+- 🟢 Last Stone Weight
+- 🟡 Hand of Straights
+- 🟡 Merge Triplets to Form Target Triplet
+- 🟡 Detect Squares
+- 🟢 First Bad Version
+- 🟢 Ransom Note
+- 🟢 Path Sum
+- 🟢 Remove Element
+- 🟢 Length of Last Word
+- 🔴 Text Justification
+- 🟡 Minimum Size Subarray Sum
+- 🟢 Word Pattern
+- 🟢 Contains Duplicate II
+- 🟢 Summary Ranges
+- 🟡 Populating Next Right Pointers in Each Node II
+- 🟡 Evaluate Division
+- 🟡 Minimum Genetic Mutation
+- 🟡 Maximum Sum Circular Subarray
+- 🟢 Largest Element in an Array
+- 🟢 Second Largest Element in an Array
+- 🟢 Check if Array is Sorted
+- 🟢 Left Rotate an Array by One Place
+- 🟡 Left Rotate an Array by D Places
+- 🟢 Union of Two Sorted Arrays
+- 🟢 Maximum Consecutive Ones
+- 🟢 Majority Element (>n/2 times)
+- 🟡 Maximum Subarray (Kadane's Algorithm)
+- 🟡 Rearrange Array Elements by Sign
+- 🟢 Leaders in an Array
+- 🟡 Count Subarrays with Given Sum
+- 🟡 Majority Element II (>n/3 times)
+- 🟡 Largest Subarray with 0 Sum
+- 🔴 Merge Two Sorted Arrays Without Extra Space
+- 🔴 Reverse Pairs
+- 🟢 Lower Bound / Upper Bound
+- 🟢 Floor and Ceil in Sorted Array
+- 🟡 First and Last Occurrence in Sorted Array
+- 🟢 Number of Occurrences
+- 🟢 Find Square Root of a Number
+- 🟡 Row with Maximum 1s
+- 🟡 Compare Version Numbers
+- 🟢 Delete a Given Node When Node is Given
+- 🟡 Detect the Starting Point of the Loop
+- 🟡 Find the Length of the Loop
+- 🟡 Subset Sum I
+- 🟢 Check if a Number is Odd
+- 🟢 Check if a Number is a Power of 2
+- 🟡 Sort a K-Sorted Array
+- 🟡 Minimum Number of Platforms Required
+- 🟡 N Meetings in One Room
+- 🟡 Subset Sum Equal to Target
+- 🟢 Swap Two Numbers Without Temp Variable
+- 🟢 Check Prime Number
+- 🟢 Print All Divisors of a Number
+- 🟢 Print Fibonacci Series
+- 🟢 Reverse an Array
+- 🟢 Find Maximum and Minimum in an Array
+- 🟢 Move Negative Numbers to One Side
+- 🟢 Union and Intersection of Two Sorted Arrays
+- 🟢 Cyclically Rotate an Array by One
+- 🟡 Kadane's Algorithm - Maximum Subarray Sum
+- 🟡 Minimize the Maximum Difference Between Heights
+- 🟡 Minimum Jumps to Reach End of Array
+- 🟡 Find Duplicate in Array of N+1 Integers
+- 🟢 Find All Pairs with Given Sum
+- 🟡 Common Elements in Three Sorted Arrays
+- 🟡 Rearrange Alternating Positive and Negative Items
+- 🟡 Subarray with Sum Equal to Zero
+- 🟡 Elements Appearing More Than N/K Times
+- 🟡 Chocolate Distribution Problem
+- 🟡 Three-Way Partitioning of an Array
+- 🟡 Minimum Swaps to Bring Elements Less Than K Together
+- 🟡 Minimum Bracket Reversals to Balance an Expression
+- 🟡 Search in a Rotated Sorted Array
+- 🟢 Square Root of an Integer
+- 🟢 Find the Majority Element
+- 🟡 Searching in an Array Where Adjacent Differ by At Most K
+- 🟡 Find Four Elements That Sum to a Given Value
+- 🟡 Maximum Sum with No Two Adjacent Elements
+- 🟡 Print All Subarrays with Sum Zero
+- 🟡 Find Starting Point of the Loop
+- 🟡 Evaluation of Postfix Expression
+- 🔴 Largest Rectangular Area in Histogram
+- 🟡 First Negative Integer in Every Window of Size K
+- 🔴 Maximum Sum of Non-Adjacent Nodes
+- 🟡 Buy Maximum Stocks with Daily Limit
+- 🔴 Minimize Cash Flow Among Friends
+- 🟡 M-Coloring Problem
+- 🟡 Subset Sum Problem
+- 🔴 The Knight's Tour Problem
+- 🟡 Connect N Ropes with Minimum Cost
+- 🟡 Minimum Cost Path Problem
+- 🟡 Partition Problem
+- 🔴 Optimal Strategy for a Game
+- 🔴 Word Wrap Problem
+- 🟡 Find the Two Non-Repeating Elements
+- 🟡 Subarray Sum Equals K
+- 🟢 Reverse the array
+- 🟢 Find the maximum and minimum element in an array
+- 🟡 Find the Kth max and min element of an array
+- 🟡 Given an array of 0s, 1s and 2s, sort it without using any sorting algorithm
+- 🟢 Move all the negative elements to one side of the array
+- 🟢 Find the Union and Intersection of two sorted arrays
+- 🟢 Write a program to cyclically rotate an array by one
+- 🟡 Find largest sum contiguous subarray
+- 🟡 Minimise the maximum difference between heights
+- 🟡 Minimum number of jumps to reach end of an array
+- 🟡 Find duplicate in an array of N+1 integers
+- 🔴 Merge two sorted arrays without using extra space
+- 🟡 Kadane's Algorithm
+- 🟢 Find all pairs of integers in array whose sum equals a given number
+- 🟡 Find common elements in 3 sorted arrays
+- 🟡 Rearrange the array alternately in positive and negative with O(1) extra space
+- 🟡 Find if there is any subarray with sum equal to 0
+- 🟡 Find maximum product subarray
+- 🟡 Given an array of size n and a number k, find all elements appearing more than n/k times
+- 🔴 Maximum profit by buying and selling a share at most twice
+- 🟢 Find whether an array is a subset of another array
+- 🟡 Find the triplet that sums to a given value
+- 🟡 Three-way partitioning of an array around a given value
+- 🟡 Minimum swaps required to bring elements less equal K together
+- 🟡 Find the row with maximum number of 1s
+- 🟢 Convert a sentence into its equivalent mobile numeric keypad sequence
+- 🟡 Minimum number of bracket reversals needed to balance an expression
+- 🟡 Search a word in a 2D grid of characters
+- 🔴 Boyer-Moore algorithm for pattern searching
+- 🟡 Minimum number of swaps for bracket balancing
+- 🟡 Recursively remove all adjacent duplicates
+- 🟡 Find number of customers who could not get a computer
+- 🔴 Recursively print all sentences that can be formed from a list of word lists
+- 🟢 Find a fixed point (value equal to index) in a given array
+- 🟢 Maximum and minimum of an array using minimum number of comparisons
+- 🔴 Optimum location of point to minimize total distance
+- 🟡 Searching in an array where adjacent elements differ by at most k
+- 🟡 Maximum sum such that no two elements are adjacent
+- 🟡 Count triplets with sum smaller than a given value
+- 🟢 Merge two sorted arrays
+- 🟡 Print all subarrays with sum equal to zero
+- 🟡 Product array puzzle
+- 🟡 Minimum number of swaps required to sort the array
+- 🟡 Bishu and Soldiers
+- 🟡 Rasta and Kheshtak
+- 🟡 Kth smallest number
+- 🟢 Find the pivot element in a sorted array
+- 🔴 ROTI - Prata SPOJ
+- 🔴 DoubleHelix SPOJ
+- 🟡 Subset Sums
+- 🟡 Find the starting point of the loop
+- 🟡 Delete nodes which have a greater value on the right side
+- 🟡 Find the first non-repeating character from a stream of characters
+- 🔴 Replace every element with the least greater element on its right
+- 🟡 Given n appointments, find the conflicting appointments
+- 🟡 Water Connection Problem
+- 🔴 Maximum trains for which stoppage can be provided
+- 🟡 Buy maximum stocks if i stocks can be bought on the i-th day
+- 🟡 Find the minimum and maximum amount to buy all N candies
+- 🔴 Minimize cash flow among a given set of friends who have borrowed money from each other
+- 🟡 Minimum cost to cut a board into squares
+- 🟡 Find maximum meetings in one room
+- 🟡 Maximum product subset of an array
+- 🟢 Maximize array sum after K negations
+- 🟡 Maximize the sum of arr[i] * i
+- 🟡 Maximum sum of absolute difference of an array
+- 🟡 Maximize sum of consecutive differences in a circular array
+- 🟡 Minimum sum of absolute difference of pairs of two arrays
+- 🔴 DEFKIN - Defense of a Kingdom
+- 🔴 DIEHARD - Die Hard
+- 🔴 GERGOVIA - Wine trading in Gergovia
+- 🟡 Picking Up Chicks
+- 🔴 CHOCOLA - Chocolate
+- 🔴 ARRANGE - Arranging Amplifiers
+- 🟡 Find smallest number with given number of digits and sum of digits
+- 🔴 Tug of War
+- 🔴 Find the shortest safe route in a path with landmines
+- 🔴 Find the maximum number possible by doing at most K swaps
+- 🔴 Find if there is a path of more than k length from a source
+- 🔴 Arithmetic expression evaluation
+- 🔴 Largest rectangular area in a histogram
+- 🟡 Check whether an expression contains a redundant bracket
+- 🟡 Find the first circular tour that visits all petrol pumps
+- 🔴 Sum of minimum and maximum elements of all subarrays of size K
+- 🔴 Minimum sum of squares of character counts after removing K characters
+- 🔴 Maximum of all subarrays of size K
+- 🟡 Kth smallest and largest element in an unsorted array
+- 🔴 Smallest range covering elements from K lists
+- 🟡 Minimum sum of two numbers formed from the digits of an array
+- 🔴 Search in a maze
+- 🟡 Minimum steps by a Knight
+- 🟡 Making wired connections
+- 🟡 Find whether it is possible to finish all tasks from given dependencies
+- 🔴 Given a sorted dictionary of an alien language, find the order of characters
+- 🔴 Travelling Salesman Problem
+- 🔴 Oliver and the Game
+- 🟡 M-Colouring Problem
+- 🔴 Minimum edges to reverse to make a path from source to destination
+- 🔴 Paths to travel each node using each edge (Seven Bridges)
+- 🔴 Vertex Cover Problem
+- 🔴 Chinese Postman / Route Inspection Problem
+- 🔴 Minimize the cashflow among friends who have borrowed money from each other
+- 🔴 Two Clique Problem
+- 🔴 Find the shortest unique prefix for every word in a given list
+- 🟡 Binomial Coefficient Problem
+- 🟡 Friends Pairing Problem
+- 🟡 Gold Mine Problem
+- 🟡 Painting the Fence Problem
+- 🟡 Maximize the Cut Segments
+- 🟡 Space Optimized Solution of LCS
+- 🟡 Maximum Length Chain of Pairs
+- 🟡 Maximum sum of pairs with a specific difference
+- 🟡 Min Cost Path Problem
+- 🟡 Minimum number of jumps to reach the end
+- 🔴 Minimum cost to fill a given weight in a bag
+- 🔴 Minimum removals from array to make max-min <= K
+- 🟡 Count the number of ways to reach a given score in a game
+- 🟡 Largest sum contiguous subarray
+- 🟡 Smallest sum contiguous subarray
+- 🔴 Largest Independent Set Problem
+- 🟡 Coin game winner where every player has three choices
+- 🔴 Maximum profit from buying/selling a share at most twice
+- 🟡 Mobile Numeric Keypad Problem
+- 🔴 Maximum profit from buying/selling a share at most K times
+- 🟡 Find the two non-repeating elements in an array of repeating elements
+- 🟡 Power Set
+- 🟡 Longest Repeating Char Replacement
+
+---
+
+_Part of the [🧠 DSA for Frontend question bank](README.md). Spot an error or duplicate? [Open a PR](../../CONTRIBUTING.md)._
