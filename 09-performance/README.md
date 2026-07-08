@@ -53,6 +53,29 @@ Every system-design answer is judged on this. Know the metrics, know how to move
 | Performance budgets | 🔴 | 45m | `#strategy` | [web.dev: budgets ⭐](https://web.dev/articles/performance-budgets-101) |
 | Bundle analysis | 🟡 | 30m | `#bundling` `#tooling` | [webpack-bundle-analyzer ⭐](https://github.com/webpack-contrib/webpack-bundle-analyzer) |
 
+## ❓ Rapid-fire web performance interview questions
+
+Real performance interview questions. Answer out loud, then verify above.
+
+1. What are the **Core Web Vitals** (LCP, CLS, INP) and their thresholds?
+2. How do you **improve LCP**?
+3. What causes **layout shift (CLS)** and how do you prevent it?
+4. What is **INP** and how do you make interactions faster?
+5. How does **code splitting** reduce bundle size?
+6. What is **tree shaking**?
+7. How do you **optimize images** (formats, `srcset`, lazy loading)?
+8. **`preload` vs `prefetch` vs `preconnect`** — what's the difference?
+9. How does **HTTP caching** improve performance?
+10. What is **list virtualization** and when do you need it?
+11. **Infinite scroll vs pagination** — performance trade-offs?
+12. How do you **debounce/throttle** expensive handlers?
+13. How do you **find and fix a memory leak**?
+14. What is a **performance budget**?
+15. How do you **measure** performance in the field (RUM vs lab)?
+16. How do **web workers** improve responsiveness?
+
+---
+
 **Related:** [02-browser](../02-browser/) · [12-networking](../12-networking/) · [17-interview-patterns](../17-interview-patterns/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

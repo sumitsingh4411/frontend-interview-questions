@@ -48,6 +48,28 @@ How the browser turns bytes into pixels — and why your app is slow. The "expla
 | Memory leaks & detection | 🔴 | 1h | `#memory` `#performance` | [Chrome DevTools: memory ⭐](https://developer.chrome.com/docs/devtools/memory-problems) |
 | Storage internals (cache/quota) | 🟡 | 45m | `#storage` | [web.dev: storage ⭐](https://web.dev/articles/storage-for-the-web) |
 
+## ❓ Rapid-fire browser internals interview questions
+
+Real "how does the browser work" interview questions. Answer out loud, then verify above.
+
+1. Walk through the **rendering pipeline**: parse → layout → paint → composite.
+2. What is the **critical rendering path** and what blocks it?
+3. **Reflow vs repaint vs composite** — which are expensive?
+4. Explain the **event loop**, the call stack, and the task queues.
+5. **Microtasks vs macrotasks** — what runs first?
+6. What is **`requestAnimationFrame`** vs `requestIdleCallback`?
+7. How does the browser build the **DOM and CSSOM**?
+8. What is the **compositor thread** and why does it matter?
+9. How does **garbage collection** (mark & sweep) work?
+10. What causes and how do you find **memory leaks**?
+11. What is **V8** and how does JIT compilation work?
+12. Why are **transform/opacity** animations cheaper than `top`/`left`?
+13. What is a **long task** and how do you break it up?
+14. What is the difference between the **main thread and web workers**?
+15. How does the browser's **multi-process architecture** work?
+
+---
+
 **Related:** [01-fundamentals](../01-fundamentals/) · [03-javascript](../03-javascript/) · [09-performance](../09-performance/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

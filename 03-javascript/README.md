@@ -68,6 +68,43 @@ The language, deeply. These are the questions that get asked in *every* frontend
 | Numbers, `BigInt`, floating point | 🟡 | 30m | `#basics` | [javascript.info: numbers ⭐](https://javascript.info/number) |
 | Date & time handling | 🟢 | 30m | `#basics` | [MDN: Date ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) |
 
+## ❓ Rapid-fire JavaScript interview questions
+
+The exact questions asked in real JavaScript interviews. Answer out loud, then verify against the resources above.
+
+1. What is a **closure**? Give a real-world use case.
+2. Explain the **event loop** — how do microtasks and macrotasks differ?
+3. What's the difference between **`==` and `===`**?
+4. What is **hoisting**? How do `var`, `let`, and `const` differ?
+5. How does **`this`** work? What do `call`, `apply`, and `bind` do?
+6. What is the **prototype chain** and prototypal inheritance?
+7. Difference between **`null` and `undefined`**?
+8. What is **event delegation** and why is it useful?
+9. How do you **deep clone** an object? Shallow vs deep copy?
+10. What are **`debounce` and `throttle`** — and when do you use each?
+11. Explain **`Promise.all` vs `allSettled` vs `race` vs `any`**.
+12. What is `async`/`await` and how do you handle errors in it?
+13. What is the **temporal dead zone (TDZ)**?
+14. How do **ES Modules** differ from CommonJS?
+15. What is **currying** and partial application?
+16. `map` vs `forEach` vs `reduce` — when to use which?
+17. What is a **generator** function?
+18. What causes **memory leaks** in JavaScript?
+19. What are **`WeakMap`/`WeakSet`** and when are they useful?
+20. What is a **Proxy** and what can it do?
+21. What's the difference between **synchronous and asynchronous** code?
+22. How does **garbage collection** work in JS engines?
+23. What is a **pure function** and why does immutability matter?
+24. What do **optional chaining (`?.`)** and **nullish coalescing (`??`)** do?
+25. How do you **cancel a fetch request** (AbortController)?
+26. `slice` vs `splice`? What does `Object.freeze` do?
+27. `setTimeout` vs `setInterval` vs `requestAnimationFrame`?
+28. What is the difference between **call by value and call by reference**?
+29. How does **`Array.prototype.reduce`** work — implement it.
+30. What is the output? (event-loop / closure / hoisting trick questions)
+
+---
+
 **Related:** [02-browser](../02-browser/) · [04-typescript](../04-typescript/) · [18-design-patterns](../18-design-patterns/) · [16-machine-coding](../16-machine-coding/#-js-utilities-implement-these)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

@@ -54,6 +54,33 @@ The bedrock. If any of these are shaky, everything above them wobbles in an inte
 | Internationalization (i18n) basics | 🟡 | 45m | `#i18n` | [MDN: Intl ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) |
 | Character encoding (UTF-8/Unicode) | 🟢 | 30m | `#basics` | [MDN: Unicode ⭐](https://developer.mozilla.org/en-US/docs/Glossary/Unicode) |
 
+## ❓ Rapid-fire HTML & web fundamentals interview questions
+
+Real HTML / web-fundamentals interview questions. Answer out loud, then verify above.
+
+1. What is **semantic HTML** and why does it matter for SEO and a11y?
+2. What happens **when you type a URL and press Enter** (end to end)?
+3. What is the **DOM**? How does it differ from HTML?
+4. **Event bubbling vs capturing** — explain event propagation.
+5. What is **event delegation**?
+6. **`localStorage` vs `sessionStorage` vs cookies vs IndexedDB**?
+7. What are **cookie attributes** (`HttpOnly`, `Secure`, `SameSite`)?
+8. What is **CORS** and how do you fix a CORS error?
+9. **CSR vs SSR vs SSG vs ISR** — trade-offs for SEO and performance?
+10. What is the **critical rendering path**?
+11. How does **HTTP caching** work (`Cache-Control`, `ETag`)?
+12. What is the difference between **`<script>`, `<script async>`, and `<script defer>`**?
+13. What are **Web Components** and the Shadow DOM?
+14. What is a **PWA** and what makes an app installable?
+15. How do you make a site **responsive**? Mobile-first vs desktop-first?
+16. What is **progressive enhancement** vs graceful degradation?
+17. What is the difference between **`GET` and `POST`**?
+18. What are **`data-*` attributes**?
+19. What is the difference between **`id` and `class`**?
+20. How does **lazy loading** of images/iframes work?
+
+---
+
 **Related:** [02-browser](../02-browser/) · [09-performance](../09-performance/) · [12-networking](../12-networking/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

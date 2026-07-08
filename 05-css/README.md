@@ -64,6 +64,38 @@ Layout, the cascade, and making it fast. "Center a div" is a meme; "explain the 
 | Design tokens | 🟡 | 45m | `#design-systems` `#theming` | [W3C: design tokens ⭐](https://tr.designtokens.org/format/) |
 | Accessibility in CSS (focus, contrast) | 🟡 | 45m | `#a11y` | [web.dev: a11y ⭐](https://web.dev/learn/accessibility) |
 
+## ❓ Rapid-fire CSS interview questions
+
+Real CSS interview questions. Answer out loud, then verify against the resources above.
+
+1. Explain the **box model** and `box-sizing`.
+2. How does **specificity** work? Calculate it for a given selector.
+3. **Flexbox vs Grid** — when do you use each?
+4. What is a **stacking context** and how does **z-index** really work?
+5. **`position`**: relative vs absolute vs fixed vs sticky?
+6. **Pseudo-classes vs pseudo-elements**?
+7. **`em` vs `rem` vs `%` vs `vw/vh`** — when to use which?
+8. What is the **cascade** and how is inheritance resolved?
+9. **Container queries vs media queries**?
+10. What is **`will-change`** and how does GPU compositing help animations?
+11. **Reflow vs repaint vs composite** — which properties are cheap to animate?
+12. How many ways can you **center a div**?
+13. What are **CSS custom properties** (variables)?
+14. What is **BEM** and why use a CSS methodology?
+15. **`inline` vs `block` vs `inline-block`**?
+16. Difference between **`visibility: hidden`, `display: none`, and `opacity: 0`**?
+17. How does **`object-fit`** work?
+18. What are **logical properties** and why do they matter for i18n?
+19. How does **`aspect-ratio`** prevent layout shift (CLS)?
+20. **Transitions vs animations** — when to use each?
+21. How do you implement **dark mode**?
+22. What triggers a new **stacking context**?
+23. What is **`content-visibility`** and how does it boost performance?
+24. What is the difference between a **CSS reset and normalize**?
+25. How does the **`:has()`** selector work?
+
+---
+
 **Related:** [02-browser](../02-browser/) · [09-performance](../09-performance/) · [11-accessibility](../11-accessibility/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

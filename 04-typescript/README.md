@@ -44,6 +44,33 @@ Type-level thinking. Senior+ interviews increasingly ask you to design APIs with
 | Typing React components & hooks | 🟡 | 1h | `#react` | [React TS cheatsheet ⭐](https://react-typescript-cheatsheet.netlify.app/) |
 | Typing async & generics in APIs | 🟡 | 45m | `#patterns` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
 
+## ❓ Rapid-fire TypeScript interview questions
+
+Real TypeScript interview questions. Answer out loud, then verify above.
+
+1. **`interface` vs `type`** — when to use each?
+2. **`unknown` vs `any` vs `never`** — what's the difference?
+3. What are **generics** and why use them?
+4. Explain **union vs intersection** types.
+5. What are **type guards** and **narrowing**?
+6. What are **discriminated unions**?
+7. Name the common **utility types** (`Partial`, `Pick`, `Omit`, `Record`…).
+8. What do **`keyof`** and **`typeof`** do at the type level?
+9. What are **mapped types**?
+10. What are **conditional types** and **`infer`**?
+11. What are **template literal types**?
+12. What is a **declaration file** (`.d.ts`)?
+13. What does **`strict` mode** turn on?
+14. What is the difference between **`enum` and a union of literals**?
+15. How do you **type a React component and its props/hooks**?
+16. What is **structural typing** (duck typing)?
+17. What is **type assertion** and when is it dangerous?
+18. How do **generic constraints** (`extends`) work?
+19. What's the difference between **`readonly` and `const`**?
+20. How does **type inference** work and when does it fail?
+
+---
+
 **Related:** [03-javascript](../03-javascript/) · [06-react](../06-react/) · [08-architecture](../08-architecture/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

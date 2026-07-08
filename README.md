@@ -127,6 +127,10 @@ Good first contributions:
 
 ---
 
+## 🔎 Topics covered
+
+A complete **frontend interview preparation** resource and **frontend interview questions** bank covering: **frontend system design**, **machine coding** rounds, **JavaScript interview questions**, **React interview questions**, **TypeScript**, **CSS** and **HTML**, **browser internals**, **web performance** (Core Web Vitals — LCP, CLS, INP), **accessibility (a11y)**, **web security** (XSS, CSRF, CSP), **networking** (HTTP, WebSocket, GraphQL), **state management**, **testing**, and **design patterns** — plus **company-wise interview guides** for Google, Meta, Amazon, Netflix, Airbnb, Uber, Stripe, Microsoft, Atlassian, LinkedIn, Apple, Cloudflare, DoorDash, Pinterest, and Dropbox. Whether you're preparing for **SDE-2, Senior, Staff, or FAANG frontend interviews**, follow the [roadmap](ROADMAP.md) and work through every topic that matters.
+
 ## 📄 License
 
 [MIT](LICENSE) — free to use, share, and build on. Attribution appreciated, not required.

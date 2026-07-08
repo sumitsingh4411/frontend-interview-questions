@@ -61,6 +61,38 @@ The framework most FAANG frontend loops assume. They'll ask *how it works*, not 
 | Server Actions | 🟡 | 45m | `#rsc` `#data` | [react.dev: 'use server' ⭐](https://react.dev/reference/rsc/use-server) |
 | Testing React | 🟡 | 1h | `#testing` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/intro/) |
 
+## ❓ Rapid-fire React interview questions
+
+The most-asked React interview questions. Say your answer, then verify against the resources above.
+
+1. What is the **virtual DOM** and how does **reconciliation** work?
+2. Why are **keys** important in lists? What happens if you use the index?
+3. **`useEffect` vs `useLayoutEffect`** — what's the difference?
+4. **When does a component re-render?**
+5. What does **`React.memo`** do? **`useMemo` vs `useCallback`**?
+6. What are the **rules of hooks** and why do they exist?
+7. **Controlled vs uncontrolled** components?
+8. What is **`useRef`** used for (vs state)?
+9. How does **Context** work, and what are its performance pitfalls?
+10. **`useReducer` vs `useState`** — when to use each?
+11. What are **error boundaries**?
+12. How do **code splitting**, `lazy`, and `Suspense` work?
+13. What is **React Fiber**?
+14. What are **React Server Components (RSC)**?
+15. **CSR vs SSR vs SSG vs ISR** — trade-offs?
+16. What is **hydration** and what causes hydration mismatches?
+17. How do you **avoid unnecessary re-renders**?
+18. What is a **custom hook**?
+19. What is **prop drilling** and how do you avoid it?
+20. Difference between **state and props**?
+21. What is **`useTransition`** / concurrent rendering?
+22. How do **portals** work and when do you need them?
+23. How does **state batching** work in React 18?
+24. What is the difference between **`useEffect` cleanup** and unmount?
+25. What are **compound components** and render props?
+
+---
+
 **Related:** [13-state-management](../13-state-management/) · [07-nextjs](../07-nextjs/) · [09-performance](../09-performance/) · [19-build-your-own](../19-build-your-own/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._
