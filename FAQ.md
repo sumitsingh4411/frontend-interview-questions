@@ -1,4 +1,12 @@
-# Frontend Interview Questions & Answers (FAQ)
+<div align="center">
+
+<img src="assets/banner-faq.svg" alt="Frontend Interview Questions & Answers (FAQ)" width="100%" />
+
+<a href="README.md">⬅ Back to the handbook</a> &nbsp;·&nbsp; <a href="ROADMAP.md">Roadmap</a> &nbsp;·&nbsp; <a href="15-system-design/">System Design</a> &nbsp;·&nbsp; <a href="16-machine-coding/">Machine Coding</a>
+
+</div>
+
+<br/>
 
 The most **frequently searched** frontend interview questions — the exact ones people type into Google or ask ChatGPT — with short, correct answers and links to go deeper. Great for a quick refresh the night before an interview.
 

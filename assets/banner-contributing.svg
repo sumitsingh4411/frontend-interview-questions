@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 160" role="img" aria-label="Contributing to Frontend Interview Prep">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0C1019"/><stop offset="1" stop-color="#090C13"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="1279" height="159" rx="18" fill="url(#bg)" stroke="#1B2333"/>
+  <rect x="18" y="0" width="1244" height="3" rx="1.5" fill="#BB9AF7"/>
+  <rect x="48" y="50" width="64" height="64" rx="16" fill="#BB9AF7" fill-opacity="0.12" stroke="#BB9AF7" stroke-opacity="0.55"/>
+  <text x="80" y="101" font-size="40" font-weight="800" text-anchor="middle" fill="#BB9AF7" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">+</text>
+  <text x="140" y="80" font-size="32" font-weight="700" fill="#F3F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">Contributing</text>
+  <text x="142" y="114" font-size="18" fill="#8B95A7" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">Add a question, fix a link, or share what you were asked</text>
+  <g>
+    <rect x="1150" y="86" width="12" height="24" rx="4" fill="#3FB950"/>
+    <rect x="1170" y="76" width="12" height="34" rx="4" fill="#E3A72C"/>
+    <rect x="1190" y="66" width="12" height="44" rx="4" fill="#F85149"/>
+  </g>
+</svg>

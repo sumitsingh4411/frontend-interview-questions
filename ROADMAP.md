@@ -1,4 +1,12 @@
-# 📍 The Frontend Interview Prep Roadmap
+<div align="center">
+
+<img src="assets/banner-roadmap.svg" alt="The Frontend Interview Prep Roadmap — a guided path from beginner to Staff" width="100%" />
+
+<a href="README.md">⬅ Back to the handbook</a> &nbsp;·&nbsp; <a href="FAQ.md">FAQ</a> &nbsp;·&nbsp; <a href="21-dsa-for-frontend/">DSA</a> &nbsp;·&nbsp; <a href="20-company-guides/">Company Guides</a>
+
+</div>
+
+<br/>
 
 A **Beginner → Advanced** path through the whole repo. Don't read top-to-bottom randomly — follow a track below, then use the section tables to go deep.
 

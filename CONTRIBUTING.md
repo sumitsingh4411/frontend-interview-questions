@@ -1,4 +1,12 @@
-# 🤝 Contributing
+<div align="center">
+
+<img src="assets/banner-contributing.svg" alt="Contributing to Frontend Interview Prep" width="100%" />
+
+<a href="README.md">⬅ Back to the handbook</a> &nbsp;·&nbsp; <a href="TEMPLATE.md">Topic template</a> &nbsp;·&nbsp; <a href="20-company-guides/">Company Guides</a>
+
+</div>
+
+<br/>
 
 This repo is **community-owned** and gets better with every PR. Whether you're fixing a typo, adding a better link, contributing a full solution, or sharing a question you got asked — thank you. 🙏
 
