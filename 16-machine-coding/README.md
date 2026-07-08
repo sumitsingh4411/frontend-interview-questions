@@ -23,6 +23,9 @@
 | [Nested Comments (tree)](nested-comments.md) | 🟡 | 45m | `#recursion` `#tree` |
 | [Kanban board (drag & drop)](kanban-drag-and-drop.md) | 🔴 | 1h | `#dnd` `#state` |
 | [Star Rating widget](star-rating.md) | 🟢 | 30m | `#input` `#a11y` |
+| [Data Grid (sortable, virtualized)](data-grid.md) | 🔴 | 1h | `#large-data` `#virtualization` |
+| [Accessible Modal / Dialog](modal-dialog.md) | 🟡 | 45m | `#overlay` `#focus` `#a11y` |
+| [Command Palette (⌘K)](command-palette.md) | 🔴 | 1h | `#search` `#keyboard` `#a11y` |
 
 ---
 
@@ -55,7 +58,7 @@
 | Infinite Scroll list | 🟡 | 45m | [System design flagship](../15-system-design/design-news-feed.md) |
 | Virtualized List | 🔴 | 1h | [React flagship ⭐](../06-react/build-a-virtualized-list.md) |
 | Pagination | 🟢 | 30m | [GreatFrontEnd](https://www.greatfrontend.com/questions/js) |
-| Sortable / filterable Data Grid | 🔴 | 1h | [TanStack Table](https://tanstack.com/table) |
+| Sortable / filterable Data Grid | 🔴 | 1h | [Flagship ⭐](data-grid.md) |
 | Editable spreadsheet grid | 🔴 | 1.5h | [GreatFrontEnd](https://www.greatfrontend.com/questions/js) |
 | Nested Comments (tree) | 🟡 | 45m | [Flagship ⭐](nested-comments.md) |
 | Nested Checkboxes (tri-state) | 🟡 | 45m | [BFE.dev](https://bigfrontend.dev/) |
@@ -71,13 +74,13 @@
 
 | Component | Difficulty | Time | Resource |
 |-----------|:----------:|:----:|----------|
-| Modal / Dialog | 🟡 | 45m | [ARIA dialog](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) |
+| Modal / Dialog | 🟡 | 45m | [Flagship ⭐](modal-dialog.md) |
 | Toast / Snackbar system | 🟡 | 45m | [GreatFrontEnd](https://www.greatfrontend.com/questions/js) |
 | Tooltip | 🟡 | 45m | [ARIA tooltip](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/) |
 | Popover / Dropdown menu | 🟡 | 45m | [ARIA menu](https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/) |
 | Context menu (right-click) | 🟡 | 45m | [BFE.dev](https://bigfrontend.dev/) |
 | Accordion | 🟢 | 30m | [ARIA accordion](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) |
-| Command palette (⌘K) | 🔴 | 1h | [BFE.dev](https://bigfrontend.dev/) |
+| Command palette (⌘K) | 🔴 | 1h | [Flagship ⭐](command-palette.md) |
 | Progress bar / Spinner | 🟢 | 20m | [ARIA progressbar](https://www.w3.org/WAI/ARIA/apg/patterns/meter/) |
 | Skeleton loader | 🟢 | 20m | [web.dev](https://web.dev/) |
 | Confirmation dialog (promise-based) | 🟡 | 45m | [Patterns](../18-design-patterns/) |

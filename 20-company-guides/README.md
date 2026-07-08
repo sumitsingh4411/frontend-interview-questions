@@ -31,6 +31,6 @@ What each company *actually* emphasizes in frontend loops — the rounds, the fl
 | Pinterest | Feeds, masonry grids, image performance | [pinterest.md](pinterest.md) |
 | Dropbox | File UIs, sync, offline, large data | [dropbox.md](dropbox.md) |
 
-> ⭐ = fully written example pages you can use as templates. The rest are stubs waiting for community contributions — **[be the first to fill one in](../CONTRIBUTING.md)!**
+> ✅ **All 16 guides are written.** Each is seeded from the company's well-known frontend-interview reputation (loop shape, emphasis, likely questions) and linked to the relevant flagships. They get sharper with real data — **[add the exact questions you were asked](../CONTRIBUTING.md)** (role + year).
 
 **Related:** [15-system-design](../15-system-design/) · [16-machine-coding](../16-machine-coding/) · [ROADMAP](../ROADMAP.md)

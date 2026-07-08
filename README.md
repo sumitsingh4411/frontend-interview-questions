@@ -86,12 +86,17 @@ These are **fully-solved**, end-to-end — the gold standard for how to answer i
 - [Design a Chat App (WhatsApp Web)](15-system-design/design-chat-whatsapp-web.md) 🔴
 - [Design Google Docs (collaborative editing)](15-system-design/design-google-docs.md) 🔴
 - [Design an Image Carousel at scale](15-system-design/design-image-carousel.md) 🟡
+- [Design a Notification System](15-system-design/design-notification-system.md) 🔴
+- [Design a Video Player](15-system-design/design-video-player.md) 🔴
 
 ### 🧩 Machine Coding
 - [Build an Autocomplete component](16-machine-coding/autocomplete-component.md) 🟡
 - [Build Nested Comments (tree)](16-machine-coding/nested-comments.md) 🟡
 - [Build a Kanban board (drag & drop)](16-machine-coding/kanban-drag-and-drop.md) 🔴
 - [Build a Star Rating widget](16-machine-coding/star-rating.md) 🟢
+- [Build a Data Grid (sortable, virtualized)](16-machine-coding/data-grid.md) 🔴
+- [Build an Accessible Modal / Dialog](16-machine-coding/modal-dialog.md) 🟡
+- [Build a Command Palette (⌘K)](16-machine-coding/command-palette.md) 🔴
 
 ### 🔬 Deep Dives
 - [JS: Promise polyfills + debounce/throttle](03-javascript/promise-polyfills-and-throttle-debounce.md) 🟡

@@ -24,6 +24,8 @@ The main event. "Design X" — where you drive the whole conversation: requireme
 | [Design a Chat App (WhatsApp Web)](design-chat-whatsapp-web.md) | 🔴 | 1h | `#realtime` `#websocket` `#offline` |
 | [Design Google Docs (collaborative)](design-google-docs.md) | 🔴 | 1.5h | `#realtime` `#crdt` `#collaboration` |
 | [Design an Image Carousel at scale](design-image-carousel.md) | 🟡 | 45m | `#media` `#a11y` `#performance` |
+| [Design a Notification System](design-notification-system.md) | 🔴 | 1h | `#realtime` `#websocket` `#a11y` |
+| [Design a Video Player](design-video-player.md) | 🔴 | 1h | `#media` `#streaming` `#performance` |
 
 ---
 
@@ -39,7 +41,7 @@ The main event. "Design X" — where you drive the whole conversation: requireme
 | Design a Stories feature | 🟡 | 45m | [GreatFrontEnd](https://www.greatfrontend.com/questions/system-design) |
 | Design Live Comments | 🟡 | 45m | [Real-time pattern](../17-interview-patterns/) |
 | Design a Poll / Voting widget | 🟢 | 30m | [Machine coding](../16-machine-coding/) |
-| Design a Notification system | 🔴 | 1h | [Real-time pattern](../17-interview-patterns/) |
+| Design a Notification system | 🔴 | 1h | [Flagship ⭐](design-notification-system.md) |
 | Design an Activity Feed | 🟡 | 45m | [Flagship pattern](design-news-feed.md) |
 | Design a Comment system | 🟡 | 45m | [Nested comments](../16-machine-coding/nested-comments.md) |
 | Design a Follow/Friend system UI | 🟡 | 45m | [Optimistic UI](../17-interview-patterns/) |
@@ -87,7 +89,7 @@ The main event. "Design X" — where you drive the whole conversation: requireme
 |---------|:----------:|:----:|----------|
 | Design YouTube | 🔴 | 1.5h | [GreatFrontEnd](https://www.greatfrontend.com/questions/system-design) |
 | Design Netflix | 🔴 | 1.5h | [GreatFrontEnd](https://www.greatfrontend.com/questions/system-design) |
-| Design a Video Player | 🔴 | 1h | [MDN: media](https://developer.mozilla.org/en-US/docs/Web/Media) |
+| Design a Video Player | 🔴 | 1h | [Flagship ⭐](design-video-player.md) |
 | Design Spotify | 🔴 | 1.5h | [GreatFrontEnd](https://www.greatfrontend.com/questions/system-design) |
 | Design SoundCloud (audio) | 🟡 | 1h | [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) |
 | Design an Image Gallery / Carousel | 🟡 | 45m | [Flagship ⭐](design-image-carousel.md) |
