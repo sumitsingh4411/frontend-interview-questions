@@ -58,6 +58,39 @@ The bedrock. If any of these are shaky, everything above them wobbles in an inte
 | Internationalization (i18n) basics | 🟡 | 45m | `#i18n` | [MDN: Intl ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) |
 | Character encoding (UTF-8/Unicode) | 🟢 | 30m | `#basics` | [MDN: Unicode ⭐](https://developer.mozilla.org/en-US/docs/Glossary/Unicode) |
 
+## 🧩 Key Web APIs (must-know)
+
+The browser APIs that power real features — and that interviewers expect you to reach for. **Intersection Observer** alone powers infinite scroll, lazy loading, scroll-spy, and viewport analytics.
+
+| API | Difficulty | Time | Tags | Best Resource |
+|-----|:----------:|:----:|------|---------------|
+| **Intersection Observer** (infinite scroll, lazy load) | 🟡 | 45m | `#infinite-scroll` `#lazy` `#performance` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) · [News Feed flagship](../15-system-design/design-news-feed.md) |
+| Resize Observer | 🟡 | 30m | `#layout` `#responsive` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) |
+| Mutation Observer | 🟡 | 30m | `#dom` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) |
+| Performance Observer | 🟡 | 30m | `#performance` `#metrics` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver) |
+| `requestAnimationFrame` | 🟡 | 30m | `#animation` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) |
+| `requestIdleCallback` | 🟡 | 30m | `#scheduling` `#performance` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback) |
+| History API (SPA routing) | 🟡 | 45m | `#routing` `#spa` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/History_API) |
+| Page Visibility API | 🟢 | 20m | `#performance` `#ux` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) |
+| Clipboard API | 🟢 | 20m | `#ux` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API) |
+| Web Share API | 🟢 | 20m | `#ux` `#mobile` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API) |
+| File & Blob API (uploads) | 🟡 | 45m | `#upload` `#files` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/File_API) |
+| Drag & Drop API | 🟡 | 45m | `#dnd` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API) |
+| Broadcast Channel (cross-tab sync) | 🟡 | 30m | `#sync` `#tabs` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API) |
+| Notifications API | 🟢 | 30m | `#pwa` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API) |
+| Geolocation API | 🟢 | 20m | `#location` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) |
+| Fullscreen API | 🟢 | 20m | `#media` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API) |
+| Web Storage (local / session) | 🟢 | 30m | `#storage` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API) |
+| IndexedDB (offline data) | 🔴 | 1h | `#storage` `#offline` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) |
+| Service Worker & Cache API | 🔴 | 1.5h | `#pwa` `#offline` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) |
+| Web Workers | 🟡 | 1h | `#performance` `#threads` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) |
+| WebSocket | 🔴 | 1h | `#realtime` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) |
+| Fetch & Streams | 🟡 | 45m | `#networking` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) |
+| Canvas API | 🔴 | 1h | `#graphics` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) |
+| Web Audio API | 🔴 | 1h | `#media` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) |
+| WebRTC | 🔴 | 1h | `#realtime` `#video` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API) |
+| Navigation / scroll restoration | 🟡 | 30m | `#routing` `#ux` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/API/History/scrollRestoration) |
+
 ## ❓ Rapid-fire HTML & web fundamentals interview questions
 
 Real HTML / web-fundamentals interview questions. Answer out loud, then verify above.

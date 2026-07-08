@@ -73,31 +73,113 @@ Built for **frontend / UI engineers at every level** preparing for interviews �
 
 ---
 
-## 📚 Sections
+## 🔥 Start here — most popular
 
-| # | Section | What it covers |
-|---|---------|----------------|
-| 01 | [Fundamentals](01-fundamentals/) | Rendering, DOM, networking, storage, SEO, responsive |
-| 02 | [Browser Internals](02-browser/) | V8, Blink, rendering pipeline, event loop, GC |
-| 03 | [JavaScript](03-javascript/) | Closures, promises, generators, workers, polyfills |
-| 04 | [TypeScript](04-typescript/) | Generics, conditional & mapped types, utility types |
-| 05 | [CSS](05-css/) | Flexbox, grid, cascade, container queries, animations |
-| 06 | [React](06-react/) | Fiber, reconciliation, concurrent, RSC, hooks, perf |
-| 07 | [Next.js](07-nextjs/) | App router, caching, streaming, edge, server actions |
-| 08 | [Architecture](08-architecture/) | Micro-frontends, monorepos, design systems, DDD |
-| 09 | [Performance](09-performance/) | Core Web Vitals, bundles, images, virtualization |
-| 10 | [Security](10-security/) | XSS, CSRF, CSP, CORS, auth, JWT, trusted types |
-| 11 | [Accessibility](11-accessibility/) | ARIA, WCAG, keyboard nav, focus, screen readers |
-| 12 | [Networking](12-networking/) | HTTP/2-3, GraphQL, WebSocket, SSE, CDN, caching |
-| 13 | [State Management](13-state-management/) | Redux, Zustand, Jotai, signals, React Query, SWR |
-| 14 | [Testing](14-testing/) | Jest, Vitest, RTL, Playwright, MSW, visual/a11y |
-| 15 | [Frontend System Design](15-system-design/) | 🚀 Design News Feed, Chat, Docs, Maps… (flagships) |
-| 16 | [Machine Coding](16-machine-coding/) | 🚀 Build Autocomplete, Kanban, Carousel… (flagships) |
-| 17 | [Interview Patterns](17-interview-patterns/) | Cross-cutting patterns: real-time, offline, virtualization |
-| 18 | [Design Patterns](18-design-patterns/) | Observer, factory, strategy, DI… in frontend |
-| 19 | [Build Your Own](19-build-your-own/) | Clone React, Redux, Router, a Virtual DOM… |
-| 20 | [Company Guides](20-company-guides/) | What Google, Meta, Netflix… actually ask |
-| 21 | [DSA for Frontend](21-dsa-for-frontend/) | Arrays, trees, recursion + frontend-flavored problems |
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### 🏗️ [System Design](15-system-design/)
+
+**90+** "Design X" problems + **7** worked flagships.
+
+→ [News Feed](15-system-design/design-news-feed.md) · [Chat](15-system-design/design-chat-whatsapp-web.md) · [Autocomplete](15-system-design/design-autocomplete.md)
+
+</td>
+<td width="33%" valign="top">
+
+### 🧩 [Machine Coding](16-machine-coding/)
+
+**120+** build-this-component tasks + **7** flagships.
+
+→ [Autocomplete](16-machine-coding/autocomplete-component.md) · [Kanban](16-machine-coding/kanban-drag-and-drop.md) · [Modal](16-machine-coding/modal-dialog.md)
+
+</td>
+<td width="33%" valign="top">
+
+### ⚡ [JavaScript](03-javascript/)
+
+Core language + tricky output & coding rounds.
+
+→ [Output questions](03-javascript/output-based-questions.md) · [Polyfills](03-javascript/promise-polyfills-and-throttle-debounce.md)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+### 🧠 [DSA for Frontend](21-dsa-for-frontend/)
+
+The DSA slice frontend interviews actually test.
+
+→ [Flatten](21-dsa-for-frontend/) · [LRU cache](21-dsa-for-frontend/) · [DOM traversal](21-dsa-for-frontend/)
+
+</td>
+<td valign="top">
+
+### 🏢 [Company Guides](20-company-guides/)
+
+What each company really asks, with prep plans.
+
+→ [Google](20-company-guides/google.md) · [Meta](20-company-guides/meta.md) · [Amazon](20-company-guides/amazon.md)
+
+</td>
+<td valign="top">
+
+### ❓ [FAQ](FAQ.md)
+
+Fast answers to the most-searched questions.
+
+→ closures · virtual DOM · CSR vs SSR · AI UIs
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📚 Explore the full handbook
+
+**🧱 Core foundations**
+
+| Section | Key topics | Deep dives |
+|---------|------------|-----------|
+| [01 · Fundamentals](01-fundamentals/) | DOM, rendering, HTTP, storage, **Web APIs** (Intersection Observer, infinite scroll) | — |
+| [02 · Browser Internals](02-browser/) | rendering pipeline, event loop, microtasks, GC | — |
+| [03 · JavaScript](03-javascript/) | closures, async, prototypes, polyfills | [Output questions](03-javascript/output-based-questions.md) · [Promises & debounce](03-javascript/promise-polyfills-and-throttle-debounce.md) |
+| [04 · TypeScript](04-typescript/) | generics, mapped & conditional types, utility types | — |
+| [05 · CSS](05-css/) | flexbox, grid, cascade, container queries, animation | — |
+
+**⚛️ Framework**
+
+| Section | Key topics | Deep dives |
+|---------|------------|-----------|
+| [06 · React](06-react/) | fiber, hooks, concurrent, RSC, performance | [Build a Virtualized List](06-react/build-a-virtualized-list.md) |
+| [07 · Next.js](07-nextjs/) | App Router, caching, streaming, server actions | — |
+
+**🚦 Cross-cutting engineering**
+
+| Section | Key topics |
+|---------|------------|
+| [08 · Architecture](08-architecture/) | micro-frontends, monorepos, design systems, DDD |
+| [09 · Performance](09-performance/) | Core Web Vitals, bundles, images, virtualization |
+| [10 · Security](10-security/) | XSS, CSRF, CSP, CORS, auth, JWT |
+| [11 · Accessibility](11-accessibility/) | ARIA, WCAG, keyboard, focus, screen readers |
+| [12 · Networking](12-networking/) | HTTP/2-3, WebSocket, SSE, GraphQL, CDN, caching |
+| [13 · State Management](13-state-management/) | Redux, Zustand, Jotai, signals, React Query, SWR |
+| [14 · Testing](14-testing/) | Jest, Vitest, RTL, Playwright, MSW, visual/a11y |
+
+**🎯 The interview**
+
+| Section | What's inside |
+|---------|---------------|
+| [15 · System Design](15-system-design/) | 90+ "Design X" problems + 7 flagships |
+| [16 · Machine Coding](16-machine-coding/) | 120+ components + 7 flagships |
+| [17 · Interview Patterns](17-interview-patterns/) | real-time, offline, virtualization, optimistic UI |
+| [18 · Design Patterns](18-design-patterns/) | observer, factory, strategy, DI |
+| [19 · Build Your Own](19-build-your-own/) | React, Redux, Router, a Virtual DOM |
+| [20 · Company Guides](20-company-guides/) | Google, Meta, Amazon, Netflix, Stripe… |
+| [21 · DSA for Frontend](21-dsa-for-frontend/) | arrays, trees, recursion + frontend-flavored problems |
 
 ---
 
