@@ -8,8 +8,8 @@ Every topic is an **interview-worthy question** with a **difficulty label**, a *
 
 <br/>
 
-[![Stars](https://img.shields.io/github/stars/sumitsingh4411/frontend-interview-prep?style=for-the-badge&logo=github&color=f9d949)](https://github.com/sumitsingh4411/frontend-interview-prep/stargazers)
-[![Forks](https://img.shields.io/github/forks/sumitsingh4411/frontend-interview-prep?style=for-the-badge&logo=github&color=57a6ff)](https://github.com/sumitsingh4411/frontend-interview-prep/network/members)
+[![Stars](https://img.shields.io/github/stars/sumitsingh4411/frontend-interview-questions?style=for-the-badge&logo=github&color=f9d949)](https://github.com/sumitsingh4411/frontend-interview-questions/stargazers)
+[![Forks](https://img.shields.io/github/forks/sumitsingh4411/frontend-interview-questions?style=for-the-badge&logo=github&color=57a6ff)](https://github.com/sumitsingh4411/frontend-interview-questions/network/members)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
