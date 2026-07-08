@@ -1,21 +1,30 @@
 <div align="center">
 
-# 🎨 Frontend Interview Prep
+<img src="assets/banner.svg" alt="Frontend Interview Prep — open-source frontend interview questions and handbook covering system design, machine coding, JavaScript, React, CSS, DSA and performance, for SDE-2 to Staff and FAANG" width="100%" />
 
-### The open-source handbook for cracking frontend interviews — system design, machine coding & every core topic. From SDE-2 to Staff & FAANG.
+<br/><br/>
 
-Every topic is an **interview-worthy question** with a **difficulty label**, a **time estimate**, **tags**, and links to the **best resource on the internet** to learn it from. No fluff. Just prepare, and go.
+[![Stars](https://img.shields.io/github/stars/sumitsingh4411/frontend-interview-questions?style=flat-square&logo=github&label=Stars&labelColor=0d1117&color=e3a72c)](https://github.com/sumitsingh4411/frontend-interview-questions/stargazers)
+&nbsp;
+[![Forks](https://img.shields.io/github/forks/sumitsingh4411/frontend-interview-questions?style=flat-square&logo=github&label=Forks&labelColor=0d1117&color=7aa2f7)](https://github.com/sumitsingh4411/frontend-interview-questions/network/members)
+&nbsp;
+[![License MIT](https://img.shields.io/badge/License-MIT-0d1117?style=flat-square&labelColor=0d1117&color=3fb950)](LICENSE)
+&nbsp;
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-0d1117?style=flat-square&labelColor=0d1117&color=bb9af7)](CONTRIBUTING.md)
+
+`21 sections`&nbsp;&nbsp;•&nbsp;&nbsp;`700+ questions`&nbsp;&nbsp;•&nbsp;&nbsp;`17 worked solutions`&nbsp;&nbsp;•&nbsp;&nbsp;`16 company guides`
 
 <br/>
 
-[![Stars](https://img.shields.io/github/stars/sumitsingh4411/frontend-interview-questions?style=for-the-badge&logo=github&color=f9d949)](https://github.com/sumitsingh4411/frontend-interview-questions/stargazers)
-[![Forks](https://img.shields.io/github/forks/sumitsingh4411/frontend-interview-questions?style=for-the-badge&logo=github&color=57a6ff)](https://github.com/sumitsingh4411/frontend-interview-questions/network/members)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](CONTRIBUTING.md)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
-
-<br/>
-
-**[❓ FAQ](FAQ.md)** · **[📍 Roadmap](ROADMAP.md)** · **[🤝 Contribute](CONTRIBUTING.md)** · **[⭐ Flagship Solutions](#-flagship-worked-solutions)** · **[🏢 Company Guides](20-company-guides/)**
+[![FAQ](https://img.shields.io/badge/❓-FAQ-101825?style=flat-square&labelColor=7aa2f7)](FAQ.md)
+&nbsp;
+[![Roadmap](https://img.shields.io/badge/📍-Roadmap-101825?style=flat-square&labelColor=7aa2f7)](ROADMAP.md)
+&nbsp;
+[![System Design](https://img.shields.io/badge/🧠-System_Design-101825?style=flat-square&labelColor=7aa2f7)](15-system-design/)
+&nbsp;
+[![Machine Coding](https://img.shields.io/badge/🧩-Machine_Coding-101825?style=flat-square&labelColor=7aa2f7)](16-machine-coding/)
+&nbsp;
+[![Company Guides](https://img.shields.io/badge/🏢-Company_Guides-101825?style=flat-square&labelColor=7aa2f7)](20-company-guides/)
 
 </div>
 

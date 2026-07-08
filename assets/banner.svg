@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" role="img" aria-label="Frontend Interview Prep — the open-source handbook to crack frontend interviews from SDE-2 to Staff and FAANG">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0C1019"/>
+      <stop offset="1" stop-color="#090C13"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.1" r="0.7">
+      <stop offset="0" stop-color="#6D5EF7" stop-opacity="0.30"/>
+      <stop offset="0.45" stop-color="#3B82F6" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7AA2F7"/>
+      <stop offset="1" stop-color="#BB9AF7"/>
+    </linearGradient>
+    <linearGradient id="barG" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#2C8C3C"/><stop offset="1" stop-color="#3FB950"/>
+    </linearGradient>
+    <linearGradient id="barA" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#A9741A"/><stop offset="1" stop-color="#E3A72C"/>
+    </linearGradient>
+    <linearGradient id="barR" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#C13B33"/><stop offset="1" stop-color="#F85149"/>
+    </linearGradient>
+  </defs>
+
+  <!-- panel -->
+  <rect x="0.5" y="0.5" width="1279" height="359" rx="22" fill="url(#bg)" stroke="#1B2333" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="1279" height="359" rx="22" fill="url(#glow)"/>
+  <rect x="22" y="0" width="1236" height="4" rx="2" fill="url(#accent)" opacity="0.85"/>
+
+  <!-- signature: ascending difficulty ladder (Easy -> Medium -> Hard) -->
+  <g>
+    <rect x="988"  y="182" width="52" height="120" rx="13" fill="url(#barG)"/>
+    <rect x="1062" y="132" width="52" height="170" rx="13" fill="url(#barA)"/>
+    <rect x="1136" y="82"  width="52" height="220" rx="13" fill="url(#barR)"/>
+    <circle cx="1014" cy="160" r="7" fill="#3FB950"/>
+    <circle cx="1088" cy="110" r="7" fill="#E3A72C"/>
+    <circle cx="1162" cy="60"  r="7" fill="#F85149"/>
+    <rect x="980" y="308" width="216" height="3" rx="1.5" fill="#1D2637"/>
+  </g>
+
+  <!-- eyebrow: repo path -->
+  <text x="80" y="98" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="21" letter-spacing="0.5" fill="#7AA2F7">~/frontend-interview-questions</text>
+
+  <!-- title (two-tone) -->
+  <text x="78" y="176" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="60" font-weight="800" letter-spacing="-1.8">
+    <tspan fill="#F3F6FC">Frontend </tspan><tspan fill="url(#accent)">Interview Prep</tspan>
+  </text>
+  <rect x="82" y="196" width="128" height="5" rx="2.5" fill="url(#accent)"/>
+
+  <!-- tagline -->
+  <text x="80" y="242" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="24" fill="#AEB6C4">The open-source handbook to crack frontend interviews — SDE-2 to FAANG.</text>
+
+  <!-- tier chips -->
+  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="17" font-weight="600">
+    <rect x="80"  y="278" width="104" height="36" rx="18" fill="#101825" stroke="#233042"/>
+    <circle cx="104" cy="296" r="6" fill="#3FB950"/>
+    <text x="120" y="302" fill="#C6D0DC">Easy</text>
+
+    <rect x="196" y="278" width="126" height="36" rx="18" fill="#101825" stroke="#233042"/>
+    <circle cx="220" cy="296" r="6" fill="#E3A72C"/>
+    <text x="236" y="302" fill="#C6D0DC">Medium</text>
+
+    <rect x="334" y="278" width="104" height="36" rx="18" fill="#101825" stroke="#233042"/>
+    <circle cx="358" cy="296" r="6" fill="#F85149"/>
+    <text x="374" y="302" fill="#C6D0DC">Hard</text>
+  </g>
+</svg>
