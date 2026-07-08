@@ -284,6 +284,128 @@ console.log([1, 2, 3, 4].reduce((acc, x) => acc + x));
 
 ---
 
+## 🧠 Part 2 — more predict-the-output
+
+**Q31 — function declaration vs expression hoisting**
+```js
+foo();
+bar();
+function foo() { console.log('foo'); }
+var bar = function () { console.log('bar'); };
+```
+**Output:** `foo`, then `TypeError: bar is not a function` — declarations hoist fully; `var bar` is hoisted as `undefined`.
+
+**Q32 — `this` in a `setTimeout` callback**
+```js
+const timer = {
+  seconds: 5,
+  start() { setTimeout(function () { console.log(this.seconds); }, 0); },
+};
+timer.start();
+```
+**Output:** `undefined` — the plain function's `this` isn't `timer`. Fix with an arrow callback.
+
+**Q33 — `__proto__` vs `prototype`**
+```js
+function A() {}
+const a = new A();
+console.log(a.__proto__ === A.prototype, A.__proto__ === Function.prototype);
+```
+**Output:** `true true`.
+
+**Q34 — `Object.freeze` is shallow**
+```js
+const obj = Object.freeze({ a: 1, nested: { b: 2 } });
+obj.a = 10;
+obj.nested.b = 20;
+console.log(obj.a, obj.nested.b);
+```
+**Output:** `1 20` — only the top level is frozen.
+
+**Q35 — spread is a shallow copy**
+```js
+const original = { a: 1, nested: { b: 2 } };
+const copy = { ...original };
+copy.nested.b = 99;
+console.log(original.nested.b);
+```
+**Output:** `99` — nested objects are shared by reference.
+
+**Q36 — sparse arrays skip holes**
+```js
+const arr = [1, , 3];
+arr.forEach((x) => console.log(x));
+console.log(arr.length);
+```
+**Output:** `1`, `3`, then `3` — `forEach` skips the hole, but `length` counts it.
+
+**Q37 — default params are evaluated at call time**
+```js
+let count = 0;
+function next(x = count++) { return x; }
+console.log(next(), next(), count);
+```
+**Output:** `0 1 2`.
+
+**Q38 — async/await interleaving**
+```js
+async function a1() { console.log(1); await a2(); console.log(2); }
+async function a2() { console.log(3); }
+console.log(4); a1(); console.log(5);
+```
+**Output:** `4 1 3 5 2` — sync runs first; the code after `await` resumes as a microtask.
+
+**Q39 — throwing inside an async function**
+```js
+async function run() { throw new Error('boom'); }
+run().catch((e) => console.log('caught', e.message));
+```
+**Output:** `caught boom` — an async function turns a `throw` into a rejected promise.
+
+**Q40 — generators are lazy**
+```js
+function* g() { console.log('a'); yield 1; console.log('b'); yield 2; }
+const it = g();
+console.log('start');
+it.next(); it.next();
+```
+**Output:** `start`, `a`, `b` — nothing runs until `.next()`.
+
+**Q41 — `finally` overrides `return`**
+```js
+function test() { try { return 1; } finally { return 2; } }
+console.log(test());
+```
+**Output:** `2`.
+
+**Q42 — Proxy `get` trap**
+```js
+const t = { a: 1 };
+const p = new Proxy(t, { get: (o, k) => (k in o ? o[k] : `no ${k}`) });
+console.log(p.a, p.b);
+```
+**Output:** `1 no b`.
+
+**Q43 — Symbols are always unique**
+```js
+console.log(Symbol('id') === Symbol('id'));
+```
+**Output:** `false`.
+
+**Q44 — NaN: `includes` vs `indexOf`**
+```js
+console.log([NaN].includes(NaN), [NaN].indexOf(NaN));
+```
+**Output:** `true -1` — `includes` uses SameValueZero; `indexOf` uses `===` (and `NaN === NaN` is `false`).
+
+**Q45 — loose-equality traps**
+```js
+console.log(0 == '', 0 == '0', '' == '0');
+```
+**Output:** `true true false`.
+
+---
+
 ## 🎓 What these test
 
 | Concept | Questions |

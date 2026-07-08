@@ -66,6 +66,44 @@ Real frontend security questions asked at the SDE-2 / senior level. Answer out l
 
 ---
 
+## 🎯 Scenario, advanced & real-incident questions (Senior / Staff)
+
+These go beyond definitions into judgment, design, and real-world incidents — the differentiators in senior loops.
+
+**🧩 Scenarios**
+1. A login page redirects to `?redirect=<url>` after login. What vulnerability does this risk (open redirect) and how do you fix it?
+2. Your SPA stores a JWT in `localStorage` "because cookies are complicated." A pentest finds a stored-XSS bug and the tokens were exfiltrated. What would you change?
+3. Your API sets `Access-Control-Allow-Origin: *` **and** `Access-Control-Allow-Credentials: true` — what's wrong?
+4. A design-system `<RichText>` renders raw HTML via `dangerouslySetInnerHTML`; someone wants a `rawHtml` prop that trusts all callers. Do you approve the API? Why not?
+5. How would you implement **"log out of all devices"** with a stateless JWT architecture?
+
+**🔬 Advanced**
+6. Session fixation vs session hijacking — how do they differ?
+7. How does **refresh-token rotation** work and what problem does it solve?
+8. What is **prototype pollution** and how can a deep-merge utility introduce it?
+9. What is **dependency confusion** and how can a frontend build pipeline be vulnerable?
+10. What is a **"secure context"** and why do Service Workers / geolocation / clipboard require HTTPS?
+11. Why isn't a CSRF token sufficient if it's also stored in a JS-readable cookie?
+12. How do **Trusted Types** prevent DOM XSS at the platform level?
+13. What is **OpenID Connect** and how does it differ from plain OAuth 2.0?
+
+**🚨 Real incidents**
+14. An app embedded an OAuth **client secret in a mobile binary**, later reverse-engineered. What went wrong, and what's the correct pattern for public clients (PKCE)?
+15. A team trusted a client-side `isEmployee` flag to unlock admin routes. What principle did this violate?
+16. The **British Airways 2018 (Magecart)** breach injected a form-skimming script. What frontend architecture (CSP, SRI, script isolation) would have mitigated it?
+
+**🐛 Debugging / ops**
+17. Users are logged out randomly after ~15 min despite being active — likely causes and how you'd investigate?
+18. Your CSP `report-uri` is suddenly flooded with `script-src` violations — attack or false positive, and how do you tell?
+19. How would you roll out a **strict CSP** to a legacy app with hundreds of inline scripts without breaking it overnight?
+20. How would you migrate a **session-cookie legacy app to JWT auth** without a breaking "flag day"?
+
+**⚖️ Trade-offs**
+21. Where should **least privilege** apply on the frontend, given it can't fully enforce anything the server doesn't?
+22. How do you balance instant client-side validation UX with the rule that client validation isn't a security boundary?
+
+---
+
 **Related:** [01-fundamentals](../01-fundamentals/) · [12-networking](../12-networking/) · [13-state-management](../13-state-management/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._
