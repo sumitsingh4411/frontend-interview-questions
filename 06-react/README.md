@@ -6,31 +6,61 @@ The framework most FAANG frontend loops assume. They'll ask *how it works*, not 
 
 ⭐ **Flagship:** [Build a Virtualized List](build-a-virtualized-list.md)
 
+## Fundamentals & rendering
+
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
+| JSX & `createElement` | 🟢 | 30m | `#basics` | [react.dev: JSX ⭐](https://react.dev/learn/writing-markup-with-jsx) |
+| Components, props, composition | 🟢 | 45m | `#basics` | [react.dev: components ⭐](https://react.dev/learn/your-first-component) |
 | Rendering & re-render mental model | 🟡 | 1h | `#rendering` | [react.dev: render & commit ⭐](https://react.dev/learn/render-and-commit) |
 | Reconciliation & keys | 🟡 | 45m | `#rendering` `#internals` | [react.dev: preserving state ⭐](https://react.dev/learn/preserving-and-resetting-state) |
-| Fiber architecture | 🔴 | 1.5h | `#internals` | [Lin Clark: a cartoon intro to Fiber ⭐](https://www.youtube.com/watch?v=ZCuYPiUIONs) |
-| Rules of hooks | 🟢 | 30m | `#hooks` | [react.dev: rules of hooks ⭐](https://react.dev/reference/rules/rules-of-hooks) |
-| `useState` & state batching | 🟢 | 45m | `#hooks` `#state` | [react.dev: useState ⭐](https://react.dev/reference/react/useState) |
+| Fiber architecture | 🔴 | 1.5h | `#internals` | [Lin Clark: cartoon intro to Fiber ⭐](https://www.youtube.com/watch?v=ZCuYPiUIONs) |
+| Controlled vs uncontrolled inputs | 🟡 | 45m | `#forms` | [react.dev: forms ⭐](https://react.dev/reference/react-dom/components/input) |
+| Lists, keys & reconciliation pitfalls | 🟡 | 45m | `#rendering` | [react.dev: rendering lists ⭐](https://react.dev/learn/rendering-lists) |
+
+## Hooks
+
+| Topic | Difficulty | Time | Tags | Best Resources |
+|-------|:----------:|:----:|------|----------------|
+| Rules of hooks | 🟢 | 30m | `#hooks` | [react.dev: rules ⭐](https://react.dev/reference/rules/rules-of-hooks) |
+| `useState` & batching | 🟢 | 45m | `#hooks` `#state` | [react.dev: useState ⭐](https://react.dev/reference/react/useState) |
 | `useEffect` & effect timing | 🟡 | 1h | `#hooks` | [react.dev: you might not need an effect ⭐](https://react.dev/learn/you-might-not-need-an-effect) |
+| `useLayoutEffect` vs `useEffect` | 🟡 | 30m | `#hooks` | [react.dev: useLayoutEffect ⭐](https://react.dev/reference/react/useLayoutEffect) |
 | `useMemo` / `useCallback` | 🟡 | 45m | `#hooks` `#performance` | [react.dev: useMemo ⭐](https://react.dev/reference/react/useMemo) |
 | `useRef` & imperative handles | 🟡 | 45m | `#hooks` | [react.dev: useRef ⭐](https://react.dev/reference/react/useRef) |
-| `useContext` & context perf pitfalls | 🟡 | 1h | `#hooks` `#state` `#performance` | [react.dev: useContext ⭐](https://react.dev/reference/react/useContext) |
+| `useContext` & context perf | 🟡 | 1h | `#hooks` `#state` | [react.dev: useContext ⭐](https://react.dev/reference/react/useContext) |
 | `useReducer` & state machines | 🟡 | 45m | `#hooks` `#state` | [react.dev: useReducer ⭐](https://react.dev/reference/react/useReducer) |
+| `useTransition` / `useDeferredValue` | 🔴 | 1h | `#concurrent` | [react.dev: useTransition ⭐](https://react.dev/reference/react/useTransition) |
+| `useSyncExternalStore` | 🔴 | 45m | `#hooks` `#state` | [react.dev ⭐](https://react.dev/reference/react/useSyncExternalStore) |
+| `useId`, `useImperativeHandle` | 🟡 | 30m | `#hooks` | [react.dev: useId ⭐](https://react.dev/reference/react/useId) |
 | Custom hooks | 🟡 | 45m | `#hooks` `#patterns` | [react.dev: reusing logic ⭐](https://react.dev/learn/reusing-logic-with-custom-hooks) |
-| `React.memo` & referential equality | 🟡 | 45m | `#performance` | [react.dev: memo ⭐](https://react.dev/reference/react/memo) |
-| Concurrent rendering & `useTransition` | 🔴 | 1h | `#concurrent` `#performance` | [react.dev: useTransition ⭐](https://react.dev/reference/react/useTransition) |
-| Suspense & streaming | 🔴 | 1h | `#concurrent` `#data` | [react.dev: Suspense ⭐](https://react.dev/reference/react/Suspense) |
-| Error boundaries | 🟡 | 30m | `#errors` | [react.dev: error boundary ⭐](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary) |
-| Code splitting & `lazy` | 🟡 | 45m | `#performance` `#bundling` | [react.dev: lazy ⭐](https://react.dev/reference/react/lazy) |
-| Portals | 🟢 | 30m | `#patterns` | [react.dev: createPortal ⭐](https://react.dev/reference/react-dom/createPortal) |
-| React Server Components (RSC) | 🔴 | 1.5h | `#rsc` `#rendering` | [react.dev: server components ⭐](https://react.dev/reference/rsc/server-components) |
-| SSR & hydration | 🔴 | 1h | `#ssr` `#rendering` | [react.dev: hydrateRoot ⭐](https://react.dev/reference/react-dom/client/hydrateRoot) |
-| Virtualization / windowing | 🔴 | 1.5h | `#performance` `#large-data` | [Flagship ⭐](build-a-virtualized-list.md) · [TanStack Virtual](https://tanstack.com/virtual) |
-| React Compiler | 🟡 | 45m | `#performance` `#modern` | [react.dev: React Compiler ⭐](https://react.dev/learn/react-compiler) |
-| Testing React | 🟡 | 1h | `#testing` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/intro/) · see [14-testing](../14-testing/) |
 
-**Related:** [13-state-management](../13-state-management/) · [07-nextjs](../07-nextjs/) · [09-performance](../09-performance/)
+## Performance & patterns
+
+| Topic | Difficulty | Time | Tags | Best Resources |
+|-------|:----------:|:----:|------|----------------|
+| `React.memo` & referential equality | 🟡 | 45m | `#performance` | [react.dev: memo ⭐](https://react.dev/reference/react/memo) |
+| Code splitting & `lazy`/`Suspense` | 🟡 | 45m | `#performance` `#bundling` | [react.dev: lazy ⭐](https://react.dev/reference/react/lazy) |
+| Virtualization / windowing | 🔴 | 1.5h | `#performance` `#large-data` | [Flagship ⭐](build-a-virtualized-list.md) |
+| Avoiding unnecessary re-renders | 🔴 | 1h | `#performance` | [react.dev ⭐](https://react.dev/learn/render-and-commit) |
+| Error boundaries | 🟡 | 30m | `#errors` | [react.dev ⭐](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary) |
+| Portals | 🟢 | 30m | `#patterns` | [react.dev: createPortal ⭐](https://react.dev/reference/react-dom/createPortal) |
+| Refs & `forwardRef` | 🟡 | 30m | `#patterns` | [react.dev: forwardRef ⭐](https://react.dev/reference/react/forwardRef) |
+| Compound components / render props | 🔴 | 45m | `#patterns` | [patterns.dev: React patterns ⭐](https://www.patterns.dev/react) |
+| HOCs | 🟡 | 30m | `#patterns` | [patterns.dev ⭐](https://www.patterns.dev/react/hoc-pattern) |
+| React Compiler | 🟡 | 45m | `#performance` `#modern` | [react.dev: compiler ⭐](https://react.dev/learn/react-compiler) |
+
+## Rendering strategies & advanced
+
+| Topic | Difficulty | Time | Tags | Best Resources |
+|-------|:----------:|:----:|------|----------------|
+| Concurrent rendering | 🔴 | 1h | `#concurrent` | [react.dev ⭐](https://react.dev/blog/2022/03/29/react-v18) |
+| Suspense & streaming | 🔴 | 1h | `#concurrent` `#data` | [react.dev: Suspense ⭐](https://react.dev/reference/react/Suspense) |
+| React Server Components (RSC) | 🔴 | 1.5h | `#rsc` `#rendering` | [react.dev: server components ⭐](https://react.dev/reference/rsc/server-components) |
+| SSR & hydration | 🔴 | 1h | `#ssr` | [react.dev: hydrateRoot ⭐](https://react.dev/reference/react-dom/client/hydrateRoot) |
+| Server Actions | 🟡 | 45m | `#rsc` `#data` | [react.dev: 'use server' ⭐](https://react.dev/reference/rsc/use-server) |
+| Testing React | 🟡 | 1h | `#testing` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/intro/) |
+
+**Related:** [13-state-management](../13-state-management/) · [07-nextjs](../07-nextjs/) · [09-performance](../09-performance/) · [19-build-your-own](../19-build-your-own/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

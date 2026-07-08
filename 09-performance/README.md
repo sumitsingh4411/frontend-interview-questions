@@ -4,27 +4,54 @@ Every system-design answer is judged on this. Know the metrics, know how to move
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+## Metrics
+
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
 | Core Web Vitals overview | 🟡 | 45m | `#metrics` | [web.dev: Web Vitals ⭐](https://web.dev/articles/vitals) |
 | LCP (Largest Contentful Paint) | 🟡 | 45m | `#metrics` `#lcp` | [web.dev: LCP ⭐](https://web.dev/articles/lcp) |
 | CLS (Cumulative Layout Shift) | 🟡 | 45m | `#metrics` `#cls` | [web.dev: CLS ⭐](https://web.dev/articles/cls) |
 | INP (Interaction to Next Paint) | 🔴 | 1h | `#metrics` `#inp` | [web.dev: INP ⭐](https://web.dev/articles/inp) |
-| TTFB / FCP | 🟡 | 30m | `#metrics` | [web.dev: TTFB ⭐](https://web.dev/articles/ttfb) |
-| Bundle optimization & code splitting | 🔴 | 1.5h | `#bundling` | [web.dev: reduce JS payloads ⭐](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting) |
+| TTFB | 🟡 | 30m | `#metrics` | [web.dev: TTFB ⭐](https://web.dev/articles/ttfb) |
+| FCP & FID (legacy) | 🟢 | 30m | `#metrics` | [web.dev: FCP ⭐](https://web.dev/articles/fcp) |
+| Lab vs field data (RUM) | 🟡 | 45m | `#metrics` `#tooling` | [web.dev: RUM ⭐](https://web.dev/articles/user-centric-performance-metrics) |
+
+## Loading performance
+
+| Topic | Difficulty | Time | Tags | Best Resources |
+|-------|:----------:|:----:|------|----------------|
+| Bundle optimization & code splitting | 🔴 | 1.5h | `#bundling` | [web.dev: code splitting ⭐](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting) |
 | Tree shaking & dead code | 🟡 | 45m | `#bundling` | [web.dev: tree shaking ⭐](https://web.dev/articles/reduce-javascript-payloads-with-tree-shaking) |
-| Image optimization (formats, responsive, lazy) | 🟡 | 1h | `#images` | [web.dev: images ⭐](https://web.dev/learn/images) |
+| Lazy loading (routes/components/images) | 🟡 | 45m | `#loading` | [web.dev: lazy loading ⭐](https://web.dev/articles/lazy-loading) |
+| Image optimization (formats, responsive) | 🟡 | 1h | `#images` | [web.dev: images ⭐](https://web.dev/learn/images) |
 | Font loading strategy | 🟡 | 45m | `#fonts` | [web.dev: fonts ⭐](https://web.dev/learn/performance/optimize-web-fonts) |
-| Caching strategies | 🟡 | 1h | `#caching` `#networking` | [web.dev: HTTP caching ⭐](https://web.dev/articles/http-cache) |
-| Compression (gzip/brotli) | 🟢 | 30m | `#networking` | [web.dev: text compression ⭐](https://web.dev/articles/reduce-network-payloads-using-text-compression) |
 | Preload / prefetch / preconnect | 🟡 | 45m | `#loading` | [web.dev: resource hints ⭐](https://web.dev/articles/preload-critical-assets) |
+| Compression (gzip/brotli) | 🟢 | 30m | `#networking` | [web.dev: compression ⭐](https://web.dev/articles/reduce-network-payloads-using-text-compression) |
+| Critical CSS & above-the-fold | 🟡 | 45m | `#rendering` | [web.dev: critical CSS ⭐](https://web.dev/articles/extract-critical-css) |
+| HTTP caching & service worker cache | 🟡 | 1h | `#caching` | [web.dev: HTTP cache ⭐](https://web.dev/articles/http-cache) |
+| CDN & edge delivery | 🟡 | 45m | `#cdn` | [Cloudflare: CDN ⭐](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) |
+
+## Runtime performance
+
+| Topic | Difficulty | Time | Tags | Best Resources |
+|-------|:----------:|:----:|------|----------------|
 | List virtualization / windowing | 🔴 | 1.5h | `#large-data` `#rendering` | [Flagship ⭐](../06-react/build-a-virtualized-list.md) |
 | Infinite scroll vs pagination | 🟡 | 45m | `#large-data` `#ux` | [Flagship ⭐](../15-system-design/design-news-feed.md) |
 | Debounce/throttle & long-task splitting | 🟡 | 45m | `#interaction` | [web.dev: long tasks ⭐](https://web.dev/articles/optimize-long-tasks) |
 | Rendering performance (reflow/repaint) | 🔴 | 1h | `#rendering` | [web.dev: rendering perf ⭐](https://web.dev/articles/rendering-performance) |
+| Avoid layout thrashing | 🔴 | 45m | `#rendering` | [web.dev ⭐](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) |
 | Web Workers offloading | 🟡 | 1h | `#workers` | [web.dev: off main thread ⭐](https://web.dev/articles/off-main-thread) |
-| Profiling (DevTools Performance panel) | 🟡 | 1h | `#tooling` | [Chrome DevTools: performance ⭐](https://developer.chrome.com/docs/devtools/performance) |
-| Lighthouse & measuring in the field (RUM) | 🟡 | 45m | `#tooling` `#metrics` | [web.dev: Lighthouse ⭐](https://developer.chrome.com/docs/lighthouse/overview) |
+| Memory leaks & profiling | 🔴 | 1h | `#memory` | [Chrome DevTools ⭐](https://developer.chrome.com/docs/devtools/memory-problems) |
+| React render optimization | 🔴 | 1h | `#react` | [React deep dive ⭐](../06-react/) |
+
+## Tooling
+
+| Topic | Difficulty | Time | Tags | Best Resources |
+|-------|:----------:|:----:|------|----------------|
+| Lighthouse | 🟡 | 45m | `#tooling` | [Lighthouse ⭐](https://developer.chrome.com/docs/lighthouse/overview) |
+| DevTools Performance panel | 🟡 | 1h | `#tooling` | [Chrome DevTools ⭐](https://developer.chrome.com/docs/devtools/performance) |
+| Performance budgets | 🔴 | 45m | `#strategy` | [web.dev: budgets ⭐](https://web.dev/articles/performance-budgets-101) |
+| Bundle analysis | 🟡 | 30m | `#bundling` `#tooling` | [webpack-bundle-analyzer ⭐](https://github.com/webpack-contrib/webpack-bundle-analyzer) |
 
 **Related:** [02-browser](../02-browser/) · [12-networking](../12-networking/) · [17-interview-patterns](../17-interview-patterns/)
 
