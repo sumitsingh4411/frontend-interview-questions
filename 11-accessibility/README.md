@@ -47,6 +47,28 @@ Increasingly a scored dimension in system-design and machine-coding rounds. "Mak
 | Automated a11y testing (axe) | 🟡 | 45m | `#testing` `#tooling` | [Deque axe ⭐](https://www.deque.com/axe/) |
 | Manual testing with a screen reader | 🟡 | 45m | `#testing` | [web.dev ⭐](https://web.dev/learn/accessibility/test-manual) |
 
+## ❓ Rapid-fire accessibility interview questions
+
+Real a11y questions asked at the SDE-2 / senior level. Answer out loud, then verify above.
+
+1. What is **semantic HTML** and why does it matter for accessibility?
+2. What is **ARIA** and when should you **not** use it?
+3. What is the **accessibility tree**?
+4. How do you make a **custom component keyboard accessible**?
+5. What is **focus management** and **focus trapping**?
+6. What is an **ARIA live region** and when do you use it?
+7. What are WCAG's **POUR principles**?
+8. What **color contrast** ratio does WCAG require?
+9. How do you make a **modal accessible**?
+10. How do you **test accessibility** (automated + manual)?
+11. Difference between **`aria-hidden`** and **`display:none`**?
+12. How do **screen readers** work?
+13. What is a **skip link** and why add one?
+14. How do you respect **`prefers-reduced-motion`**?
+15. How do you **label form inputs** accessibly?
+
+---
+
 **Related:** [05-css](../05-css/) · [16-machine-coding](../16-machine-coding/) · [14-testing](../14-testing/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

@@ -40,6 +40,28 @@ The production meta-framework. Interviewers use it to probe rendering strategies
 | Authentication patterns | 🔴 | 1h | `#auth` | [Next.js: auth ⭐](https://nextjs.org/docs/app/building-your-application/authentication) |
 | Deployment & performance | 🟡 | 45m | `#deployment` `#performance` | [Next.js: deploying ⭐](https://nextjs.org/docs/app/building-your-application/deploying) |
 
+## ❓ Rapid-fire Next.js interview questions
+
+Real Next.js questions asked at the SDE-2 / senior level. Answer out loud, then verify above.
+
+1. **App Router vs Pages Router** — what changed and why?
+2. **Server Components vs Client Components** — when do you use each?
+3. How does **caching** work in Next.js (request, data, full-route, router cache)?
+4. **SSR vs SSG vs ISR vs PPR** — trade-offs?
+5. What are **Server Actions** and when do you use them?
+6. How does **streaming with Suspense** work?
+7. What is the **Edge runtime** and how does it differ from Node?
+8. How does **middleware** work and what can it do?
+9. What do **`'use client'`** and **`'use server'`** directives do?
+10. How do you **revalidate** cached data (`revalidatePath`, `revalidateTag`)?
+11. How do you handle **authentication** in the App Router?
+12. How do you set **metadata / SEO** tags?
+13. How do you fetch data in a **Server Component vs Client Component**?
+14. How do **Image** and **Font** optimization work?
+15. What is `generateStaticParams` and dynamic vs static rendering?
+
+---
+
 **Related:** [06-react](../06-react/) · [09-performance](../09-performance/) · [12-networking](../12-networking/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

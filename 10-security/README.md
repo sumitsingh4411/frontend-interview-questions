@@ -40,6 +40,28 @@ The threats you're expected to name and defend against. "How would you prevent X
 | Token storage (cookie vs localStorage) | 🔴 | 45m | `#auth` `#storage` | [OWASP: JWT cheat sheet ⭐](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html) |
 | Cookies & session security (SameSite, HttpOnly) | 🟡 | 45m | `#cookies` | [MDN: SameSite ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) |
 
+## ❓ Rapid-fire security interview questions
+
+Real frontend security questions asked at the SDE-2 / senior level. Answer out loud, then verify above.
+
+1. What is **XSS** and how do you prevent it (all three types)?
+2. What is **CSRF** and how do you prevent it?
+3. What is a **Content Security Policy (CSP)**?
+4. Where should you store **auth tokens** — cookie vs localStorage?
+5. **Authentication vs authorization** — what's the difference?
+6. How does **OAuth 2.0** work at a high level?
+7. What do **HttpOnly, Secure, and SameSite** cookie flags do?
+8. What is **CORS** and how do you configure it safely?
+9. What is **clickjacking** and how do you prevent it?
+10. What is **Subresource Integrity (SRI)**?
+11. How do you safely render **user/markdown/AI-generated** content (avoid XSS)?
+12. What is a **JWT** and what are its pitfalls?
+13. Which **security headers** should every app set?
+14. What is **prototype pollution**?
+15. How do you keep **API keys/secrets** out of the frontend?
+
+---
+
 **Related:** [01-fundamentals](../01-fundamentals/) · [12-networking](../12-networking/) · [13-state-management](../13-state-management/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

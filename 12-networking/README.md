@@ -45,6 +45,28 @@ The pipe between your app and the data. Real-time, protocols, and caching decisi
 | Rate limiting & retries/backoff | 🟡 | 45m | `#reliability` | [AWS: backoff & jitter ⭐](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/) |
 | Idempotency & request dedupe | 🟡 | 45m | `#reliability` | [Stripe: idempotency ⭐](https://docs.stripe.com/api/idempotent_requests) |
 
+## ❓ Rapid-fire networking interview questions
+
+Real networking questions asked at the SDE-2 / senior level. Answer out loud, then verify above.
+
+1. **HTTP/1.1 vs HTTP/2 vs HTTP/3** — what improved?
+2. **WebSocket vs SSE vs polling** — when do you use each?
+3. How does **HTTP caching** work (`Cache-Control`, `ETag`, `304`)?
+4. What is **CORS** and what triggers a **preflight** request?
+5. **REST vs GraphQL** — trade-offs?
+6. What is a **CDN** and how does it speed things up?
+7. What happens during a **TLS handshake**?
+8. What are **idempotent** HTTP methods?
+9. How do you **cancel an in-flight request** (AbortController)?
+10. **Cursor vs offset pagination** — why does it matter?
+11. How do you implement **retries with exponential backoff**?
+12. What is **DNS** and how does resolution work?
+13. What is **gzip/brotli compression**?
+14. How does **content negotiation** work?
+15. What is **request idempotency** and why does checkout need it?
+
+---
+
 **Related:** [09-performance](../09-performance/) · [13-state-management](../13-state-management/) · [17-interview-patterns](../17-interview-patterns/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

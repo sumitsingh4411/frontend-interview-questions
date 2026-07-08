@@ -31,6 +31,17 @@ Backend system design has [`system-design-primer`](https://github.com/donnemarti
 
 ---
 
+## 👥 Who is this for?
+
+Built for **frontend / UI engineers at every level** preparing for interviews — from your first job to FAANG:
+
+- **Junior → SDE-1** — lock the [fundamentals](01-fundamentals/), [JavaScript](03-javascript/), [CSS](05-css/), and skim the [FAQ](FAQ.md).
+- **Mid-level → SDE-2** *(the sweet spot)* — [machine coding](16-machine-coding/), [React](06-react/) deep-dives, [performance](09-performance/), [state management](13-state-management/), [DSA for frontend](21-dsa-for-frontend/), and your first [system design](15-system-design/) problems.
+- **Senior → Staff** — [frontend system design](15-system-design/), [architecture](08-architecture/), [interview patterns](17-interview-patterns/), and [build-your-own](19-build-your-own/) internals.
+- **Targeting a company?** Jump to the [company guides](20-company-guides/) — Google, Meta, Amazon, Netflix, Stripe, and more.
+
+---
+
 ## 🧭 How to use this repo
 
 1. **Start with the [Roadmap](ROADMAP.md).** It orders everything Beginner → Advanced so you're never lost.

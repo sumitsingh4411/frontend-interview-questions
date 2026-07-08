@@ -41,6 +41,28 @@ Server state vs client state, and picking the right tool. A favorite "walk me th
 | Offline support & persistence | 🔴 | 1.5h | `#offline` `#pwa` | [web.dev: offline ⭐](https://web.dev/articles/offline-cookbook) |
 | Undo/redo | 🟡 | 45m | `#patterns` | [Command pattern ⭐](../18-design-patterns/) |
 
+## ❓ Rapid-fire state management interview questions
+
+Real state-management questions asked at the SDE-2 / senior level. Answer out loud, then verify above.
+
+1. What's the difference between **client state and server state**?
+2. When do you need a **state library vs Context**?
+3. What problem does **Redux** solve? How does the flux pattern work?
+4. **Redux vs Zustand vs Jotai** — trade-offs?
+5. What is **React Query / SWR** and why use it?
+6. What are **optimistic updates** and how do you roll back?
+7. What is **state normalization** and why do it?
+8. How do you avoid unnecessary **re-renders with Context**?
+9. What are **signals** and how do they differ from React state?
+10. How do you **persist state** (localStorage/IndexedDB)?
+11. How do you handle **cache invalidation**?
+12. What is a **selector** and why memoize it (reselect)?
+13. How do you manage **complex form state**?
+14. What is a **state machine** (XState) and when is it useful?
+15. How do you **sync state across browser tabs**?
+
+---
+
 **Related:** [06-react](../06-react/) · [12-networking](../12-networking/) · [17-interview-patterns](../17-interview-patterns/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

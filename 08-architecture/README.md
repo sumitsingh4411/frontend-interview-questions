@@ -43,6 +43,28 @@ How to structure apps that many engineers and many teams touch. The Staff-level 
 | Internationalization architecture | 🟡 | 45m | `#i18n` | [FormatJS ⭐](https://formatjs.io/docs/getting-started/installation/) |
 | CI/CD for frontend | 🟡 | 45m | `#tooling` | [GitHub Actions ⭐](https://docs.github.com/en/actions) |
 
+## ❓ Rapid-fire architecture interview questions
+
+Real architecture questions asked at the SDE-2 / senior / staff level. Answer out loud, then verify above.
+
+1. What are **micro-frontends** and when would you use (or avoid) them?
+2. What is **Module Federation**?
+3. **Monorepo vs polyrepo** — trade-offs?
+4. How do you design a **reusable component library API**?
+5. What is a **design system** and what does it include?
+6. What are **design tokens**?
+7. How do you **structure a large frontend codebase** (feature-based/FSD)?
+8. What is a **Backend-for-Frontend (BFF)**?
+9. How do you decide **CSR vs SSR vs SSG** for a project?
+10. What is **dependency injection** on the frontend?
+11. How do you share **state across micro-frontends**?
+12. How do you **version and release** shared packages?
+13. What is **atomic design**?
+14. How do you **enforce architectural boundaries** in a codebase?
+15. How do you roll out changes safely with **feature flags**?
+
+---
+
 **Related:** [06-react](../06-react/) · [13-state-management](../13-state-management/) · [18-design-patterns](../18-design-patterns/) · [19-build-your-own](../19-build-your-own/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._
