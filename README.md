@@ -15,7 +15,7 @@ Every topic is an **interview-worthy question** with a **difficulty label**, a *
 
 <br/>
 
-**[📍 Roadmap](ROADMAP.md)** · **[🤝 Contribute](CONTRIBUTING.md)** · **[⭐ Flagship Solutions](#-flagship-worked-solutions)** · **[🏢 Company Guides](20-company-guides/)**
+**[❓ FAQ](FAQ.md)** · **[📍 Roadmap](ROADMAP.md)** · **[🤝 Contribute](CONTRIBUTING.md)** · **[⭐ Flagship Solutions](#-flagship-worked-solutions)** · **[🏢 Company Guides](20-company-guides/)**
 
 </div>
 
@@ -132,7 +132,7 @@ Good first contributions:
 
 ## 🔎 Topics covered
 
-A complete **frontend interview preparation** resource and **frontend interview questions** bank covering: **frontend system design**, **machine coding** rounds, **JavaScript interview questions**, **React interview questions**, **TypeScript**, **CSS** and **HTML**, **browser internals**, **web performance** (Core Web Vitals — LCP, CLS, INP), **accessibility (a11y)**, **web security** (XSS, CSRF, CSP), **networking** (HTTP, WebSocket, GraphQL), **state management**, **testing**, **design patterns**, **DSA for frontend** (data structures & algorithms), and **JavaScript output-based ("guess the output") questions** — plus **company-wise interview guides** for Google, Meta, Amazon, Netflix, Airbnb, Uber, Stripe, Microsoft, Atlassian, LinkedIn, Apple, Cloudflare, DoorDash, Pinterest, and Dropbox. Whether you're preparing for **SDE-2, Senior, Staff, or FAANG frontend interviews**, follow the [roadmap](ROADMAP.md) and work through every topic that matters.
+A complete **frontend interview preparation** resource and **frontend interview questions** bank covering: **frontend system design**, **machine coding** rounds, **JavaScript interview questions**, **React interview questions**, **TypeScript**, **CSS** and **HTML**, **browser internals**, **web performance** (Core Web Vitals — LCP, CLS, INP), **accessibility (a11y)**, **web security** (XSS, CSRF, CSP), **networking** (HTTP, WebSocket, GraphQL), **state management**, **testing**, **design patterns**, **DSA for frontend** (data structures & algorithms), and **JavaScript output-based ("guess the output") questions** — plus **company-wise interview guides** for Google, Meta, Amazon, Netflix, Airbnb, Uber, Stripe, Microsoft, Atlassian, LinkedIn, Apple, Cloudflare, DoorDash, Pinterest, and Dropbox. Whether you're preparing for **SDE-2, Senior, Staff, or FAANG frontend interviews**, follow the [roadmap](ROADMAP.md) and work through every topic that matters. New here? Start with the [**FAQ**](FAQ.md) — quick answers to the most-searched frontend questions (*what is a closure*, *what is the virtual DOM*, *how to center a div*, *CSR vs SSR*, *how to build a ChatGPT-style UI*, and more).
 
 ## 📄 License
 
