@@ -1,4 +1,8 @@
-# 13 · State Management
+<div align="center">
+
+<img src="banner.svg" alt="13 · State Management" width="100%" />
+
+</div>
 
 Server state vs client state, and picking the right tool. A favorite "walk me through the trade-offs" topic.
 

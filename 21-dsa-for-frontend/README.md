@@ -1,4 +1,8 @@
-# 21 · DSA for Frontend
+<div align="center">
+
+<img src="banner.svg" alt="21 · DSA for Frontend" width="100%" />
+
+</div>
 
 Yes, frontend interviews have a DSA round — but it's a **specific slice**. You rarely need dynamic programming on trees; you very often need arrays, strings, hashmaps, recursion, and **trees (the DOM is a tree!)**. This section is that focused slice, plus the "frontend-flavored" algorithm problems companies actually ask.
 

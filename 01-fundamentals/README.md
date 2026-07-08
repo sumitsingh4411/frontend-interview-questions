@@ -1,4 +1,8 @@
-# 01 · Frontend Fundamentals
+<div align="center">
+
+<img src="banner.svg" alt="01 · Frontend Fundamentals" width="100%" />
+
+</div>
 
 The bedrock. If any of these are shaky, everything above them wobbles in an interview. Master these first.
 

@@ -1,4 +1,8 @@
-# 16 · Machine Coding
+<div align="center">
+
+<img src="banner.svg" alt="16 · Machine Coding" width="100%" />
+
+</div>
 
 "Build this component in 45 minutes." Clean code, correct edge cases, accessibility, and a clear component API — that's what's scored. Start with the ⭐ **flagships**, then drill the categories.
 

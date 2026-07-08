@@ -1,4 +1,8 @@
-# 04 · TypeScript
+<div align="center">
+
+<img src="banner.svg" alt="04 · TypeScript" width="100%" />
+
+</div>
 
 Type-level thinking. Senior+ interviews increasingly ask you to design APIs with types and reason about generics.
 

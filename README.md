@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Frontend Interview Prep — open-source frontend interview questions and handbook covering system design, machine coding, JavaScript, React, CSS, DSA and performance, for SDE-2 to Staff and FAANG" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner.svg" />
+  <img src="assets/banner.svg" alt="Frontend Interview Prep — open-source frontend interview questions and handbook covering system design, machine coding, JavaScript, React, CSS, DSA and performance, for SDE-2 to Staff and FAANG" width="100%" />
+</picture>
 
 <br/><br/>
 

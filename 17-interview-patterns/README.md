@@ -1,4 +1,8 @@
-# 17 · Interview Patterns
+<div align="center">
+
+<img src="banner.svg" alt="17 · Interview Patterns" width="100%" />
+
+</div>
 
 The reusable "moves." Most "Design X" problems are combinations of these. Learn the pattern once, apply it everywhere.
 

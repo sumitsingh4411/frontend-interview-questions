@@ -1,4 +1,8 @@
-# 09 · Frontend Performance
+<div align="center">
+
+<img src="banner.svg" alt="09 · Frontend Performance" width="100%" />
+
+</div>
 
 Every system-design answer is judged on this. Know the metrics, know how to move them.
 

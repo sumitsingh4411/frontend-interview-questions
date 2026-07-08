@@ -1,4 +1,8 @@
-# 07 · Next.js
+<div align="center">
+
+<img src="banner.svg" alt="07 · Next.js" width="100%" />
+
+</div>
 
 The production meta-framework. Interviewers use it to probe rendering strategies, caching, and the server/client boundary.
 

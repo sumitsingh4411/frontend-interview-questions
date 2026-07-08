@@ -1,4 +1,8 @@
-# 15 · Frontend System Design
+<div align="center">
+
+<img src="banner.svg" alt="15 · Frontend System Design" width="100%" />
+
+</div>
 
 The main event. "Design X" — where you drive the whole conversation: requirements → architecture → data flow → deep dives → trade-offs. Start with the ⭐ **flagships** (fully solved) to learn the shape of a great answer, then practice the rest.
 

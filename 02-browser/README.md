@@ -1,4 +1,8 @@
-# 02 · Browser Internals
+<div align="center">
+
+<img src="banner.svg" alt="02 · Browser Internals" width="100%" />
+
+</div>
 
 How the browser turns bytes into pixels — and why your app is slow. The "explain what happens when…" questions live here.
 

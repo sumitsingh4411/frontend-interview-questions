@@ -1,4 +1,8 @@
-# 11 · Accessibility
+<div align="center">
+
+<img src="banner.svg" alt="11 · Accessibility" width="100%" />
+
+</div>
 
 Increasingly a scored dimension in system-design and machine-coding rounds. "Make it keyboard-accessible" is a common curveball.
 

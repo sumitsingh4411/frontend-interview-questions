@@ -1,4 +1,8 @@
-# 14 · Testing
+<div align="center">
+
+<img src="banner.svg" alt="14 · Testing" width="100%" />
+
+</div>
 
 How you prove the thing works. Expect "how would you test this?" after any machine-coding round.
 

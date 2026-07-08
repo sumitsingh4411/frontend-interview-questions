@@ -1,4 +1,8 @@
-# 03 · JavaScript
+<div align="center">
+
+<img src="banner.svg" alt="03 · JavaScript" width="100%" />
+
+</div>
 
 The language, deeply. These are the questions that get asked in *every* frontend loop — and where machine-coding rounds start.
 

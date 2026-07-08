@@ -1,4 +1,8 @@
-# 08 · Frontend Architecture
+<div align="center">
+
+<img src="banner.svg" alt="08 · Frontend Architecture" width="100%" />
+
+</div>
 
 How to structure apps that many engineers and many teams touch. The Staff-level differentiator.
 

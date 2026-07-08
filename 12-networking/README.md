@@ -1,4 +1,8 @@
-# 12 · Networking
+<div align="center">
+
+<img src="banner.svg" alt="12 · Networking" width="100%" />
+
+</div>
 
 The pipe between your app and the data. Real-time, protocols, and caching decisions dominate system-design rounds.
 

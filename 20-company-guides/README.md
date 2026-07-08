@@ -1,4 +1,8 @@
-# 20 · Company Guides
+<div align="center">
+
+<img src="banner.svg" alt="20 · Company Guides" width="100%" />
+
+</div>
 
 What each company *actually* emphasizes in frontend loops — the rounds, the flavor of questions, and real prompts people have been asked. **Community-sourced.** If you interviewed somewhere, [add what you got asked](../CONTRIBUTING.md).
 

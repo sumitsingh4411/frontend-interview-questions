@@ -1,4 +1,8 @@
-# 06 · React
+<div align="center">
+
+<img src="banner.svg" alt="06 · React" width="100%" />
+
+</div>
 
 The framework most FAANG frontend loops assume. They'll ask *how it works*, not just how to use it.
 

@@ -1,4 +1,8 @@
-# 05 · CSS
+<div align="center">
+
+<img src="banner.svg" alt="05 · CSS" width="100%" />
+
+</div>
 
 Layout, the cascade, and making it fast. "Center a div" is a meme; "explain the stacking context" is the real interview.
 

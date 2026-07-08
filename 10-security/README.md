@@ -1,4 +1,8 @@
-# 10 · Frontend Security
+<div align="center">
+
+<img src="banner.svg" alt="10 · Frontend Security" width="100%" />
+
+</div>
 
 The threats you're expected to name and defend against. "How would you prevent XSS here?" is a near-guaranteed follow-up.
 

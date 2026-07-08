@@ -1,4 +1,8 @@
-# 19 · Build Your Own
+<div align="center">
+
+<img src="banner.svg" alt="19 · Build Your Own" width="100%" />
+
+</div>
 
 Nothing teaches internals like rebuilding the tools. These projects turn "I use React" into "I understand React" — the difference between Senior and Staff.
 

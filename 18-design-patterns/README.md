@@ -1,4 +1,8 @@
-# 18 · Design Patterns
+<div align="center">
+
+<img src="banner.svg" alt="18 · Design Patterns" width="100%" />
+
+</div>
 
 Classic GoF patterns and how they actually appear in frontend code. Expect "what pattern is this / how would you refactor this?"
 
