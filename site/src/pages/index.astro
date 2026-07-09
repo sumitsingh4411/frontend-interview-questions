@@ -8,6 +8,11 @@ import { url, GITHUB_URL } from '@lib/url.ts';
 const stats = getStats();
 const banks = getBanks();
 const n = (v: number) => v.toLocaleString();
+
+// The headline's underline is the spectrum at its true proportions.
+const t = stats.counts.total || 1;
+const stopEasy = (stats.counts.easy / t) * 100;
+const stopMed = stopEasy + (stats.counts.medium / t) * 100;
 ---
 
 <BaseLayout
@@ -17,11 +22,14 @@ const n = (v: number) => v.toLocaleString();
 >
   <section class="hero">
     <div class="hero-inner">
-      <p class="eyebrow">Open-source frontend interview handbook</p>
+      <p class="pill">
+        <span class="pill-dot" aria-hidden="true"></span>
+        Open source · MIT · generated from Markdown
+      </p>
 
       <h1>
-        Walk in knowing you<br />
-        <em>didn't miss anything.</em>
+        <span class="quiet">Walk in knowing you</span>
+        <span class="punch" style={`--stop-e:${stopEasy}%;--stop-m:${stopMed}%`}>didn't miss anything.</span>
       </h1>
 
       <p class="lede">
@@ -38,15 +46,18 @@ const n = (v: number) => v.toLocaleString();
       </div>
 
       <div class="cta">
-        <a class="btn btn-primary" href={url('roadmap/')}>Start with the roadmap</a>
+        <a class="btn btn-primary" href={url('roadmap/')}>
+          Start with the roadmap
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
         <a class="btn" href={url('banks/')}>Browse question banks</a>
       </div>
 
-      <ul class="stat-strip mono">
-        <li><b>{stats.sections}</b> sections</li>
-        <li><b>{stats.categories}</b> categories</li>
-        <li><b>{stats.deepDives}</b> worked deep-dives</li>
-        <li><b>{stats.companyGuides}</b> company guides</li>
+      <ul class="stat-strip">
+        <li><b class="mono">{stats.sections}</b><span>sections</span></li>
+        <li><b class="mono">{stats.categories}</b><span>categories</span></li>
+        <li><b class="mono">{stats.deepDives}</b><span>worked deep-dives</span></li>
+        <li><b class="mono">{stats.companyGuides}</b><span>company guides</span></li>
       </ul>
     </div>
   </section>
@@ -54,11 +65,8 @@ const n = (v: number) => v.toLocaleString();
   <section class="band">
     <div class="band-inner">
       <header class="band-head">
-        <div>
-          <p class="eyebrow">Question banks</p>
-          <h2>Every question, bucketed by what it tests</h2>
-        </div>
-        <a class="more" href={url('banks/')}>All banks →</a>
+        <p class="eyebrow">Question banks</p>
+        <h2>Every question, bucketed by what it tests</h2>
       </header>
 
       <ul class="bank-grid">
@@ -66,30 +74,62 @@ const n = (v: number) => v.toLocaleString();
           banks.map((b) => (
             <li>
               <a class="bank-card" href={url(`banks/${b.slug}/`)}>
+                <span class="edge-lit" aria-hidden="true" />
                 <div class="bc-top">
-                  <span class="bc-emoji" aria-hidden="true">
+                  <span class="bc-tile" aria-hidden="true">
                     {b.emoji}
                   </span>
-                  <span class="bc-n mono">{n(b.counts.total)}</span>
+                  <span class="bc-count">
+                    <b class="mono">{n(b.counts.total)}</b>
+                    <i>questions</i>
+                  </span>
                 </div>
+
                 <h3>{b.title}</h3>
-                <p>{b.blurb}</p>
+                <p class="bc-blurb">{b.blurb}</p>
+
                 <SpectrumBar counts={b.counts} size="sm" class="bc-bar" />
-                <p class="bc-meta mono">
-                  {b.categories.length} categories
-                  <span class="bc-arrow">→</span>
-                </p>
+
+                <div class="bc-foot mono">
+                  <span>{b.categories.length} categories</span>
+                  <span class="bc-arrow" aria-hidden="true">
+                    →
+                  </span>
+                </div>
               </a>
             </li>
           ))
         }
+
+        <li>
+          <a class="bank-card is-all" href={url('banks/')}>
+            <span class="edge-lit" aria-hidden="true"></span>
+            <div class="bc-top">
+              <span class="bc-tile is-ghost" aria-hidden="true">✦</span>
+              <span class="bc-count">
+                <b class="mono">{n(stats.questions)}</b>
+                <i>in total</i>
+              </span>
+            </div>
+
+            <h3>All question banks</h3>
+            <p class="bc-blurb">Every bank in one place, {stats.categories} categories deep. Filter, search, and track what you finish.</p>
+
+            <SpectrumBar counts={stats.counts} size="sm" class="bc-bar" />
+
+            <div class="bc-foot mono">
+              <span>Browse all</span>
+              <span class="bc-arrow" aria-hidden="true">→</span>
+            </div>
+          </a>
+        </li>
       </ul>
     </div>
   </section>
 
   <section class="band band-alt">
     <div class="band-inner">
-      <header class="band-head">
+      <header class="band-head band-head-row">
         <div>
           <p class="eyebrow">The handbook</p>
           <h2>{stats.sections} sections, ordered the way you should learn them</h2>
@@ -131,7 +171,10 @@ const n = (v: number) => v.toLocaleString();
         resource? Open a pull request.
       </p>
       <div class="cta">
-        <a class="btn btn-primary" href={GITHUB_URL} target="_blank" rel="noopener noreferrer">Star on GitHub</a>
+        <a class="btn btn-primary" href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+          Star on GitHub
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
         <a class="btn" href={url('faq/')}>Read the FAQ</a>
       </div>
     </div>
@@ -145,54 +188,144 @@ const n = (v: number) => v.toLocaleString();
     overflow: hidden;
     border-bottom: 1px solid var(--border);
   }
+
+  /* Spotlight */
   .hero::before {
     content: '';
     position: absolute;
-    top: -240px;
+    top: -280px;
     left: 50%;
     translate: -50% 0;
-    width: 900px;
-    height: 520px;
+    width: 1000px;
+    height: 600px;
     background: radial-gradient(closest-side, var(--accent-glow), transparent 72%);
-    opacity: 0.5;
+    opacity: 0.55;
     pointer-events: none;
+  }
+
+  /* Faint dot grid, faded out toward the edges */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle at 1px 1px, var(--border-strong) 1px, transparent 0);
+    background-size: 30px 30px;
+    opacity: 0.3;
+    -webkit-mask-image: radial-gradient(ellipse 78% 62% at 50% 4%, #000 35%, transparent 78%);
+    mask-image: radial-gradient(ellipse 78% 62% at 50% 4%, #000 35%, transparent 78%);
   }
 
   .hero-inner {
     position: relative;
-    max-width: 900px;
+    z-index: 1;
+    max-width: 920px;
     margin: 0 auto;
-    padding: 92px 24px 80px;
+    padding: 88px 24px 84px;
     text-align: center;
   }
 
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0;
+    padding: 6px 14px 6px 11px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 70%, transparent);
+    backdrop-filter: blur(6px);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--text-dim);
+  }
+  .pill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--easy);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--easy) 70%, transparent);
+    animation: ping 2.4s var(--ease) infinite;
+  }
+  @keyframes ping {
+    0% {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--easy) 60%, transparent);
+    }
+    70%,
+    100% {
+      box-shadow: 0 0 0 7px transparent;
+    }
+  }
+
   .hero h1 {
+    display: flex;
+    flex-direction: column;
+    /* shrink each line to its text so the underline hugs the punchline */
+    align-items: center;
+    gap: 0.04em;
     font-size: var(--step-4);
     font-weight: 600;
-    margin: 18px 0 0;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.038em;
+    margin: 22px 0 0;
   }
-  .hero h1 em {
-    font-style: normal;
+  .quiet {
     color: var(--text-dim);
+  }
+
+  /* The punchline is underscored by the corpus's real difficulty split. */
+  .punch {
+    position: relative;
+    display: inline-block;
+    color: var(--text);
+    padding-bottom: 0.1em;
+  }
+  .punch::after {
+    content: '';
+    position: absolute;
+    left: 0.02em;
+    right: 0.02em;
+    bottom: 0;
+    height: 5px;
+    border-radius: 999px;
+    background: linear-gradient(
+      90deg,
+      var(--easy) 0 var(--stop-e),
+      var(--medium) var(--stop-e) var(--stop-m),
+      var(--hard) var(--stop-m) 100%
+    );
+    transform-origin: left center;
+    animation: sweep 0.95s var(--ease) 0.3s both;
+  }
+  @keyframes sweep {
+    from {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    to {
+      transform: scaleX(1);
+      opacity: 1;
+    }
   }
 
   .lede {
     max-width: 620px;
-    margin: 20px auto 0;
+    margin: 26px auto 0;
     color: var(--text-dim);
     font-size: var(--step-1);
     line-height: 1.55;
   }
 
   .corpus {
-    margin: 52px auto 0;
+    margin: 50px auto 0;
     max-width: 720px;
     text-align: left;
     padding: 20px 22px 18px;
-    background: var(--surface);
+    background: color-mix(in srgb, var(--surface) 82%, transparent);
+    backdrop-filter: blur(8px);
     border: 1px solid var(--border);
     border-radius: var(--r-lg);
+    box-shadow: var(--shadow-md);
   }
   .corpus-head {
     display: flex;
@@ -218,24 +351,34 @@ const n = (v: number) => v.toLocaleString();
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px 28px;
+    gap: 12px 30px;
     list-style: none;
-    margin: 42px 0 0;
+    margin: 44px 0 0;
     padding: 0;
-    font-size: var(--step--1);
-    color: var(--text-faint);
+  }
+  .stat-strip li {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
   }
   .stat-strip b {
-    color: var(--text);
+    font-size: var(--step-1);
     font-weight: 500;
+    color: var(--text);
+    letter-spacing: -0.02em;
+  }
+  .stat-strip span {
+    font-size: var(--step--1);
+    color: var(--text-faint);
   }
 
   /* Buttons ------------------------------------------------------------ */
   .btn {
     display: inline-flex;
     align-items: center;
-    height: 42px;
-    padding: 0 20px;
+    gap: 8px;
+    height: 44px;
+    padding: 0 22px;
     border-radius: 999px;
     border: 1px solid var(--border-strong);
     background: var(--surface);
@@ -257,17 +400,24 @@ const n = (v: number) => v.toLocaleString();
     background: var(--accent);
     border-color: var(--accent);
     color: var(--accent-contrast);
-    box-shadow: 0 6px 28px -8px var(--accent-glow);
+    box-shadow: 0 8px 30px -8px var(--accent-glow);
   }
   .btn-primary:hover {
     background: var(--accent-hi);
     border-color: var(--accent-hi);
     color: var(--accent-contrast);
+    box-shadow: 0 12px 36px -8px var(--accent-glow);
+  }
+  .btn-arrow {
+    transition: translate 0.16s var(--ease);
+  }
+  .btn:hover .btn-arrow {
+    translate: 3px 0;
   }
 
   /* Bands -------------------------------------------------------------- */
   .band {
-    padding: 76px 24px;
+    padding: 84px 24px;
   }
   .band-alt {
     background: var(--bg-elev);
@@ -279,11 +429,7 @@ const n = (v: number) => v.toLocaleString();
   }
 
   .band-head {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 36px;
+    margin-bottom: 38px;
   }
   .band-head .eyebrow {
     margin: 0 0 10px;
@@ -292,6 +438,12 @@ const n = (v: number) => v.toLocaleString();
     font-size: var(--step-2);
     margin: 0;
     max-width: 26ch;
+  }
+  .band-head-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
   }
   .more {
     color: var(--text-dim);
@@ -304,83 +456,139 @@ const n = (v: number) => v.toLocaleString();
   }
 
   /* Bank cards --------------------------------------------------------- */
+  /* Five banks + one "all banks" cell = a clean 3x2. No orphan row. */
   .bank-grid {
     list-style: none;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
   }
 
   .bank-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 20px;
+    padding: 22px;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--r-lg);
     text-decoration: none;
     color: inherit;
+    overflow: hidden;
     transition:
-      transform 0.16s var(--ease),
-      border-color 0.16s var(--ease),
-      box-shadow 0.16s var(--ease);
+      transform 0.18s var(--ease),
+      border-color 0.18s var(--ease),
+      box-shadow 0.18s var(--ease);
   }
   .bank-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
     border-color: var(--accent-line);
     box-shadow: var(--shadow-md);
+  }
+
+  /* A hairline of accent that sweeps across the top edge on hover. */
+  .edge-lit {
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity 0.22s var(--ease);
+  }
+  .bank-card:hover .edge-lit {
+    opacity: 1;
   }
 
   .bc-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 14px;
+    gap: 12px;
+    margin-bottom: 18px;
   }
-  .bc-emoji {
-    font-size: 20px;
+  .bc-tile {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+    border-radius: var(--r-md);
+    border: 1px solid var(--border);
+    background: linear-gradient(160deg, var(--surface-2), var(--surface));
   }
-  .bc-n {
-    font-size: var(--step-1);
+  .bc-tile.is-ghost {
+    color: var(--accent);
+    border-color: var(--accent-line);
+    background: var(--accent-dim);
+  }
+
+  .bc-count {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1.1;
+  }
+  .bc-count b {
+    font-size: var(--step-2);
     font-weight: 500;
     color: var(--text);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+  }
+  .bc-count i {
+    font-style: normal;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-faint);
+    margin-top: 3px;
   }
 
   .bank-card h3 {
-    font-size: var(--step-0);
-    margin: 0 0 6px;
+    font-size: var(--step-1);
+    margin: 0 0 7px;
     color: var(--text);
   }
-  .bank-card p {
+  .bank-card:hover h3 {
+    color: var(--accent);
+  }
+  .bc-blurb {
     margin: 0;
     font-size: var(--step--1);
     color: var(--text-dim);
     line-height: 1.5;
   }
 
+  /* Pin the bar to the bottom so it lines up across a row, whatever the
+     blurb's line count. */
   .bank-card :global(.bc-bar) {
-    margin: 18px 0 12px;
+    margin-top: auto;
+    padding-top: 22px;
+    margin-bottom: 14px;
   }
 
-  .bc-meta {
+  .bc-foot {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: auto !important;
+    padding-top: 2px;
     font-size: 11px;
-    color: var(--text-faint) !important;
+    color: var(--text-faint);
   }
   .bc-arrow {
-    color: var(--text-faint);
-    transition: translate 0.16s var(--ease), color 0.16s var(--ease);
+    transition:
+      translate 0.16s var(--ease),
+      color 0.16s var(--ease);
   }
   .bank-card:hover .bc-arrow {
     translate: 3px 0;
     color: var(--accent);
+  }
+
+  .is-all {
+    background: linear-gradient(160deg, color-mix(in srgb, var(--accent-dim) 70%, var(--surface)), var(--surface));
+    border-color: var(--accent-line);
   }
 
   /* Section groups ----------------------------------------------------- */
@@ -463,16 +671,31 @@ const n = (v: number) => v.toLocaleString();
     margin: 14px 0 0;
   }
 
+  @media (max-width: 960px) {
+    .bank-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
   @media (max-width: 640px) {
     .hero-inner {
-      padding: 64px 18px 56px;
+      padding: 60px 18px 56px;
+    }
+    .hero h1 {
+      letter-spacing: -0.03em;
     }
     .band {
       padding: 56px 18px;
     }
-    .band-head {
+    .band-head-row {
       flex-direction: column;
       align-items: flex-start;
+    }
+    .bank-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .stat-strip {
+      gap: 10px 22px;
     }
   }
 </style>

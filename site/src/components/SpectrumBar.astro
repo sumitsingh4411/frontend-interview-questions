@@ -34,7 +34,12 @@ const aria = segments.map((s) => `${s.n} ${s.label.toLowerCase()}`).join(', ');
   <div class="track" role="img" aria-label={`Difficulty mix: ${aria}`}>
     {
       segments.map((s, i) => (
-        <div class:list={['seg', `seg-${s.key}`]} style={`--w:${pct(s.n)}%;--i:${i}`} data-diff={s.key}>
+        <div
+          class:list={['seg', `seg-${s.key}`]}
+          style={`--w:${pct(s.n)}%;--i:${i}`}
+          data-diff={s.key}
+          title={`${s.n.toLocaleString()} ${s.label.toLowerCase()} · ${pct(s.n).toFixed(0)}%`}
+        >
           {progress && <span class="seg-done" data-done-for={s.key} />}
         </div>
       ))
