@@ -1,0 +1,169 @@
+---
+import DocLayout from '@layouts/DocLayout.astro';
+import { getBank, getStats, getSubpages } from '@lib/content.ts';
+import { GROUP_ORDER, SECTIONS } from '@lib/sections.ts';
+import { url } from '@lib/url.ts';
+
+const stats = getStats();
+const rows = SECTIONS.map((s) => ({
+  ...s,
+  dives: getSubpages(s.slug).length,
+  bankCount: s.bank ? getBank(s.bank).counts.total : 0,
+}));
+const n = (v: number) => v.toLocaleString();
+---
+
+<DocLayout
+  title="All sections"
+  eyebrow="The handbook"
+  wide
+  description={`${stats.sections} sections covering the whole frontend interview, ordered the way you should learn them.`}
+>
+  <p slot="subhead" class="sub">
+    {stats.sections} sections, ordered the way you should learn them. Each one lists what to know, ranked by difficulty,
+    with the single best resource for each item.
+  </p>
+
+  {
+    GROUP_ORDER.map((group) => (
+      <section class="grp">
+        <h2 class="grp-h">
+          {group}
+          <span class="mono">{rows.filter((r) => r.group === group).length}</span>
+        </h2>
+        <ul>
+          {rows
+            .filter((r) => r.group === group)
+            .map((s) => (
+              <li>
+                <a href={url(`sections/${s.slug}/`)}>
+                  <span class="num mono">{s.num}</span>
+                  <span class="body">
+                    <span class="title">
+                      <span class="emo" aria-hidden="true">
+                        {s.emoji}
+                      </span>
+                      {s.title}
+                    </span>
+                    <span class="blurb">{s.blurb}</span>
+                  </span>
+                  <span class="meta mono">
+                    {s.bankCount > 0 && <span class="pill">{n(s.bankCount)} in bank</span>}
+                    {s.dives > 0 && <span class="dives">{s.dives} deep-dives</span>}
+                  </span>
+                </a>
+              </li>
+            ))}
+        </ul>
+      </section>
+    ))
+  }
+</DocLayout>
+
+<style>
+  .sub {
+    margin: 14px 0 0;
+    color: var(--text-dim);
+    max-width: 62ch;
+  }
+
+  .grp {
+    margin-top: 44px;
+  }
+  .grp-h {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: var(--step-1);
+    margin: 0 0 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .grp-h .mono {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 6px;
+  }
+
+  a {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 14px;
+    border-radius: var(--r-md);
+    border: 1px solid transparent;
+    text-decoration: none;
+    color: inherit;
+    transition:
+      background 0.13s var(--ease),
+      border-color 0.13s var(--ease);
+  }
+  a:hover {
+    background: var(--surface);
+    border-color: var(--border);
+  }
+
+  .num {
+    font-size: 10px;
+    color: var(--text-faint);
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+    font-weight: 500;
+    font-size: var(--step-0);
+  }
+  a:hover .title {
+    color: var(--accent);
+  }
+  .emo {
+    font-size: 13px;
+  }
+  .blurb {
+    color: var(--text-faint);
+    font-size: var(--step--1);
+    line-height: 1.45;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    color: var(--text-faint);
+    white-space: nowrap;
+  }
+  .pill {
+    color: var(--accent);
+    background: var(--accent-dim);
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+
+  @media (max-width: 700px) {
+    a {
+      grid-template-columns: 20px minmax(0, 1fr);
+    }
+    .meta {
+      grid-column: 2;
+      margin-top: 6px;
+    }
+  }
+</style>

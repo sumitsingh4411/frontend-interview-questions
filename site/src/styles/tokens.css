@@ -1,0 +1,99 @@
+/* Design tokens. Dark is the default; light is an opt-in override. */
+
+:root {
+  /* Surfaces — near-black, faintly blue, layered rather than flat */
+  --bg: #0b0c0f;
+  --bg-elev: #101218;
+  --surface: #14161c;
+  --surface-2: #1b1e26;
+  --surface-3: #22262f;
+  --border: #262a34;
+  --border-strong: #333846;
+
+  /* Text */
+  --text: #e7e9ee;
+  --text-dim: #9aa0ad;
+  --text-faint: #5c6270;
+
+  /* Brand accent: iris. Deliberately off the red/amber/green difficulty axis
+     so it never competes with content meaning. */
+  --accent: #8b8cff;
+  --accent-hi: #a5a6ff;
+  --accent-dim: rgba(139, 140, 255, 0.14);
+  --accent-line: rgba(139, 140, 255, 0.32);
+  --accent-glow: rgba(139, 140, 255, 0.35);
+  --accent-contrast: #0b0c0f;
+
+  /* Difficulty — the content's own color language */
+  --easy: #3fb950;
+  --medium: #e3b341;
+  --hard: #f85149;
+  --easy-dim: rgba(63, 185, 80, 0.16);
+  --medium-dim: rgba(227, 179, 65, 0.16);
+  --hard-dim: rgba(248, 81, 73, 0.16);
+
+  /* Type */
+  --font-display: 'Space Grotesk Variable', 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Hanken Grotesk Variable', 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --step--1: clamp(0.78rem, 0.76rem + 0.1vw, 0.84rem);
+  --step-0: clamp(0.94rem, 0.91rem + 0.15vw, 1rem);
+  --step-1: clamp(1.1rem, 1.03rem + 0.35vw, 1.28rem);
+  --step-2: clamp(1.35rem, 1.2rem + 0.7vw, 1.7rem);
+  --step-3: clamp(1.7rem, 1.4rem + 1.4vw, 2.4rem);
+  --step-4: clamp(2.1rem, 1.5rem + 2.8vw, 3.8rem);
+
+  /* Space + shape */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px -8px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 24px 64px -16px rgba(0, 0, 0, 0.7);
+
+  --sidebar-w: 268px;
+  --toc-w: 216px;
+  --topbar-h: 56px;
+  --content-max: 780px;
+
+  --ease: cubic-bezier(0.32, 0.72, 0, 1);
+
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  --bg: #fbfbfd;
+  --bg-elev: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f4f5f8;
+  --surface-3: #eaecf1;
+  --border: #e4e6ec;
+  --border-strong: #d3d6de;
+
+  --text: #14161c;
+  --text-dim: #5c6270;
+  --text-faint: #8a90a0;
+
+  --accent: #5b5ce0;
+  --accent-hi: #4747d1;
+  --accent-dim: rgba(91, 92, 224, 0.1);
+  --accent-line: rgba(91, 92, 224, 0.28);
+  --accent-glow: rgba(91, 92, 224, 0.25);
+  --accent-contrast: #ffffff;
+
+  --easy: #1a7f37;
+  --medium: #9a6700;
+  --hard: #cf222e;
+  --easy-dim: rgba(26, 127, 55, 0.12);
+  --medium-dim: rgba(154, 103, 0, 0.12);
+  --hard-dim: rgba(207, 34, 46, 0.1);
+
+  --shadow-sm: 0 1px 2px rgba(16, 18, 24, 0.06);
+  --shadow-md: 0 8px 24px -10px rgba(16, 18, 24, 0.18);
+  --shadow-lg: 0 24px 64px -18px rgba(16, 18, 24, 0.22);
+
+  color-scheme: light;
+}

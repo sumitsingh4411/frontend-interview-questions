@@ -1,0 +1,95 @@
+---
+import type { Heading } from '@lib/markdown.ts';
+
+interface Props {
+  headings: Heading[];
+}
+const { headings } = Astro.props;
+---
+
+{
+  headings.length > 1 && (
+    <aside class="toc" aria-label="On this page">
+      <p class="eyebrow">On this page</p>
+      <ul>
+        {headings.map((h) => (
+          <li class:list={[`d${h.depth}`]}>
+            <a href={`#${h.id}`} data-toc-link={h.id}>
+              {h.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  )
+}
+
+<style>
+  .toc {
+    position: sticky;
+    top: calc(var(--topbar-h) + 32px);
+    align-self: start;
+    width: var(--toc-w);
+    max-height: calc(100dvh - var(--topbar-h) - 64px);
+    overflow-y: auto;
+    padding-left: 20px;
+    border-left: 1px solid var(--border);
+    font-size: var(--step--1);
+  }
+
+  .eyebrow {
+    margin: 0 0 10px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li.d3 a {
+    padding-left: 14px;
+    font-size: 12px;
+  }
+
+  a {
+    display: block;
+    padding: 4px 0;
+    color: var(--text-faint);
+    text-decoration: none;
+    line-height: 1.4;
+    transition: color 0.13s var(--ease);
+  }
+  a:hover {
+    color: var(--text-dim);
+  }
+  a.active {
+    color: var(--accent);
+  }
+
+  @media (max-width: 1180px) {
+    .toc {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('[data-toc-link]')];
+  if (links.length) {
+    const byId = new Map(links.map((l) => [l.dataset.tocLink!, l]));
+    const targets = [...byId.keys()].map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          links.forEach((l) => l.classList.remove('active'));
+          byId.get(e.target.id)?.classList.add('active');
+        }
+      },
+      { rootMargin: '-80px 0px -70% 0px', threshold: 0 },
+    );
+    targets.forEach((t) => observer.observe(t));
+  }
+</script>

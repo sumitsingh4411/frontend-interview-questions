@@ -1,0 +1,417 @@
+@import '@fontsource-variable/space-grotesk';
+@import '@fontsource-variable/hanken-grotesk';
+@import '@fontsource-variable/jetbrains-mono';
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--topbar-h) + 24px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+  text-wrap: balance;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-color: var(--accent-line);
+  text-underline-offset: 3px;
+}
+a:hover {
+  color: var(--accent-hi);
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+:where(button, a, input, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: var(--text);
+}
+
+/* Utility ------------------------------------------------------------ */
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 100;
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  padding: 10px 16px;
+  border-radius: var(--r-md);
+  transition: top 0.16s var(--ease);
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+/* Difficulty tags ---------------------------------------------------- */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.tag::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.tag-easy {
+  color: var(--easy);
+  background: var(--easy-dim);
+  border-color: var(--easy-dim);
+}
+.tag-medium {
+  color: var(--medium);
+  background: var(--medium-dim);
+  border-color: var(--medium-dim);
+}
+.tag-hard {
+  color: var(--hard);
+  background: var(--hard-dim);
+  border-color: var(--hard-dim);
+}
+.tag-none {
+  color: var(--text-faint);
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
+/* Checkbox ----------------------------------------------------------- */
+/* One control, used by the question tracker, the "hide done" toggle, and
+   the requirement checklists inside flagship pages. */
+
+.check {
+  appearance: none;
+  -webkit-appearance: none;
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 5px;
+  background: var(--bg-elev);
+  cursor: pointer;
+  display: inline-grid;
+  place-content: center;
+  transition:
+    background 0.14s var(--ease),
+    border-color 0.14s var(--ease);
+}
+
+.check::after {
+  content: '';
+  width: 9px;
+  height: 9px;
+  background: var(--accent-contrast);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transition: transform 0.14s var(--ease);
+}
+
+.check:hover {
+  border-color: var(--accent-line);
+}
+.check:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.check:checked::after {
+  transform: scale(1);
+}
+.check:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+/* Prose -------------------------------------------------------------- */
+
+.prose {
+  max-width: var(--content-max);
+  font-size: var(--step-0);
+  color: var(--text-dim);
+}
+
+.prose > * + * {
+  margin-top: 1.1em;
+}
+
+.prose h2 {
+  font-size: var(--step-2);
+  color: var(--text);
+  margin-top: 2.4em;
+  padding-top: 1.4em;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: calc(var(--topbar-h) + 24px);
+}
+
+/* The source Markdown already separates sections with "---". Don't draw a
+   second rule (and a dead gap) when an <hr> lands right before a heading. */
+.prose hr + h2 {
+  margin-top: 1.4em;
+  padding-top: 0;
+  border-top: 0;
+}
+.prose h3 {
+  font-size: var(--step-1);
+  color: var(--text);
+  margin-top: 1.9em;
+  scroll-margin-top: calc(var(--topbar-h) + 24px);
+}
+.prose h4 {
+  font-size: var(--step-0);
+  color: var(--text);
+  margin-top: 1.6em;
+}
+
+.prose strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.3em;
+}
+.prose li + li {
+  margin-top: 0.35em;
+}
+.prose li::marker {
+  color: var(--text-faint);
+}
+
+/* Requirement checklists inside flagship pages */
+.prose .task-list-item {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.prose ul:has(> .task-list-item) {
+  padding-left: 0;
+}
+.prose .task-list-item-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  flex: none;
+  width: 15px;
+  height: 15px;
+  margin: 4px 0 0;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 5px;
+  background: var(--bg-elev);
+  cursor: pointer;
+  display: inline-grid;
+  place-content: center;
+  transition:
+    background 0.14s var(--ease),
+    border-color 0.14s var(--ease);
+}
+.prose .task-list-item-checkbox::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--accent-contrast);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transition: transform 0.14s var(--ease);
+}
+.prose .task-list-item-checkbox:hover {
+  border-color: var(--accent-line);
+}
+.prose .task-list-item-checkbox:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.prose .task-list-item-checkbox:checked::after {
+  transform: scale(1);
+}
+.prose .task-list-item-checkbox:checked + label {
+  color: var(--text-faint);
+  text-decoration: line-through;
+}
+
+.prose blockquote {
+  margin: 1.6em 0;
+  padding: 14px 18px;
+  border-left: 2px solid var(--accent);
+  background: var(--accent-dim);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  color: var(--text);
+}
+.prose blockquote > :first-child {
+  margin-top: 0;
+}
+.prose blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 0.12em 0.38em;
+  color: var(--text);
+}
+
+.prose pre {
+  background: var(--surface) !important;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 16px 18px;
+  overflow-x: auto;
+  font-size: 0.86em;
+  line-height: 1.6;
+}
+.prose pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2.4em 0;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--step--1);
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.prose thead th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-strong);
+}
+.prose tbody td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.prose tbody tr:hover td {
+  background: var(--surface);
+}
+.prose tbody td:first-child {
+  color: var(--text);
+}
+
+.prose .heading-anchor {
+  margin-left: 0.4em;
+  color: var(--text-faint);
+  opacity: 0;
+  text-decoration: none;
+  font-weight: 400;
+  transition: opacity 0.12s var(--ease);
+}
+.prose :is(h2, h3):hover .heading-anchor,
+.prose .heading-anchor:focus-visible {
+  opacity: 1;
+}
+
+/* Shiki dual theme --------------------------------------------------- */
+
+.shiki,
+.shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: transparent !important;
+}
+:root[data-theme='light'] .shiki,
+:root[data-theme='light'] .shiki span {
+  color: var(--shiki-light) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

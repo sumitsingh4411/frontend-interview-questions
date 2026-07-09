@@ -20,6 +20,8 @@
 
 <br/>
 
+[![Website](https://img.shields.io/badge/🌐-Browse_as_a_website-101825?style=flat-square&labelColor=8b8cff)](https://sumitsingh4411.github.io/frontend-interview-questions/)
+&nbsp;
 [![FAQ](https://img.shields.io/badge/❓-FAQ-101825?style=flat-square&labelColor=7aa2f7)](FAQ.md)
 &nbsp;
 [![Roadmap](https://img.shields.io/badge/📍-Roadmap-101825?style=flat-square&labelColor=7aa2f7)](ROADMAP.md)
@@ -29,6 +31,14 @@
 [![Machine Coding](https://img.shields.io/badge/🧩-Machine_Coding-101825?style=flat-square&labelColor=7aa2f7)](16-machine-coding/)
 &nbsp;
 [![Company Guides](https://img.shields.io/badge/🏢-Company_Guides-101825?style=flat-square&labelColor=7aa2f7)](20-company-guides/)
+
+<br/><br/>
+
+<a href="https://sumitsingh4411.github.io/frontend-interview-questions/">
+  <img src="assets/site-preview.png" alt="The Frontend Interview Prep website — a dark, searchable handbook showing the whole question corpus split by difficulty into 628 easy, 1,497 medium and 1,021 hard" width="100%" />
+</a>
+
+<sub>**[Browse the handbook as a website →](https://sumitsingh4411.github.io/frontend-interview-questions/)**&nbsp;&nbsp;·&nbsp;&nbsp;search every question with `⌘K`, filter by difficulty, track what you've finished.</sub>
 
 </div>
 

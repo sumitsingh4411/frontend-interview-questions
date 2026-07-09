@@ -1,0 +1,188 @@
+---
+import DocLayout from '@layouts/DocLayout.astro';
+import SpectrumBar from '@components/SpectrumBar.astro';
+import { getBank, getProseDoc, getSubpages } from '@lib/content.ts';
+import { SECTIONS } from '@lib/sections.ts';
+import { BASE, url } from '@lib/url.ts';
+
+export async function getStaticPaths() {
+  return SECTIONS.map((section) => ({ params: { section: section.slug }, props: { section } }));
+}
+
+const { section } = Astro.props;
+const doc = await getProseDoc(`${section.slug}/README.md`, BASE, { title: section.title });
+const subpages = getSubpages(section.slug);
+const bank = section.bank ? getBank(section.bank) : null;
+const n = (v: number) => v.toLocaleString();
+---
+
+<DocLayout
+  title={section.title}
+  eyebrow={`${section.num} · ${section.group}`}
+  description={section.blurb}
+  headings={doc.headings}
+>
+  <p slot="subhead" class="sub">{section.blurb}</p>
+
+  {
+    bank && (
+      <a class="bank-cta" href={url(`banks/${bank.slug}/`)}>
+        <span class="bc-emoji" aria-hidden="true">
+          {bank.emoji}
+        </span>
+        <span class="bc-main">
+          <span class="bc-title">
+            {bank.title} question bank
+            <span class="bc-arrow">→</span>
+          </span>
+          <span class="bc-sub mono">
+            {n(bank.counts.total)} questions · {bank.categories.length} categories
+          </span>
+        </span>
+        <SpectrumBar counts={bank.counts} size="sm" class="bc-bar" />
+      </a>
+    )
+  }
+
+  <div class="prose" set:html={doc.html} />
+
+  {
+    subpages.length > 0 && (
+      <section class="dives">
+        <h2 class="dives-h">
+          {section.slug === '20-company-guides' ? 'Company guides' : 'Deep dives in this section'}
+          <span class="mono">{subpages.length}</span>
+        </h2>
+        <ul>
+          {subpages.map((p) => (
+            <li>
+              <a href={url(`sections/${section.slug}/${p.slug}/`)}>
+                <span class="d-title">{p.title}</span>
+                <span class="d-arrow" aria-hidden="true">
+                  →
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+</DocLayout>
+
+<style>
+  .sub {
+    margin: 14px 0 0;
+    color: var(--text-dim);
+    font-size: var(--step-1);
+    max-width: 60ch;
+    line-height: 1.5;
+  }
+
+  .bank-cta {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 4px 14px;
+    align-items: center;
+    padding: 16px 18px;
+    margin-bottom: 34px;
+    border: 1px solid var(--accent-line);
+    border-radius: var(--r-lg);
+    background: var(--accent-dim);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.14s var(--ease);
+  }
+  .bank-cta:hover {
+    transform: translateY(-2px);
+  }
+  .bc-emoji {
+    font-size: 20px;
+    grid-row: span 2;
+  }
+  .bc-main {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .bc-title {
+    color: var(--text);
+    font-weight: 500;
+    font-size: var(--step-0);
+  }
+  .bc-arrow {
+    color: var(--accent);
+    margin-left: 4px;
+    display: inline-block;
+    transition: translate 0.14s var(--ease);
+  }
+  .bank-cta:hover .bc-arrow {
+    translate: 3px 0;
+  }
+  .bc-sub {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+  .bank-cta :global(.bc-bar) {
+    grid-column: 2;
+    margin-top: 10px;
+  }
+
+  .dives {
+    margin-top: 56px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border);
+  }
+  .dives-h {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: var(--step-1);
+    margin: 0 0 16px;
+  }
+  .dives-h .mono {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+  .dives ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .dives a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 13px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    background: var(--surface);
+    text-decoration: none;
+    transition:
+      border-color 0.14s var(--ease),
+      transform 0.14s var(--ease);
+  }
+  .dives a:hover {
+    border-color: var(--accent-line);
+    transform: translateX(2px);
+  }
+  .d-title {
+    color: var(--text);
+    font-size: var(--step--1);
+    line-height: 1.4;
+  }
+  .dives a:hover .d-title {
+    color: var(--accent);
+  }
+  .d-arrow {
+    color: var(--text-faint);
+    flex: none;
+  }
+  .dives a:hover .d-arrow {
+    color: var(--accent);
+  }
+</style>

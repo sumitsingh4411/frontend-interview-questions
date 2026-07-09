@@ -1,0 +1,166 @@
+---
+import DocLayout from '@layouts/DocLayout.astro';
+import SpectrumBar from '@components/SpectrumBar.astro';
+import { getBanks, getStats } from '@lib/content.ts';
+import { url } from '@lib/url.ts';
+
+const banks = getBanks();
+const stats = getStats();
+const n = (v: number) => v.toLocaleString();
+---
+
+<DocLayout
+  title="Question banks"
+  eyebrow="Browse"
+  wide
+  description={`All ${n(stats.questions)} frontend interview questions, split into ${stats.banks} banks and ${stats.categories} categories.`}
+>
+  <p slot="subhead" class="sub">
+    {n(stats.questions)} questions, de-duplicated from real prep sheets and bucketed by what they test. Prompts only —
+    you work the answers.
+  </p>
+
+  <div class="overview">
+    <div class="ov-head">
+      <span class="eyebrow">Every bank combined</span>
+      <span class="mono ov-n">{n(stats.questions)} questions</span>
+    </div>
+    <SpectrumBar counts={stats.counts} size="lg" labels animate />
+  </div>
+
+  <ul class="banks">
+    {
+      banks.map((b) => (
+        <li>
+          <a class="bank" href={url(`banks/${b.slug}/`)}>
+            <span class="b-emoji" aria-hidden="true">
+              {b.emoji}
+            </span>
+            <div class="b-main">
+              <h3>{b.title}</h3>
+              <p class="b-blurb">{b.blurb}</p>
+              <SpectrumBar counts={b.counts} size="sm" class="b-bar" />
+            </div>
+            <div class="b-side mono">
+              <span class="b-n">{n(b.counts.total)}</span>
+              <span class="b-cats">{b.categories.length} categories</span>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</DocLayout>
+
+<style>
+  .sub {
+    margin: 14px 0 0;
+    color: var(--text-dim);
+    max-width: 60ch;
+  }
+
+  .overview {
+    margin-top: 8px;
+    padding: 20px 22px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+  }
+  .ov-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+  .ov-n {
+    font-size: var(--step--1);
+    color: var(--text);
+  }
+
+  .banks {
+    list-style: none;
+    margin: 30px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+  }
+
+  .bank {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    gap: 18px;
+    align-items: start;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    background: var(--surface);
+    text-decoration: none;
+    color: inherit;
+    transition:
+      border-color 0.15s var(--ease),
+      transform 0.15s var(--ease);
+  }
+  .bank:hover {
+    border-color: var(--accent-line);
+    transform: translateY(-2px);
+  }
+
+  .b-emoji {
+    font-size: 24px;
+    line-height: 1;
+    padding-top: 2px;
+  }
+
+  .bank h3 {
+    font-size: var(--step-1);
+    margin: 0 0 5px;
+    color: var(--text);
+  }
+  .bank:hover h3 {
+    color: var(--accent);
+  }
+  .b-blurb {
+    margin: 0;
+    color: var(--text-dim);
+    font-size: var(--step--1);
+  }
+  .bank :global(.b-bar) {
+    margin-top: 16px;
+    max-width: 420px;
+  }
+
+  .b-side {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .b-n {
+    font-size: var(--step-2);
+    color: var(--text);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .b-cats {
+    font-size: 10px;
+    color: var(--text-faint);
+  }
+
+  @media (max-width: 640px) {
+    .bank {
+      grid-template-columns: 32px minmax(0, 1fr);
+    }
+    .b-side {
+      grid-column: 2;
+      text-align: left;
+      flex-direction: row;
+      align-items: baseline;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .b-n {
+      font-size: var(--step-1);
+    }
+  }
+</style>

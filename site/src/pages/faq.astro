@@ -1,0 +1,16 @@
+---
+import DocLayout from '@layouts/DocLayout.astro';
+import { getProseDoc } from '@lib/content.ts';
+import { BASE } from '@lib/url.ts';
+
+const doc = await getProseDoc('FAQ.md', BASE, { title: 'FAQ' });
+---
+
+<DocLayout
+  title="FAQ"
+  eyebrow="Reference"
+  description="Common questions about preparing for frontend interviews — levels, timelines, what to study, and how to use this handbook."
+  headings={doc.headings}
+>
+  <div class="prose" set:html={doc.html} />
+</DocLayout>

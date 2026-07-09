@@ -1,0 +1,247 @@
+---
+import { getStats } from '@lib/content.ts';
+import { url, GITHUB_URL } from '@lib/url.ts';
+
+const stats = getStats();
+const t = stats.counts.total || 1;
+const w = {
+  easy: (stats.counts.easy / t) * 100,
+  medium: (stats.counts.medium / t) * 100,
+  hard: (stats.counts.hard / t) * 100,
+};
+---
+
+<header class="topbar">
+  <div class="bar">
+    <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" data-menu-toggle>
+      <svg viewBox="0 0 16 16" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M2 4h12M2 8h12M2 12h12" stroke-linecap="round"></path>
+      </svg>
+    </button>
+
+    <a class="brand" href={url()}>
+      <span class="mark" aria-hidden="true"></span>
+      <span class="wordmark">Frontend<span class="thin">Interview</span></span>
+    </a>
+
+    <nav class="top-nav" aria-label="Primary">
+      <a href={url('sections/')}>Sections</a>
+      <a href={url('banks/')}>Question banks</a>
+      <a href={url('roadmap/')}>Roadmap</a>
+    </nav>
+
+    <div class="right">
+      <button class="search-btn" data-search-open aria-label="Search questions">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="7" cy="7" r="4.5"></circle>
+          <path d="M10.5 10.5 14 14" stroke-linecap="round"></path>
+        </svg>
+        <span class="search-label">Search {stats.questions.toLocaleString()} questions</span>
+        <kbd class="mono">⌘K</kbd>
+      </button>
+
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle color theme">
+        <svg class="i-sun" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="8" cy="8" r="3.2"></circle>
+          <path d="M8 .8v1.6M8 13.6v1.6M15.2 8h-1.6M2.4 8H.8M13.1 2.9l-1.1 1.1M4 12l-1.1 1.1M13.1 13.1 12 12M4 4 2.9 2.9" stroke-linecap="round"></path>
+        </svg>
+        <svg class="i-moon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M13.5 9.4A5.8 5.8 0 0 1 6.6 2.5 5.8 5.8 0 1 0 13.5 9.4Z" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+
+      <a class="icon-btn" href={GITHUB_URL} aria-label="View on GitHub" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+          <path
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  {/* The spectrum, at true corpus proportions, as the bar's own edge. */}
+  <div class="edge" aria-hidden="true">
+    <i style={`width:${w.easy}%;background:var(--easy)`}></i>
+    <i style={`width:${w.medium}%;background:var(--medium)`}></i>
+    <i style={`width:${w.hard}%;background:var(--hard)`}></i>
+  </div>
+</header>
+
+<style>
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: blur(12px) saturate(140%);
+  }
+
+  .bar {
+    height: var(--topbar-h);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 0 20px;
+  }
+
+  .edge {
+    display: flex;
+    height: 2px;
+    opacity: 0.85;
+  }
+  .edge i {
+    display: block;
+    height: 100%;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+  .mark {
+    width: 13px;
+    height: 13px;
+    border-radius: 4px;
+    background: linear-gradient(150deg, var(--accent-hi), var(--accent));
+    box-shadow: 0 0 16px var(--accent-glow);
+  }
+  .thin {
+    color: var(--text-faint);
+    font-weight: 400;
+    margin-left: 2px;
+  }
+
+  .top-nav {
+    display: flex;
+    gap: 20px;
+    margin-left: 14px;
+  }
+  .top-nav a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: var(--step--1);
+    transition: color 0.14s var(--ease);
+  }
+  .top-nav a:hover {
+    color: var(--text);
+  }
+
+  .right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .search-btn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    height: 34px;
+    padding: 0 8px 0 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text-faint);
+    font-family: var(--font-body);
+    font-size: var(--step--1);
+    cursor: pointer;
+    transition:
+      border-color 0.14s var(--ease),
+      color 0.14s var(--ease);
+  }
+  .search-btn:hover {
+    border-color: var(--border-strong);
+    color: var(--text-dim);
+  }
+  .search-btn kbd {
+    font-size: 10px;
+    padding: 2px 5px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--surface-2);
+    color: var(--text-faint);
+  }
+
+  .icon-btn,
+  .menu-btn {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition:
+      background 0.14s var(--ease),
+      color 0.14s var(--ease);
+  }
+  .icon-btn:hover,
+  .menu-btn:hover {
+    background: var(--surface-2);
+    color: var(--text);
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .i-moon {
+    display: none;
+  }
+  :root[data-theme='light'] .i-sun {
+    display: none;
+  }
+  :root[data-theme='light'] .i-moon {
+    display: block;
+  }
+
+  @media (max-width: 1000px) {
+    .top-nav {
+      display: none;
+    }
+    .search-label {
+      display: none;
+    }
+    .search-btn {
+      padding: 0 10px;
+    }
+  }
+
+  @media (max-width: 860px) {
+    .menu-btn {
+      display: grid;
+    }
+    .bar {
+      padding: 0 12px;
+      gap: 10px;
+    }
+  }
+</style>
+
+<script>
+  const root = document.documentElement;
+  document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
+    const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem('fip-theme', next);
+    } catch {}
+  });
+
+  const menuBtn = document.querySelector('[data-menu-toggle]');
+  menuBtn?.addEventListener('click', () => {
+    const open = document.body.classList.toggle('nav-open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+</script>

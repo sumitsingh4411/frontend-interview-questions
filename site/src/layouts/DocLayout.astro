@@ -1,0 +1,95 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Sidebar from '@components/Sidebar.astro';
+import Toc from '@components/Toc.astro';
+import type { Heading } from '@lib/markdown.ts';
+
+interface Props {
+  title: string;
+  description: string;
+  eyebrow?: string;
+  headings?: Heading[];
+  /** Dense list pages (banks) get a roomier content column. */
+  wide?: boolean;
+}
+
+const { title, description, eyebrow, headings = [], wide = false } = Astro.props;
+const showToc = headings.length > 1;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class:list={['shell', { 'no-toc': !showToc, wide }]}>
+    <Sidebar />
+
+    <div class="col">
+      <article class="article">
+        <header class="head">
+          {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+          <h1>{title}</h1>
+          <slot name="subhead" />
+        </header>
+        <slot />
+      </article>
+    </div>
+
+    <Toc headings={headings} />
+  </div>
+</BaseLayout>
+
+<style>
+  .shell {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) minmax(0, 1fr) var(--toc-w);
+    gap: 0 44px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-right: 24px;
+    align-items: start;
+  }
+
+  /* Don't reserve a gutter for a table of contents that isn't rendered. */
+  .shell.no-toc {
+    grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+    max-width: 1240px;
+  }
+
+  .col {
+    min-width: 0;
+    padding: 44px 0 80px;
+  }
+
+  .article {
+    max-width: var(--content-max);
+  }
+
+  .wide .article {
+    max-width: 940px;
+  }
+
+  .head {
+    margin-bottom: 34px;
+  }
+  .head .eyebrow {
+    margin: 0 0 12px;
+  }
+  .head h1 {
+    font-size: var(--step-3);
+    margin: 0;
+  }
+
+  @media (max-width: 1180px) {
+    .shell {
+      grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+    }
+  }
+
+  @media (max-width: 860px) {
+    .shell {
+      grid-template-columns: minmax(0, 1fr);
+      padding: 0 18px;
+    }
+    .col {
+      padding: 28px 0 64px;
+    }
+  }
+</style>

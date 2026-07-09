@@ -1,0 +1,479 @@
+---
+import type { Counts, Question } from '@lib/content.ts';
+import SpectrumBar from './SpectrumBar.astro';
+
+interface Props {
+  bank: string;
+  category: string;
+  questions: Question[];
+  counts: Counts;
+}
+
+const { bank, category, questions, counts } = Astro.props;
+
+/** Stable id per question so progress survives reordering. */
+function qHash(s: string): string {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+  return (h >>> 0).toString(36);
+}
+
+const LABEL: Record<string, string> = { easy: 'Easy', medium: 'Medium', hard: 'Hard', none: 'Unrated' };
+const pad = String(questions.length).length;
+---
+
+<section class="qlist" data-qlist data-key={`fip:done:${bank}:${category}`}>
+  <div class="progress">
+    <div class="p-row">
+      <span class="eyebrow">Your progress</span>
+      <span class="p-count mono"><b data-done-count>0</b> / {counts.total} done</span>
+    </div>
+    <SpectrumBar counts={counts} size="md" progress />
+    <p class="p-note mono">
+      Saved in this browser.
+      <button type="button" data-reset>Reset</button>
+    </p>
+  </div>
+
+  <div class="toolbar">
+    <div class="chips" role="group" aria-label="Filter by difficulty">
+      <button class="chip is-on" data-filter="all" aria-pressed="true">
+        All <span class="mono">{counts.total}</span>
+      </button>
+      {
+        (['easy', 'medium', 'hard', 'none'] as const)
+          .filter((d) => counts[d] > 0)
+          .map((d) => (
+            <button class:list={['chip', `chip-${d}`]} data-filter={d} aria-pressed="false">
+              <span class="c-dot" />
+              {LABEL[d]} <span class="mono">{counts[d]}</span>
+            </button>
+          ))
+      }
+    </div>
+
+    <div class="tools">
+      <label class="hide-done">
+        <input type="checkbox" class="check" data-hide-done />
+        <span>Hide done</span>
+      </label>
+      <div class="filter-input">
+        <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <circle cx="7" cy="7" r="4.5"></circle>
+          <path d="M10.5 10.5 14 14" stroke-linecap="round"></path>
+        </svg>
+        <input type="search" data-filter-text placeholder="Filter these questions…" aria-label="Filter questions in this category" />
+      </div>
+    </div>
+  </div>
+
+  <p class="empty" data-empty hidden>No questions match those filters.</p>
+
+  <ol class="items" style={`--pad:${pad}ch`}>
+    {
+      questions.map((q, i) => {
+        const id = `${bank}-${category}-${i}`;
+        return (
+          <li class="q" data-diff={q.difficulty} data-hash={qHash(q.text)} data-text={q.text.toLowerCase()}>
+            <input type="checkbox" id={id} class="q-check check" data-check />
+            <label for={id}>
+              <span class="q-num mono">{String(i + 1).padStart(pad, '0')}</span>
+              <span class="q-text">{q.text}</span>
+              <span class:list={['tag', `tag-${q.difficulty}`]}>{LABEL[q.difficulty]}</span>
+            </label>
+          </li>
+        );
+      })
+    }
+  </ol>
+</section>
+
+<style>
+  .qlist {
+    margin-top: 4px;
+  }
+
+  /* Progress ----------------------------------------------------------- */
+  .progress {
+    padding: 18px 20px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+  }
+  .p-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+  }
+  .p-count {
+    font-size: var(--step--1);
+    color: var(--text-faint);
+  }
+  .p-count b {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .p-note {
+    margin: 12px 0 0;
+    font-size: 11px;
+    color: var(--text-faint);
+    display: flex;
+    justify-content: space-between;
+  }
+  .p-note button {
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--text-faint);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .p-note button:hover {
+    color: var(--hard);
+  }
+
+  /* Toolbar ------------------------------------------------------------ */
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 26px 0 14px;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    height: 30px;
+    padding: 0 11px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-dim);
+    font-family: var(--font-body);
+    font-size: var(--step--1);
+    cursor: pointer;
+    transition:
+      border-color 0.13s var(--ease),
+      color 0.13s var(--ease),
+      background 0.13s var(--ease);
+  }
+  .chip .mono {
+    font-size: 10px;
+    color: var(--text-faint);
+  }
+  .chip:hover {
+    border-color: var(--border-strong);
+    color: var(--text);
+  }
+  .chip.is-on {
+    background: var(--accent-dim);
+    border-color: var(--accent-line);
+    color: var(--text);
+  }
+  .chip.is-on .mono {
+    color: var(--accent);
+  }
+
+  .c-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+  }
+  .chip-easy .c-dot {
+    background: var(--easy);
+  }
+  .chip-medium .c-dot {
+    background: var(--medium);
+  }
+  .chip-hard .c-dot {
+    background: var(--hard);
+  }
+  .chip-none .c-dot {
+    background: var(--text-faint);
+  }
+
+  .tools {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hide-done {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: var(--step--1);
+    color: var(--text-dim);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .hide-done .check {
+    width: 15px;
+    height: 15px;
+  }
+
+  .filter-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 32px;
+    padding: 0 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text-faint);
+    transition: border-color 0.13s var(--ease);
+  }
+  .filter-input:focus-within {
+    border-color: var(--accent-line);
+  }
+  .filter-input input {
+    border: 0;
+    outline: none;
+    background: none;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: var(--step--1);
+    width: 180px;
+  }
+  .filter-input input::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  /* Items -------------------------------------------------------------- */
+  .items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+  }
+
+  .q {
+    position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+  .q:last-child {
+    border-bottom: 0;
+  }
+  .q[hidden] {
+    display: none;
+  }
+
+  /* Visual style comes from the shared .check control in global.css. */
+  .q-check {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    translate: 0 -50%;
+    z-index: 1;
+  }
+
+  .q label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 11px 16px 11px 44px;
+    cursor: pointer;
+    transition: background 0.12s var(--ease);
+  }
+  .q:hover label {
+    background: var(--surface);
+  }
+
+  .q-num {
+    font-size: 10px;
+    color: var(--text-faint);
+    width: var(--pad);
+    flex: none;
+    text-align: right;
+  }
+
+  .q-text {
+    flex: 1;
+    min-width: 0;
+    color: var(--text);
+    font-size: var(--step-0);
+    line-height: 1.45;
+  }
+
+  .q .tag {
+    flex: none;
+  }
+
+  .q.done .q-text {
+    color: var(--text-faint);
+    text-decoration: line-through;
+    text-decoration-color: var(--text-faint);
+  }
+  .q.done .tag {
+    opacity: 0.45;
+  }
+
+  .empty {
+    padding: 40px 10px;
+    text-align: center;
+    color: var(--text-faint);
+    font-size: var(--step--1);
+    border: 1px dashed var(--border);
+    border-radius: var(--r-lg);
+    margin: 0 0 14px;
+  }
+
+  @media (max-width: 720px) {
+    .toolbar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .tools {
+      justify-content: space-between;
+    }
+    .filter-input input {
+      width: 100%;
+    }
+    /* Stack as: [x] 01  Question text
+                         ● TAG           — the question leads, the tag follows. */
+    .q label {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 7px 12px;
+      align-items: start;
+      padding: 12px 16px 12px 44px;
+    }
+    .q-num {
+      grid-area: 1 / 1;
+      padding-top: 3px;
+    }
+    .q-text {
+      grid-area: 1 / 2;
+    }
+    .q .tag {
+      grid-area: 2 / 2;
+      justify-self: start;
+    }
+    .q-check {
+      top: 17px;
+      translate: 0 0;
+    }
+  }
+</style>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-qlist]');
+  if (root) {
+    const KEY = root.dataset.key!;
+    const items = [...root.querySelectorAll<HTMLLIElement>('.q')];
+    const doneCountEl = root.querySelector<HTMLElement>('[data-done-count]')!;
+    const emptyEl = root.querySelector<HTMLElement>('[data-empty]')!;
+    const hideDoneEl = root.querySelector<HTMLInputElement>('[data-hide-done]')!;
+    const textEl = root.querySelector<HTMLInputElement>('[data-filter-text]')!;
+    const chips = [...root.querySelectorAll<HTMLButtonElement>('[data-filter]')];
+    const segs = [...root.querySelectorAll<HTMLElement>('[data-done-for]')];
+
+    const totals: Record<string, number> = {};
+    for (const li of items) totals[li.dataset.diff!] = (totals[li.dataset.diff!] ?? 0) + 1;
+
+    const load = (): Set<string> => {
+      try {
+        return new Set(JSON.parse(localStorage.getItem(KEY) ?? '[]'));
+      } catch {
+        return new Set();
+      }
+    };
+    const save = (s: Set<string>) => {
+      try {
+        localStorage.setItem(KEY, JSON.stringify([...s]));
+      } catch {}
+    };
+
+    let done = load();
+    let filter = 'all';
+
+    const paint = () => {
+      // Per-difficulty completion drives the spectrum's accent fill.
+      const perDiff: Record<string, number> = {};
+      for (const li of items) {
+        const isDone = done.has(li.dataset.hash!);
+        li.classList.toggle('done', isDone);
+        (li.querySelector('.q-check') as HTMLInputElement).checked = isDone;
+        if (isDone) perDiff[li.dataset.diff!] = (perDiff[li.dataset.diff!] ?? 0) + 1;
+      }
+      doneCountEl.textContent = String(done.size);
+      for (const seg of segs) {
+        const d = seg.dataset.doneFor!;
+        const pct = totals[d] ? ((perDiff[d] ?? 0) / totals[d]) * 100 : 0;
+        seg.style.width = `${pct}%`;
+      }
+    };
+
+    const applyFilters = () => {
+      const q = textEl.value.trim().toLowerCase();
+      const hideDone = hideDoneEl.checked;
+      let visible = 0;
+      for (const li of items) {
+        const okDiff = filter === 'all' || li.dataset.diff === filter;
+        const okText = !q || li.dataset.text!.includes(q);
+        const okDone = !hideDone || !done.has(li.dataset.hash!);
+        const show = okDiff && okText && okDone;
+        li.hidden = !show;
+        if (show) visible++;
+      }
+      emptyEl.hidden = visible > 0;
+    };
+
+    root.addEventListener('change', (e) => {
+      const el = e.target as HTMLElement;
+      if (el.matches('[data-check]')) {
+        const li = el.closest('.q') as HTMLLIElement;
+        const h = li.dataset.hash!;
+        (el as HTMLInputElement).checked ? done.add(h) : done.delete(h);
+        save(done);
+        paint();
+        if (hideDoneEl.checked) applyFilters();
+      } else if (el.matches('[data-hide-done]')) {
+        applyFilters();
+      }
+    });
+
+    chips.forEach((chip) =>
+      chip.addEventListener('click', () => {
+        filter = chip.dataset.filter!;
+        chips.forEach((c) => {
+          const on = c === chip;
+          c.classList.toggle('is-on', on);
+          c.setAttribute('aria-pressed', String(on));
+        });
+        applyFilters();
+      }),
+    );
+
+    let t: ReturnType<typeof setTimeout>;
+    textEl.addEventListener('input', () => {
+      clearTimeout(t);
+      t = setTimeout(applyFilters, 90);
+    });
+
+    root.querySelector('[data-reset]')?.addEventListener('click', () => {
+      done = new Set();
+      save(done);
+      paint();
+      applyFilters();
+    });
+
+    paint();
+    applyFilters();
+  }
+</script>

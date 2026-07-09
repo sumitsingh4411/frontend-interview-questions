@@ -1,0 +1,106 @@
+---
+import '../styles/global.css';
+import TopBar from '@components/TopBar.astro';
+import SearchPalette from '@components/SearchPalette.astro';
+import { url } from '@lib/url.ts';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Wide pages (home, indexes) skip the docs grid. */
+  bare?: boolean;
+}
+
+const { title, description, bare = false } = Astro.props;
+const siteName = 'Frontend Interview Prep';
+const fullTitle = title === siteName ? title : `${title} · ${siteName}`;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://example.com').href;
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content={siteName} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
+
+    {/* Set the theme before first paint to avoid a flash. */}
+    <script is:inline>
+      (() => {
+        try {
+          const stored = localStorage.getItem('fip-theme');
+          const theme =
+            stored ?? (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          document.documentElement.dataset.theme = theme;
+        } catch {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <TopBar />
+    <slot name="hero" />
+
+    {
+      bare ? (
+        <main id="main">
+          <slot />
+        </main>
+      ) : (
+        <main id="main">
+          <slot />
+        </main>
+      )
+    }
+
+    <footer class="site-footer">
+      <div class="foot-inner">
+        <p>
+          Built from the <a href="https://github.com/sumitsingh4411/frontend-interview-questions">open-source
+          handbook</a>. Markdown is the source of truth — this site is generated from it.
+        </p>
+        <p class="mono muted">MIT licensed · Contributions welcome</p>
+      </div>
+    </footer>
+
+    <SearchPalette />
+  </body>
+</html>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--border);
+    margin-top: 96px;
+    padding: 40px 24px;
+    background: var(--bg-elev);
+  }
+  .foot-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 32px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--step--1);
+    color: var(--text-dim);
+  }
+  .foot-inner p {
+    margin: 0;
+  }
+  .muted {
+    color: var(--text-faint);
+    font-size: 11px;
+  }
+</style>
