@@ -1,0 +1,115 @@
+---
+import DocLayout from '@layouts/DocLayout.astro';
+import QuestionList from '@components/QuestionList.astro';
+import { getBanks } from '@lib/content.ts';
+import { url } from '@lib/url.ts';
+
+export async function getStaticPaths() {
+  return getBanks().flatMap((bank) =>
+    bank.categories.map((cat, i) => ({
+      params: { bank: bank.slug, category: cat.slug },
+      props: {
+        bank,
+        cat,
+        prev: bank.categories[i - 1] ?? null,
+        next: bank.categories[i + 1] ?? null,
+      },
+    })),
+  );
+}
+
+const { bank, cat, prev, next } = Astro.props;
+const n = (v: number) => v.toLocaleString();
+---
+
+<DocLayout
+  title={cat.title}
+  eyebrow={`${bank.title} bank`}
+  wide
+  description={`${n(cat.counts.total)} ${cat.title} interview questions (${cat.counts.easy} easy, ${cat.counts.medium} medium, ${cat.counts.hard} hard) from the open-source frontend interview handbook.`}
+>
+  <p slot="subhead" class="sub">
+    <a href={url(`banks/${bank.slug}/`)}>{bank.title}</a>
+    <span class="sep">/</span>
+    <span class="mono">{n(cat.counts.total)} questions</span>
+  </p>
+
+  <QuestionList bank={bank.slug} category={cat.slug} questions={cat.questions} counts={cat.counts} />
+
+  <nav class="pager" aria-label="Categories">
+    {
+      prev ? (
+        <a class="pg" href={url(`banks/${bank.slug}/${prev.slug}/`)}>
+          <span class="eyebrow">← Previous</span>
+          <span class="pg-t">{prev.title}</span>
+        </a>
+      ) : (
+        <span />
+      )
+    }
+    {
+      next && (
+        <a class="pg pg-next" href={url(`banks/${bank.slug}/${next.slug}/`)}>
+          <span class="eyebrow">Next →</span>
+          <span class="pg-t">{next.title}</span>
+        </a>
+      )
+    }
+  </nav>
+</DocLayout>
+
+<style>
+  .sub {
+    margin: 14px 0 0;
+    font-size: var(--step--1);
+    color: var(--text-faint);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .sub a {
+    color: var(--text-dim);
+    text-decoration: none;
+  }
+  .sub a:hover {
+    color: var(--accent);
+  }
+  .sep {
+    color: var(--border-strong);
+  }
+
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 56px;
+    padding-top: 26px;
+    border-top: 1px solid var(--border);
+  }
+  .pg {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    text-decoration: none;
+    max-width: 46%;
+    transition:
+      border-color 0.14s var(--ease),
+      background 0.14s var(--ease);
+  }
+  .pg:hover {
+    border-color: var(--accent-line);
+    background: var(--surface);
+  }
+  .pg-next {
+    text-align: right;
+    margin-left: auto;
+  }
+  .pg-t {
+    color: var(--text);
+    font-size: var(--step--1);
+    font-weight: 500;
+  }
+</style>

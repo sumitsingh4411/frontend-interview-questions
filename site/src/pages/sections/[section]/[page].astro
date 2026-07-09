@@ -1,0 +1,45 @@
+---
+import DocLayout from '@layouts/DocLayout.astro';
+import { getProseDoc, getSubpages } from '@lib/content.ts';
+import { SECTIONS } from '@lib/sections.ts';
+import { BASE, url } from '@lib/url.ts';
+
+export async function getStaticPaths() {
+  return SECTIONS.flatMap((section) =>
+    getSubpages(section.slug).map((page) => ({
+      params: { section: section.slug, page: page.slug },
+      props: { section, page },
+    })),
+  );
+}
+
+const { section, page } = Astro.props;
+const doc = await getProseDoc(page.repoPath, BASE);
+---
+
+<DocLayout
+  title={doc.title}
+  eyebrow={section.title}
+  description={`${doc.title} — a worked deep-dive from the open-source frontend interview handbook.`}
+  headings={doc.headings}
+>
+  <p slot="subhead" class="crumb">
+    <a href={url(`sections/${section.slug}/`)}>← Back to {section.title}</a>
+  </p>
+
+  <div class="prose" set:html={doc.html} />
+</DocLayout>
+
+<style>
+  .crumb {
+    margin: 14px 0 0;
+    font-size: var(--step--1);
+  }
+  .crumb a {
+    color: var(--text-dim);
+    text-decoration: none;
+  }
+  .crumb a:hover {
+    color: var(--accent);
+  }
+</style>

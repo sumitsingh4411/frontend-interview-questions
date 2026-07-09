@@ -1,0 +1,188 @@
+---
+// The site's signature element: the difficulty spectrum.
+// Segment widths are the real proportions of the question set it describes.
+// In `progress` mode each segment fills with the brand accent as questions of
+// that difficulty are completed — the bar is both the map and the progress.
+import type { Counts } from '@lib/content.ts';
+
+interface Props {
+  counts: Counts;
+  size?: 'sm' | 'md' | 'lg';
+  labels?: boolean;
+  animate?: boolean;
+  progress?: boolean;
+  class?: string;
+}
+
+const { counts, size = 'md', labels = false, animate = false, progress = false, class: cls = '' } = Astro.props;
+
+const segments = (
+  [
+    { key: 'easy', label: 'Easy', n: counts.easy },
+    { key: 'medium', label: 'Medium', n: counts.medium },
+    { key: 'hard', label: 'Hard', n: counts.hard },
+    { key: 'none', label: 'Unrated', n: counts.none },
+  ] as const
+).filter((s) => s.n > 0);
+
+const total = counts.total || 1;
+const pct = (n: number) => (n / total) * 100;
+const aria = segments.map((s) => `${s.n} ${s.label.toLowerCase()}`).join(', ');
+---
+
+<div class:list={['spectrum', `is-${size}`, { 'is-animated': animate }, cls]}>
+  <div class="track" role="img" aria-label={`Difficulty mix: ${aria}`}>
+    {
+      segments.map((s, i) => (
+        <div class:list={['seg', `seg-${s.key}`]} style={`--w:${pct(s.n)}%;--i:${i}`} data-diff={s.key}>
+          {progress && <span class="seg-done" data-done-for={s.key} />}
+        </div>
+      ))
+    }
+  </div>
+
+  {
+    labels && (
+      <ul class="legend">
+        {segments.map((s) => (
+          <li class:list={['leg', `leg-${s.key}`]}>
+            <span class="dot" />
+            <span class="lbl">{s.label}</span>
+            <span class="n mono">{s.n.toLocaleString()}</span>
+            <span class="pc mono">{pct(s.n).toFixed(0)}%</span>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</div>
+
+<style>
+  .spectrum {
+    width: 100%;
+  }
+
+  .track {
+    display: flex;
+    gap: 3px;
+    width: 100%;
+    border-radius: 999px;
+  }
+
+  .seg {
+    width: var(--w);
+    border-radius: 999px;
+    position: relative;
+    overflow: hidden;
+    transform-origin: left center;
+  }
+
+  .is-sm .track {
+    height: 4px;
+  }
+  .is-md .track {
+    height: 7px;
+  }
+  .is-lg .track {
+    height: 13px;
+  }
+
+  .seg-easy {
+    background: var(--easy);
+  }
+  .seg-medium {
+    background: var(--medium);
+  }
+  .seg-hard {
+    background: var(--hard);
+  }
+  .seg-none {
+    background: var(--text-faint);
+  }
+
+  .is-lg .seg {
+    box-shadow: 0 0 24px -6px currentColor;
+  }
+  .is-lg .seg-easy {
+    color: var(--easy);
+  }
+  .is-lg .seg-medium {
+    color: var(--medium);
+  }
+  .is-lg .seg-hard {
+    color: var(--hard);
+  }
+
+  /* Completed portion of each difficulty, painted in the brand accent. */
+  .seg-done {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 0%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent-glow);
+    transition: width 0.45s var(--ease);
+  }
+
+  .is-animated .seg {
+    animation: grow 0.85s var(--ease) both;
+    animation-delay: calc(var(--i) * 90ms + 120ms);
+  }
+
+  @keyframes grow {
+    from {
+      transform: scaleX(0);
+      opacity: 0.4;
+    }
+    to {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 0;
+  }
+
+  .leg {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: var(--step--1);
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    align-self: center;
+  }
+  .leg-easy .dot {
+    background: var(--easy);
+  }
+  .leg-medium .dot {
+    background: var(--medium);
+  }
+  .leg-hard .dot {
+    background: var(--hard);
+  }
+  .leg-none .dot {
+    background: var(--text-faint);
+  }
+
+  .lbl {
+    color: var(--text-dim);
+  }
+  .n {
+    color: var(--text);
+    font-weight: 500;
+  }
+  .pc {
+    color: var(--text-faint);
+    font-size: 11px;
+  }
+</style>

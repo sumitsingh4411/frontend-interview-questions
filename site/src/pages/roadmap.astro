@@ -1,0 +1,16 @@
+---
+import DocLayout from '@layouts/DocLayout.astro';
+import { getProseDoc } from '@lib/content.ts';
+import { BASE } from '@lib/url.ts';
+
+const doc = await getProseDoc('ROADMAP.md', BASE, { title: 'Roadmap' });
+---
+
+<DocLayout
+  title="Roadmap"
+  eyebrow="Start here"
+  description="A beginner-to-advanced path through the whole frontend interview handbook, so you always know what to study next."
+  headings={doc.headings}
+>
+  <div class="prose" set:html={doc.html} />
+</DocLayout>

@@ -1,0 +1,180 @@
+---
+import DocLayout from '@layouts/DocLayout.astro';
+import SpectrumBar from '@components/SpectrumBar.astro';
+import { getBanks } from '@lib/content.ts';
+import { url } from '@lib/url.ts';
+
+export async function getStaticPaths() {
+  return getBanks().map((bank) => ({ params: { bank: bank.slug }, props: { bank } }));
+}
+
+const { bank } = Astro.props;
+const n = (v: number) => v.toLocaleString();
+---
+
+<DocLayout
+  title={`${bank.title} question bank`}
+  eyebrow="Question bank"
+  wide
+  description={`${n(bank.counts.total)} ${bank.title} interview questions across ${bank.categories.length} categories, ranked by difficulty.`}
+>
+  <p slot="subhead" class="sub">{bank.blurb}</p>
+
+  <div class="overview">
+    <div class="ov-head">
+      <span class="eyebrow">Difficulty mix</span>
+      <span class="mono ov-n">{n(bank.counts.total)} questions · {bank.categories.length} categories</span>
+    </div>
+    <SpectrumBar counts={bank.counts} size="lg" labels animate />
+  </div>
+
+  <p class="lead">
+    Pick a category and work it top to bottom. Your progress is remembered per category, in this browser.
+    <a href={url(`sections/${bank.sectionSlug}/`)}>Read the {bank.title} guide →</a>
+  </p>
+
+  <ul class="cats" data-bank-cats data-bank={bank.slug}>
+    {
+      bank.categories.map((cat) => (
+        <li>
+          <a class="cat" href={url(`banks/${bank.slug}/${cat.slug}/`)} data-cat={cat.slug} data-total={cat.counts.total}>
+            <div class="c-main">
+              <h3>{cat.title}</h3>
+              <p class="c-meta mono">
+                <span data-cat-progress>{n(cat.counts.total)} questions</span>
+              </p>
+            </div>
+            <SpectrumBar counts={cat.counts} size="sm" class="c-bar" />
+            <span class="c-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</DocLayout>
+
+<style>
+  .sub {
+    margin: 14px 0 0;
+    color: var(--text-dim);
+    font-size: var(--step-0);
+  }
+
+  .overview {
+    margin-top: 8px;
+    padding: 20px 22px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+  }
+  .ov-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .ov-n {
+    font-size: var(--step--1);
+    color: var(--text);
+  }
+
+  .lead {
+    margin: 26px 0 22px;
+    color: var(--text-dim);
+    font-size: var(--step--1);
+  }
+  .lead a {
+    white-space: nowrap;
+  }
+
+  .cats {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+  }
+
+  .cat {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 140px 20px;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    background: var(--surface);
+    text-decoration: none;
+    color: inherit;
+    transition:
+      border-color 0.14s var(--ease),
+      transform 0.14s var(--ease);
+  }
+  .cat:hover {
+    border-color: var(--accent-line);
+    transform: translateX(2px);
+  }
+
+  .c-main {
+    min-width: 0;
+  }
+  .cat h3 {
+    font-size: var(--step-0);
+    margin: 0 0 4px;
+    color: var(--text);
+  }
+  .cat:hover h3 {
+    color: var(--accent);
+  }
+  .c-meta {
+    margin: 0;
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+  .c-meta b {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .c-arrow {
+    color: var(--text-faint);
+    transition:
+      translate 0.14s var(--ease),
+      color 0.14s var(--ease);
+  }
+  .cat:hover .c-arrow {
+    translate: 3px 0;
+    color: var(--accent);
+  }
+
+  @media (max-width: 720px) {
+    .cat {
+      grid-template-columns: minmax(0, 1fr) 20px;
+      gap: 12px;
+    }
+    .cat :global(.c-bar) {
+      grid-column: 1 / -1;
+      order: 3;
+    }
+  }
+</style>
+
+<script>
+  // Surface saved progress on the category cards.
+  const list = document.querySelector<HTMLElement>('[data-bank-cats]');
+  if (list) {
+    const bank = list.dataset.bank!;
+    for (const a of list.querySelectorAll<HTMLAnchorElement>('[data-cat]')) {
+      const total = Number(a.dataset.total);
+      let done = 0;
+      try {
+        done = (JSON.parse(localStorage.getItem(`fip:done:${bank}:${a.dataset.cat}`) ?? '[]') as string[]).length;
+      } catch {}
+      if (!done) continue;
+      const el = a.querySelector('[data-cat-progress]')!;
+      el.innerHTML = `<b>${done}</b> / ${total.toLocaleString()} done`;
+    }
+  }
+</script>

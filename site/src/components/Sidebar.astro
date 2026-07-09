@@ -1,0 +1,200 @@
+---
+import { GROUP_ORDER, SECTIONS } from '@lib/sections.ts';
+import { getBanks } from '@lib/content.ts';
+import { url } from '@lib/url.ts';
+
+const banks = getBanks();
+const current = Astro.url.pathname.replace(/\/$/, '');
+/** A bank category page keeps its bank lit; a sub-page keeps its section lit. */
+const isActive = (href: string) => {
+  const h = href.replace(/\/$/, '');
+  return current === h || current.startsWith(h + '/');
+};
+---
+
+<aside class="sidebar" id="sidebar">
+  <nav aria-label="Sections">
+    <div class="group">
+      <p class="eyebrow g-title">Question banks</p>
+      <ul>
+        {
+          banks.map((b) => (
+            <li>
+              <a href={url(`banks/${b.slug}/`)} class:list={['link', { active: isActive(url(`banks/${b.slug}/`)) }]}>
+                <span class="emo" aria-hidden="true">
+                  {b.emoji}
+                </span>
+                <span class="txt">{b.title}</span>
+                <span class="count mono">{b.counts.total.toLocaleString()}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    {
+      GROUP_ORDER.map((group) => (
+        <div class="group">
+          <p class="eyebrow g-title">{group}</p>
+          <ul>
+            {SECTIONS.filter((s) => s.group === group).map((s) => (
+              <li>
+                <a
+                  href={url(`sections/${s.slug}/`)}
+                  class:list={['link', { active: isActive(url(`sections/${s.slug}/`)) }]}
+                >
+                  <span class="num mono" aria-hidden="true">
+                    {s.num}
+                  </span>
+                  <span class="txt">{s.title}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+
+    <div class="group">
+      <p class="eyebrow g-title">Reference</p>
+      <ul>
+        <li><a href={url('roadmap/')} class:list={['link', { active: isActive(url('roadmap/')) }]}><span class="num mono">→</span><span class="txt">Roadmap</span></a></li>
+        <li><a href={url('faq/')} class:list={['link', { active: isActive(url('faq/')) }]}><span class="num mono">?</span><span class="txt">FAQ</span></a></li>
+      </ul>
+    </div>
+  </nav>
+</aside>
+
+<div class="nav-scrim" data-nav-close aria-hidden="true"></div>
+
+<style>
+  .sidebar {
+    position: sticky;
+    top: var(--topbar-h);
+    align-self: start;
+    width: var(--sidebar-w);
+    height: calc(100dvh - var(--topbar-h));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 28px 12px 48px 20px;
+    border-right: 1px solid var(--border);
+    scrollbar-width: thin;
+  }
+
+  .group + .group {
+    margin-top: 26px;
+  }
+
+  .g-title {
+    margin: 0 0 8px 10px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    border-radius: var(--r-md);
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: var(--step--1);
+    line-height: 1.4;
+    position: relative;
+    transition:
+      background 0.13s var(--ease),
+      color 0.13s var(--ease);
+  }
+  .link:hover {
+    background: var(--surface);
+    color: var(--text);
+  }
+
+  .link.active {
+    background: var(--accent-dim);
+    color: var(--text);
+    font-weight: 500;
+  }
+  .link.active::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    translate: 0 -50%;
+    width: 2px;
+    height: 18px;
+    border-radius: 0 2px 2px 0;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent-glow);
+  }
+
+  .num {
+    font-size: 10px;
+    color: var(--text-faint);
+    width: 16px;
+    flex: none;
+  }
+  .link.active .num {
+    color: var(--accent);
+  }
+
+  .emo {
+    font-size: 13px;
+    width: 16px;
+    flex: none;
+    text-align: center;
+  }
+
+  .txt {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .count {
+    font-size: 10px;
+    color: var(--text-faint);
+    flex: none;
+  }
+
+  .nav-scrim {
+    display: none;
+  }
+
+  @media (max-width: 860px) {
+    .sidebar {
+      position: fixed;
+      inset: var(--topbar-h) auto 0 0;
+      z-index: 45;
+      background: var(--bg-elev);
+      translate: -100% 0;
+      transition: translate 0.24s var(--ease);
+      box-shadow: var(--shadow-lg);
+    }
+    :global(body.nav-open) .sidebar {
+      translate: 0 0;
+    }
+    :global(body.nav-open) .nav-scrim {
+      display: block;
+      position: fixed;
+      inset: var(--topbar-h) 0 0;
+      z-index: 44;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+</style>
+
+<script>
+  document.querySelector('[data-nav-close]')?.addEventListener('click', () => {
+    document.body.classList.remove('nav-open');
+    document.querySelector('[data-menu-toggle]')?.setAttribute('aria-expanded', 'false');
+  });
+</script>
