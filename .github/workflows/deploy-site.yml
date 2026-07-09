@@ -44,7 +44,12 @@ jobs:
         working-directory: site
         run: npm run build
 
+      # enablement: turn Pages on via the API if it isn't already, so a fresh
+      # clone doesn't need anyone to flip the setting by hand first.
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/dist
