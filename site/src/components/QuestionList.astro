@@ -1,5 +1,6 @@
 ---
 import type { Counts, Question } from '@lib/content.ts';
+import { questionId } from '@lib/transform.ts';
 import SpectrumBar from './SpectrumBar.astro';
 
 interface Props {
@@ -10,13 +11,6 @@ interface Props {
 }
 
 const { bank, category, questions, counts } = Astro.props;
-
-/** Stable id per question so progress survives reordering. */
-function qHash(s: string): string {
-  let h = 0;
-  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
-  return (h >>> 0).toString(36);
-}
 
 const LABEL: Record<string, string> = { easy: 'Easy', medium: 'Medium', hard: 'Hard', none: 'Unrated' };
 const pad = String(questions.length).length;
@@ -74,7 +68,7 @@ const pad = String(questions.length).length;
       questions.map((q, i) => {
         const id = `${bank}-${category}-${i}`;
         return (
-          <li class="q" data-diff={q.difficulty} data-hash={qHash(q.text)} data-text={q.text.toLowerCase()}>
+          <li class="q" data-diff={q.difficulty} data-hash={questionId(q.text)} data-text={q.text.toLowerCase()}>
             <input type="checkbox" id={id} class="q-check check" data-check />
             <label for={id}>
               <span class="q-num mono">{String(i + 1).padStart(pad, '0')}</span>

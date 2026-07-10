@@ -39,6 +39,17 @@ brand accent as you complete questions of that difficulty.
 Progress is stored in `localStorage` under `fip:done:<bank>:<category>`; theme under
 `fip-theme`. There is no backend.
 
+## Progress dashboard
+
+`/progress/` turns those saved ids into a dashboard: an overall ring, per-difficulty and
+per-bank breakdowns, and a "pick up where you left off" list. It fetches
+`progress-catalog.json` (built alongside the site) to map each saved id back to its
+difficulty and category.
+
+Both the checkboxes and the dashboard derive ids from `questionId()` in `transform.ts`.
+They **must** agree — a unit test pins one known id so a refactor can't silently stop
+progress from counting.
+
 ## Search
 
 `search-index.json` is generated at build time: every question, its difficulty, and its

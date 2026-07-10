@@ -67,19 +67,29 @@ const aria = segments.map((s) => `${s.n} ${s.label.toLowerCase()}`).join(', ');
     width: 100%;
   }
 
+  /* One continuous bar: segments butt together and only the outer ends round. */
   .track {
     display: flex;
-    gap: 3px;
+    gap: 0;
     width: 100%;
     border-radius: 999px;
   }
 
   .seg {
     width: var(--w);
-    border-radius: 999px;
     position: relative;
     overflow: hidden;
     transform-origin: left center;
+    border-radius: 0;
+  }
+  .seg:first-child {
+    border-radius: 999px 0 0 999px;
+  }
+  .seg:last-child {
+    border-radius: 0 999px 999px 0;
+  }
+  .seg:only-child {
+    border-radius: 999px;
   }
 
   .is-sm .track {
@@ -105,17 +115,10 @@ const aria = segments.map((s) => `${s.n} ${s.label.toLowerCase()}`).join(', ');
     background: var(--text-faint);
   }
 
-  .is-lg .seg {
-    box-shadow: 0 0 24px -6px currentColor;
-  }
-  .is-lg .seg-easy {
-    color: var(--easy);
-  }
-  .is-lg .seg-medium {
-    color: var(--medium);
-  }
-  .is-lg .seg-hard {
-    color: var(--hard);
+  /* A single soft glow under the whole bar — per-segment glows would bleed
+     across the now-touching edges. */
+  .is-lg .track {
+    filter: drop-shadow(0 2px 16px rgba(0, 0, 0, 0.45));
   }
 
   /* Completed portion of each difficulty, painted in the brand accent. */

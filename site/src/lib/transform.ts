@@ -11,6 +11,17 @@ const DIFF_EMOJI: Record<string, Difficulty> = {
   '🔴': 'hard',
 };
 
+/**
+ * Stable id for a question, derived from its text so saved progress survives
+ * reordering. Shared by the checkbox list and the progress dashboard — both
+ * must produce identical ids or progress silently stops counting.
+ */
+export function questionId(s: string): string {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+  return (h >>> 0).toString(36);
+}
+
 /** Parse a question bullet like "🟡 **Debounce**" into difficulty + clean text. */
 export function parseQuestion(raw: string): { difficulty: Difficulty; text: string } {
   let text = raw.trim();

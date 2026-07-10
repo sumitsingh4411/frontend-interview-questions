@@ -32,6 +32,7 @@ export const GET: APIRoute = () => {
       pages.push([sub.title, url(`sections/${s.slug}/${sub.slug}/`), s.title]);
     }
   }
+  pages.push(['Your progress', url('progress/'), 'Dashboard']);
   pages.push(['Roadmap', url('roadmap/'), 'Reference']);
   pages.push(['FAQ', url('faq/'), 'Reference']);
 

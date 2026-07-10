@@ -59,6 +59,7 @@ const isActive = (href: string) => {
     <div class="group">
       <p class="eyebrow g-title">Reference</p>
       <ul>
+        <li><a href={url('progress/')} class:list={['link', { active: isActive(url('progress/')) }]}><span class="num mono">%</span><span class="txt">Your progress</span></a></li>
         <li><a href={url('roadmap/')} class:list={['link', { active: isActive(url('roadmap/')) }]}><span class="num mono">→</span><span class="txt">Roadmap</span></a></li>
         <li><a href={url('faq/')} class:list={['link', { active: isActive(url('faq/')) }]}><span class="num mono">?</span><span class="txt">FAQ</span></a></li>
       </ul>

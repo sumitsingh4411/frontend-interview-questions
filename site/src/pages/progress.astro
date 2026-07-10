@@ -1,0 +1,768 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { getStats, getBanks } from '@lib/content.ts';
+import { url } from '@lib/url.ts';
+
+const stats = getStats();
+const banks = getBanks();
+const n = (v: number) => v.toLocaleString();
+---
+
+<BaseLayout
+  title="Your progress"
+  description={`Track which of the ${n(stats.questions)} frontend interview questions you've finished. Stored in your browser — no account, no server.`}
+  bare
+>
+  <div class="wrap" data-progress data-catalog={url('progress-catalog.json')}>
+    <header class="head">
+      <p class="eyebrow">Dashboard</p>
+      <h1>Your progress</h1>
+      <p class="lede">
+        Everything you've ticked off, broken down by difficulty, bank and category. Progress lives in this browser
+        only — no account, no server. Export a backup if you want it on another device.
+      </p>
+    </header>
+
+    <!-- Overall ------------------------------------------------------- -->
+    <section class="card overall">
+      <div class="ring-wrap">
+        <svg class="ring" viewBox="0 0 120 120" role="img" aria-labelledby="ring-label">
+          <title id="ring-label">Overall completion</title>
+          <circle class="ring-track" cx="60" cy="60" r="52" />
+          <circle class="ring-fill" cx="60" cy="60" r="52" data-ring />
+        </svg>
+        <div class="ring-center">
+          <b class="mono" data-pct>0%</b>
+          <span class="mono">complete</span>
+        </div>
+      </div>
+
+      <div class="overall-main">
+        <p class="eyebrow">Overall progress</p>
+        <p class="headline">
+          <b class="mono" data-done>0</b>
+          <span class="mono slash">/ {n(stats.questions)}</span>
+          <span>done</span>
+        </p>
+        <p class="hint" data-hint>
+          Tick the checkbox on any question to start tracking. Nothing leaves this browser.
+        </p>
+
+        <ul class="tiles">
+          <li>
+            <b class="mono" data-tile-done>0</b>
+            <span class="mono">done</span>
+          </li>
+          <li>
+            <b class="mono" data-tile-left>{n(stats.questions)}</b>
+            <span class="mono">remaining</span>
+          </li>
+          <li>
+            <b class="mono" data-tile-cats>0/{stats.categories}</b>
+            <span class="mono">categories cleared</span>
+          </li>
+          <li>
+            <b class="mono" data-tile-banks>0/{stats.banks}</b>
+            <span class="mono">banks cleared</span>
+          </li>
+        </ul>
+
+        <div class="actions">
+          <button class="btn" data-export>↓ Export backup</button>
+          <button class="btn" data-import>↑ Import</button>
+          <input type="file" accept="application/json" hidden data-file />
+          <button class="btn btn-danger" data-reset-all>Reset all</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <!-- By difficulty ---------------------------------------------- -->
+      <section class="card">
+        <p class="eyebrow">By difficulty</p>
+        {/* Segment widths are the real corpus split, not fixed numbers. */}
+        <div class="track" aria-hidden="true">
+          <span class="seg seg-easy" style={`flex:${stats.counts.easy}`}><i data-diff-fill="e"></i></span>
+          <span class="seg seg-medium" style={`flex:${stats.counts.medium}`}><i data-diff-fill="m"></i></span>
+          <span class="seg seg-hard" style={`flex:${stats.counts.hard}`}><i data-diff-fill="h"></i></span>
+        </div>
+
+        <ul class="rows">
+          {
+            (
+              [
+                ['e', 'Easy', 'easy', stats.counts.easy],
+                ['m', 'Medium', 'medium', stats.counts.medium],
+                ['h', 'Hard', 'hard', stats.counts.hard],
+              ] as const
+            ).map(([k, label, cls, total]) => (
+              <li>
+                <span class={`dot dot-${cls}`} />
+                <span class="r-name">{label}</span>
+                <span class="r-bar">
+                  <i class={`fill fill-${cls}`} data-row-fill={k} />
+                </span>
+                <span class="r-n mono">
+                  <b data-row-done={k}>0</b> / {n(total)}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="foot mono">The bar fills as you clear questions of each tier.</p>
+      </section>
+
+      <!-- By bank ---------------------------------------------------- -->
+      <section class="card">
+        <p class="eyebrow">By bank</p>
+        <ul class="rows rows-bank">
+          {
+            banks.map((b) => (
+              <li>
+                <a class="b-name" href={url(`banks/${b.slug}/`)}>
+                  <span aria-hidden="true">{b.emoji}</span>
+                  {b.title}
+                </a>
+                <span class="r-bar">
+                  <i class="fill fill-accent" data-bank-fill={b.slug} />
+                </span>
+                <span class="r-n mono">
+                  <b data-bank-done={b.slug}>0</b> / {n(b.counts.total)}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="foot mono">Click a bank to keep going.</p>
+      </section>
+    </div>
+
+    <!-- In progress ------------------------------------------------- -->
+    <section class="card" data-active-card hidden>
+      <p class="eyebrow">Pick up where you left off</p>
+      <ul class="active" data-active-list></ul>
+    </section>
+
+    <p class="empty" data-empty>
+      Nothing tracked yet. Open any <a href={url('banks/')}>question bank</a> and tick a checkbox — this page fills in
+      as you go.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 56px 24px 40px;
+  }
+
+  .head {
+    margin-bottom: 34px;
+  }
+  .head .eyebrow {
+    margin: 0 0 12px;
+  }
+  .head h1 {
+    font-size: var(--step-3);
+    margin: 0;
+  }
+  .lede {
+    max-width: 66ch;
+    margin: 16px 0 0;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  .card {
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+  }
+  .card > .eyebrow {
+    margin: 0 0 18px;
+  }
+
+  /* Overall ------------------------------------------------------------ */
+  .overall {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 34px;
+    align-items: center;
+  }
+
+  .ring-wrap {
+    position: relative;
+    width: 156px;
+    height: 156px;
+    flex: none;
+  }
+  .ring {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+  .ring-track {
+    fill: none;
+    stroke: var(--surface-3);
+    stroke-width: 9;
+  }
+  .ring-fill {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 9;
+    stroke-linecap: round;
+    stroke-dasharray: 326.7;
+    stroke-dashoffset: 326.7;
+    filter: drop-shadow(0 0 8px var(--accent-glow));
+    transition: stroke-dashoffset 0.9s var(--ease);
+  }
+  .ring-center {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    gap: 2px;
+  }
+  .ring-center b {
+    font-size: var(--step-2);
+    font-weight: 500;
+    color: var(--text);
+    letter-spacing: -0.03em;
+  }
+  .ring-center span {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  .overall-main .eyebrow {
+    margin: 0 0 8px;
+  }
+  .headline {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    margin: 0;
+    font-size: var(--step-2);
+    letter-spacing: -0.02em;
+  }
+  .headline b {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .headline .slash {
+    color: var(--text-dim);
+  }
+  .headline span:last-child {
+    font-size: var(--step-0);
+    color: var(--text-faint);
+  }
+  .hint {
+    margin: 10px 0 0;
+    font-size: var(--step--1);
+    color: var(--text-faint);
+  }
+
+  .tiles {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin: 20px 0 0;
+    padding: 0;
+  }
+  .tiles li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    background: var(--bg-elev);
+  }
+  .tiles b {
+    font-size: var(--step-1);
+    font-weight: 500;
+    color: var(--text);
+    letter-spacing: -0.02em;
+  }
+  .tiles span {
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .btn {
+    height: 34px;
+    padding: 0 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border-strong);
+    background: var(--bg-elev);
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    cursor: pointer;
+    transition:
+      color 0.14s var(--ease),
+      border-color 0.14s var(--ease);
+  }
+  .btn:hover {
+    color: var(--text);
+    border-color: var(--text-faint);
+  }
+  .btn-danger:hover {
+    color: var(--hard);
+    border-color: var(--hard);
+  }
+
+  /* Breakdown ---------------------------------------------------------- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .track {
+    display: flex;
+    height: 10px;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .seg {
+    position: relative;
+    overflow: hidden;
+  }
+  .seg-easy {
+    background: color-mix(in srgb, var(--easy) 22%, transparent);
+  }
+  .seg-medium {
+    background: color-mix(in srgb, var(--medium) 22%, transparent);
+  }
+  .seg-hard {
+    background: color-mix(in srgb, var(--hard) 22%, transparent);
+  }
+  .seg i {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 0%;
+    transition: width 0.7s var(--ease);
+  }
+  .seg-easy i {
+    background: var(--easy);
+  }
+  .seg-medium i {
+    background: var(--medium);
+  }
+  .seg-hard i {
+    background: var(--hard);
+  }
+
+  .rows {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+  }
+  .rows li {
+    display: grid;
+    grid-template-columns: 8px minmax(0, 110px) minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+  }
+  .rows-bank li {
+    grid-template-columns: minmax(0, 170px) minmax(0, 1fr) auto;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .dot-easy {
+    background: var(--easy);
+  }
+  .dot-medium {
+    background: var(--medium);
+  }
+  .dot-hard {
+    background: var(--hard);
+  }
+
+  .r-name {
+    font-size: var(--step--1);
+    color: var(--text-dim);
+  }
+  .b-name {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: var(--step--1);
+    color: var(--text);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .b-name:hover {
+    color: var(--accent);
+  }
+
+  .r-bar {
+    height: 6px;
+    border-radius: 999px;
+    background: var(--surface-3);
+    overflow: hidden;
+  }
+  .fill {
+    display: block;
+    height: 100%;
+    width: 0%;
+    border-radius: 999px;
+    transition: width 0.7s var(--ease);
+  }
+  .fill-easy {
+    background: var(--easy);
+  }
+  .fill-medium {
+    background: var(--medium);
+  }
+  .fill-hard {
+    background: var(--hard);
+  }
+  .fill-accent {
+    background: var(--accent);
+  }
+
+  .r-n {
+    font-size: 11px;
+    color: var(--text-faint);
+    white-space: nowrap;
+  }
+  .r-n b {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .foot {
+    margin: 20px 0 0;
+    font-size: 10.5px;
+    color: var(--text-faint);
+  }
+
+  /* Pick up where you left off ------------------------------------------ */
+  [data-active-card] {
+    margin-top: 16px;
+  }
+  .active {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+  }
+
+  .empty {
+    margin: 22px 0 0;
+    padding: 28px;
+    text-align: center;
+    color: var(--text-faint);
+    font-size: var(--step--1);
+    border: 1px dashed var(--border);
+    border-radius: var(--r-lg);
+  }
+  .empty[hidden] {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .overall {
+      grid-template-columns: minmax(0, 1fr);
+      justify-items: center;
+      text-align: center;
+    }
+    .headline,
+    .actions {
+      justify-content: center;
+    }
+    .grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .tiles {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 560px) {
+    .wrap {
+      padding: 36px 18px;
+    }
+    .rows li {
+      grid-template-columns: 8px minmax(0, 1fr) auto;
+    }
+    .rows li .r-bar {
+      grid-column: 1 / -1;
+    }
+    .rows-bank li {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+  }
+</style>
+
+{/* The resume list is built with innerHTML at runtime, so it never receives
+    Astro's scoping attribute — these rules must be global to reach it. */}
+<style is:global>
+  [data-progress] .active li {
+    display: grid;
+    grid-template-columns: minmax(0, 260px) minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 14px;
+  }
+  [data-progress] .active .b-name {
+    display: block;
+    font-size: var(--step--1);
+    color: var(--text);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  [data-progress] .active .b-name:hover {
+    color: var(--accent);
+  }
+  [data-progress] .active .r-bar {
+    height: 6px;
+    border-radius: 999px;
+    background: var(--surface-3);
+    overflow: hidden;
+  }
+  [data-progress] .active .fill {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+  [data-progress] .active .r-n {
+    font-size: 11px;
+    color: var(--text-faint);
+    white-space: nowrap;
+  }
+  [data-progress] .active .r-n b {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  @media (max-width: 560px) {
+    [data-progress] .active li {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+    [data-progress] .active .r-bar {
+      grid-column: 1 / -1;
+    }
+  }
+</style>
+
+<script>
+  interface Cat {
+    slug: string;
+    title: string;
+    href: string;
+    e: string[];
+    m: string[];
+    h: string[];
+    n: string[];
+  }
+  interface Bank {
+    slug: string;
+    title: string;
+    emoji: string;
+    href: string;
+    cats: Cat[];
+  }
+
+  const root = document.querySelector<HTMLElement>('[data-progress]');
+  if (root) {
+    const RING = 2 * Math.PI * 52;
+    const $ = <T extends Element>(s: string) => root.querySelector<T>(s)!;
+    const setText = (sel: string, v: string) => {
+      const el = root.querySelector(sel);
+      if (el) el.textContent = v;
+    };
+    const pct = (a: number, b: number) => (b ? (a / b) * 100 : 0);
+
+    const readDone = (bank: string, cat: string): Set<string> => {
+      try {
+        return new Set(JSON.parse(localStorage.getItem(`fip:done:${bank}:${cat}`) ?? '[]'));
+      } catch {
+        return new Set();
+      }
+    };
+
+    const paint = (banks: Bank[]) => {
+      const tiers = ['e', 'm', 'h', 'n'] as const;
+      const totals = { e: 0, m: 0, h: 0, n: 0 };
+      const done = { e: 0, m: 0, h: 0, n: 0 };
+      const perBank: Record<string, { done: number; total: number }> = {};
+      const active: { title: string; bank: string; href: string; done: number; total: number }[] = [];
+      let catsCleared = 0;
+      let catCount = 0;
+
+      for (const bank of banks) {
+        perBank[bank.slug] = { done: 0, total: 0 };
+        for (const cat of bank.cats) {
+          catCount++;
+          const saved = readDone(bank.slug, cat.slug);
+          let cd = 0;
+          let ct = 0;
+          for (const t of tiers) {
+            for (const id of cat[t]) {
+              totals[t]++;
+              ct++;
+              // Only count ids that still exist in the catalog.
+              if (saved.has(id)) {
+                done[t]++;
+                cd++;
+              }
+            }
+          }
+          perBank[bank.slug].done += cd;
+          perBank[bank.slug].total += ct;
+          if (cd > 0 && cd === ct) catsCleared++;
+          if (cd > 0 && cd < ct) active.push({ title: cat.title, bank: bank.title, href: cat.href, done: cd, total: ct });
+        }
+      }
+
+      const allDone = done.e + done.m + done.h + done.n;
+      const allTotal = totals.e + totals.m + totals.h + totals.n;
+      const overall = pct(allDone, allTotal);
+
+      // Ring
+      const ring = $<SVGCircleElement>('[data-ring]');
+      ring.style.strokeDasharray = String(RING);
+      ring.style.strokeDashoffset = String(RING * (1 - overall / 100));
+      setText('[data-pct]', `${Math.round(overall)}%`);
+
+      setText('[data-done]', allDone.toLocaleString());
+      setText('[data-tile-done]', allDone.toLocaleString());
+      setText('[data-tile-left]', (allTotal - allDone).toLocaleString());
+      setText('[data-tile-cats]', `${catsCleared}/${catCount}`);
+
+      const banksCleared = banks.filter((b) => perBank[b.slug].total > 0 && perBank[b.slug].done === perBank[b.slug].total).length;
+      setText('[data-tile-banks]', `${banksCleared}/${banks.length}`);
+
+      for (const t of ['e', 'm', 'h'] as const) {
+        const p = pct(done[t], totals[t]);
+        const bar = root.querySelector<HTMLElement>(`[data-diff-fill="${t}"]`);
+        if (bar) bar.style.width = `${p}%`;
+        const row = root.querySelector<HTMLElement>(`[data-row-fill="${t}"]`);
+        if (row) row.style.width = `${p}%`;
+        setText(`[data-row-done="${t}"]`, String(done[t]));
+      }
+
+      for (const bank of banks) {
+        const { done: d, total } = perBank[bank.slug];
+        const bar = root.querySelector<HTMLElement>(`[data-bank-fill="${bank.slug}"]`);
+        if (bar) bar.style.width = `${pct(d, total)}%`;
+        setText(`[data-bank-done="${bank.slug}"]`, String(d));
+      }
+
+      // In-progress categories, most complete first.
+      const card = $<HTMLElement>('[data-active-card]');
+      const list = $<HTMLElement>('[data-active-list]');
+      active.sort((a, b) => b.done / b.total - a.done / a.total);
+      const esc = (s: string) =>
+        s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+
+      if (active.length) {
+        card.hidden = false;
+        list.innerHTML = active
+          .slice(0, 6)
+          .map(
+            (a) =>
+              `<li><a class="b-name" href="${a.href}">${esc(a.bank)} / ${esc(a.title)}</a>` +
+              `<span class="r-bar"><i class="fill" style="width:${pct(a.done, a.total).toFixed(1)}%"></i></span>` +
+              `<span class="r-n mono"><b>${a.done}</b> / ${a.total}</span></li>`,
+          )
+          .join('');
+      } else {
+        card.hidden = true;
+      }
+
+      const empty = $<HTMLElement>('[data-empty]');
+      empty.hidden = allDone > 0;
+      if (allDone > 0) setText('[data-hint]', 'Progress is saved in this browser only. Export a backup to move it.');
+    };
+
+    // Backup ---------------------------------------------------------------
+    const collect = () => {
+      const out: Record<string, unknown> = {};
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i)!;
+        if (k.startsWith('fip:done:')) out[k] = JSON.parse(localStorage.getItem(k) ?? '[]');
+      }
+      return out;
+    };
+
+    let catalog: Bank[] = [];
+
+    $<HTMLButtonElement>('[data-export]').addEventListener('click', () => {
+      const blob = new Blob([JSON.stringify({ app: 'frontend-interview-prep', saved: collect() }, null, 2)], {
+        type: 'application/json',
+      });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'frontend-interview-prep-progress.json';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    });
+
+    const file = $<HTMLInputElement>('[data-file]');
+    $<HTMLButtonElement>('[data-import]').addEventListener('click', () => file.click());
+    file.addEventListener('change', async () => {
+      const f = file.files?.[0];
+      if (!f) return;
+      try {
+        const data = JSON.parse(await f.text());
+        const saved = data?.saved ?? data;
+        let n = 0;
+        for (const [k, v] of Object.entries(saved)) {
+          if (!k.startsWith('fip:done:') || !Array.isArray(v)) continue;
+          const merged = new Set([...JSON.parse(localStorage.getItem(k) ?? '[]'), ...v]);
+          localStorage.setItem(k, JSON.stringify([...merged]));
+          n++;
+        }
+        paint(catalog);
+        alert(`Imported ${n} categor${n === 1 ? 'y' : 'ies'}. Existing progress was kept.`);
+      } catch {
+        alert("That file doesn't look like a progress backup.");
+      }
+      file.value = '';
+    });
+
+    $<HTMLButtonElement>('[data-reset-all]').addEventListener('click', () => {
+      if (!confirm('Clear all saved progress in this browser? This cannot be undone.')) return;
+      for (const k of Object.keys(collect())) localStorage.removeItem(k);
+      paint(catalog);
+    });
+
+    fetch(root.dataset.catalog!)
+      .then((r) => r.json())
+      .then((d: { banks: Bank[] }) => {
+        catalog = d.banks;
+        paint(catalog);
+      });
+  }
+</script>

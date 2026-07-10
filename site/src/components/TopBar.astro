@@ -44,6 +44,7 @@ const on = (seg: string) => path.startsWith(url(seg));
         Question banks<span class="n mono">{stats.questions.toLocaleString()}</span>
       </a>
       <a href={url('roadmap/')} class:list={{ on: on('roadmap') }}>Roadmap</a>
+      <a href={url('progress/')} class:list={{ on: on('progress') }}>Progress</a>
     </nav>
 
     <div class="right">

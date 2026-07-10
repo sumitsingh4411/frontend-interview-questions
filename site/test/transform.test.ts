@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
+  questionId,
   parseQuestion,
   repoPathToRoute,
   resolveHref,
@@ -11,6 +12,14 @@ import {
 } from '../src/lib/transform.ts';
 
 const B = '/frontend-interview-questions';
+
+test('questionId is stable — saved progress must keep counting', () => {
+  // Anchored to an id already written into users' localStorage. Never change.
+  assert.equal(questionId('Container With Most Water'), 'a6d9md');
+  assert.equal(questionId('Two Sum'), questionId('Two Sum'));
+  assert.notEqual(questionId('Two Sum'), questionId('Two Sum II'));
+  assert.match(questionId('Valid Palindrome'), /^[a-z0-9]+$/);
+});
 
 test('parseQuestion reads difficulty emoji and cleans text', () => {
   assert.deepEqual(parseQuestion('🟢 Valid Palindrome'), { difficulty: 'easy', text: 'Valid Palindrome' });

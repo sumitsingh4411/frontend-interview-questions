@@ -88,6 +88,50 @@ await page.goto(`${ORIGIN}/banks/dsa/`, { waitUntil: 'networkidle0' });
 const label = await page.$eval('[data-cat="two-pointers"] [data-cat-progress]', (e) => e.textContent.trim());
 ok('two-pointers card shows "2 / 16 done"', /2\s*\/\s*16 done/.test(label), `got "${label}"`);
 
+// ---------------------------------------------------------------- progress dashboard
+// The two questions ticked above (1 easy, 1 medium) must surface here. This is the
+// integration that breaks silently if the dashboard's ids drift from the checkboxes'.
+console.log('\nprogress dashboard');
+await page.goto(`${ORIGIN}/progress/`, { waitUntil: 'networkidle0' });
+await new Promise((r) => setTimeout(r, 900));
+
+const txt = (sel) => page.$eval(sel, (e) => e.textContent.trim());
+ok('counts the 2 ticked questions', (await txt('[data-done]')) === '2', await txt('[data-done]'));
+ok('tile: done', (await txt('[data-tile-done]')) === '2');
+ok('tile: remaining', (await txt('[data-tile-left]')) === '3,144', await txt('[data-tile-left]'));
+ok('easy row shows 1', (await txt('[data-row-done="e"]')) === '1');
+ok('medium row shows 1', (await txt('[data-row-done="m"]')) === '1');
+ok('hard row shows 0', (await txt('[data-row-done="h"]')) === '0');
+ok('dsa bank shows 2', (await txt('[data-bank-done="dsa"]')) === '2');
+ok('empty state hidden once tracking', await page.$eval('[data-empty]', (e) => e.hidden));
+
+const ringOffset = await page.$eval('[data-ring]', (e) => parseFloat(e.style.strokeDashoffset));
+ok('ring is partially filled', ringOffset > 0 && ringOffset < 2 * Math.PI * 52, `offset=${ringOffset}`);
+
+// The partially-done category should be offered to resume.
+const resume = await page.$$eval('[data-active-list] a', (els) => els.map((e) => e.textContent));
+ok('offers to resume Two Pointers', resume.some((r) => /Two Pointers/.test(r)), JSON.stringify(resume));
+
+// The resume rows are injected with innerHTML, so Astro's scoped CSS can't reach
+// them — guard that their global styles are actually applied and laid out.
+const resumeStyled = await page.$eval('[data-active-list] li', (li) => {
+  const bar = li.querySelector('.r-bar');
+  const fill = li.querySelector('.fill');
+  return {
+    grid: getComputedStyle(li).display,
+    barW: Math.round(bar.getBoundingClientRect().width),
+    fillW: Math.round(fill.getBoundingClientRect().width),
+    fillBg: getComputedStyle(fill).backgroundColor,
+  };
+});
+ok('resume row is a laid-out grid', resumeStyled.grid === 'grid', resumeStyled.grid);
+ok('resume row renders a progress bar', resumeStyled.barW > 40, `barW=${resumeStyled.barW}`);
+ok('resume bar has a coloured fill', resumeStyled.fillW > 0 && resumeStyled.fillBg !== 'rgba(0, 0, 0, 0)', JSON.stringify(resumeStyled));
+
+// Difficulty bars fill proportionally, not to 100%.
+const easyW = await page.$eval('[data-row-fill="e"]', (e) => parseFloat(e.style.width));
+ok('easy bar fills 1/628 of the way', easyW > 0 && easyW < 1, `${easyW}%`);
+
 // ---------------------------------------------------------------- search palette
 console.log('\ncommand palette');
 await page.goto(`${ORIGIN}/`, { waitUntil: 'networkidle0' });
