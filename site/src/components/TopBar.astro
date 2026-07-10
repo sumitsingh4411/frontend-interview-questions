@@ -9,9 +9,12 @@ const w = {
   medium: (stats.counts.medium / t) * 100,
   hard: (stats.counts.hard / t) * 100,
 };
+
+const path = Astro.url.pathname;
+const on = (seg: string) => path.startsWith(url(seg));
 ---
 
-<header class="topbar">
+<header class="topbar" data-topbar>
   <div class="bar">
     <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" data-menu-toggle>
       <svg viewBox="0 0 16 16" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -19,15 +22,20 @@ const w = {
       </svg>
     </button>
 
-    <a class="brand" href={url()}>
-      <span class="mark" aria-hidden="true"></span>
+    <a class="brand" href={url()} aria-label="Frontend Interview Prep — home">
+      {/* The mark is the spectrum: three tiers, same as the favicon. */}
+      <span class="mark" aria-hidden="true">
+        <i style="background:var(--easy)"></i>
+        <i style="background:var(--medium)"></i>
+        <i style="background:var(--hard)"></i>
+      </span>
       <span class="wordmark">Frontend<span class="thin">Interview</span></span>
     </a>
 
     <nav class="top-nav" aria-label="Primary">
-      <a href={url('sections/')}>Sections</a>
-      <a href={url('banks/')}>Question banks</a>
-      <a href={url('roadmap/')}>Roadmap</a>
+      <a href={url('sections/')} class:list={{ on: on('sections') }}>Sections</a>
+      <a href={url('banks/')} class:list={{ on: on('banks') }}>Question banks</a>
+      <a href={url('roadmap/')} class:list={{ on: on('roadmap') }}>Roadmap</a>
     </nav>
 
     <div class="right">
@@ -36,9 +44,11 @@ const w = {
           <circle cx="7" cy="7" r="4.5"></circle>
           <path d="M10.5 10.5 14 14" stroke-linecap="round"></path>
         </svg>
-        <span class="search-label">Search {stats.questions.toLocaleString()} questions</span>
+        <span class="search-label">Search <b>{stats.questions.toLocaleString()}</b> questions</span>
         <kbd class="mono">⌘K</kbd>
       </button>
+
+      <span class="divider" aria-hidden="true"></span>
 
       <button class="icon-btn" data-theme-toggle aria-label="Toggle color theme">
         <svg class="i-sun" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -73,8 +83,14 @@ const w = {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: color-mix(in srgb, var(--bg) 82%, transparent);
-    backdrop-filter: blur(12px) saturate(140%);
+    background: color-mix(in srgb, var(--bg) 72%, transparent);
+    backdrop-filter: blur(14px) saturate(160%);
+    transition: background 0.2s var(--ease), box-shadow 0.2s var(--ease);
+  }
+  /* Gains presence once you leave the top of the page. */
+  .topbar.is-scrolled {
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    box-shadow: 0 8px 30px -18px rgba(0, 0, 0, 0.9);
   }
 
   .bar {
@@ -95,58 +111,110 @@ const w = {
     height: 100%;
   }
 
+  /* Brand -------------------------------------------------------------- */
   .brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 11px;
     color: var(--text);
     text-decoration: none;
     font-family: var(--font-display);
     font-weight: 600;
-    letter-spacing: -0.02em;
+    font-size: 15px;
+    letter-spacing: -0.025em;
     white-space: nowrap;
   }
   .mark {
-    width: 13px;
-    height: 13px;
-    border-radius: 4px;
-    background: linear-gradient(150deg, var(--accent-hi), var(--accent));
-    box-shadow: 0 0 16px var(--accent-glow);
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 2.5px;
+    padding: 5px 5px;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    transition: transform 0.2s var(--ease), border-color 0.2s var(--ease);
+  }
+  .mark i {
+    display: block;
+    width: 2.5px;
+    height: 12px;
+    border-radius: 2px;
+    transition: height 0.22s var(--ease);
+  }
+  .brand:hover .mark {
+    border-color: var(--accent-line);
+  }
+  .brand:hover .mark i:nth-child(1) {
+    height: 8px;
+  }
+  .brand:hover .mark i:nth-child(2) {
+    height: 14px;
+  }
+  .brand:hover .mark i:nth-child(3) {
+    height: 10px;
   }
   .thin {
     color: var(--text-faint);
     font-weight: 400;
-    margin-left: 2px;
+    margin-left: 3px;
   }
 
+  /* Nav ---------------------------------------------------------------- */
   .top-nav {
     display: flex;
-    gap: 20px;
-    margin-left: 14px;
+    gap: 4px;
+    margin-left: 12px;
   }
   .top-nav a {
+    position: relative;
+    padding: 7px 11px;
+    border-radius: var(--r-md);
     color: var(--text-dim);
     text-decoration: none;
     font-size: var(--step--1);
-    transition: color 0.14s var(--ease);
+    transition: color 0.14s var(--ease), background 0.14s var(--ease);
   }
   .top-nav a:hover {
     color: var(--text);
+    background: var(--surface);
+  }
+  .top-nav a.on {
+    color: var(--text);
+  }
+  .top-nav a.on::after {
+    content: '';
+    position: absolute;
+    left: 11px;
+    right: 11px;
+    bottom: 1px;
+    height: 1.5px;
+    border-radius: 2px;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent-glow);
   }
 
   .right {
     margin-left: auto;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
   }
 
+  .divider {
+    width: 1px;
+    height: 18px;
+    background: var(--border);
+    margin: 0 4px;
+  }
+
+  /* Search ------------------------------------------------------------- */
   .search-btn {
     display: flex;
     align-items: center;
     gap: 9px;
     height: 34px;
-    padding: 0 8px 0 12px;
+    padding: 0 7px 0 12px;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 999px;
@@ -154,19 +222,26 @@ const w = {
     font-family: var(--font-body);
     font-size: var(--step--1);
     cursor: pointer;
-    transition:
-      border-color 0.14s var(--ease),
-      color 0.14s var(--ease);
+    transition: border-color 0.16s var(--ease), color 0.16s var(--ease), box-shadow 0.16s var(--ease);
   }
   .search-btn:hover {
-    border-color: var(--border-strong);
+    border-color: var(--accent-line);
     color: var(--text-dim);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+  }
+  .search-btn b {
+    color: var(--text-dim);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .search-btn:hover b {
+    color: var(--text);
   }
   .search-btn kbd {
     font-size: 10px;
-    padding: 2px 5px;
+    padding: 3px 6px;
     border: 1px solid var(--border);
-    border-radius: 5px;
+    border-radius: 6px;
     background: var(--surface-2);
     color: var(--text-faint);
   }
@@ -182,9 +257,7 @@ const w = {
     background: transparent;
     color: var(--text-dim);
     cursor: pointer;
-    transition:
-      background 0.14s var(--ease),
-      color 0.14s var(--ease);
+    transition: background 0.14s var(--ease), color 0.14s var(--ease);
   }
   .icon-btn:hover,
   .menu-btn:hover {
@@ -206,7 +279,7 @@ const w = {
     display: block;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1060px) {
     .top-nav {
       display: none;
     }
@@ -226,6 +299,9 @@ const w = {
       padding: 0 12px;
       gap: 10px;
     }
+    .divider {
+      display: none;
+    }
   }
 </style>
 
@@ -244,4 +320,11 @@ const w = {
     const open = document.body.classList.toggle('nav-open');
     menuBtn.setAttribute('aria-expanded', String(open));
   });
+
+  const topbar = document.querySelector('[data-topbar]');
+  if (topbar) {
+    const onScroll = () => topbar.classList.toggle('is-scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
 </script>

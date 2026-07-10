@@ -129,37 +129,53 @@ const stopMed = stopEasy + (stats.counts.medium / t) * 100;
 
   <section class="band band-alt">
     <div class="band-inner">
-      <header class="band-head band-head-row">
-        <div>
+      <header class="band-head">
+        <div class="head-row">
           <p class="eyebrow">The handbook</p>
-          <h2>{stats.sections} sections, ordered the way you should learn them</h2>
+          <a class="more" href={url('sections/')}>All sections <span aria-hidden="true">→</span></a>
         </div>
-        <a class="more" href={url('sections/')}>All sections →</a>
+        <h2>{stats.sections} sections, ordered the way you should learn them</h2>
       </header>
 
-      <div class="groups">
-        {
-          GROUP_ORDER.map((group) => (
-            <div class="group">
-              <p class="eyebrow g-name">{group}</p>
-              <ul class="sec-list">
-                {SECTIONS.filter((s) => s.group === group).map((s) => (
+      {
+        GROUP_ORDER.map((group, gi) => {
+          const rows = SECTIONS.filter((s) => s.group === group);
+          return (
+            <>
+              {/* The numbering is real: these are stages you work through in order. */}
+              <div class="stage-row">
+                <span class="stage-num mono">{String(gi + 1).padStart(2, '0')}</span>
+                <h3 class="eyebrow stage-name">{group}</h3>
+                <span class="rule" aria-hidden="true" />
+                <span class="stage-count mono">
+                  {rows.length} sections
+                </span>
+              </div>
+
+              <ul class="sec-grid">
+                {rows.map((s) => (
                   <li>
-                    <a href={url(`sections/${s.slug}/`)}>
-                      <span class="s-num mono">{s.num}</span>
-                      <span class="s-body">
-                        <span class="s-title">{s.title}</span>
-                        <span class="s-blurb">{s.blurb}</span>
+                    <a class="sec-card" href={url(`sections/${s.slug}/`)}>
+                      <span class="edge-lit" aria-hidden="true" />
+                      <span class="sc-top">
+                        <span class="sc-emoji" aria-hidden="true">
+                          {s.emoji}
+                        </span>
+                        <span class="sc-meta">
+                          {s.bank && <span class="s-bank mono">bank</span>}
+                          <span class="sc-num mono">{s.num}</span>
+                        </span>
                       </span>
-                      {s.bank && <span class="s-bank mono">bank</span>}
+                      <h4>{s.title}</h4>
+                      <p>{s.blurb}</p>
                     </a>
                   </li>
                 ))}
               </ul>
-            </div>
-          ))
-        }
-      </div>
+            </>
+          );
+        })
+      }
     </div>
   </section>
 
@@ -439,20 +455,35 @@ const stopMed = stopEasy + (stats.counts.medium / t) * 100;
     margin: 0;
     max-width: 26ch;
   }
-  .band-head-row {
+  /* Keep the "all sections" link on the eyebrow line — anchoring it to a
+     two-line heading's baseline left it floating. */
+  .head-row {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     gap: 20px;
+    margin-bottom: 10px;
+  }
+  .head-row .eyebrow {
+    margin: 0;
   }
   .more {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     color: var(--text-dim);
     text-decoration: none;
     font-size: var(--step--1);
     white-space: nowrap;
   }
+  .more span {
+    transition: translate 0.16s var(--ease);
+  }
   .more:hover {
     color: var(--accent);
+  }
+  .more:hover span {
+    translate: 3px 0;
   }
 
   /* Bank cards --------------------------------------------------------- */
@@ -591,71 +622,140 @@ const stopMed = stopEasy + (stats.counts.medium / t) * 100;
     border-color: var(--accent-line);
   }
 
-  /* Section groups ----------------------------------------------------- */
-  .groups {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 34px 30px;
+  /* Stages -------------------------------------------------------------
+     Four columns grouped by stage left a ragged bottom edge (5 / 3 / 8 / 5).
+     Instead: a labelled rule per stage, with cards flowing under it. */
+  .stage-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 44px 0 18px;
   }
-  .g-name {
-    margin: 0 0 12px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
+  .stage-row:first-of-type {
+    margin-top: 0;
+  }
+  .stage-num {
+    flex: none;
+    font-size: 10px;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-line);
+    padding: 3px 7px;
+    border-radius: 6px;
+  }
+  .stage-name {
+    margin: 0;
+    flex: none;
+  }
+  .rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border), transparent);
+  }
+  .stage-count {
+    flex: none;
+    font-size: 10px;
+    color: var(--text-faint);
   }
 
-  .sec-list {
+  /* Five columns is deliberate: Core (5) and Interview prep (5) land as exact
+     rows, and Engineering (8) breaks 5 + 3 — no lone trailing card. */
+  .sec-grid {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  .sec-list a {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 12px;
-    align-items: baseline;
-    padding: 9px 10px 9px 6px;
-    border-radius: var(--r-md);
-    text-decoration: none;
-    color: inherit;
-    transition: background 0.13s var(--ease);
   }
-  .sec-list a:hover {
-    background: var(--surface);
-  }
-  .s-num {
-    font-size: 10px;
-    color: var(--text-faint);
-    flex: none;
-  }
-  .s-body {
+
+  .sec-card {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    min-width: 0;
-    flex: 1;
+    height: 100%;
+    padding: 16px 16px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition:
+      transform 0.16s var(--ease),
+      border-color 0.16s var(--ease);
   }
-  .s-title {
+  .sec-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-line);
+  }
+  .sec-card:hover .edge-lit {
+    opacity: 1;
+  }
+
+  .sc-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 13px;
+  }
+  .sc-emoji {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: linear-gradient(160deg, var(--surface-2), var(--surface));
+  }
+  /* Pill lives up here with the number, so cards need no footer and gain
+     no dead space when a section has no bank. */
+  .sc-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sc-num {
+    font-size: 10px;
+    color: var(--text-faint);
+  }
+
+  .sec-card h4 {
+    margin: 0 0 6px;
+    font-family: var(--font-display);
+    font-size: var(--step-0);
+    font-weight: 600;
     color: var(--text);
-    font-size: var(--step--1);
-    font-weight: 500;
+    letter-spacing: -0.015em;
   }
-  .sec-list a:hover .s-title {
+  .sec-card:hover h4 {
     color: var(--accent);
   }
-  .s-blurb {
-    color: var(--text-faint);
+  /* 3 lines: at five columns every blurb fits whole, so nothing truncates
+     mid-word. The clamp stays as a guard for future, longer blurbs. */
+  .sec-card p {
+    margin: 0;
     font-size: 11.5px;
-    line-height: 1.45;
+    line-height: 1.5;
+    color: var(--text-faint);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
+
   .s-bank {
-    flex: none;
     font-size: 9px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--accent);
     background: var(--accent-dim);
-    padding: 2px 6px;
+    border: 1px solid var(--accent-line);
+    padding: 2px 7px;
     border-radius: 999px;
-    align-self: center;
+    white-space: nowrap;
   }
 
   /* Closing ------------------------------------------------------------ */
@@ -671,8 +771,23 @@ const stopMed = stopEasy + (stats.counts.medium / t) * 100;
     margin: 14px 0 0;
   }
 
+  @media (max-width: 1140px) {
+    .sec-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
   @media (max-width: 960px) {
     .bank-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .sec-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 760px) {
+    .sec-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
@@ -693,6 +808,15 @@ const stopMed = stopEasy + (stats.counts.medium / t) * 100;
     }
     .bank-grid {
       grid-template-columns: minmax(0, 1fr);
+    }
+    .sec-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .stage-row {
+      margin: 34px 0 14px;
+    }
+    .stage-count {
+      display: none;
     }
     .stat-strip {
       gap: 10px 22px;
