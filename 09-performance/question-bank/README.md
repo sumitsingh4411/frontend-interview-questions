@@ -21,6 +21,21 @@ Everything worth knowing for the Performance round, grouped so you can drill one
 | 5 | [Measuring & Budgets](measuring-budgets.md) | 5 |
 | | **Total** | **31** |
 
+<!-- resources:auto:start -->
+
+## 📚 Learn & Practice
+
+_Hand-picked, canonical places to actually learn and solve this — read the concept, then go deep._
+
+**📖 Read**
+
+- [web.dev — Learn Core Web Vitals](https://web.dev/explore/learn-core-web-vitals) — LCP, INP, CLS and how to move them.
+- [web.dev — Fast load times](https://web.dev/explore/fast) — A structured path through loading performance.
+- [MDN — Web performance](https://developer.mozilla.org/en-US/docs/Web/Performance) — Reference for the performance APIs & concepts.
+- [Chrome DevTools — Performance](https://developer.chrome.com/docs/devtools/performance) — How to actually profile and read a flame chart.
+
+<!-- resources:auto:end -->
+
 ---
 
 _Curated interview prompts for the Performance round. Found a great question we're missing? [Add it](../../CONTRIBUTING.md)._

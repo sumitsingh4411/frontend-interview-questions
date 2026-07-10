@@ -22,6 +22,26 @@ Everything worth knowing for the TypeScript round, grouped so you can drill one 
 | 6 | [TypeScript in Practice](typescript-in-practice.md) | 6 |
 | | **Total** | **36** |
 
+<!-- resources:auto:start -->
+
+## 📚 Learn & Practice
+
+_Hand-picked, canonical places to actually learn and solve this — read the concept, then go deep._
+
+**📖 Read**
+
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) — The official, complete reference.
+- [Total TypeScript — free tutorials](https://www.totaltypescript.com/tutorials) — Matt Pocock's exercises on inference & generics.
+- [Type-Level TypeScript](https://type-level-typescript.com/) — Conditional & mapped types, taught as a language.
+- [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/) — A thorough community book, free online.
+
+**🛠️ Practice**
+
+- [type-challenges](https://github.com/type-challenges/type-challenges) — Type-level puzzles from easy to fiendish.
+- [TypeScript Playground](https://www.typescriptlang.org/play) — Prototype types and see inference live.
+
+<!-- resources:auto:end -->
+
 ---
 
 _Curated interview prompts for the TypeScript round. Found a great question we're missing? [Add it](../../CONTRIBUTING.md)._

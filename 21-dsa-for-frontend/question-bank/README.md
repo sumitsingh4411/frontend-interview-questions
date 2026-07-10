@@ -36,6 +36,26 @@ Data-structures & algorithms problems, bucketed into the classic patterns. Focus
 | 20 | [Design](design.md) | 10 |
 | | **Total** | **938** |
 
+<!-- resources:auto:start -->
+
+## 📚 Learn & Practice
+
+_Hand-picked, canonical places to actually learn and solve this — read the concept, then go deep._
+
+**📖 Read**
+
+- [NeetCode — Roadmap](https://neetcode.io/roadmap) — The pattern-first path through the classic problems.
+- [MDN — Data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects) — Map, Set, arrays — the tools you'll actually use in JS.
+- [Tech Interview Handbook — Algorithms](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/) — Per-pattern cheat sheets and tips.
+
+**🛠️ Practice**
+
+- [LeetCode](https://leetcode.com/) — The standard problem set; filter by tag & difficulty.
+- [NeetCode — Practice](https://neetcode.io/practice) — Curated lists (NeetCode 150) grouped by pattern.
+- [BigFrontEnd.dev](https://bigfrontend.dev/) — DSA & JS problems framed for frontend interviews.
+
+<!-- resources:auto:end -->
+
 ---
 
 _Sourced & de-duplicated from interview-prep sheets. Found a duplicate or error? [Open a PR](../../CONTRIBUTING.md)._

@@ -1,6 +1,7 @@
 ---
 import DocLayout from '@layouts/DocLayout.astro';
 import SpectrumBar from '@components/SpectrumBar.astro';
+import BankResources from '@components/BankResources.astro';
 import { getBanks } from '@lib/content.ts';
 import { url } from '@lib/url.ts';
 
@@ -51,6 +52,8 @@ const n = (v: number) => v.toLocaleString();
       ))
     }
   </ul>
+
+  <BankResources slug={bank.slug} />
 </DocLayout>
 
 <style>

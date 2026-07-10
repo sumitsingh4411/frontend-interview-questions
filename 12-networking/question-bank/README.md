@@ -21,6 +21,21 @@ Everything worth knowing for the Networking round, grouped so you can drill one 
 | 5 | [APIs & Delivery](apis-delivery.md) | 5 |
 | | **Total** | **26** |
 
+<!-- resources:auto:start -->
+
+## 📚 Learn & Practice
+
+_Hand-picked, canonical places to actually learn and solve this — read the concept, then go deep._
+
+**📖 Read**
+
+- [MDN — HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP) — Methods, status codes, headers, caching — the reference.
+- [High Performance Browser Networking](https://hpbn.co/) — Ilya Grigorik's free book — TCP to HTTP/2 to WebRTC.
+- [MDN — HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) — The header semantics people get wrong in interviews.
+- [MDN — WebSockets API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) — Real-time transport, and when to reach for it.
+
+<!-- resources:auto:end -->
+
 ---
 
 _Curated interview prompts for the Networking round. Found a great question we're missing? [Add it](../../CONTRIBUTING.md)._

@@ -8,6 +8,8 @@ The production meta-framework. Interviewers use it to probe rendering strategies
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 35 Next.js questions across 6 categories →](question-bank/README.md)**
+
 ## Routing & structure
 
 | Topic | Difficulty | Time | Tags | Best Resources |

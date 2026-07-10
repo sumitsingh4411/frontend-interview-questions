@@ -16,7 +16,7 @@
 &nbsp;
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-0d1117?style=flat-square&labelColor=0d1117&color=bb9af7)](CONTRIBUTING.md)
 
-`21 sections`&nbsp;&nbsp;•&nbsp;&nbsp;`3,000+ questions`&nbsp;&nbsp;•&nbsp;&nbsp;`17 worked solutions`&nbsp;&nbsp;•&nbsp;&nbsp;`16 company guides`
+`21 sections`&nbsp;&nbsp;•&nbsp;&nbsp;`3,600+ questions`&nbsp;&nbsp;•&nbsp;&nbsp;`20 question banks`&nbsp;&nbsp;•&nbsp;&nbsp;`16 company guides`
 
 <br/>
 
@@ -35,7 +35,7 @@
 <br/><br/>
 
 <a href="https://sumitsingh4411.github.io/frontend-interview-questions/">
-  <img src="assets/site-preview.png" alt="The Frontend Interview Prep website — a dark, searchable handbook showing the whole question corpus split by difficulty into 628 easy, 1,497 medium and 1,021 hard" width="100%" />
+  <img src="assets/site-preview.png" alt="The Frontend Interview Prep website — a dark, searchable handbook showing the whole question corpus split by difficulty into 675 easy, 1,802 medium and 1,133 hard" width="100%" />
 </a>
 
 <sub>**[Browse the handbook as a website →](https://sumitsingh4411.github.io/frontend-interview-questions/)**&nbsp;&nbsp;·&nbsp;&nbsp;search every question with `⌘K`, filter by difficulty, track what you've finished.</sub>

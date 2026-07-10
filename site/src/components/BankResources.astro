@@ -1,0 +1,157 @@
+---
+// Renders a bank's curated "Learn & Practice" links from the single source of
+// truth (src/lib/resources.ts). The same data is written into the GitHub markdown
+// by scripts/inject-resources.ts.
+import { RESOURCES, type Resource } from '@lib/resources.ts';
+import type { BankSlug } from '@lib/sections.ts';
+
+interface Props {
+  slug: BankSlug;
+}
+const { slug } = Astro.props;
+const res = RESOURCES[slug];
+
+const host = (url: string) => {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return '';
+  }
+};
+
+const groups: { label: string; icon: string; items: Resource[] }[] = [
+  { label: 'Read', icon: '📖', items: res.read ?? [] },
+  { label: 'Practice', icon: '🛠️', items: res.practice ?? [] },
+].filter((g) => g.items.length);
+---
+
+<section class="resources" aria-labelledby="learn-practice">
+  <div class="r-head">
+    <span class="eyebrow">Where to go next</span>
+    <h2 id="learn-practice">📚 Learn &amp; practice</h2>
+    <p>Prompts get you drilling; these get you learning. Hand-picked, canonical sources — read the concept, then go deep.</p>
+  </div>
+
+  <div class="r-groups" data-cols={groups.length}>
+    {
+      groups.map((g) => (
+        <div class="r-group">
+          <h3>
+            <span aria-hidden="true">{g.icon}</span> {g.label}
+          </h3>
+          <ul>
+            {g.items.map((r) => (
+              <li>
+                <a href={r.url} target="_blank" rel="noopener noreferrer">
+                  <span class="r-label">{r.label}</span>
+                  <span class="r-host mono">{host(r.url)}<span class="r-arrow" aria-hidden="true">↗</span></span>
+                </a>
+                {r.note && <p class="r-note">{r.note}</p>}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .resources {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border);
+  }
+  .r-head .eyebrow {
+    display: block;
+  }
+  .r-head h2 {
+    font-size: var(--step-1);
+    margin: 6px 0 6px;
+    color: var(--text);
+  }
+  .r-head p {
+    margin: 0 0 22px;
+    color: var(--text-dim);
+    font-size: var(--step--1);
+    max-width: 60ch;
+  }
+
+  .r-groups {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+  }
+  .r-groups[data-cols='2'] {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .r-group {
+    padding: 18px 20px 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+  }
+  .r-group h3 {
+    font-size: var(--step--1);
+    letter-spacing: 0.02em;
+    margin: 0 0 6px;
+    color: var(--text);
+  }
+
+  .r-group ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .r-group li {
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+  }
+  .r-group li:first-child {
+    border-top: 0;
+  }
+
+  .r-group a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .r-group a:hover .r-label {
+    color: var(--accent);
+  }
+  .r-label {
+    font-weight: 500;
+    font-size: var(--step-0);
+  }
+  .r-host {
+    flex: none;
+    font-size: 11px;
+    color: var(--text-faint);
+    white-space: nowrap;
+  }
+  .r-arrow {
+    margin-left: 4px;
+    transition: transform 0.14s var(--ease);
+    display: inline-block;
+  }
+  .r-group a:hover .r-arrow {
+    transform: translate(2px, -2px);
+    color: var(--accent);
+  }
+  .r-note {
+    margin: 3px 0 0;
+    font-size: var(--step--1);
+    color: var(--text-dim);
+    max-width: 62ch;
+  }
+
+  @media (max-width: 720px) {
+    .r-groups[data-cols='2'] {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

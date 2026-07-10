@@ -16,6 +16,22 @@ React topics to master, by area. Deep-dive links live in the [section README](RE
 
 ---
 
+<!-- resources:auto:start -->
+
+## 📚 Learn & Practice
+
+_Hand-picked, canonical places to actually learn and solve this — read the concept, then go deep._
+
+**📖 Read**
+
+- [react.dev — Learn](https://react.dev/learn) — The official docs, rebuilt around hooks & mental models.
+- [react.dev — Reference](https://react.dev/reference/react) — Every hook and API, precisely.
+- [Overreacted — Dan Abramov](https://overreacted.io/) — Deep intuition on rendering, effects, and closures.
+- [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/) — The article that finally makes effects click.
+- [patterns.dev — React patterns](https://www.patterns.dev/react) — Component & rendering patterns with examples.
+
+<!-- resources:auto:end -->
+
 ### React Core  
 <sub>9 questions</sub>
 

@@ -21,6 +21,21 @@ Everything worth knowing for the Accessibility round, grouped so you can drill o
 | 5 | [Visual, Motion & Testing](visual-motion-testing.md) | 5 |
 | | **Total** | **27** |
 
+<!-- resources:auto:start -->
+
+## 📚 Learn & Practice
+
+_Hand-picked, canonical places to actually learn and solve this — read the concept, then go deep._
+
+**📖 Read**
+
+- [MDN — Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) — Semantics, ARIA, and how AT consumes your markup.
+- [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) — The reference patterns for accessible widgets.
+- [The A11y Project — Checklist](https://www.a11yproject.com/checklist/) — A practical checklist you can actually ship against.
+- [web.dev — Learn Accessibility](https://web.dev/learn/accessibility) — A structured course from the basics up.
+
+<!-- resources:auto:end -->
+
 ---
 
 _Curated interview prompts for the Accessibility round. Found a great question we're missing? [Add it](../../CONTRIBUTING.md)._

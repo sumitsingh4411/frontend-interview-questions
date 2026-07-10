@@ -8,6 +8,8 @@ Nothing teaches internals like rebuilding the tools. These projects turn "I use 
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 30 Build Your Own questions across 5 categories →](question-bank/README.md)**
+
 ## React & rendering
 
 | Project | Difficulty | Time | Tags | Best guide |

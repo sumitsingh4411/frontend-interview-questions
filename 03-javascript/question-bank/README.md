@@ -40,6 +40,26 @@ Conceptual + practical JavaScript interview questions by topic. Pair with the [o
 | 24 | [Company Specific](company-specific.md) | 159 |
 | | **Total** | **548** |
 
+<!-- resources:auto:start -->
+
+## 📚 Learn & Practice
+
+_Hand-picked, canonical places to actually learn and solve this — read the concept, then go deep._
+
+**📖 Read**
+
+- [javascript.info](https://javascript.info/) — The best free, deep, modern JavaScript course.
+- [MDN — JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript) — The authoritative language reference.
+- [You Don't Know JS Yet](https://github.com/getify/You-Dont-Know-JS) — Kyle Simpson's deep series on the tricky bits.
+- [MDN — Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures) — The concept behind half of JS interview questions.
+- [MDN — Equality comparisons](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) — ==, ===, Object.is — and when each bites.
+
+**🛠️ Practice**
+
+- [BigFrontEnd.dev — JS coding](https://bigfrontend.dev/) — Implement-the-primitive JS challenges with tests.
+
+<!-- resources:auto:end -->
+
 ---
 
 _Sourced & de-duplicated from interview-prep sheets. Found a duplicate or error? [Open a PR](../../CONTRIBUTING.md)._

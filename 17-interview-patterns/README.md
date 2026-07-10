@@ -8,6 +8,8 @@ The reusable "moves." Most "Design X" problems are combinations of these. Learn 
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 24 Interview Patterns questions across 5 categories →](question-bank/README.md)**
+
 ## Rendering & data delivery
 
 | Pattern | Difficulty | Time | Tags | Where it shows up |

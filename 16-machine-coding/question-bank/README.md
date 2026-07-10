@@ -44,6 +44,26 @@ Every build-this-component problem, grouped by category. Start with the [flagshi
 | 28 | [System Design Style](system-design-style.md) | 30 |
 | | **Total** | **1232** |
 
+<!-- resources:auto:start -->
+
+## 📚 Learn & Practice
+
+_Hand-picked, canonical places to actually learn and solve this — read the concept, then go deep._
+
+**📖 Read**
+
+- [patterns.dev](https://www.patterns.dev/) — The component patterns machine-coding rounds reward.
+- [MDN — Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) — The platform APIs you'll wire up under time pressure.
+
+**🛠️ Practice**
+
+- [GreatFrontEnd — Coding questions](https://www.greatfrontend.com/questions/js) — UI & JS build challenges with solutions.
+- [BigFrontEnd.dev](https://bigfrontend.dev/) — Build-the-component challenges with a test runner.
+- [Frontend Mentor](https://www.frontendmentor.io/challenges) — Real design files to build pixel-accurate UIs.
+- [CodeSandbox](https://codesandbox.io/) — A fast scratchpad to practice building in.
+
+<!-- resources:auto:end -->
+
 ---
 
 _Sourced & de-duplicated from interview-prep sheets. Found a duplicate or error? [Open a PR](../../CONTRIBUTING.md)._

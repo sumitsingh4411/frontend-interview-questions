@@ -24,6 +24,27 @@ Everything worth knowing for the CSS round, grouped so you can drill one area at
 | 8 | [Architecture & Scaling CSS](architecture-scaling-css.md) | 6 |
 | | **Total** | **59** |
 
+<!-- resources:auto:start -->
+
+## 📚 Learn & Practice
+
+_Hand-picked, canonical places to actually learn and solve this — read the concept, then go deep._
+
+**📖 Read**
+
+- [web.dev — Learn CSS](https://web.dev/learn/css) — A modern, complete CSS course.
+- [MDN — CSS reference](https://developer.mozilla.org/en-US/docs/Web/CSS) — Every property and how it behaves.
+- [CSS-Tricks — Flexbox & Grid guides](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) — The go-to visual references for layout.
+- [Josh W. Comeau — CSS articles](https://www.joshwcomeau.com/) — Deep, intuition-building posts on tricky CSS.
+- [defensivecss.dev](https://defensivecss.dev/) — Patterns that keep layouts from breaking.
+
+**🛠️ Practice**
+
+- [Flexbox Froggy](https://flexboxfroggy.com/) — Learn flexbox as a game.
+- [CSS Grid Garden](https://cssgridgarden.com/) — Learn grid as a game.
+
+<!-- resources:auto:end -->
+
 ---
 
 _Curated interview prompts for the CSS round. Found a great question we're missing? [Add it](../../CONTRIBUTING.md)._

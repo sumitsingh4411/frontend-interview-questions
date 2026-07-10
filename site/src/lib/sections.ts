@@ -28,7 +28,13 @@ export type BankSlug =
   | 'accessibility'
   | 'security'
   | 'networking'
-  | 'testing';
+  | 'testing'
+  | 'nextjs'
+  | 'architecture'
+  | 'state-management'
+  | 'interview-patterns'
+  | 'design-patterns'
+  | 'build-your-own';
 
 export const GROUP_ORDER: Group[] = [
   'Core',
@@ -44,19 +50,19 @@ export const SECTIONS: SectionMeta[] = [
   { slug: '04-typescript', num: '04', title: 'TypeScript', emoji: '🔷', group: 'Core', blurb: 'Types that scale — generics, narrowing, and the tricky inference questions.', bank: 'typescript' },
   { slug: '05-css', num: '05', title: 'CSS', emoji: '🎨', group: 'Core', blurb: 'Layout, the cascade, and the visual questions people underestimate.', bank: 'css' },
   { slug: '06-react', num: '06', title: 'React', emoji: '⚛️', group: 'Frameworks & State', blurb: 'Hooks, reconciliation, performance — the framework interviews center on.', bank: 'react' },
-  { slug: '07-nextjs', num: '07', title: 'Next.js', emoji: '▲', group: 'Frameworks & State', blurb: 'Rendering strategies, the app router, and server components.' },
-  { slug: '13-state-management', num: '13', title: 'State management', emoji: '🗃️', group: 'Frameworks & State', blurb: 'Local, global, server state — and choosing the right tool.' },
-  { slug: '08-architecture', num: '08', title: 'Architecture', emoji: '🏛️', group: 'Engineering craft', blurb: 'Structuring frontends that survive scale and many engineers.' },
+  { slug: '07-nextjs', num: '07', title: 'Next.js', emoji: '▲', group: 'Frameworks & State', blurb: 'Rendering strategies, the app router, and server components.', bank: 'nextjs' },
+  { slug: '13-state-management', num: '13', title: 'State management', emoji: '🗃️', group: 'Frameworks & State', blurb: 'Local, global, server state — and choosing the right tool.', bank: 'state-management' },
+  { slug: '08-architecture', num: '08', title: 'Architecture', emoji: '🏛️', group: 'Engineering craft', blurb: 'Structuring frontends that survive scale and many engineers.', bank: 'architecture' },
   { slug: '09-performance', num: '09', title: 'Performance', emoji: '🚀', group: 'Engineering craft', blurb: 'Core Web Vitals, loading strategy, and the measurable wins.', bank: 'performance' },
   { slug: '10-security', num: '10', title: 'Security', emoji: '🔒', group: 'Engineering craft', blurb: 'XSS, CSRF, CSP, and the client-side threats you must name.', bank: 'security' },
   { slug: '11-accessibility', num: '11', title: 'Accessibility', emoji: '♿', group: 'Engineering craft', blurb: 'Semantics, ARIA, and keyboard-first interfaces.', bank: 'accessibility' },
   { slug: '12-networking', num: '12', title: 'Networking', emoji: '📡', group: 'Engineering craft', blurb: 'HTTP, caching, WebSockets, and everything above the socket.', bank: 'networking' },
   { slug: '14-testing', num: '14', title: 'Testing', emoji: '🧪', group: 'Engineering craft', blurb: 'Unit, integration, e2e — and what to test at each layer.', bank: 'testing' },
-  { slug: '18-design-patterns', num: '18', title: 'Design patterns', emoji: '🧩', group: 'Engineering craft', blurb: 'The reusable patterns that show up in machine-coding rounds.' },
-  { slug: '19-build-your-own', num: '19', title: 'Build your own', emoji: '🔧', group: 'Engineering craft', blurb: 'Reimplement the tools — Promise, router, bundler, virtual DOM.' },
+  { slug: '18-design-patterns', num: '18', title: 'Design patterns', emoji: '🧩', group: 'Engineering craft', blurb: 'The reusable patterns that show up in machine-coding rounds.', bank: 'design-patterns' },
+  { slug: '19-build-your-own', num: '19', title: 'Build your own', emoji: '🔧', group: 'Engineering craft', blurb: 'Reimplement the tools — Promise, router, bundler, virtual DOM.', bank: 'build-your-own' },
   { slug: '15-system-design', num: '15', title: 'System design', emoji: '🏗️', group: 'Interview prep', blurb: 'Design real frontend systems — the senior/staff differentiator.', bank: 'system-design' },
   { slug: '16-machine-coding', num: '16', title: 'Machine coding', emoji: '🧑‍💻', group: 'Interview prep', blurb: 'Build a working UI under time pressure — the SDE-2 sweet spot.', bank: 'machine-coding' },
-  { slug: '17-interview-patterns', num: '17', title: 'Interview patterns', emoji: '🎯', group: 'Interview prep', blurb: 'How rounds are scored, and the templates that pass them.' },
+  { slug: '17-interview-patterns', num: '17', title: 'Interview patterns', emoji: '🎯', group: 'Interview prep', blurb: 'How rounds are scored, and the templates that pass them.', bank: 'interview-patterns' },
   { slug: '20-company-guides', num: '20', title: 'Company guides', emoji: '🏢', group: 'Interview prep', blurb: 'What Google, Meta, Amazon, Netflix, Stripe and more actually ask.' },
   { slug: '21-dsa-for-frontend', num: '21', title: 'DSA for frontend', emoji: '🧠', group: 'Interview prep', blurb: 'The specific algorithmic slice frontend loops care about.', bank: 'dsa' },
 ];
@@ -89,6 +95,12 @@ export const BANKS: BankSource[] = [
   { slug: 'networking', title: 'Networking', emoji: '📡', sectionSlug: '12-networking', kind: 'folder', blurb: 'HTTP, caching, and real-time transports.' },
   { slug: 'testing', title: 'Testing', emoji: '🧪', sectionSlug: '14-testing', kind: 'folder', blurb: 'Unit, integration, and e2e — what to test at each layer.' },
   { slug: 'fundamentals', title: 'Fundamentals', emoji: '🧱', sectionSlug: '01-fundamentals', kind: 'folder', blurb: 'HTML semantics, forms, and how the web works.' },
+  { slug: 'nextjs', title: 'Next.js', emoji: '▲', sectionSlug: '07-nextjs', kind: 'folder', blurb: 'Rendering strategies, the app router, caching, and server components.' },
+  { slug: 'state-management', title: 'State Management', emoji: '🗃️', sectionSlug: '13-state-management', kind: 'folder', blurb: 'Local, global, and server state — and choosing the right tool.' },
+  { slug: 'architecture', title: 'Architecture', emoji: '🏛️', sectionSlug: '08-architecture', kind: 'folder', blurb: 'Structuring frontends that scale across many engineers.' },
+  { slug: 'design-patterns', title: 'Design Patterns', emoji: '🧩', sectionSlug: '18-design-patterns', kind: 'folder', blurb: 'The reusable patterns behind clean component code.' },
+  { slug: 'build-your-own', title: 'Build Your Own', emoji: '🔧', sectionSlug: '19-build-your-own', kind: 'folder', blurb: 'Reimplement the tools — debounce, Promise, router, virtual DOM.' },
+  { slug: 'interview-patterns', title: 'Interview Patterns', emoji: '🎯', sectionSlug: '17-interview-patterns', kind: 'folder', blurb: 'How rounds are scored, and the templates that pass them.' },
 ];
 
 export const BANK_BY_SLUG = new Map(BANKS.map((b) => [b.slug, b]));

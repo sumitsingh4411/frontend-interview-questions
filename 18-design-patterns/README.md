@@ -8,6 +8,8 @@ Classic GoF patterns and how they actually appear in frontend code. Expect "what
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 26 Design Patterns questions across 5 categories →](question-bank/README.md)**
+
 ⭐ **Flagship:** [Observer / Event Bus](observer-event-bus.md)
 
 | Pattern | Difficulty | Time | Tags | Frontend example |

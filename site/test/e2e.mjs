@@ -235,6 +235,24 @@ ok('twitter:image matches og:image', meta.twImage === meta.ogImage);
 ok('og:url is set', /^https:\/\//.test(meta.ogUrl ?? ''), meta.ogUrl);
 ok('large-image card has an image', meta.card !== 'summary_large_image' || !!meta.ogImage);
 
+// ---------------------------------------------------------------- learn & practice resources
+console.log('\nlearn & practice resources');
+await page.goto(`${ORIGIN}/banks/css/`, { waitUntil: 'networkidle0' });
+const resHeading = await page.$eval('#learn-practice', (e) => e.textContent).catch(() => null);
+ok('bank page has a Learn & practice section', /Learn & practice/.test(resHeading ?? ''), String(resHeading));
+const extLinks = await page.$$eval('.resources a[target="_blank"]', (els) =>
+  els.map((e) => e.href).filter((h) => /^https:\/\//.test(h)),
+);
+ok('resources render external https links', extLinks.length >= 4, `n=${extLinks.length}`);
+ok(
+  'resources open safely (rel=noopener)',
+  await page.$$eval('.resources a[target="_blank"]', (els) => els.length > 0 && els.every((e) => /noopener/.test(e.rel))),
+);
+// DSA is a hands-on bank → it should surface a Practice group.
+await page.goto(`${ORIGIN}/banks/dsa/`, { waitUntil: 'networkidle0' });
+const groupLabels = await page.$$eval('.resources .r-group h3', (els) => els.map((e) => e.textContent.trim()));
+ok('hands-on bank shows a Practice group', groupLabels.some((t) => /Practice/.test(t)), JSON.stringify(groupLabels));
+
 await browser.close();
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

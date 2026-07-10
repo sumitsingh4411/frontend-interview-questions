@@ -21,6 +21,21 @@ Everything worth knowing for the Security round, grouped so you can drill one ar
 | 5 | [Supply Chain & Data](supply-chain-data.md) | 5 |
 | | **Total** | **27** |
 
+<!-- resources:auto:start -->
+
+## 📚 Learn & Practice
+
+_Hand-picked, canonical places to actually learn and solve this — read the concept, then go deep._
+
+**📖 Read**
+
+- [OWASP — Top Ten](https://owasp.org/www-project-top-ten/) — The canonical list of web risks to name & defend.
+- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/) — Practical, per-threat guidance (XSS, CSRF, auth…).
+- [web.dev — Content Security Policy](https://web.dev/articles/strict-csp) — How CSP actually mitigates XSS.
+- [MDN — Web security](https://developer.mozilla.org/en-US/docs/Web/Security) — CORS, CSP, HTTPS, and same-origin, explained.
+
+<!-- resources:auto:end -->
+
 ---
 
 _Curated interview prompts for the Security round. Found a great question we're missing? [Add it](../../CONTRIBUTING.md)._

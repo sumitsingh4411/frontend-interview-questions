@@ -35,6 +35,25 @@ Scenario and design questions by area. Learn the shape from the [flagship soluti
 | 19 | [System Design](system-design.md) | 55 |
 | | **Total** | **353** |
 
+<!-- resources:auto:start -->
+
+## 📚 Learn & Practice
+
+_Hand-picked, canonical places to actually learn and solve this — read the concept, then go deep._
+
+**📖 Read**
+
+- [GreatFrontEnd — Front End System Design](https://www.greatfrontend.com/front-end-system-design-playbook) — A framework built specifically for FE design rounds.
+- [patterns.dev](https://www.patterns.dev/) — Rendering & performance patterns you'll cite in designs.
+- [web.dev — Architecture & PRPL](https://web.dev/articles/apply-instant-loading-with-prpl) — A delivery pattern worth naming in a design.
+- [System Design Primer](https://github.com/donnemartin/system-design-primer) — Backend-leaning, but the fundamentals transfer.
+
+**🛠️ Practice**
+
+- [GreatFrontEnd — System design questions](https://www.greatfrontend.com/questions/system-design) — Real FE design prompts with sample solutions.
+
+<!-- resources:auto:end -->
+
 ---
 
 _Sourced & de-duplicated from interview-prep sheets. Found a duplicate or error? [Open a PR](../../CONTRIBUTING.md)._

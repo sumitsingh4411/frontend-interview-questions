@@ -8,6 +8,8 @@ Server state vs client state, and picking the right tool. A favorite "walk me th
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 27 State Management questions across 5 categories →](question-bank/README.md)**
+
 ## Concepts
 
 | Topic | Difficulty | Time | Tags | Best Resources |

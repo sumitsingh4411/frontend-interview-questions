@@ -8,6 +8,8 @@ How to structure apps that many engineers and many teams touch. The Staff-level 
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 31 Architecture questions across 6 categories →](question-bank/README.md)**
+
 ## Component & app structure
 
 | Topic | Difficulty | Time | Tags | Best Resources |
