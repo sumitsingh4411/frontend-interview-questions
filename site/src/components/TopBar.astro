@@ -16,25 +16,33 @@ const on = (seg: string) => path.startsWith(url(seg));
 
 <header class="topbar" data-topbar>
   <div class="bar">
-    <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" data-menu-toggle>
-      <svg viewBox="0 0 16 16" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M2 4h12M2 8h12M2 12h12" stroke-linecap="round"></path>
-      </svg>
-    </button>
+    <div class="left">
+      <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" data-menu-toggle>
+        <svg viewBox="0 0 16 16" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M2 4h12M2 8h12M2 12h12" stroke-linecap="round"></path>
+        </svg>
+      </button>
 
-    <a class="brand" href={url()} aria-label="Frontend Interview Prep — home">
-      {/* The mark is the spectrum: three tiers, same as the favicon. */}
-      <span class="mark" aria-hidden="true">
-        <i style="background:var(--easy)"></i>
-        <i style="background:var(--medium)"></i>
-        <i style="background:var(--hard)"></i>
-      </span>
-      <span class="wordmark">Frontend<span class="thin">Interview</span></span>
-    </a>
+      <a class="brand" href={url()} aria-label="Frontend Interview Prep — home">
+        {/* The mark is the spectrum: three tiers, same as the favicon. */}
+        <span class="mark" aria-hidden="true">
+          <i style="background:var(--easy)"></i>
+          <i style="background:var(--medium)"></i>
+          <i style="background:var(--hard)"></i>
+        </span>
+        <span class="wordmark">Frontend<span class="thin">Interview</span></span>
+      </a>
+    </div>
 
-    <nav class="top-nav" aria-label="Primary">
-      <a href={url('sections/')} class:list={{ on: on('sections') }}>Sections</a>
-      <a href={url('banks/')} class:list={{ on: on('banks') }}>Question banks</a>
+    {/* Segmented control: a glider slides to the active item, and follows hover. */}
+    <nav class="top-nav" aria-label="Primary" data-nav>
+      <span class="glider" data-glider aria-hidden="true"></span>
+      <a href={url('sections/')} class:list={{ on: on('sections') }}>
+        Sections<span class="n mono">{stats.sections}</span>
+      </a>
+      <a href={url('banks/')} class:list={{ on: on('banks') }}>
+        Question banks<span class="n mono">{stats.questions.toLocaleString()}</span>
+      </a>
       <a href={url('roadmap/')} class:list={{ on: on('roadmap') }}>Roadmap</a>
     </nav>
 
@@ -93,12 +101,21 @@ const on = (seg: string) => path.startsWith(url(seg));
     box-shadow: 0 8px 30px -18px rgba(0, 0, 0, 0.9);
   }
 
+  /* Brand | nav | actions. Centering the nav removes the dead void that
+     opened up between the wordmark and the search button. */
   .bar {
     height: var(--topbar-h);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 18px;
     padding: 0 20px;
+  }
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
   }
 
   .edge {
@@ -162,40 +179,97 @@ const on = (seg: string) => path.startsWith(url(seg));
 
   /* Nav ---------------------------------------------------------------- */
   .top-nav {
+    position: relative;
     display: flex;
-    gap: 4px;
-    margin-left: 12px;
+    align-items: center;
+    gap: 2px;
+    padding: 3px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 75%, transparent);
+    justify-self: center;
   }
+
+  .glider {
+    position: absolute;
+    /* Offsets resolve against the padding box's *outer* edge, so inset by the
+       nav's own 3px padding to sit flush on the links. */
+    top: 3px;
+    bottom: 3px;
+    left: 0;
+    width: var(--w, 0px);
+    translate: var(--x, 0) 0;
+    border-radius: 999px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      translate 0.28s var(--ease),
+      width 0.28s var(--ease),
+      opacity 0.18s var(--ease),
+      background 0.18s var(--ease),
+      border-color 0.18s var(--ease);
+  }
+  .top-nav:hover .glider,
+  .top-nav.has-active .glider {
+    opacity: 1;
+  }
+  .glider.is-active {
+    background: var(--accent-dim);
+    border-color: var(--accent-line);
+    box-shadow: 0 0 20px -6px var(--accent-glow);
+  }
+  /* Skip the slide when the glider first appears. */
+  .glider.no-anim {
+    transition: opacity 0.18s var(--ease);
+  }
+
   .top-nav a {
     position: relative;
-    padding: 7px 11px;
-    border-radius: var(--r-md);
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 13px;
+    border-radius: 999px;
     color: var(--text-dim);
     text-decoration: none;
     font-size: var(--step--1);
-    transition: color 0.14s var(--ease), background 0.14s var(--ease);
+    white-space: nowrap;
+    transition: color 0.16s var(--ease);
   }
   .top-nav a:hover {
     color: var(--text);
-    background: var(--surface);
   }
   .top-nav a.on {
     color: var(--text);
+    font-weight: 500;
   }
-  .top-nav a.on::after {
-    content: '';
-    position: absolute;
-    left: 11px;
-    right: 11px;
-    bottom: 1px;
-    height: 1.5px;
-    border-radius: 2px;
-    background: var(--accent);
-    box-shadow: 0 0 8px var(--accent-glow);
+
+  .top-nav .n {
+    font-size: 9.5px;
+    line-height: 1;
+    padding: 3px 6px;
+    border-radius: 999px;
+    color: var(--text-faint);
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    font-variant-numeric: tabular-nums;
+    transition:
+      color 0.16s var(--ease),
+      border-color 0.16s var(--ease);
+  }
+  .top-nav a.on .n {
+    color: var(--accent);
+    border-color: var(--accent-line);
+  }
+  .top-nav a:hover .n {
+    color: var(--text-dim);
   }
 
   .right {
-    margin-left: auto;
+    justify-self: end;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -279,10 +353,16 @@ const on = (seg: string) => path.startsWith(url(seg));
     display: block;
   }
 
-  @media (max-width: 1060px) {
+  @media (max-width: 1180px) {
     .top-nav {
       display: none;
     }
+    .bar {
+      grid-template-columns: 1fr auto;
+    }
+  }
+
+  @media (max-width: 900px) {
     .search-label {
       display: none;
     }
@@ -326,5 +406,49 @@ const on = (seg: string) => path.startsWith(url(seg));
     const onScroll = () => topbar.classList.toggle('is-scrolled', window.scrollY > 8);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  // Segmented nav: slide the glider to the active item, and let it follow hover.
+  const nav = document.querySelector<HTMLElement>('[data-nav]');
+  const glider = document.querySelector<HTMLElement>('[data-glider]');
+  if (nav && glider) {
+    const links = [...nav.querySelectorAll<HTMLAnchorElement>('a')];
+    const active = links.find((l) => l.classList.contains('on')) ?? null;
+
+    const place = (el: HTMLElement | null, isActive: boolean, animate = true) => {
+      if (!el) return;
+      const navRect = nav.getBoundingClientRect();
+      const border = parseFloat(getComputedStyle(nav).borderLeftWidth) || 0;
+      const rect = el.getBoundingClientRect();
+      if (!animate) glider.classList.add('no-anim');
+      glider.style.setProperty('--x', `${rect.left - navRect.left - border}px`);
+      glider.style.setProperty('--w', `${rect.width}px`);
+      glider.classList.toggle('is-active', isActive);
+      if (!animate) requestAnimationFrame(() => glider.classList.remove('no-anim'));
+    };
+
+    if (active) {
+      place(active, true, false);
+      nav.classList.add('has-active');
+      // Link widths change when the webfont swaps in, so measure again then.
+      document.fonts?.ready.then(() => place(active, true, false));
+    }
+
+    links.forEach((l) =>
+      l.addEventListener('mouseenter', () => {
+        // With no active item the glider is hidden; drop it in place rather
+        // than sliding it across from x=0 on first hover.
+        const wasVisible = nav.classList.contains('has-active');
+        place(l, l === active, wasVisible);
+        nav.classList.add('has-active');
+      }),
+    );
+
+    nav.addEventListener('mouseleave', () => {
+      if (active) place(active, true);
+      else nav.classList.remove('has-active');
+    });
+
+    addEventListener('resize', () => place(active, true, false));
   }
 </script>
