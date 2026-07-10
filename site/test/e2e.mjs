@@ -217,6 +217,18 @@ ok('exactly one h1', (await page.$$('h1')).length === 1);
 const noMd = await page.$$eval('a[href$=".md"]', (els) => els.filter((e) => !e.href.includes('github.com')).length);
 ok('no dead .md links', noMd === 0);
 
+// summary_large_image renders blank without an absolute og:image.
+const meta = await page.evaluate(() => ({
+  card: document.querySelector('meta[name="twitter:card"]')?.content,
+  ogImage: document.querySelector('meta[property="og:image"]')?.content,
+  twImage: document.querySelector('meta[name="twitter:image"]')?.content,
+  ogUrl: document.querySelector('meta[property="og:url"]')?.content,
+}));
+ok('og:image is set and absolute', /^https:\/\/.+\/og\.png$/.test(meta.ogImage ?? ''), meta.ogImage);
+ok('twitter:image matches og:image', meta.twImage === meta.ogImage);
+ok('og:url is set', /^https:\/\//.test(meta.ogUrl ?? ''), meta.ogUrl);
+ok('large-image card has an image', meta.card !== 'summary_large_image' || !!meta.ogImage);
+
 await browser.close();
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

@@ -14,7 +14,10 @@ interface Props {
 const { title, description, bare = false } = Astro.props;
 const siteName = 'Frontend Interview Prep';
 const fullTitle = title === siteName ? title : `${title} · ${siteName}`;
-const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://example.com').href;
+const origin = Astro.site ?? new URL('https://sumitsingh4411.github.io');
+const canonical = new URL(Astro.url.pathname, origin).href;
+// twitter:card=summary_large_image renders blank without an image.
+const ogImage = new URL(url('og.png'), origin).href;
 ---
 
 <!doctype html>
@@ -27,10 +30,18 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://example.com
     <link rel="canonical" href={canonical} />
 
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content={siteName} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Frontend Interview Prep — every frontend interview question, ranked by difficulty" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
 
