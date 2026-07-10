@@ -8,6 +8,8 @@ How the browser turns bytes into pixels — and why your app is slow. The "expla
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 32 Browser questions across 5 categories →](question-bank/README.md)**
+
 ## Architecture & engines
 
 | Topic | Difficulty | Time | Tags | Best Resources |

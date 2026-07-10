@@ -8,6 +8,8 @@ The threats you're expected to name and defend against. "How would you prevent X
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 27 Security questions across 5 categories →](question-bank/README.md)**
+
 ## Attacks & defenses
 
 | Topic | Difficulty | Time | Tags | Best Resources |

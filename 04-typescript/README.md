@@ -8,6 +8,8 @@ Type-level thinking. Senior+ interviews increasingly ask you to design APIs with
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 36 TypeScript questions across 6 categories →](question-bank/README.md)**
+
 ## Basics
 
 | Topic | Difficulty | Time | Tags | Best Resources |

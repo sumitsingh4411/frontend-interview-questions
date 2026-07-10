@@ -8,6 +8,8 @@ The bedrock. If any of these are shaky, everything above them wobbles in an inte
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 25 Fundamentals questions across 4 categories →](question-bank/README.md)**
+
 ## The platform
 
 | Topic | Difficulty | Time | Tags | Best Resources |

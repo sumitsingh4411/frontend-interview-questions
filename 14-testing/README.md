@@ -8,6 +8,8 @@ How you prove the thing works. Expect "how would you test this?" after any machi
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 28 Testing questions across 5 categories →](question-bank/README.md)**
+
 ## Strategy
 
 | Topic | Difficulty | Time | Tags | Best Resources |

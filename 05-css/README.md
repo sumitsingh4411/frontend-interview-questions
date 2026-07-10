@@ -8,6 +8,8 @@ Layout, the cascade, and making it fast. "Center a div" is a meme; "explain the 
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 59 CSS questions across 8 categories →](question-bank/README.md)**
+
 ## Fundamentals & the cascade
 
 | Topic | Difficulty | Time | Tags | Best Resources |

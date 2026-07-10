@@ -8,6 +8,8 @@ Every system-design answer is judged on this. Know the metrics, know how to move
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 31 Performance questions across 5 categories →](question-bank/README.md)**
+
 ## Metrics
 
 | Topic | Difficulty | Time | Tags | Best Resources |

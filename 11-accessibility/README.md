@@ -8,6 +8,8 @@ Increasingly a scored dimension in system-design and machine-coding rounds. "Mak
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 27 Accessibility questions across 5 categories →](question-bank/README.md)**
+
 ## Foundations
 
 | Topic | Difficulty | Time | Tags | Best Resources |

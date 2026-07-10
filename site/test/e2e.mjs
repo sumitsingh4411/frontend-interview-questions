@@ -98,7 +98,13 @@ await new Promise((r) => setTimeout(r, 900));
 const txt = (sel) => page.$eval(sel, (e) => e.textContent.trim());
 ok('counts the 2 ticked questions', (await txt('[data-done]')) === '2', await txt('[data-done]'));
 ok('tile: done', (await txt('[data-tile-done]')) === '2');
-ok('tile: remaining', (await txt('[data-tile-left]')) === '3,144', await txt('[data-tile-left]'));
+// Derive expected "remaining" from the live total so it never goes stale.
+const remaining = await page.$eval('[data-tile-left]', (e) => e.textContent.trim());
+const totalFromIndex = await page.evaluate(
+  async (url) => (await fetch(url).then((r) => r.json())).q.length,
+  `${ORIGIN}/search-index.json`,
+);
+ok('tile: remaining = total − 2 done', remaining === (totalFromIndex - 2).toLocaleString(), `${remaining} vs ${totalFromIndex - 2}`);
 ok('easy row shows 1', (await txt('[data-row-done="e"]')) === '1');
 ok('medium row shows 1', (await txt('[data-row-done="m"]')) === '1');
 ok('hard row shows 0', (await txt('[data-row-done="h"]')) === '0');

@@ -8,6 +8,8 @@ The pipe between your app and the data. Real-time, protocols, and caching decisi
 
 > Difficulty: 🟢 Easy · 🟡 Medium · 🔴 Hard · [⬆ Back to all sections](../README.md)
 
+> 📚 **[Full question bank — 26 Networking questions across 5 categories →](question-bank/README.md)**
+
 ## HTTP & protocols
 
 | Topic | Difficulty | Time | Tags | Best Resources |

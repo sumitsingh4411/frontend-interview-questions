@@ -73,11 +73,20 @@ export function repoPathToRoute(repoPath: string, base: string): string | null {
 }
 
 const BANK_FOR_SECTION: Record<string, string> = {
+  '01-fundamentals': 'fundamentals',
+  '02-browser': 'browser',
   '03-javascript': 'javascript',
+  '04-typescript': 'typescript',
+  '05-css': 'css',
+  '06-react': 'react',
+  '09-performance': 'performance',
+  '10-security': 'security',
+  '11-accessibility': 'accessibility',
+  '12-networking': 'networking',
+  '14-testing': 'testing',
   '15-system-design': 'system-design',
   '16-machine-coding': 'machine-coding',
   '21-dsa-for-frontend': 'dsa',
-  '06-react': 'react',
 };
 
 /** Resolve an href against the file's repo path. Returns {kind, value}. */
