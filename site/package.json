@@ -11,6 +11,7 @@
     "test:e2e": "node test/e2e.mjs"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
     "@fontsource-variable/hanken-grotesk": "^5.1.0",
     "@fontsource-variable/jetbrains-mono": "^5.1.0",
     "@fontsource-variable/space-grotesk": "^5.1.0",

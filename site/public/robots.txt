@@ -1,0 +1,9 @@
+# Note: on a GitHub Pages *project* site, crawlers only read robots.txt from the
+# origin root (sumitsingh4411.github.io/robots.txt) — not from this sub-path.
+# This file takes effect if the site ever moves to a custom domain. The sitemap
+# below is valid either way and can be submitted straight to Search Console.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://sumitsingh4411.github.io/frontend-interview-questions/sitemap-index.xml
