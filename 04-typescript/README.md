@@ -14,20 +14,20 @@ Type-level thinking. Senior+ interviews increasingly ask you to design APIs with
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Type basics & inference | 🟢 | 45m | `#basics` | [TS Handbook: everyday types ⭐](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) |
-| Interfaces vs type aliases | 🟢 | 30m | `#basics` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#interfaces-vs-type-aliases) |
-| Union & intersection types | 🟢 | 30m | `#basics` | [TS Handbook: unions ⭐](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) |
-| Literal & enum types | 🟢 | 30m | `#basics` | [TS Handbook: enums ⭐](https://www.typescriptlang.org/docs/handbook/enums.html) |
-| Functions & overloads | 🟡 | 45m | `#basics` | [TS Handbook: functions ⭐](https://www.typescriptlang.org/docs/handbook/2/functions.html) |
-| Narrowing & type guards | 🟡 | 45m | `#guards` | [TS Handbook: narrowing ⭐](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) |
-| Discriminated unions | 🟡 | 45m | `#patterns` `#state` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#discriminated-unions) |
-| `unknown` vs `any` vs `never` | 🟡 | 30m | `#basics` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/functions.html#never) |
+| [Type basics & inference](topics/type-basics-inference.md) | 🟢 | 45m | `#basics` | [TS Handbook: everyday types ⭐](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) |
+| [Interfaces vs type aliases](topics/interfaces-vs-type-aliases.md) | 🟢 | 30m | `#basics` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#interfaces-vs-type-aliases) |
+| [Union & intersection types](topics/union-intersection-types.md) | 🟢 | 30m | `#basics` | [TS Handbook: unions ⭐](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) |
+| [Literal & enum types](topics/literal-enum-types.md) | 🟢 | 30m | `#basics` | [TS Handbook: enums ⭐](https://www.typescriptlang.org/docs/handbook/enums.html) |
+| [Functions & overloads](topics/functions-overloads.md) | 🟡 | 45m | `#basics` | [TS Handbook: functions ⭐](https://www.typescriptlang.org/docs/handbook/2/functions.html) |
+| [Narrowing & type guards](topics/narrowing-type-guards.md) | 🟡 | 45m | `#guards` | [TS Handbook: narrowing ⭐](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) |
+| [Discriminated unions](topics/discriminated-unions.md) | 🟡 | 45m | `#patterns` `#state` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#discriminated-unions) |
+| [`unknown` vs `any` vs `never`](topics/unknown-vs-any-vs-never.md) | 🟡 | 30m | `#basics` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/functions.html#never) |
 
 ## Advanced types
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Generics | 🟡 | 1h | `#generics` | [TS Handbook: generics ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
+| [Generics](topics/generics.md) | 🟡 | 1h | `#generics` | [TS Handbook: generics ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
 | Generic constraints & defaults | 🟡 | 45m | `#generics` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html#generic-constraints) |
 | Utility types (Partial/Pick/Omit/Record…) | 🟡 | 45m | `#utility-types` | [TS Handbook: utility types ⭐](https://www.typescriptlang.org/docs/handbook/utility-types.html) |
 | `keyof` & `typeof` | 🟡 | 30m | `#type-ops` | [TS Handbook: keyof ⭐](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html) |

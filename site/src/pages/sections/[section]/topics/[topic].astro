@@ -5,7 +5,26 @@
 import DocLayout from '@layouts/DocLayout.astro';
 import { getProseDoc, getDeepDives } from '@lib/content.ts';
 import { SECTIONS, SECTION_BY_SLUG } from '@lib/sections.ts';
+import { resolveHref, repoPathToRoute } from '@lib/transform.ts';
 import { BASE, url } from '@lib/url.ts';
+
+const GH_BLOB = 'https://github.com/sumitsingh4411/frontend-interview-questions/blob/main/';
+
+/**
+ * The "Best Resources" cell is usually an external URL, but some rows point at a
+ * repo-relative page (e.g. a flagship .md). Resolve those to their on-site route so
+ * the primary-source card never renders a dead .md link.
+ */
+function resolveResource(sectionSlug: string, raw: string): { href: string; external: boolean } {
+  if (/^https?:\/\//i.test(raw)) return { href: raw, external: true };
+  const r = resolveHref(`${sectionSlug}/README.md`, raw);
+  if (r.kind === 'external') return { href: r.value, external: true };
+  if (r.kind === 'repo') {
+    const route = repoPathToRoute(r.value, BASE);
+    return route ? { href: route, external: false } : { href: GH_BLOB + r.value, external: true };
+  }
+  return { href: raw, external: true };
+}
 
 export async function getStaticPaths() {
   return SECTIONS.flatMap((section) => {
@@ -28,6 +47,9 @@ const doc = await getProseDoc(`${topic.sectionSlug}/topics/${topic.slug}.md`, BA
 });
 
 const DIFF_LABEL = { easy: 'Easy', medium: 'Medium', hard: 'Hard', none: '' } as const;
+const resource = topic.resource
+  ? { label: topic.resource.label, ...resolveResource(topic.sectionSlug, topic.resource.url) }
+  : null;
 ---
 
 <DocLayout
@@ -51,13 +73,18 @@ const DIFF_LABEL = { easy: 'Easy', medium: 'Medium', hard: 'Hard', none: '' } as
   <div class="prose" set:html={doc.html} />
 
   {
-    topic.resource && (
-      <a class="source" href={topic.resource.url} target="_blank" rel="noopener noreferrer">
+    resource && (
+      <a
+        class="source"
+        href={resource.href}
+        target={resource.external ? '_blank' : undefined}
+        rel={resource.external ? 'noopener noreferrer' : undefined}
+      >
         <span class="s-label">
           <b>Primary source</b> — the single best place to go deeper
         </span>
         <span class="s-link">
-          {topic.resource.label} <span aria-hidden="true">↗</span>
+          {resource.label} <span aria-hidden="true">{resource.external ? '↗' : '→'}</span>
         </span>
       </a>
     )

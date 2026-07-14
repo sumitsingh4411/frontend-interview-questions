@@ -14,25 +14,25 @@ Layout, the cascade, and making it fast. "Center a div" is a meme; "explain the 
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Box model & `box-sizing` | 🟢 | 30m | `#basics` `#layout` | [MDN: box model ⭐](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model) |
-| The cascade & specificity | 🟡 | 45m | `#cascade` | [web.dev: specificity ⭐](https://web.dev/learn/css/specificity) |
-| Inheritance & `initial/inherit/unset` | 🟢 | 20m | `#cascade` | [web.dev: inheritance ⭐](https://web.dev/learn/css/inheritance) |
-| Cascade layers (`@layer`) | 🟡 | 30m | `#cascade` `#modern` | [MDN: @layer ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) |
-| Selectors & combinators | 🟢 | 45m | `#selectors` | [MDN: selectors ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) |
-| Pseudo-classes & pseudo-elements | 🟢 | 45m | `#selectors` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) |
-| `:has()`, `:is()`, `:where()` | 🟡 | 30m | `#selectors` `#modern` | [MDN: :has ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/:has) |
-| Units (rem/em/%/vw/ch) | 🟢 | 30m | `#basics` | [web.dev: sizing ⭐](https://web.dev/learn/css/sizing) |
+| [Box model & `box-sizing`](topics/box-model-box-sizing.md) | 🟢 | 30m | `#basics` `#layout` | [MDN: box model ⭐](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model) |
+| [The cascade & specificity](topics/the-cascade-specificity.md) | 🟡 | 45m | `#cascade` | [web.dev: specificity ⭐](https://web.dev/learn/css/specificity) |
+| [Inheritance & `initial/inherit/unset`](topics/inheritance-initial-inherit-unset.md) | 🟢 | 20m | `#cascade` | [web.dev: inheritance ⭐](https://web.dev/learn/css/inheritance) |
+| [Cascade layers (`@layer`)](topics/cascade-layers-layer.md) | 🟡 | 30m | `#cascade` `#modern` | [MDN: @layer ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) |
+| [Selectors & combinators](topics/selectors-combinators.md) | 🟢 | 45m | `#selectors` | [MDN: selectors ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) |
+| [Pseudo-classes & pseudo-elements](topics/pseudo-classes-pseudo-elements.md) | 🟢 | 45m | `#selectors` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) |
+| [`:has()`, `:is()`, `:where()`](topics/has-is-where.md) | 🟡 | 30m | `#selectors` `#modern` | [MDN: :has ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/:has) |
+| [Units (rem/em/%/vw/ch)](topics/units-rem-em-vw-ch.md) | 🟢 | 30m | `#basics` | [web.dev: sizing ⭐](https://web.dev/learn/css/sizing) |
 
 ## Layout
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Display & normal flow | 🟢 | 30m | `#layout` | [web.dev: layout ⭐](https://web.dev/learn/css/layout) |
-| Flexbox | 🟢 | 1h | `#layout` `#flexbox` | [CSS-Tricks: flexbox ⭐](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) |
-| Grid | 🟡 | 1h | `#layout` `#grid` | [CSS-Tricks: grid ⭐](https://css-tricks.com/snippets/css/complete-guide-grid/) |
-| Positioning (relative/absolute/sticky) | 🟡 | 45m | `#layout` | [MDN: position ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/position) |
-| Stacking context & z-index | 🔴 | 1h | `#layout` `#stacking` | [Josh Comeau: stacking contexts ⭐](https://www.joshwcomeau.com/css/stacking-contexts/) |
-| Overflow & scroll containers | 🟢 | 30m | `#layout` | [MDN: overflow ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow) |
+| [Display & normal flow](topics/display-normal-flow.md) | 🟢 | 30m | `#layout` | [web.dev: layout ⭐](https://web.dev/learn/css/layout) |
+| [Flexbox](topics/flexbox.md) | 🟢 | 1h | `#layout` `#flexbox` | [CSS-Tricks: flexbox ⭐](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) |
+| [Grid](topics/grid.md) | 🟡 | 1h | `#layout` `#grid` | [CSS-Tricks: grid ⭐](https://css-tricks.com/snippets/css/complete-guide-grid/) |
+| [Positioning (relative/absolute/sticky)](topics/positioning-relative-absolute-sticky.md) | 🟡 | 45m | `#layout` | [MDN: position ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/position) |
+| [Stacking context & z-index](topics/stacking-context-z-index.md) | 🔴 | 1h | `#layout` `#stacking` | [Josh Comeau: stacking contexts ⭐](https://www.joshwcomeau.com/css/stacking-contexts/) |
+| [Overflow & scroll containers](topics/overflow-scroll-containers.md) | 🟢 | 30m | `#layout` | [MDN: overflow ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow) |
 | Multi-column & aspect-ratio | 🟡 | 30m | `#layout` `#modern` | [MDN: aspect-ratio ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio) |
 | Centering (all the ways) | 🟢 | 20m | `#layout` | [Josh Comeau ⭐](https://www.joshwcomeau.com/css/center-a-div/) |
 
@@ -43,17 +43,17 @@ Layout, the cascade, and making it fast. "Center a div" is a meme; "explain the 
 | Media queries | 🟢 | 45m | `#responsive` | [web.dev: media queries ⭐](https://web.dev/learn/design/media-queries) |
 | Container queries | 🔴 | 1h | `#responsive` `#modern` | [MDN: container queries ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries) |
 | Fluid type & `clamp()` | 🟡 | 30m | `#responsive` | [web.dev: fluid type ⭐](https://web.dev/learn/design/typography) |
-| Custom properties (variables) | 🟡 | 45m | `#variables` `#theming` | [MDN: custom properties ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) |
-| Logical properties | 🟡 | 30m | `#i18n` `#modern` | [MDN: logical properties ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) |
-| Dark mode & `color-scheme` | 🟡 | 45m | `#theming` | [web.dev: color scheme ⭐](https://web.dev/articles/color-scheme) |
-| `prefers-*` (color-scheme, reduced-motion) | 🟡 | 30m | `#a11y` `#modern` | [web.dev ⭐](https://web.dev/articles/prefers-reduced-motion) |
+| [Custom properties (variables)](topics/custom-properties-variables.md) | 🟡 | 45m | `#variables` `#theming` | [MDN: custom properties ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) |
+| [Logical properties](topics/logical-properties.md) | 🟡 | 30m | `#i18n` `#modern` | [MDN: logical properties ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) |
+| [Dark mode & `color-scheme`](topics/dark-mode-color-scheme.md) | 🟡 | 45m | `#theming` | [web.dev: color scheme ⭐](https://web.dev/articles/color-scheme) |
+| [`prefers-*` (color-scheme, reduced-motion)](topics/prefers-color-scheme-reduced-motion.md) | 🟡 | 30m | `#a11y` `#modern` | [web.dev ⭐](https://web.dev/articles/prefers-reduced-motion) |
 
 ## Animation & performance
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Transitions | 🟢 | 30m | `#animation` | [MDN: transitions ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) |
-| Keyframe animations | 🟡 | 1h | `#animation` | [MDN: animations ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) |
+| [Transitions](topics/transitions.md) | 🟢 | 30m | `#animation` | [MDN: transitions ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) |
+| [Keyframe animations](topics/keyframe-animations.md) | 🟡 | 1h | `#animation` | [MDN: animations ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) |
 | Transforms (2D/3D) | 🟡 | 45m | `#animation` | [MDN: transform ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) |
 | GPU-accelerated animation & `will-change` | 🔴 | 45m | `#animation` `#performance` | [web.dev: animations guide ⭐](https://web.dev/articles/animations-guide) |
 | Reflow vs repaint vs composite | 🔴 | 1h | `#performance` | [web.dev: rendering perf ⭐](https://web.dev/articles/rendering-performance) |

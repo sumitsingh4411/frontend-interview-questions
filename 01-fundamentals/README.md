@@ -27,21 +27,21 @@ The bedrock. If any of these are shaky, everything above them wobbles in an inte
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Rendering strategies (CSR/SSR/SSG/ISR) | 🟡 | 1h | `#rendering` `#seo` | [web.dev: rendering on the web ⭐](https://web.dev/articles/rendering-on-the-web) |
-| Critical Rendering Path | 🟡 | 1h | `#rendering` `#performance` | [web.dev: CRP ⭐](https://web.dev/articles/critical-rendering-path) |
-| Event Loop | 🟡 | 1h | `#async` `#internals` | [javascript.info: event loop ⭐](https://javascript.info/event-loop) |
-| SEO fundamentals | 🟡 | 1h | `#seo` | [Google Search Central ⭐](https://developers.google.com/search/docs) |
-| Progressive Web Apps (PWA) | 🟡 | 1h | `#pwa` `#offline` | [web.dev: PWA ⭐](https://web.dev/explore/progressive-web-apps) |
-| Progressive enhancement | 🟡 | 30m | `#basics` `#a11y` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement) |
-| Responsive design | 🟢 | 1h | `#css` `#responsive` | [web.dev: responsive ⭐](https://web.dev/articles/responsive-web-design-basics) |
+| [Rendering strategies (CSR/SSR/SSG/ISR)](topics/rendering-strategies-csr-ssr-ssg-isr.md) | 🟡 | 1h | `#rendering` `#seo` | [web.dev: rendering on the web ⭐](https://web.dev/articles/rendering-on-the-web) |
+| [Critical Rendering Path](topics/critical-rendering-path.md) | 🟡 | 1h | `#rendering` `#performance` | [web.dev: CRP ⭐](https://web.dev/articles/critical-rendering-path) |
+| [Event Loop](topics/event-loop.md) | 🟡 | 1h | `#async` `#internals` | [javascript.info: event loop ⭐](https://javascript.info/event-loop) |
+| [SEO fundamentals](topics/seo-fundamentals.md) | 🟡 | 1h | `#seo` | [Google Search Central ⭐](https://developers.google.com/search/docs) |
+| [Progressive Web Apps (PWA)](topics/progressive-web-apps-pwa.md) | 🟡 | 1h | `#pwa` `#offline` | [web.dev: PWA ⭐](https://web.dev/explore/progressive-web-apps) |
+| [Progressive enhancement](topics/progressive-enhancement.md) | 🟡 | 30m | `#basics` `#a11y` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement) |
+| [Responsive design](topics/responsive-design.md) | 🟢 | 1h | `#css` `#responsive` | [web.dev: responsive ⭐](https://web.dev/articles/responsive-web-design-basics) |
 
 ## Networking & storage
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| HTTP fundamentals | 🟢 | 45m | `#networking` `#http` | [MDN: HTTP overview ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) |
-| HTTPS & TLS | 🟡 | 45m | `#networking` `#security` | [Cloudflare: HTTPS ⭐](https://www.cloudflare.com/learning/ssl/what-is-https/) |
-| REST & JSON APIs | 🟢 | 45m | `#api` | [MDN: REST ⭐](https://developer.mozilla.org/en-US/docs/Glossary/REST) |
+| [HTTP fundamentals](topics/http-fundamentals.md) | 🟢 | 45m | `#networking` `#http` | [MDN: HTTP overview ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) |
+| [HTTPS & TLS](topics/https-tls.md) | 🟡 | 45m | `#networking` `#security` | [Cloudflare: HTTPS ⭐](https://www.cloudflare.com/learning/ssl/what-is-https/) |
+| [REST & JSON APIs](topics/rest-json-apis.md) | 🟢 | 45m | `#api` | [MDN: REST ⭐](https://developer.mozilla.org/en-US/docs/Glossary/REST) |
 | Fetch & AJAX | 🟢 | 45m | `#fetch` `#api` | [MDN: Fetch ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) |
 | CORS | 🟡 | 45m | `#networking` `#security` | [MDN: CORS ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) |
 | Caching (HTTP + browser) | 🟡 | 1h | `#networking` `#performance` | [MDN: HTTP caching ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) |

@@ -81,14 +81,30 @@ test('every linked row in a README resolves to a real deep-dive file', () => {
   }
 });
 
-test('the pilot section has its 8 deep dives, all with metadata', () => {
+test('the 8 "The platform" pilot dives exist with valid metadata', () => {
+  const platform = getDeepDives('01-fundamentals').filter((d) => d.group === 'The platform');
+  const slugs = platform.map((d) => d.slug);
+  for (const want of [
+    'how-the-web-works-request-render',
+    'semantic-html',
+    'the-dom',
+    'dom-manipulation-traversal',
+    'event-handling-bubbling-delegation',
+    'virtual-dom',
+    'shadow-dom-web-components',
+    'forms-validation',
+  ]) {
+    assert.ok(slugs.includes(want), `missing pilot dive: ${want}`);
+  }
+});
+
+test('every written deep dive has valid metadata from its table row', () => {
   const dives = getDeepDives('01-fundamentals');
-  assert.equal(dives.length, 8);
+  assert.ok(dives.length >= 8);
   for (const d of dives) {
-    assert.ok(d.title.length > 0);
+    assert.ok(d.title.length > 0, `${d.slug}: no title`);
     assert.ok(['easy', 'medium', 'hard'].includes(d.difficulty), `${d.slug}: no difficulty`);
     assert.match(d.time, /^\d+[mh]$/, `${d.slug}: bad time "${d.time}"`);
     assert.ok(d.tags.length > 0, `${d.slug}: no tags`);
-    assert.equal(d.group, 'The platform');
   }
 });

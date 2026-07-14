@@ -14,21 +14,21 @@ The production meta-framework. Interviewers use it to probe rendering strategies
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| App Router fundamentals | 🟡 | 1h | `#routing` | [Next.js: App Router ⭐](https://nextjs.org/docs/app) |
-| Pages Router (legacy) | 🟢 | 45m | `#routing` | [Next.js: Pages Router ⭐](https://nextjs.org/docs/pages) |
-| Layouts & nested routing | 🟡 | 45m | `#routing` | [Next.js: layouts ⭐](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) |
-| Dynamic & catch-all routes | 🟡 | 30m | `#routing` | [Next.js: dynamic routes ⭐](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes) |
-| Parallel & intercepting routes | 🔴 | 1h | `#routing` `#advanced` | [Next.js ⭐](https://nextjs.org/docs/app/building-your-application/routing/parallel-routes) |
-| Loading & error UI | 🟡 | 30m | `#routing` `#ux` | [Next.js ⭐](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming) |
-| Route handlers (API) | 🟡 | 45m | `#api` | [Next.js ⭐](https://nextjs.org/docs/app/building-your-application/routing/route-handlers) |
+| [App Router fundamentals](topics/app-router-fundamentals.md) | 🟡 | 1h | `#routing` | [Next.js: App Router ⭐](https://nextjs.org/docs/app) |
+| [Pages Router (legacy)](topics/pages-router-legacy.md) | 🟢 | 45m | `#routing` | [Next.js: Pages Router ⭐](https://nextjs.org/docs/pages) |
+| [Layouts & nested routing](topics/layouts-nested-routing.md) | 🟡 | 45m | `#routing` | [Next.js: layouts ⭐](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) |
+| [Dynamic & catch-all routes](topics/dynamic-catch-all-routes.md) | 🟡 | 30m | `#routing` | [Next.js: dynamic routes ⭐](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes) |
+| [Parallel & intercepting routes](topics/parallel-intercepting-routes.md) | 🔴 | 1h | `#routing` `#advanced` | [Next.js ⭐](https://nextjs.org/docs/app/building-your-application/routing/parallel-routes) |
+| [Loading & error UI](topics/loading-error-ui.md) | 🟡 | 30m | `#routing` `#ux` | [Next.js ⭐](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming) |
+| [Route handlers (API)](topics/route-handlers-api.md) | 🟡 | 45m | `#api` | [Next.js ⭐](https://nextjs.org/docs/app/building-your-application/routing/route-handlers) |
 
 ## Rendering & data
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Server vs Client Components | 🔴 | 1h | `#rsc` `#rendering` | [Next.js: server components ⭐](https://nextjs.org/docs/app/building-your-application/rendering/server-components) |
-| Data fetching patterns | 🟡 | 1h | `#data` | [Next.js: data fetching ⭐](https://nextjs.org/docs/app/building-your-application/data-fetching) |
-| Caching layers (request/data/full route) | 🔴 | 1.5h | `#caching` `#performance` | [Next.js: caching ⭐](https://nextjs.org/docs/app/building-your-application/caching) |
+| [Server vs Client Components](topics/server-vs-client-components.md) | 🔴 | 1h | `#rsc` `#rendering` | [Next.js: server components ⭐](https://nextjs.org/docs/app/building-your-application/rendering/server-components) |
+| [Data fetching patterns](topics/data-fetching-patterns.md) | 🟡 | 1h | `#data` | [Next.js: data fetching ⭐](https://nextjs.org/docs/app/building-your-application/data-fetching) |
+| [Caching layers (request/data/full route)](topics/caching-layers-request-data-full-route.md) | 🔴 | 1.5h | `#caching` `#performance` | [Next.js: caching ⭐](https://nextjs.org/docs/app/building-your-application/caching) |
 | Streaming & Suspense | 🔴 | 1h | `#rendering` `#performance` | [Next.js: streaming ⭐](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming) |
 | Server Actions & mutations | 🟡 | 1h | `#data` `#mutations` | [Next.js: server actions ⭐](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations) |
 | ISR (Incremental Static Regeneration) | 🟡 | 45m | `#rendering` `#caching` | [Next.js: ISR ⭐](https://nextjs.org/docs/app/building-your-application/data-fetching/incremental-static-regeneration) |

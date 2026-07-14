@@ -302,14 +302,15 @@ const inIndex = await page.evaluate(async (origin) => {
   const j = await r.json();
   return j.pages.filter((p) => p[2] === 'Deep dive').length;
 }, ORIGIN);
-ok('deep dives are in the search index', inIndex === 8, `n=${inIndex}`);
+ok('deep dives are in the search index', inIndex >= 8, `n=${inIndex}`);
 
 // ---------------------------------------------------------------- sidebar orientation
 console.log('\nsidebar: where am I');
 await page.goto(`${ORIGIN}/sections/01-fundamentals/topics/event-handling-bubbling-delegation/`, {
   waitUntil: 'networkidle0',
 });
-ok('open section reveals its deep dives', (await page.$$('#sidebar .dive')).length === 8);
+ok('open section reveals its deep dives', (await page.$$('#sidebar .dive')).length >= 8);
+ok('only the active section expands', (await page.$$('#sidebar .dives')).length === 1);
 const here = await page.$$eval('#sidebar .dive.here', (els) => els.map((e) => e.textContent.trim()));
 ok('exactly one topic is marked "you are here"', here.length === 1, JSON.stringify(here));
 ok('it is the topic being read', here[0]?.includes('Event handling'), String(here[0]));
@@ -321,9 +322,9 @@ ok(
 const diveHrefs = await page.$$eval('#sidebar .dive', (els) => els.map((e) => e.getAttribute('href')));
 ok('every listed dive links somewhere', diveHrefs.every((h) => /\/topics\/[a-z-]+\/$/.test(h ?? '')));
 
-// A section with no deep dives stays collapsed — no empty rail.
-await page.goto(`${ORIGIN}/sections/03-javascript/`, { waitUntil: 'networkidle0' });
-ok('section without deep dives does not expand', (await page.$$('#sidebar .dive')).length === 0);
+// When no section is active (e.g. a bank page), nothing expands — no stray rails.
+await page.goto(`${ORIGIN}/banks/css/`, { waitUntil: 'networkidle0' });
+ok('nothing expands when no section is active', (await page.$$('#sidebar .dives')).length === 0);
 
 await browser.close();
 console.log(`\n${pass} passed, ${fail} failed`);

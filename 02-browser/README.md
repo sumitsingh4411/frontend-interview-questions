@@ -14,19 +14,19 @@ How the browser turns bytes into pixels — and why your app is slow. The "expla
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Browser high-level architecture (multi-process) | 🟡 | 1h | `#internals` | [Inside a modern browser (part 1) ⭐](https://developer.chrome.com/blog/inside-browser-part1) |
-| Process/thread model (renderer, GPU, network) | 🟡 | 45m | `#internals` | [Inside a modern browser (part 2) ⭐](https://developer.chrome.com/blog/inside-browser-part2) |
-| Blink rendering engine | 🟡 | 30m | `#internals` | [Chromium: Blink ⭐](https://www.chromium.org/blink/) |
-| V8 & JIT compilation | 🔴 | 1.5h | `#internals` `#v8` | [V8 blog ⭐](https://v8.dev/blog) |
-| SpiderMonkey / JavaScriptCore (other engines) | 🟡 | 30m | `#internals` | [MDN: JS engines ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/JavaScript_technologies_overview) |
-| Hidden classes & inline caches | 🔴 | 1h | `#v8` `#performance` | [V8: hidden classes ⭐](https://v8.dev/docs/hidden-classes) |
+| [Browser high-level architecture (multi-process)](topics/browser-high-level-architecture-multi-process.md) | 🟡 | 1h | `#internals` | [Inside a modern browser (part 1) ⭐](https://developer.chrome.com/blog/inside-browser-part1) |
+| [Process/thread model (renderer, GPU, network)](topics/process-thread-model-renderer-gpu-network.md) | 🟡 | 45m | `#internals` | [Inside a modern browser (part 2) ⭐](https://developer.chrome.com/blog/inside-browser-part2) |
+| [Blink rendering engine](topics/blink-rendering-engine.md) | 🟡 | 30m | `#internals` | [Chromium: Blink ⭐](https://www.chromium.org/blink/) |
+| [V8 & JIT compilation](topics/v8-jit-compilation.md) | 🔴 | 1.5h | `#internals` `#v8` | [V8 blog ⭐](https://v8.dev/blog) |
+| [SpiderMonkey / JavaScriptCore (other engines)](topics/spidermonkey-javascriptcore-other-engines.md) | 🟡 | 30m | `#internals` | [MDN: JS engines ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/JavaScript_technologies_overview) |
+| [Hidden classes & inline caches](topics/hidden-classes-inline-caches.md) | 🔴 | 1h | `#v8` `#performance` | [V8: hidden classes ⭐](https://v8.dev/docs/hidden-classes) |
 
 ## The rendering pipeline
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Critical rendering path (overview) | 🔴 | 1.5h | `#rendering` | [web.dev: CRP ⭐](https://web.dev/articles/critical-rendering-path) |
-| HTML parsing & the DOM tree | 🟡 | 45m | `#parsing` `#dom` | [MDN: how browsers work ⭐](https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work) |
+| [Critical rendering path (overview)](topics/critical-rendering-path-overview.md) | 🔴 | 1.5h | `#rendering` | [web.dev: CRP ⭐](https://web.dev/articles/critical-rendering-path) |
+| [HTML parsing & the DOM tree](topics/html-parsing-the-dom-tree.md) | 🟡 | 45m | `#parsing` `#dom` | [MDN: how browsers work ⭐](https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work) |
 | CSS parsing & the CSSOM | 🟡 | 45m | `#parsing` `#css` | [web.dev: CSSOM ⭐](https://web.dev/articles/critical-rendering-path-constructing-the-object-model) |
 | Render tree, Layout & Reflow | 🔴 | 1h | `#rendering` `#performance` | [Inside a modern browser (part 3) ⭐](https://developer.chrome.com/blog/inside-browser-part3) |
 | Paint & layers | 🟡 | 45m | `#rendering` | [web.dev: rendering perf ⭐](https://web.dev/articles/rendering-performance) |
