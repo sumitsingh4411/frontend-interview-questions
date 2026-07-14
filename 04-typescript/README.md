@@ -28,23 +28,23 @@ Type-level thinking. Senior+ interviews increasingly ask you to design APIs with
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
 | [Generics](topics/generics.md) | 🟡 | 1h | `#generics` | [TS Handbook: generics ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
-| Generic constraints & defaults | 🟡 | 45m | `#generics` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html#generic-constraints) |
-| Utility types (Partial/Pick/Omit/Record…) | 🟡 | 45m | `#utility-types` | [TS Handbook: utility types ⭐](https://www.typescriptlang.org/docs/handbook/utility-types.html) |
-| `keyof` & `typeof` | 🟡 | 30m | `#type-ops` | [TS Handbook: keyof ⭐](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html) |
-| Indexed access types | 🟡 | 30m | `#type-ops` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html) |
+| [Generic constraints & defaults](topics/generic-constraints-defaults.md) | 🟡 | 45m | `#generics` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html#generic-constraints) |
+| [Utility types (Partial/Pick/Omit/Record…)](topics/utility-types-partial-pick-omit-record.md) | 🟡 | 45m | `#utility-types` | [TS Handbook: utility types ⭐](https://www.typescriptlang.org/docs/handbook/utility-types.html) |
+| [`keyof` & `typeof`](topics/keyof-typeof.md) | 🟡 | 30m | `#type-ops` | [TS Handbook: keyof ⭐](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html) |
+| [Indexed access types](topics/indexed-access-types.md) | 🟡 | 30m | `#type-ops` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html) |
 | Mapped types | 🔴 | 1h | `#type-ops` | [TS Handbook: mapped types ⭐](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html) |
 | Conditional types & `infer` | 🔴 | 1.5h | `#type-ops` `#advanced` | [TS Handbook: conditional types ⭐](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) |
 | Template literal types | 🔴 | 1h | `#type-ops` `#advanced` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html) |
 | Variance & assignability | 🔴 | 1h | `#advanced` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) |
-| Type-level programming | 🔴 | 2h | `#advanced` | [Type Challenges ⭐](https://github.com/type-challenges/type-challenges) |
+| [Type-level programming](topics/type-level-programming.md) | 🔴 | 2h | `#advanced` | [Type Challenges ⭐](https://github.com/type-challenges/type-challenges) |
 
 ## Tooling & practice
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Declaration files (`.d.ts`) | 🟡 | 45m | `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) |
-| Decorators | 🟡 | 45m | `#advanced` | [TS Handbook: decorators ⭐](https://www.typescriptlang.org/docs/handbook/decorators.html) |
-| `tsconfig` deep dive | 🟡 | 45m | `#config` | [TSConfig reference ⭐](https://www.typescriptlang.org/tsconfig) |
+| [Declaration files (`.d.ts`)](topics/declaration-files-d-ts.md) | 🟡 | 45m | `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) |
+| [Decorators](topics/decorators.md) | 🟡 | 45m | `#advanced` | [TS Handbook: decorators ⭐](https://www.typescriptlang.org/docs/handbook/decorators.html) |
+| [`tsconfig` deep dive](topics/tsconfig-deep-dive.md) | 🟡 | 45m | `#config` | [TSConfig reference ⭐](https://www.typescriptlang.org/tsconfig) |
 | `strict` mode & flags | 🟡 | 30m | `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/tsconfig#strict) |
 | Project references & monorepos | 🔴 | 1h | `#monorepo` `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/project-references.html) |
 | Typing React components & hooks | 🟡 | 1h | `#react` | [React TS cheatsheet ⭐](https://react-typescript-cheatsheet.netlify.app/) |

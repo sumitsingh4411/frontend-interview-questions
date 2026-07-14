@@ -29,8 +29,8 @@ The production meta-framework. Interviewers use it to probe rendering strategies
 | [Server vs Client Components](topics/server-vs-client-components.md) | 🔴 | 1h | `#rsc` `#rendering` | [Next.js: server components ⭐](https://nextjs.org/docs/app/building-your-application/rendering/server-components) |
 | [Data fetching patterns](topics/data-fetching-patterns.md) | 🟡 | 1h | `#data` | [Next.js: data fetching ⭐](https://nextjs.org/docs/app/building-your-application/data-fetching) |
 | [Caching layers (request/data/full route)](topics/caching-layers-request-data-full-route.md) | 🔴 | 1.5h | `#caching` `#performance` | [Next.js: caching ⭐](https://nextjs.org/docs/app/building-your-application/caching) |
-| Streaming & Suspense | 🔴 | 1h | `#rendering` `#performance` | [Next.js: streaming ⭐](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming) |
-| Server Actions & mutations | 🟡 | 1h | `#data` `#mutations` | [Next.js: server actions ⭐](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations) |
+| [Streaming & Suspense](topics/streaming-suspense.md) | 🔴 | 1h | `#rendering` `#performance` | [Next.js: streaming ⭐](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming) |
+| [Server Actions & mutations](topics/server-actions-mutations.md) | 🟡 | 1h | `#data` `#mutations` | [Next.js: server actions ⭐](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations) |
 | ISR (Incremental Static Regeneration) | 🟡 | 45m | `#rendering` `#caching` | [Next.js: ISR ⭐](https://nextjs.org/docs/app/building-your-application/data-fetching/incremental-static-regeneration) |
 | Partial Prerendering (PPR) | 🔴 | 45m | `#rendering` `#modern` | [Next.js: PPR ⭐](https://nextjs.org/docs/app/building-your-application/rendering/partial-prerendering) |
 

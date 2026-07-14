@@ -33,15 +33,15 @@ The language, deeply. These are the questions that get asked in *every* frontend
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Event loop, micro/macrotasks | 🟡 | 1h | `#async` `#internals` | [Jake Archibald: in the loop ⭐](https://www.youtube.com/watch?v=cCOL7MC4Pl0) |
-| Callbacks & callback hell | 🟢 | 30m | `#async` | [javascript.info: callbacks ⭐](https://javascript.info/callbacks) |
-| Promises (states, chaining) | 🟡 | 1h | `#async` `#promises` | [javascript.info: promises ⭐](https://javascript.info/promise-basics) |
-| `Promise.all/allSettled/race/any` | 🟡 | 45m | `#async` `#polyfill` | [Flagship ⭐](promise-polyfills-and-throttle-debounce.md) |
+| [Event loop, micro/macrotasks](topics/event-loop-micro-macrotasks.md) | 🟡 | 1h | `#async` `#internals` | [Jake Archibald: in the loop ⭐](https://www.youtube.com/watch?v=cCOL7MC4Pl0) |
+| [Callbacks & callback hell](topics/callbacks-callback-hell.md) | 🟢 | 30m | `#async` | [javascript.info: callbacks ⭐](https://javascript.info/callbacks) |
+| [Promises (states, chaining)](topics/promises-states-chaining.md) | 🟡 | 1h | `#async` `#promises` | [javascript.info: promises ⭐](https://javascript.info/promise-basics) |
+| [`Promise.all/allSettled/race/any`](topics/promise-all-allsettled-race-any.md) | 🟡 | 45m | `#async` `#polyfill` | [Flagship ⭐](promise-polyfills-and-throttle-debounce.md) |
 | async / await + error handling | 🟡 | 45m | `#async` | [javascript.info: async/await ⭐](https://javascript.info/async-await) |
 | Debounce & throttle | 🟡 | 45m | `#patterns` `#performance` | [Flagship ⭐](promise-polyfills-and-throttle-debounce.md) |
 | AbortController & cancellation | 🟡 | 30m | `#async` | [MDN: AbortController ⭐](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) |
 | Async iterators & `for await` | 🔴 | 45m | `#async` `#iterators` | [javascript.info: async iteration ⭐](https://javascript.info/async-iterators-generators) |
-| Concurrency control (promise pool) | 🔴 | 45m | `#async` `#patterns` | [BFE.dev ⭐](https://bigfrontend.dev/) |
+| [Concurrency control (promise pool)](topics/concurrency-control-promise-pool.md) | 🔴 | 45m | `#async` `#patterns` | [BFE.dev ⭐](https://bigfrontend.dev/) |
 
 ## Functions & FP
 
@@ -66,9 +66,9 @@ The language, deeply. These are the questions that get asked in *every* frontend
 | [Streams API](topics/streams-api.md) | 🔴 | 1h | `#streams` | [MDN: streams ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API) |
 | [Proxy & Reflect](topics/proxy-reflect.md) | 🔴 | 1h | `#metaprogramming` | [javascript.info: Proxy ⭐](https://javascript.info/proxy) |
 | [WeakMap & WeakSet](topics/weakmap-weakset.md) | 🟡 | 45m | `#memory` | [javascript.info: WeakMap ⭐](https://javascript.info/weakmap-weakset) |
-| WeakRef & FinalizationRegistry | 🔴 | 45m | `#memory` `#advanced` | [MDN: WeakRef ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) |
-| Memory leaks in JS | 🔴 | 1h | `#memory` | [web.dev: memory ⭐](https://developer.chrome.com/docs/devtools/memory-problems) |
-| Regular expressions | 🟡 | 1h | `#regex` | [javascript.info: regexp ⭐](https://javascript.info/regular-expressions) |
+| [WeakRef & FinalizationRegistry](topics/weakref-finalizationregistry.md) | 🔴 | 45m | `#memory` `#advanced` | [MDN: WeakRef ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) |
+| [Memory leaks in JS](topics/memory-leaks-in-js.md) | 🔴 | 1h | `#memory` | [web.dev: memory ⭐](https://developer.chrome.com/docs/devtools/memory-problems) |
+| [Regular expressions](topics/regular-expressions.md) | 🟡 | 1h | `#regex` | [javascript.info: regexp ⭐](https://javascript.info/regular-expressions) |
 | `structuredClone` & deep clone | 🟡 | 30m | `#patterns` | [MDN: structuredClone ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone) |
 | Polyfills (map/filter/reduce/bind/Promise) | 🔴 | 2h | `#polyfill` | [Flagship ⭐](promise-polyfills-and-throttle-debounce.md) |
 | Numbers, `BigInt`, floating point | 🟡 | 30m | `#basics` | [javascript.info: numbers ⭐](https://javascript.info/number) |

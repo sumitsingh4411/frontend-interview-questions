@@ -32,8 +32,8 @@ The framework most FAANG frontend loops assume. They'll ask *how it works*, not 
 | [`useState` & batching](topics/usestate-batching.md) | 🟢 | 45m | `#hooks` `#state` | [react.dev: useState ⭐](https://react.dev/reference/react/useState) |
 | [`useEffect` & effect timing](topics/useeffect-effect-timing.md) | 🟡 | 1h | `#hooks` | [react.dev: you might not need an effect ⭐](https://react.dev/learn/you-might-not-need-an-effect) |
 | [`useLayoutEffect` vs `useEffect`](topics/uselayouteffect-vs-useeffect.md) | 🟡 | 30m | `#hooks` | [react.dev: useLayoutEffect ⭐](https://react.dev/reference/react/useLayoutEffect) |
-| `useMemo` / `useCallback` | 🟡 | 45m | `#hooks` `#performance` | [react.dev: useMemo ⭐](https://react.dev/reference/react/useMemo) |
-| `useRef` & imperative handles | 🟡 | 45m | `#hooks` | [react.dev: useRef ⭐](https://react.dev/reference/react/useRef) |
+| [`useMemo` / `useCallback`](topics/usememo-usecallback.md) | 🟡 | 45m | `#hooks` `#performance` | [react.dev: useMemo ⭐](https://react.dev/reference/react/useMemo) |
+| [`useRef` & imperative handles](topics/useref-imperative-handles.md) | 🟡 | 45m | `#hooks` | [react.dev: useRef ⭐](https://react.dev/reference/react/useRef) |
 | `useContext` & context perf | 🟡 | 1h | `#hooks` `#state` | [react.dev: useContext ⭐](https://react.dev/reference/react/useContext) |
 | `useReducer` & state machines | 🟡 | 45m | `#hooks` `#state` | [react.dev: useReducer ⭐](https://react.dev/reference/react/useReducer) |
 | `useTransition` / `useDeferredValue` | 🔴 | 1h | `#concurrent` | [react.dev: useTransition ⭐](https://react.dev/reference/react/useTransition) |

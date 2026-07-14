@@ -27,10 +27,10 @@ How the browser turns bytes into pixels — and why your app is slow. The "expla
 |-------|:----------:|:----:|------|----------------|
 | [Critical rendering path (overview)](topics/critical-rendering-path-overview.md) | 🔴 | 1.5h | `#rendering` | [web.dev: CRP ⭐](https://web.dev/articles/critical-rendering-path) |
 | [HTML parsing & the DOM tree](topics/html-parsing-the-dom-tree.md) | 🟡 | 45m | `#parsing` `#dom` | [MDN: how browsers work ⭐](https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work) |
-| CSS parsing & the CSSOM | 🟡 | 45m | `#parsing` `#css` | [web.dev: CSSOM ⭐](https://web.dev/articles/critical-rendering-path-constructing-the-object-model) |
-| Render tree, Layout & Reflow | 🔴 | 1h | `#rendering` `#performance` | [Inside a modern browser (part 3) ⭐](https://developer.chrome.com/blog/inside-browser-part3) |
-| Paint & layers | 🟡 | 45m | `#rendering` | [web.dev: rendering perf ⭐](https://web.dev/articles/rendering-performance) |
-| Compositing & the compositor thread | 🔴 | 1h | `#rendering` `#performance` | [Inside a modern browser (part 3) ⭐](https://developer.chrome.com/blog/inside-browser-part3) |
+| [CSS parsing & the CSSOM](topics/css-parsing-the-cssom.md) | 🟡 | 45m | `#parsing` `#css` | [web.dev: CSSOM ⭐](https://web.dev/articles/critical-rendering-path-constructing-the-object-model) |
+| [Render tree, Layout & Reflow](topics/render-tree-layout-reflow.md) | 🔴 | 1h | `#rendering` `#performance` | [Inside a modern browser (part 3) ⭐](https://developer.chrome.com/blog/inside-browser-part3) |
+| [Paint & layers](topics/paint-layers.md) | 🟡 | 45m | `#rendering` | [web.dev: rendering perf ⭐](https://web.dev/articles/rendering-performance) |
+| [Compositing & the compositor thread](topics/compositing-the-compositor-thread.md) | 🔴 | 1h | `#rendering` `#performance` | [Inside a modern browser (part 3) ⭐](https://developer.chrome.com/blog/inside-browser-part3) |
 | Rasterization & the GPU | 🔴 | 45m | `#rendering` `#gpu` | [web.dev: animations guide ⭐](https://web.dev/articles/animations-guide) |
 | Main thread vs compositor thread | 🔴 | 45m | `#performance` | [web.dev: long tasks ⭐](https://web.dev/articles/optimize-long-tasks) |
 | Render-blocking resources | 🟡 | 45m | `#rendering` `#performance` | [web.dev ⭐](https://web.dev/articles/critical-rendering-path-render-blocking-css) |
@@ -40,10 +40,10 @@ How the browser turns bytes into pixels — and why your app is slow. The "expla
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
 | Event loop (browser) | 🟡 | 1h | `#async` `#internals` | [Jake Archibald: in the loop ⭐](https://www.youtube.com/watch?v=cCOL7MC4Pl0) |
-| Microtasks vs macrotasks | 🟡 | 45m | `#async` | [MDN: microtasks ⭐](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) |
-| `requestAnimationFrame` | 🟡 | 30m | `#rendering` `#async` | [MDN: rAF ⭐](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) |
-| `requestIdleCallback` & scheduling | 🟡 | 30m | `#async` `#performance` | [MDN: rIC ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback) |
-| `scheduler.postTask` / yielding | 🔴 | 45m | `#async` `#modern` | [web.dev: optimize long tasks ⭐](https://web.dev/articles/optimize-long-tasks) |
+| [Microtasks vs macrotasks](topics/microtasks-vs-macrotasks.md) | 🟡 | 45m | `#async` | [MDN: microtasks ⭐](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) |
+| [`requestAnimationFrame`](topics/requestanimationframe.md) | 🟡 | 30m | `#rendering` `#async` | [MDN: rAF ⭐](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) |
+| [`requestIdleCallback` & scheduling](topics/requestidlecallback-scheduling.md) | 🟡 | 30m | `#async` `#performance` | [MDN: rIC ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback) |
+| [`scheduler.postTask` / yielding](topics/scheduler-posttask-yielding.md) | 🔴 | 45m | `#async` `#modern` | [web.dev: optimize long tasks ⭐](https://web.dev/articles/optimize-long-tasks) |
 
 ## Memory & storage
 

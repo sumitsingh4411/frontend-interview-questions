@@ -42,8 +42,8 @@ The bedrock. If any of these are shaky, everything above them wobbles in an inte
 | [HTTP fundamentals](topics/http-fundamentals.md) | 🟢 | 45m | `#networking` `#http` | [MDN: HTTP overview ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) |
 | [HTTPS & TLS](topics/https-tls.md) | 🟡 | 45m | `#networking` `#security` | [Cloudflare: HTTPS ⭐](https://www.cloudflare.com/learning/ssl/what-is-https/) |
 | [REST & JSON APIs](topics/rest-json-apis.md) | 🟢 | 45m | `#api` | [MDN: REST ⭐](https://developer.mozilla.org/en-US/docs/Glossary/REST) |
-| Fetch & AJAX | 🟢 | 45m | `#fetch` `#api` | [MDN: Fetch ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) |
-| CORS | 🟡 | 45m | `#networking` `#security` | [MDN: CORS ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) |
+| [Fetch & AJAX](topics/fetch-ajax.md) | 🟢 | 45m | `#fetch` `#api` | [MDN: Fetch ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) |
+| [CORS](topics/cors.md) | 🟡 | 45m | `#networking` `#security` | [MDN: CORS ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) |
 | Caching (HTTP + browser) | 🟡 | 1h | `#networking` `#performance` | [MDN: HTTP caching ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) |
 | Browser storage (cookies/localStorage/IndexedDB) | 🟡 | 1h | `#storage` `#offline` | [web.dev: storage ⭐](https://web.dev/articles/storage-for-the-web) |
 | Cookies (attributes, SameSite) | 🟡 | 45m | `#storage` `#security` | [MDN: cookies ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) |
