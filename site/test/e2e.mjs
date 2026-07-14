@@ -253,6 +253,57 @@ await page.goto(`${ORIGIN}/banks/dsa/`, { waitUntil: 'networkidle0' });
 const groupLabels = await page.$$eval('.resources .r-group h3', (els) => els.map((e) => e.textContent.trim()));
 ok('hands-on bank shows a Practice group', groupLabels.some((t) => /Practice/.test(t)), JSON.stringify(groupLabels));
 
+// ---------------------------------------------------------------- topic deep dives
+console.log('\ntopic deep dives');
+// The section table row must navigate to the on-site deep dive (not a raw .md file).
+await page.goto(`${ORIGIN}/sections/01-fundamentals/`, { waitUntil: 'networkidle0' });
+const topicHref = await page.$eval('.prose table a[href*="/topics/"]', (a) => a.getAttribute('href'));
+ok('section table links topics to on-site deep dives', /\/topics\/[a-z-]+\/$/.test(topicHref ?? ''), String(topicHref));
+
+await page.goto(`${ORIGIN}/sections/01-fundamentals/topics/event-handling-bubbling-delegation/`, {
+  waitUntil: 'networkidle0',
+});
+ok('deep dive renders', (await page.$$('h1')).length === 1);
+
+// The full staff-level anatomy must be present.
+const h2s = await page.$$eval('.prose h2', (els) => els.map((e) => e.textContent.trim()));
+for (const want of ['Mental model', 'How it actually works', 'Trade-offs', 'Gotchas', 'Say this in the interview']) {
+  ok(`has "${want}" section`, h2s.some((h) => h.includes(want)), JSON.stringify(h2s));
+}
+ok('has a TL;DR callout', await page.$eval('.prose blockquote', (e) => /TL;DR/.test(e.textContent)));
+
+// Metadata badges come from the README table row, not the markdown file.
+const badges = await page.evaluate(() => ({
+  diff: document.querySelector('.pill[class*="diff-"]')?.textContent.trim(),
+  time: [...document.querySelectorAll('.pill')].map((e) => e.textContent).join(' '),
+  tags: [...document.querySelectorAll('.tag')].map((e) => e.textContent.trim()),
+}));
+ok('shows difficulty from the table row', badges.diff === 'Medium', JSON.stringify(badges));
+ok('shows time estimate', /1h/.test(badges.time), badges.time);
+ok('shows tags', badges.tags.includes('#events'), JSON.stringify(badges.tags));
+
+// Prev/next paging within the section.
+const pager = await page.$$eval('.pager .pg', (els) => els.map((e) => e.getAttribute('href')));
+ok('has prev and next links', pager.length === 2, JSON.stringify(pager));
+// Register the navigation wait BEFORE the click, or it can resolve first and hang.
+await Promise.all([
+  page.waitForNavigation({ waitUntil: 'networkidle0' }),
+  page.click('.pager .pg.next'),
+]);
+ok(
+  'next goes to the following topic',
+  page.url().endsWith('/topics/virtual-dom/'),
+  page.url(),
+);
+
+// Deep dives are searchable.
+const inIndex = await page.evaluate(async (origin) => {
+  const r = await fetch(`${origin}/search-index.json`);
+  const j = await r.json();
+  return j.pages.filter((p) => p[2] === 'Deep dive').length;
+}, ORIGIN);
+ok('deep dives are in the search index', inIndex === 8, `n=${inIndex}`);
+
 await browser.close();
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

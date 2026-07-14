@@ -16,8 +16,10 @@ import {
   extractTitle,
   parseBankCategoryFile,
   parseReactBank,
+  parseTopicTables,
   stripGithubChrome,
   type Difficulty,
+  type TopicRow,
 } from './transform.ts';
 import { renderMarkdown, type Heading } from './markdown.ts';
 
@@ -137,6 +139,60 @@ export function getBanks(): Bank[] {
 export function getBank(slug: BankSlug): Bank {
   getBanks();
   return bankCache!.get(slug)!;
+}
+
+/**
+ * Topic rows for a section, with `hasDeepDive` set when <section>/topics/<slug>.md exists.
+ * Deep dives land progressively, so most rows are metadata-only until written.
+ */
+export interface Topic extends TopicRow {
+  sectionSlug: string;
+  hasDeepDive: boolean;
+}
+
+const topicCache = new Map<string, Topic[]>();
+
+export function getTopics(sectionSlug: string): Topic[] {
+  const cached = topicCache.get(sectionSlug);
+  if (cached) return cached;
+
+  const readme = `${sectionSlug}/README.md`;
+  const rows = exists(readme) ? parseTopicTables(read(readme)) : [];
+  const topics = rows.map((r) => ({
+    ...r,
+    sectionSlug,
+    hasDeepDive: exists(`${sectionSlug}/topics/${r.slug}.md`),
+  }));
+  topicCache.set(sectionSlug, topics);
+  return topics;
+}
+
+/** Only the topics that actually have a deep dive written — these get pages. */
+export function getDeepDives(sectionSlug: string): Topic[] {
+  return getTopics(sectionSlug).filter((t) => t.hasDeepDive);
+}
+
+export function getAllDeepDives(): Topic[] {
+  return SECTIONS.flatMap((s) => getDeepDives(s.slug));
+}
+
+/**
+ * Deep-dive files with no matching topic row would be unreachable pages. Surfaced at
+ * build time rather than silently dropped.
+ */
+export function findOrphanDeepDives(): string[] {
+  const orphans: string[] = [];
+  for (const s of SECTIONS) {
+    const dir = path.join(REPO_ROOT, s.slug, 'topics');
+    if (!fs.existsSync(dir)) continue;
+    const known = new Set(getTopics(s.slug).map((t) => t.slug));
+    for (const f of fs.readdirSync(dir)) {
+      if (!f.endsWith('.md')) continue;
+      const slug = f.replace(/\.md$/, '');
+      if (!known.has(slug)) orphans.push(`${s.slug}/topics/${f}`);
+    }
+  }
+  return orphans;
 }
 
 /** Extra .md pages inside a section folder (flagships, company guides, output-based sets). */

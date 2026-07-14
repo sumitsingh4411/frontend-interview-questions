@@ -14,14 +14,14 @@ The bedrock. If any of these are shaky, everything above them wobbles in an inte
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| How the web works (request → render) | 🟢 | 30m | `#networking` `#basics` | [MDN: how the web works ⭐](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works) |
-| Semantic HTML | 🟢 | 30m | `#html` `#a11y` `#seo` | [web.dev: HTML ⭐](https://web.dev/learn/html) |
-| The DOM | 🟢 | 45m | `#dom` `#basics` | [javascript.info: DOM ⭐](https://javascript.info/document) |
-| DOM manipulation & traversal | 🟢 | 45m | `#dom` | [javascript.info ⭐](https://javascript.info/modifying-document) |
-| Event handling, bubbling & delegation | 🟡 | 1h | `#dom` `#events` | [javascript.info: bubbling ⭐](https://javascript.info/bubbling-and-capturing) |
-| Virtual DOM | 🟡 | 45m | `#dom` `#react` | [React: rendering ⭐](https://react.dev/learn/render-and-commit) |
-| Shadow DOM & Web Components | 🟡 | 1h | `#dom` `#components` | [MDN: web components ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) |
-| Forms & validation | 🟡 | 45m | `#forms` | [MDN: forms ⭐](https://developer.mozilla.org/en-US/docs/Learn/Forms) |
+| [How the web works (request → render)](topics/how-the-web-works-request-render.md) | 🟢 | 30m | `#networking` `#basics` | [MDN: how the web works ⭐](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works) |
+| [Semantic HTML](topics/semantic-html.md) | 🟢 | 30m | `#html` `#a11y` `#seo` | [web.dev: HTML ⭐](https://web.dev/learn/html) |
+| [The DOM](topics/the-dom.md) | 🟢 | 45m | `#dom` `#basics` | [javascript.info: DOM ⭐](https://javascript.info/document) |
+| [DOM manipulation & traversal](topics/dom-manipulation-traversal.md) | 🟢 | 45m | `#dom` | [javascript.info ⭐](https://javascript.info/modifying-document) |
+| [Event handling, bubbling & delegation](topics/event-handling-bubbling-delegation.md) | 🟡 | 1h | `#dom` `#events` | [javascript.info: bubbling ⭐](https://javascript.info/bubbling-and-capturing) |
+| [Virtual DOM](topics/virtual-dom.md) | 🟡 | 45m | `#dom` `#react` | [React: rendering ⭐](https://react.dev/learn/render-and-commit) |
+| [Shadow DOM & Web Components](topics/shadow-dom-web-components.md) | 🟡 | 1h | `#dom` `#components` | [MDN: web components ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) |
+| [Forms & validation](topics/forms-validation.md) | 🟡 | 45m | `#forms` | [MDN: forms ⭐](https://developer.mozilla.org/en-US/docs/Learn/Forms) |
 
 ## Rendering & delivery
 

@@ -178,6 +178,88 @@ export function parseReactBank(md: string): { title: string; slug: string; quest
   return out.filter((c) => c.questions.length > 0);
 }
 
+export interface TopicRow {
+  title: string;
+  /** slug of the deep-dive file: <section>/topics/<slug>.md */
+  slug: string;
+  /** the "## " heading the table sits under, e.g. "The platform" */
+  group: string;
+  difficulty: Difficulty;
+  time: string;
+  tags: string[];
+  /** the outbound "Best Resources" link */
+  resource?: { label: string; url: string };
+  /** set when the Topic cell is already linked to a deep dive */
+  href?: string;
+}
+
+const splitRow = (line: string): string[] =>
+  line
+    .replace(/^\|/, '')
+    .replace(/\|$/, '')
+    .split('|')
+    .map((c) => c.trim());
+
+/**
+ * Parse the "| Topic | Difficulty | Time | Tags | Best Resources |" tables out of a
+ * section README. Other table shapes (Problem/Component/Pattern/…) are ignored.
+ *
+ * The Topic cell may be plain text or already linked to its deep dive — rows get
+ * linked progressively as deep dives are written, so both must parse identically.
+ */
+export function parseTopicTables(md: string): TopicRow[] {
+  const rows: TopicRow[] = [];
+  let group = '';
+  let inTopicTable = false;
+
+  for (const line of md.split('\n')) {
+    const heading = line.match(/^#{2,3}\s+(.+?)\s*$/);
+    if (heading) {
+      group = heading[1].trim();
+      inTopicTable = false;
+      continue;
+    }
+
+    const t = line.trim();
+    if (!t.startsWith('|')) {
+      inTopicTable = false;
+      continue;
+    }
+
+    const cells = splitRow(t);
+    // Header row: only tables whose first column is "Topic" and that carry a Difficulty.
+    if (/^topic$/i.test(cells[0] ?? '')) {
+      inTopicTable = cells.some((c) => /^difficulty$/i.test(c));
+      continue;
+    }
+    if (!inTopicTable) continue;
+    if (/^:?-{2,}:?$/.test(cells[0] ?? '')) continue; // separator
+    if (cells.length < 4) continue;
+
+    const [topicCell, diffCell, timeCell, tagsCell, resCell] = cells;
+    const link = topicCell.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    const title = (link ? link[1] : topicCell).trim();
+    if (!title) continue;
+
+    const diffEmoji = [...diffCell].find((ch) => DIFF_EMOJI[ch]);
+    const resMatch = resCell?.match(/\[([^\]]+)\]\(([^)]+)\)/);
+
+    rows.push({
+      title,
+      slug: slugify(title),
+      group,
+      difficulty: diffEmoji ? DIFF_EMOJI[diffEmoji] : 'none',
+      time: (timeCell ?? '').trim(),
+      tags: [...(tagsCell ?? '').matchAll(/`#([^`]+)`/g)].map((m) => m[1].trim()),
+      ...(resMatch
+        ? { resource: { label: resMatch[1].replace(/⭐/g, '').trim(), url: resMatch[2].trim() } }
+        : {}),
+      ...(link ? { href: link[2].trim() } : {}),
+    });
+  }
+  return rows;
+}
+
 /** Extract question bullets from a folder bank category file. */
 export function parseBankCategoryFile(md: string): ReturnType<typeof parseQuestion>[] {
   const questions: ReturnType<typeof parseQuestion>[] = [];

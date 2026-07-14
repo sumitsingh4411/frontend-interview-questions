@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { getBanks, getSections, getSubpages } from '@lib/content.ts';
+import { getBanks, getDeepDives, getSections, getSubpages } from '@lib/content.ts';
 import { url } from '@lib/url.ts';
 
 const DIFF_KEY = { easy: 'e', medium: 'm', hard: 'h', none: 'n' } as const;
@@ -30,6 +30,9 @@ export const GET: APIRoute = () => {
     pages.push([s.title, url(`sections/${s.slug}/`), 'Section']);
     for (const sub of getSubpages(s.slug)) {
       pages.push([sub.title, url(`sections/${s.slug}/${sub.slug}/`), s.title]);
+    }
+    for (const topic of getDeepDives(s.slug)) {
+      pages.push([topic.title, url(`sections/${s.slug}/topics/${topic.slug}/`), 'Deep dive']);
     }
   }
   pages.push(['Your progress', url('progress/'), 'Dashboard']);
