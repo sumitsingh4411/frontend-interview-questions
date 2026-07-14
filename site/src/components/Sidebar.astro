@@ -1,6 +1,6 @@
 ---
 import { GROUP_ORDER, SECTIONS } from '@lib/sections.ts';
-import { getBanks } from '@lib/content.ts';
+import { getBanks, getDeepDives } from '@lib/content.ts';
 import { url } from '@lib/url.ts';
 
 const banks = getBanks();
@@ -10,6 +10,16 @@ const isActive = (href: string) => {
   const h = href.replace(/\/$/, '');
   return current === h || current.startsWith(h + '/');
 };
+/** Exact match — used for the topic you're actually reading. */
+const isHere = (href: string) => current === href.replace(/\/$/, '');
+
+/**
+ * The open section reveals its deep dives, so a reader inside a topic can see where
+ * they are and what else is in the section. Only written dives are listed — every
+ * entry is therefore a real link.
+ */
+const deepDivesFor = (sectionSlug: string) =>
+  isActive(url(`sections/${sectionSlug}/`)) ? getDeepDives(sectionSlug) : [];
 ---
 
 <aside class="sidebar" id="sidebar">
@@ -38,19 +48,51 @@ const isActive = (href: string) => {
         <div class="group">
           <p class="eyebrow g-title">{group}</p>
           <ul>
-            {SECTIONS.filter((s) => s.group === group).map((s) => (
-              <li>
-                <a
-                  href={url(`sections/${s.slug}/`)}
-                  class:list={['link', { active: isActive(url(`sections/${s.slug}/`)) }]}
-                >
-                  <span class="num mono" aria-hidden="true">
-                    {s.num}
-                  </span>
-                  <span class="txt">{s.title}</span>
-                </a>
-              </li>
-            ))}
+            {SECTIONS.filter((s) => s.group === group).map((s) => {
+              const dives = deepDivesFor(s.slug);
+              const groups = [...new Set(dives.map((d) => d.group))];
+              return (
+                <li>
+                  <a
+                    href={url(`sections/${s.slug}/`)}
+                    class:list={['link', { active: isActive(url(`sections/${s.slug}/`)) }]}
+                  >
+                    <span class="num mono" aria-hidden="true">
+                      {s.num}
+                    </span>
+                    <span class="txt">{s.title}</span>
+                    {dives.length > 0 && <span class="count mono">{dives.length}</span>}
+                  </a>
+
+                  {dives.length > 0 && (
+                    <ul class="dives">
+                      {groups.map((g) => (
+                        <>
+                          {groups.length > 1 && <li class="d-group">{g}</li>}
+                          {dives
+                            .filter((d) => d.group === g)
+                            .map((d) => {
+                              const href = url(`sections/${s.slug}/topics/${d.slug}/`);
+                              return (
+                                <li>
+                                  <a
+                                    href={href}
+                                    class:list={['dive', { here: isHere(href) }]}
+                                    aria-current={isHere(href) ? 'page' : undefined}
+                                  >
+                                    <span class={`dot diff-${d.difficulty}`} aria-hidden="true" />
+                                    <span class="d-txt">{d.title}</span>
+                                  </a>
+                                </li>
+                              );
+                            })}
+                        </>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       ))
@@ -115,6 +157,88 @@ const isActive = (href: string) => {
   .link:hover {
     background: var(--surface);
     color: var(--text);
+  }
+
+  /* Deep dives nested under the open section — the "where am I" rail. */
+  .dives {
+    list-style: none;
+    margin: 2px 0 6px;
+    padding: 0 0 0 21px;
+    position: relative;
+  }
+  .dives::before {
+    content: '';
+    position: absolute;
+    left: 21px;
+    top: 2px;
+    bottom: 2px;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .d-group {
+    padding: 7px 10px 3px 13px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  .dive {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px 5px 13px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--text-dim);
+    font-size: var(--step--1);
+    line-height: 1.35;
+    position: relative;
+  }
+  .dive:hover {
+    color: var(--text);
+    background: var(--surface);
+  }
+
+  /* The topic you're reading: accent text + a segment that overlays the rail. */
+  .dive.here {
+    color: var(--accent);
+    background: var(--surface);
+  }
+  .dive.here::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    border-radius: 2px;
+    background: var(--accent);
+  }
+
+  .dive .dot {
+    flex: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.75;
+  }
+  .dive .dot.diff-easy {
+    background: var(--easy);
+  }
+  .dive .dot.diff-medium {
+    background: var(--medium);
+  }
+  .dive .dot.diff-hard {
+    background: var(--hard);
+  }
+  .d-txt {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .link.active {

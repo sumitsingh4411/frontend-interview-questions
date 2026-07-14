@@ -304,6 +304,27 @@ const inIndex = await page.evaluate(async (origin) => {
 }, ORIGIN);
 ok('deep dives are in the search index', inIndex === 8, `n=${inIndex}`);
 
+// ---------------------------------------------------------------- sidebar orientation
+console.log('\nsidebar: where am I');
+await page.goto(`${ORIGIN}/sections/01-fundamentals/topics/event-handling-bubbling-delegation/`, {
+  waitUntil: 'networkidle0',
+});
+ok('open section reveals its deep dives', (await page.$$('#sidebar .dive')).length === 8);
+const here = await page.$$eval('#sidebar .dive.here', (els) => els.map((e) => e.textContent.trim()));
+ok('exactly one topic is marked "you are here"', here.length === 1, JSON.stringify(here));
+ok('it is the topic being read', here[0]?.includes('Event handling'), String(here[0]));
+ok(
+  'current topic is announced to assistive tech',
+  (await page.$eval('#sidebar .dive.here', (e) => e.getAttribute('aria-current'))) === 'page',
+);
+// Every listed dive must be a real link — we only list written ones.
+const diveHrefs = await page.$$eval('#sidebar .dive', (els) => els.map((e) => e.getAttribute('href')));
+ok('every listed dive links somewhere', diveHrefs.every((h) => /\/topics\/[a-z-]+\/$/.test(h ?? '')));
+
+// A section with no deep dives stays collapsed — no empty rail.
+await page.goto(`${ORIGIN}/sections/03-javascript/`, { waitUntil: 'networkidle0' });
+ok('section without deep dives does not expand', (await page.$$('#sidebar .dive')).length === 0);
+
 await browser.close();
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
