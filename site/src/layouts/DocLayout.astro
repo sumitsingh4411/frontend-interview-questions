@@ -19,7 +19,12 @@ const showToc = headings.length > 1;
 
 <BaseLayout title={title} description={description}>
   <div class:list={['shell', { 'no-toc': !showToc, wide }]}>
-    <Sidebar />
+    {/*
+      The sidebar DOM node is carried across navigations rather than rebuilt, so its
+      scroll position and expanded sections survive. It highlights the current page
+      client-side (see Sidebar.astro) because the server-rendered state goes stale.
+    */}
+    <Sidebar transition:persist />
 
     <div class="col">
       <article class="article">

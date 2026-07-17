@@ -32,9 +32,9 @@ Type-level thinking. Senior+ interviews increasingly ask you to design APIs with
 | [Utility types (Partial/Pick/Omit/Record…)](topics/utility-types-partial-pick-omit-record.md) | 🟡 | 45m | `#utility-types` | [TS Handbook: utility types ⭐](https://www.typescriptlang.org/docs/handbook/utility-types.html) |
 | [`keyof` & `typeof`](topics/keyof-typeof.md) | 🟡 | 30m | `#type-ops` | [TS Handbook: keyof ⭐](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html) |
 | [Indexed access types](topics/indexed-access-types.md) | 🟡 | 30m | `#type-ops` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html) |
-| Mapped types | 🔴 | 1h | `#type-ops` | [TS Handbook: mapped types ⭐](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html) |
-| Conditional types & `infer` | 🔴 | 1.5h | `#type-ops` `#advanced` | [TS Handbook: conditional types ⭐](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) |
-| Template literal types | 🔴 | 1h | `#type-ops` `#advanced` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html) |
+| [Mapped types](topics/mapped-types.md) | 🔴 | 1h | `#type-ops` | [TS Handbook: mapped types ⭐](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html) |
+| [Conditional types & `infer`](topics/conditional-types-infer.md) | 🔴 | 1.5h | `#type-ops` `#advanced` | [TS Handbook: conditional types ⭐](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) |
+| [Template literal types](topics/template-literal-types.md) | 🔴 | 1h | `#type-ops` `#advanced` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html) |
 | Variance & assignability | 🔴 | 1h | `#advanced` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) |
 | [Type-level programming](topics/type-level-programming.md) | 🔴 | 2h | `#advanced` | [Type Challenges ⭐](https://github.com/type-challenges/type-challenges) |
 

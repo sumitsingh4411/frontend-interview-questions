@@ -14,8 +14,8 @@ How you prove the thing works. Expect "how would you test this?" after any machi
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| The testing pyramid / trophy | 🟢 | 30m | `#strategy` | [Kent C. Dodds: testing trophy ⭐](https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications) |
-| What to test (and what not to) | 🟡 | 45m | `#strategy` | [Kent C. Dodds: write tests ⭐](https://kentcdodds.com/blog/write-tests) |
+| [The testing pyramid / trophy](topics/the-testing-pyramid-trophy.md) | 🟢 | 30m | `#strategy` | [Kent C. Dodds: testing trophy ⭐](https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications) |
+| [What to test (and what not to)](topics/what-to-test-and-what-not-to.md) | 🟡 | 45m | `#strategy` | [Kent C. Dodds: write tests ⭐](https://kentcdodds.com/blog/write-tests) |
 | Test-driven development | 🟡 | 45m | `#tdd` | [Martin Fowler: TDD ⭐](https://martinfowler.com/bliki/TestDrivenDevelopment.html) |
 | Flaky tests & determinism | 🟡 | 45m | `#strategy` | [Playwright: retries ⭐](https://playwright.dev/docs/test-retries) |
 
@@ -34,8 +34,8 @@ How you prove the thing works. Expect "how would you test this?" after any machi
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Mocking (modules, timers, functions) | 🟡 | 45m | `#mocking` | [Jest: mock functions ⭐](https://jestjs.io/docs/mock-functions) |
-| Mocking network with MSW | 🟡 | 1h | `#mocking` `#msw` | [MSW ⭐](https://mswjs.io/docs/) |
+| [Mocking (modules, timers, functions)](topics/mocking-modules-timers-functions.md) | 🟡 | 45m | `#mocking` | [Jest: mock functions ⭐](https://jestjs.io/docs/mock-functions) |
+| [Mocking network with MSW](topics/mocking-network-with-msw.md) | 🟡 | 1h | `#mocking` `#msw` | [MSW ⭐](https://mswjs.io/docs/) |
 | Fake timers & async testing | 🟡 | 45m | `#mocking` `#async` | [Jest: timer mocks ⭐](https://jestjs.io/docs/timer-mocks) |
 
 ## Integration, E2E & specialized

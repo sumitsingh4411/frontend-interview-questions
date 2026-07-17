@@ -576,6 +576,8 @@ const n = (v: number) => v.toLocaleString();
 </style>
 
 <script>
+  import { fetchJson } from '@lib/fetch-json.ts';
+
   interface Cat {
     slug: string;
     title: string;
@@ -593,8 +595,9 @@ const n = (v: number) => v.toLocaleString();
     cats: Cat[];
   }
 
-  const root = document.querySelector<HTMLElement>('[data-progress]');
-  if (root) {
+  const init = () => {
+    const root = document.querySelector<HTMLElement>('[data-progress]');
+    if (!root) return;
     const RING = 2 * Math.PI * 52;
     const $ = <T extends Element>(s: string) => root.querySelector<T>(s)!;
     const setText = (sel: string, v: string) => {
@@ -758,11 +761,11 @@ const n = (v: number) => v.toLocaleString();
       paint(catalog);
     });
 
-    fetch(root.dataset.catalog!)
-      .then((r) => r.json())
-      .then((d: { banks: Bank[] }) => {
-        catalog = d.banks;
-        paint(catalog);
-      });
-  }
+    fetchJson<{ banks: Bank[] }>(root.dataset.catalog!).then((d) => {
+      catalog = d.banks;
+      paint(catalog);
+    });
+  };
+
+  document.addEventListener('astro:page-load', init);
 </script>

@@ -44,10 +44,10 @@ The bedrock. If any of these are shaky, everything above them wobbles in an inte
 | [REST & JSON APIs](topics/rest-json-apis.md) | 🟢 | 45m | `#api` | [MDN: REST ⭐](https://developer.mozilla.org/en-US/docs/Glossary/REST) |
 | [Fetch & AJAX](topics/fetch-ajax.md) | 🟢 | 45m | `#fetch` `#api` | [MDN: Fetch ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) |
 | [CORS](topics/cors.md) | 🟡 | 45m | `#networking` `#security` | [MDN: CORS ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) |
-| Caching (HTTP + browser) | 🟡 | 1h | `#networking` `#performance` | [MDN: HTTP caching ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) |
-| Browser storage (cookies/localStorage/IndexedDB) | 🟡 | 1h | `#storage` `#offline` | [web.dev: storage ⭐](https://web.dev/articles/storage-for-the-web) |
-| Cookies (attributes, SameSite) | 🟡 | 45m | `#storage` `#security` | [MDN: cookies ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) |
-| Web APIs (Intersection/Resize/Mutation Observer) | 🟡 | 1h | `#web-api` | [MDN: Web APIs ⭐](https://developer.mozilla.org/en-US/docs/Web/API) |
+| [Caching (HTTP + browser)](topics/caching-http-browser.md) | 🟡 | 1h | `#networking` `#performance` | [MDN: HTTP caching ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) |
+| [Browser storage (cookies/localStorage/IndexedDB)](topics/browser-storage-cookies-localstorage-indexeddb.md) | 🟡 | 1h | `#storage` `#offline` | [web.dev: storage ⭐](https://web.dev/articles/storage-for-the-web) |
+| [Cookies (attributes, SameSite)](topics/cookies-attributes-samesite.md) | 🟡 | 45m | `#storage` `#security` | [MDN: cookies ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) |
+| [Web APIs (Intersection/Resize/Mutation Observer)](topics/web-apis-intersection-resize-mutation-observer.md) | 🟡 | 1h | `#web-api` | [MDN: Web APIs ⭐](https://developer.mozilla.org/en-US/docs/Web/API) |
 | Geolocation, Notifications, Clipboard APIs | 🟢 | 45m | `#web-api` | [MDN: Web APIs ⭐](https://developer.mozilla.org/en-US/docs/Web/API) |
 
 ## Cross-cutting

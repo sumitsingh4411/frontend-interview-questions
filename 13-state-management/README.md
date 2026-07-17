@@ -14,8 +14,8 @@ Server state vs client state, and picking the right tool. A favorite "walk me th
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Client vs server state (the key distinction) | 🟡 | 45m | `#concepts` | [TanStack Query: overview ⭐](https://tanstack.com/query/latest/docs/framework/react/overview) |
-| Local component state & lifting | 🟢 | 30m | `#basics` `#react` | [react.dev ⭐](https://react.dev/learn/sharing-state-between-components) |
+| [Client vs server state (the key distinction)](topics/client-vs-server-state-the-key-distinction.md) | 🟡 | 45m | `#concepts` | [TanStack Query: overview ⭐](https://tanstack.com/query/latest/docs/framework/react/overview) |
+| [Local component state & lifting](topics/local-component-state-lifting.md) | 🟢 | 30m | `#basics` `#react` | [react.dev ⭐](https://react.dev/learn/sharing-state-between-components) |
 | Context as state (and its limits) | 🟡 | 45m | `#react` `#performance` | [react.dev ⭐](https://react.dev/learn/scaling-up-with-reducer-and-context) |
 | Flux / unidirectional data flow | 🟡 | 45m | `#concepts` | [Redux: three principles ⭐](https://redux.js.org/understanding/thinking-in-redux/three-principles) |
 | Normalization | 🔴 | 1h | `#patterns` `#caching` | [Redux: normalizing state ⭐](https://redux.js.org/usage/structuring-reducers/normalizing-state-shape) |
@@ -30,8 +30,8 @@ Server state vs client state, and picking the right tool. A favorite "walk me th
 | Zustand | 🟢 | 45m | `#zustand` | [Zustand ⭐](https://zustand.docs.pmnd.rs/) |
 | Jotai (atomic) | 🟡 | 45m | `#jotai` `#atoms` | [Jotai ⭐](https://jotai.org/) |
 | Recoil | 🟡 | 45m | `#recoil` `#atoms` | [Recoil ⭐](https://recoiljs.org/) |
-| Signals | 🔴 | 1h | `#signals` `#reactivity` | [Preact signals ⭐](https://preactjs.com/guide/v10/signals/) |
-| MobX | 🟡 | 1h | `#mobx` `#reactivity` | [MobX ⭐](https://mobx.js.org/README.html) |
+| [Signals](topics/signals.md) | 🔴 | 1h | `#signals` `#reactivity` | [Preact signals ⭐](https://preactjs.com/guide/v10/signals/) |
+| [MobX](topics/mobx.md) | 🟡 | 1h | `#mobx` `#reactivity` | [MobX ⭐](https://mobx.js.org/README.html) |
 | XState (state machines) | 🔴 | 1h | `#state-machine` | [XState ⭐](https://stately.ai/docs) |
 
 ## Server-state & data

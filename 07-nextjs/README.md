@@ -31,8 +31,8 @@ The production meta-framework. Interviewers use it to probe rendering strategies
 | [Caching layers (request/data/full route)](topics/caching-layers-request-data-full-route.md) | 🔴 | 1.5h | `#caching` `#performance` | [Next.js: caching ⭐](https://nextjs.org/docs/app/building-your-application/caching) |
 | [Streaming & Suspense](topics/streaming-suspense.md) | 🔴 | 1h | `#rendering` `#performance` | [Next.js: streaming ⭐](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming) |
 | [Server Actions & mutations](topics/server-actions-mutations.md) | 🟡 | 1h | `#data` `#mutations` | [Next.js: server actions ⭐](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations) |
-| ISR (Incremental Static Regeneration) | 🟡 | 45m | `#rendering` `#caching` | [Next.js: ISR ⭐](https://nextjs.org/docs/app/building-your-application/data-fetching/incremental-static-regeneration) |
-| Partial Prerendering (PPR) | 🔴 | 45m | `#rendering` `#modern` | [Next.js: PPR ⭐](https://nextjs.org/docs/app/building-your-application/rendering/partial-prerendering) |
+| [ISR (Incremental Static Regeneration)](topics/isr-incremental-static-regeneration.md) | 🟡 | 45m | `#rendering` `#caching` | [Next.js: ISR ⭐](https://nextjs.org/docs/app/building-your-application/data-fetching/incremental-static-regeneration) |
+| [Partial Prerendering (PPR)](topics/partial-prerendering-ppr.md) | 🔴 | 45m | `#rendering` `#modern` | [Next.js: PPR ⭐](https://nextjs.org/docs/app/building-your-application/rendering/partial-prerendering) |
 
 ## Platform & optimization
 

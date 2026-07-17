@@ -166,8 +166,9 @@ const n = (v: number) => v.toLocaleString();
 
 <script>
   // Surface saved progress on the category cards.
-  const list = document.querySelector<HTMLElement>('[data-bank-cats]');
-  if (list) {
+  const init = () => {
+    const list = document.querySelector<HTMLElement>('[data-bank-cats]');
+    if (!list) return;
     const bank = list.dataset.bank!;
     for (const a of list.querySelectorAll<HTMLAnchorElement>('[data-cat]')) {
       const total = Number(a.dataset.total);
@@ -179,5 +180,7 @@ const n = (v: number) => v.toLocaleString();
       const el = a.querySelector('[data-cat-progress]')!;
       el.innerHTML = `<b>${done}</b> / ${total.toLocaleString()} done`;
     }
-  }
+  };
+
+  document.addEventListener('astro:page-load', init);
 </script>

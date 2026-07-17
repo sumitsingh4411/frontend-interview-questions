@@ -37,9 +37,9 @@ The language, deeply. These are the questions that get asked in *every* frontend
 | [Callbacks & callback hell](topics/callbacks-callback-hell.md) | 🟢 | 30m | `#async` | [javascript.info: callbacks ⭐](https://javascript.info/callbacks) |
 | [Promises (states, chaining)](topics/promises-states-chaining.md) | 🟡 | 1h | `#async` `#promises` | [javascript.info: promises ⭐](https://javascript.info/promise-basics) |
 | [`Promise.all/allSettled/race/any`](topics/promise-all-allsettled-race-any.md) | 🟡 | 45m | `#async` `#polyfill` | [Flagship ⭐](promise-polyfills-and-throttle-debounce.md) |
-| async / await + error handling | 🟡 | 45m | `#async` | [javascript.info: async/await ⭐](https://javascript.info/async-await) |
-| Debounce & throttle | 🟡 | 45m | `#patterns` `#performance` | [Flagship ⭐](promise-polyfills-and-throttle-debounce.md) |
-| AbortController & cancellation | 🟡 | 30m | `#async` | [MDN: AbortController ⭐](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) |
+| [async / await + error handling](topics/async-await-error-handling.md) | 🟡 | 45m | `#async` | [javascript.info: async/await ⭐](https://javascript.info/async-await) |
+| [Debounce & throttle](topics/debounce-throttle.md) | 🟡 | 45m | `#patterns` `#performance` | [Flagship ⭐](promise-polyfills-and-throttle-debounce.md) |
+| [AbortController & cancellation](topics/abortcontroller-cancellation.md) | 🟡 | 30m | `#async` | [MDN: AbortController ⭐](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) |
 | Async iterators & `for await` | 🔴 | 45m | `#async` `#iterators` | [javascript.info: async iteration ⭐](https://javascript.info/async-iterators-generators) |
 | [Concurrency control (promise pool)](topics/concurrency-control-promise-pool.md) | 🔴 | 45m | `#async` `#patterns` | [BFE.dev ⭐](https://bigfrontend.dev/) |
 

@@ -31,8 +31,8 @@ How the browser turns bytes into pixels — and why your app is slow. The "expla
 | [Render tree, Layout & Reflow](topics/render-tree-layout-reflow.md) | 🔴 | 1h | `#rendering` `#performance` | [Inside a modern browser (part 3) ⭐](https://developer.chrome.com/blog/inside-browser-part3) |
 | [Paint & layers](topics/paint-layers.md) | 🟡 | 45m | `#rendering` | [web.dev: rendering perf ⭐](https://web.dev/articles/rendering-performance) |
 | [Compositing & the compositor thread](topics/compositing-the-compositor-thread.md) | 🔴 | 1h | `#rendering` `#performance` | [Inside a modern browser (part 3) ⭐](https://developer.chrome.com/blog/inside-browser-part3) |
-| Rasterization & the GPU | 🔴 | 45m | `#rendering` `#gpu` | [web.dev: animations guide ⭐](https://web.dev/articles/animations-guide) |
-| Main thread vs compositor thread | 🔴 | 45m | `#performance` | [web.dev: long tasks ⭐](https://web.dev/articles/optimize-long-tasks) |
+| [Rasterization & the GPU](topics/rasterization-the-gpu.md) | 🔴 | 45m | `#rendering` `#gpu` | [web.dev: animations guide ⭐](https://web.dev/articles/animations-guide) |
+| [Main thread vs compositor thread](topics/main-thread-vs-compositor-thread.md) | 🔴 | 45m | `#performance` | [web.dev: long tasks ⭐](https://web.dev/articles/optimize-long-tasks) |
 | Render-blocking resources | 🟡 | 45m | `#rendering` `#performance` | [web.dev ⭐](https://web.dev/articles/critical-rendering-path-render-blocking-css) |
 
 ## Event loop & scheduling

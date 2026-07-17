@@ -41,8 +41,8 @@ Layout, the cascade, and making it fast. "Center a div" is a meme; "explain the 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
 | [Media queries](topics/media-queries.md) | 🟢 | 45m | `#responsive` | [web.dev: media queries ⭐](https://web.dev/learn/design/media-queries) |
-| Container queries | 🔴 | 1h | `#responsive` `#modern` | [MDN: container queries ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries) |
-| Fluid type & `clamp()` | 🟡 | 30m | `#responsive` | [web.dev: fluid type ⭐](https://web.dev/learn/design/typography) |
+| [Container queries](topics/container-queries.md) | 🔴 | 1h | `#responsive` `#modern` | [MDN: container queries ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries) |
+| [Fluid type & `clamp()`](topics/fluid-type-clamp.md) | 🟡 | 30m | `#responsive` | [web.dev: fluid type ⭐](https://web.dev/learn/design/typography) |
 | [Custom properties (variables)](topics/custom-properties-variables.md) | 🟡 | 45m | `#variables` `#theming` | [MDN: custom properties ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) |
 | [Logical properties](topics/logical-properties.md) | 🟡 | 30m | `#i18n` `#modern` | [MDN: logical properties ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) |
 | [Dark mode & `color-scheme`](topics/dark-mode-color-scheme.md) | 🟡 | 45m | `#theming` | [web.dev: color scheme ⭐](https://web.dev/articles/color-scheme) |
@@ -54,8 +54,8 @@ Layout, the cascade, and making it fast. "Center a div" is a meme; "explain the 
 |-------|:----------:|:----:|------|----------------|
 | [Transitions](topics/transitions.md) | 🟢 | 30m | `#animation` | [MDN: transitions ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) |
 | [Keyframe animations](topics/keyframe-animations.md) | 🟡 | 1h | `#animation` | [MDN: animations ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) |
-| Transforms (2D/3D) | 🟡 | 45m | `#animation` | [MDN: transform ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) |
-| GPU-accelerated animation & `will-change` | 🔴 | 45m | `#animation` `#performance` | [web.dev: animations guide ⭐](https://web.dev/articles/animations-guide) |
+| [Transforms (2D/3D)](topics/transforms-2d-3d.md) | 🟡 | 45m | `#animation` | [MDN: transform ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) |
+| [GPU-accelerated animation & `will-change`](topics/gpu-accelerated-animation-will-change.md) | 🔴 | 45m | `#animation` `#performance` | [web.dev: animations guide ⭐](https://web.dev/articles/animations-guide) |
 | Reflow vs repaint vs composite | 🔴 | 1h | `#performance` | [web.dev: rendering perf ⭐](https://web.dev/articles/rendering-performance) |
 | [`content-visibility` & containment](topics/content-visibility-containment.md) | 🔴 | 45m | `#performance` `#modern` | [web.dev: content-visibility ⭐](https://web.dev/articles/content-visibility) |
 | [Scroll-driven animations](topics/scroll-driven-animations.md) | 🔴 | 45m | `#animation` `#modern` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-timeline) |
