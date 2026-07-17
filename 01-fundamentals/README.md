@@ -48,13 +48,13 @@ The bedrock. If any of these are shaky, everything above them wobbles in an inte
 | [Browser storage (cookies/localStorage/IndexedDB)](topics/browser-storage-cookies-localstorage-indexeddb.md) | 🟡 | 1h | `#storage` `#offline` | [web.dev: storage ⭐](https://web.dev/articles/storage-for-the-web) |
 | [Cookies (attributes, SameSite)](topics/cookies-attributes-samesite.md) | 🟡 | 45m | `#storage` `#security` | [MDN: cookies ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) |
 | [Web APIs (Intersection/Resize/Mutation Observer)](topics/web-apis-intersection-resize-mutation-observer.md) | 🟡 | 1h | `#web-api` | [MDN: Web APIs ⭐](https://developer.mozilla.org/en-US/docs/Web/API) |
-| Geolocation, Notifications, Clipboard APIs | 🟢 | 45m | `#web-api` | [MDN: Web APIs ⭐](https://developer.mozilla.org/en-US/docs/Web/API) |
+| [Geolocation, Notifications, Clipboard APIs](topics/geolocation-notifications-clipboard-apis.md) | 🟢 | 45m | `#web-api` | [MDN: Web APIs ⭐](https://developer.mozilla.org/en-US/docs/Web/API) |
 
 ## Cross-cutting
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Accessibility basics | 🟡 | 1h | `#a11y` | [web.dev: accessibility ⭐](https://web.dev/learn/accessibility) |
+| [Accessibility basics](topics/accessibility-basics.md) | 🟡 | 1h | `#a11y` | [web.dev: accessibility ⭐](https://web.dev/learn/accessibility) |
 | Performance basics (Core Web Vitals) | 🟡 | 1h | `#performance` | [web.dev: vitals ⭐](https://web.dev/articles/vitals) |
 | Security basics (XSS/CSRF overview) | 🟡 | 1h | `#security` | [OWASP top 10 ⭐](https://owasp.org/www-project-top-ten/) |
 | Internationalization (i18n) basics | 🟡 | 45m | `#i18n` | [MDN: Intl ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) |

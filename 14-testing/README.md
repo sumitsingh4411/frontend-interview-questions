@@ -16,8 +16,8 @@ How you prove the thing works. Expect "how would you test this?" after any machi
 |-------|:----------:|:----:|------|----------------|
 | [The testing pyramid / trophy](topics/the-testing-pyramid-trophy.md) | 🟢 | 30m | `#strategy` | [Kent C. Dodds: testing trophy ⭐](https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications) |
 | [What to test (and what not to)](topics/what-to-test-and-what-not-to.md) | 🟡 | 45m | `#strategy` | [Kent C. Dodds: write tests ⭐](https://kentcdodds.com/blog/write-tests) |
-| Test-driven development | 🟡 | 45m | `#tdd` | [Martin Fowler: TDD ⭐](https://martinfowler.com/bliki/TestDrivenDevelopment.html) |
-| Flaky tests & determinism | 🟡 | 45m | `#strategy` | [Playwright: retries ⭐](https://playwright.dev/docs/test-retries) |
+| [Test-driven development](topics/test-driven-development.md) | 🟡 | 45m | `#tdd` | [Martin Fowler: TDD ⭐](https://martinfowler.com/bliki/TestDrivenDevelopment.html) |
+| [Flaky tests & determinism](topics/flaky-tests-determinism.md) | 🟡 | 45m | `#strategy` | [Playwright: retries ⭐](https://playwright.dev/docs/test-retries) |
 
 ## Unit & component
 
@@ -36,13 +36,13 @@ How you prove the thing works. Expect "how would you test this?" after any machi
 |-------|:----------:|:----:|------|----------------|
 | [Mocking (modules, timers, functions)](topics/mocking-modules-timers-functions.md) | 🟡 | 45m | `#mocking` | [Jest: mock functions ⭐](https://jestjs.io/docs/mock-functions) |
 | [Mocking network with MSW](topics/mocking-network-with-msw.md) | 🟡 | 1h | `#mocking` `#msw` | [MSW ⭐](https://mswjs.io/docs/) |
-| Fake timers & async testing | 🟡 | 45m | `#mocking` `#async` | [Jest: timer mocks ⭐](https://jestjs.io/docs/timer-mocks) |
+| [Fake timers & async testing](topics/fake-timers-async-testing.md) | 🟡 | 45m | `#mocking` `#async` | [Jest: timer mocks ⭐](https://jestjs.io/docs/timer-mocks) |
 
 ## Integration, E2E & specialized
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Integration testing | 🟡 | 1h | `#integration` | [Kent C. Dodds ⭐](https://kentcdodds.com/blog/write-tests) |
+| [Integration testing](topics/integration-testing.md) | 🟡 | 1h | `#integration` | [Kent C. Dodds ⭐](https://kentcdodds.com/blog/write-tests) |
 | E2E with Playwright | 🔴 | 1.5h | `#e2e` `#playwright` | [Playwright ⭐](https://playwright.dev/docs/intro) |
 | E2E with Cypress | 🟡 | 1h | `#e2e` `#cypress` | [Cypress ⭐](https://docs.cypress.io/guides/overview/why-cypress) |
 | Visual regression testing | 🟡 | 45m | `#visual` | [Playwright: snapshots ⭐](https://playwright.dev/docs/test-snapshots) |

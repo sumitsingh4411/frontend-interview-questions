@@ -56,7 +56,7 @@ Layout, the cascade, and making it fast. "Center a div" is a meme; "explain the 
 | [Keyframe animations](topics/keyframe-animations.md) | 🟡 | 1h | `#animation` | [MDN: animations ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) |
 | [Transforms (2D/3D)](topics/transforms-2d-3d.md) | 🟡 | 45m | `#animation` | [MDN: transform ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) |
 | [GPU-accelerated animation & `will-change`](topics/gpu-accelerated-animation-will-change.md) | 🔴 | 45m | `#animation` `#performance` | [web.dev: animations guide ⭐](https://web.dev/articles/animations-guide) |
-| Reflow vs repaint vs composite | 🔴 | 1h | `#performance` | [web.dev: rendering perf ⭐](https://web.dev/articles/rendering-performance) |
+| [Reflow vs repaint vs composite](topics/reflow-vs-repaint-vs-composite.md) | 🔴 | 1h | `#performance` | [web.dev: rendering perf ⭐](https://web.dev/articles/rendering-performance) |
 | [`content-visibility` & containment](topics/content-visibility-containment.md) | 🔴 | 45m | `#performance` `#modern` | [web.dev: content-visibility ⭐](https://web.dev/articles/content-visibility) |
 | [Scroll-driven animations](topics/scroll-driven-animations.md) | 🔴 | 45m | `#animation` `#modern` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-timeline) |
 

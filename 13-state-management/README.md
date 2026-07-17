@@ -16,8 +16,8 @@ Server state vs client state, and picking the right tool. A favorite "walk me th
 |-------|:----------:|:----:|------|----------------|
 | [Client vs server state (the key distinction)](topics/client-vs-server-state-the-key-distinction.md) | 🟡 | 45m | `#concepts` | [TanStack Query: overview ⭐](https://tanstack.com/query/latest/docs/framework/react/overview) |
 | [Local component state & lifting](topics/local-component-state-lifting.md) | 🟢 | 30m | `#basics` `#react` | [react.dev ⭐](https://react.dev/learn/sharing-state-between-components) |
-| Context as state (and its limits) | 🟡 | 45m | `#react` `#performance` | [react.dev ⭐](https://react.dev/learn/scaling-up-with-reducer-and-context) |
-| Flux / unidirectional data flow | 🟡 | 45m | `#concepts` | [Redux: three principles ⭐](https://redux.js.org/understanding/thinking-in-redux/three-principles) |
+| [Context as state (and its limits)](topics/context-as-state-and-its-limits.md) | 🟡 | 45m | `#react` `#performance` | [react.dev ⭐](https://react.dev/learn/scaling-up-with-reducer-and-context) |
+| [Flux / unidirectional data flow](topics/flux-unidirectional-data-flow.md) | 🟡 | 45m | `#concepts` | [Redux: three principles ⭐](https://redux.js.org/understanding/thinking-in-redux/three-principles) |
 | Normalization | 🔴 | 1h | `#patterns` `#caching` | [Redux: normalizing state ⭐](https://redux.js.org/usage/structuring-reducers/normalizing-state-shape) |
 | Derived state & selectors | 🟡 | 45m | `#patterns` | [Reselect ⭐](https://github.com/reduxjs/reselect) |
 | Immutability & structural sharing | 🟡 | 45m | `#patterns` | [Immer ⭐](https://immerjs.github.io/immer/) |
@@ -38,8 +38,8 @@ Server state vs client state, and picking the right tool. A favorite "walk me th
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| React Query / TanStack Query | 🔴 | 1.5h | `#server-state` `#caching` | [TanStack Query ⭐](https://tanstack.com/query/latest) |
-| SWR | 🟡 | 45m | `#server-state` `#caching` | [SWR ⭐](https://swr.vercel.app/) |
+| [React Query / TanStack Query](topics/react-query-tanstack-query.md) | 🔴 | 1.5h | `#server-state` `#caching` | [TanStack Query ⭐](https://tanstack.com/query/latest) |
+| [SWR](topics/swr.md) | 🟡 | 45m | `#server-state` `#caching` | [SWR ⭐](https://swr.vercel.app/) |
 | Apollo Client (GraphQL cache) | 🔴 | 1h | `#graphql` `#caching` | [Apollo Client ⭐](https://www.apollographql.com/docs/react/) |
 | RxJS & streams | 🔴 | 1.5h | `#rxjs` `#streams` | [RxJS ⭐](https://rxjs.dev/guide/overview) |
 | Optimistic updates | 🔴 | 1h | `#patterns` `#ux` | [TanStack: optimistic ⭐](https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates) |

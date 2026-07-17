@@ -38,7 +38,7 @@ The production meta-framework. Interviewers use it to probe rendering strategies
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Middleware | 🟡 | 45m | `#routing` `#auth` | [Next.js: middleware ⭐](https://nextjs.org/docs/app/building-your-application/routing/middleware) |
+| [Middleware](topics/middleware.md) | 🟡 | 45m | `#routing` `#auth` | [Next.js: middleware ⭐](https://nextjs.org/docs/app/building-your-application/routing/middleware) |
 | Edge runtime | 🔴 | 45m | `#edge` `#performance` | [Next.js: edge ⭐](https://nextjs.org/docs/app/api-reference/edge) |
 | Metadata & SEO | 🟡 | 45m | `#seo` | [Next.js: metadata ⭐](https://nextjs.org/docs/app/building-your-application/optimizing/metadata) |
 | Image optimization | 🟡 | 45m | `#performance` `#images` | [Next.js: Image ⭐](https://nextjs.org/docs/app/building-your-application/optimizing/images) |

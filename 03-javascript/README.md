@@ -40,7 +40,7 @@ The language, deeply. These are the questions that get asked in *every* frontend
 | [async / await + error handling](topics/async-await-error-handling.md) | 🟡 | 45m | `#async` | [javascript.info: async/await ⭐](https://javascript.info/async-await) |
 | [Debounce & throttle](topics/debounce-throttle.md) | 🟡 | 45m | `#patterns` `#performance` | [Flagship ⭐](promise-polyfills-and-throttle-debounce.md) |
 | [AbortController & cancellation](topics/abortcontroller-cancellation.md) | 🟡 | 30m | `#async` | [MDN: AbortController ⭐](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) |
-| Async iterators & `for await` | 🔴 | 45m | `#async` `#iterators` | [javascript.info: async iteration ⭐](https://javascript.info/async-iterators-generators) |
+| [Async iterators & `for await`](topics/async-iterators-for-await.md) | 🔴 | 45m | `#async` `#iterators` | [javascript.info: async iteration ⭐](https://javascript.info/async-iterators-generators) |
 | [Concurrency control (promise pool)](topics/concurrency-control-promise-pool.md) | 🔴 | 45m | `#async` `#patterns` | [BFE.dev ⭐](https://bigfrontend.dev/) |
 
 ## Functions & FP
@@ -69,8 +69,8 @@ The language, deeply. These are the questions that get asked in *every* frontend
 | [WeakRef & FinalizationRegistry](topics/weakref-finalizationregistry.md) | 🔴 | 45m | `#memory` `#advanced` | [MDN: WeakRef ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) |
 | [Memory leaks in JS](topics/memory-leaks-in-js.md) | 🔴 | 1h | `#memory` | [web.dev: memory ⭐](https://developer.chrome.com/docs/devtools/memory-problems) |
 | [Regular expressions](topics/regular-expressions.md) | 🟡 | 1h | `#regex` | [javascript.info: regexp ⭐](https://javascript.info/regular-expressions) |
-| `structuredClone` & deep clone | 🟡 | 30m | `#patterns` | [MDN: structuredClone ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone) |
-| Polyfills (map/filter/reduce/bind/Promise) | 🔴 | 2h | `#polyfill` | [Flagship ⭐](promise-polyfills-and-throttle-debounce.md) |
+| [`structuredClone` & deep clone](topics/structuredclone-deep-clone.md) | 🟡 | 30m | `#patterns` | [MDN: structuredClone ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone) |
+| [Polyfills (map/filter/reduce/bind/Promise)](topics/polyfills-map-filter-reduce-bind-promise.md) | 🔴 | 2h | `#polyfill` | [Flagship ⭐](promise-polyfills-and-throttle-debounce.md) |
 | Numbers, `BigInt`, floating point | 🟡 | 30m | `#basics` | [javascript.info: numbers ⭐](https://javascript.info/number) |
 | Date & time handling | 🟢 | 30m | `#basics` | [MDN: Date ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) |
 

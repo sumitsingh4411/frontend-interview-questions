@@ -36,9 +36,9 @@ The framework most FAANG frontend loops assume. They'll ask *how it works*, not 
 | [`useRef` & imperative handles](topics/useref-imperative-handles.md) | 🟡 | 45m | `#hooks` | [react.dev: useRef ⭐](https://react.dev/reference/react/useRef) |
 | [`useContext` & context perf](topics/usecontext-context-perf.md) | 🟡 | 1h | `#hooks` `#state` | [react.dev: useContext ⭐](https://react.dev/reference/react/useContext) |
 | [`useReducer` & state machines](topics/usereducer-state-machines.md) | 🟡 | 45m | `#hooks` `#state` | [react.dev: useReducer ⭐](https://react.dev/reference/react/useReducer) |
-| `useTransition` / `useDeferredValue` | 🔴 | 1h | `#concurrent` | [react.dev: useTransition ⭐](https://react.dev/reference/react/useTransition) |
-| `useSyncExternalStore` | 🔴 | 45m | `#hooks` `#state` | [react.dev ⭐](https://react.dev/reference/react/useSyncExternalStore) |
-| `useId`, `useImperativeHandle` | 🟡 | 30m | `#hooks` | [react.dev: useId ⭐](https://react.dev/reference/react/useId) |
+| [`useTransition` / `useDeferredValue`](topics/usetransition-usedeferredvalue.md) | 🔴 | 1h | `#concurrent` | [react.dev: useTransition ⭐](https://react.dev/reference/react/useTransition) |
+| [`useSyncExternalStore`](topics/usesyncexternalstore.md) | 🔴 | 45m | `#hooks` `#state` | [react.dev ⭐](https://react.dev/reference/react/useSyncExternalStore) |
+| [`useId`, `useImperativeHandle`](topics/useid-useimperativehandle.md) | 🟡 | 30m | `#hooks` | [react.dev: useId ⭐](https://react.dev/reference/react/useId) |
 | [Custom hooks](topics/custom-hooks.md) | 🟡 | 45m | `#hooks` `#patterns` | [react.dev: reusing logic ⭐](https://react.dev/learn/reusing-logic-with-custom-hooks) |
 
 ## Performance & patterns
@@ -60,12 +60,12 @@ The framework most FAANG frontend loops assume. They'll ask *how it works*, not 
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Concurrent rendering | 🔴 | 1h | `#concurrent` | [react.dev ⭐](https://react.dev/blog/2022/03/29/react-v18) |
-| Suspense & streaming | 🔴 | 1h | `#concurrent` `#data` | [react.dev: Suspense ⭐](https://react.dev/reference/react/Suspense) |
-| React Server Components (RSC) | 🔴 | 1.5h | `#rsc` `#rendering` | [react.dev: server components ⭐](https://react.dev/reference/rsc/server-components) |
-| SSR & hydration | 🔴 | 1h | `#ssr` | [react.dev: hydrateRoot ⭐](https://react.dev/reference/react-dom/client/hydrateRoot) |
-| Server Actions | 🟡 | 45m | `#rsc` `#data` | [react.dev: 'use server' ⭐](https://react.dev/reference/rsc/use-server) |
-| Testing React | 🟡 | 1h | `#testing` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/intro/) |
+| [Concurrent rendering](topics/concurrent-rendering.md) | 🔴 | 1h | `#concurrent` | [react.dev ⭐](https://react.dev/blog/2022/03/29/react-v18) |
+| [Suspense & streaming](topics/suspense-streaming.md) | 🔴 | 1h | `#concurrent` `#data` | [react.dev: Suspense ⭐](https://react.dev/reference/react/Suspense) |
+| [React Server Components (RSC)](topics/react-server-components-rsc.md) | 🔴 | 1.5h | `#rsc` `#rendering` | [react.dev: server components ⭐](https://react.dev/reference/rsc/server-components) |
+| [SSR & hydration](topics/ssr-hydration.md) | 🔴 | 1h | `#ssr` | [react.dev: hydrateRoot ⭐](https://react.dev/reference/react-dom/client/hydrateRoot) |
+| [Server Actions](topics/server-actions.md) | 🟡 | 45m | `#rsc` `#data` | [react.dev: 'use server' ⭐](https://react.dev/reference/rsc/use-server) |
+| [Testing React](topics/testing-react.md) | 🟡 | 1h | `#testing` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/intro/) |
 
 ## ❓ Rapid-fire React interview questions
 
