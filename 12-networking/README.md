@@ -14,8 +14,8 @@ The pipe between your app and the data. Real-time, protocols, and caching decisi
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| HTTP methods, status codes, headers | 🟢 | 45m | `#http` `#basics` | [MDN: HTTP ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP) |
-| HTTP/1.1 vs HTTP/2 | 🟡 | 45m | `#http` `#performance` | [web.dev: HTTP/2 ⭐](https://web.dev/articles/performance-http2) |
+| [HTTP methods, status codes, headers](topics/http-methods-status-codes-headers.md) | 🟢 | 45m | `#http` `#basics` | [MDN: HTTP ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP) |
+| [HTTP/1.1 vs HTTP/2](topics/http-1-1-vs-http-2.md) | 🟡 | 45m | `#http` `#performance` | [web.dev: HTTP/2 ⭐](https://web.dev/articles/performance-http2) |
 | HTTP/3 & QUIC | 🔴 | 45m | `#http` `#performance` | [Cloudflare: HTTP/3 ⭐](https://blog.cloudflare.com/http3-the-past-present-and-future/) |
 | TLS / handshake | 🟡 | 45m | `#tls` `#security` | [Cloudflare: TLS handshake ⭐](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/) |
 | DNS | 🟢 | 30m | `#dns` `#basics` | [Cloudflare: DNS ⭐](https://www.cloudflare.com/learning/dns/what-is-dns/) |
@@ -35,8 +35,8 @@ The pipe between your app and the data. Real-time, protocols, and caching decisi
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
 | WebSocket | 🔴 | 1h | `#realtime` `#websocket` | [MDN: WebSocket ⭐](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) |
-| Server-Sent Events (SSE) | 🟡 | 45m | `#realtime` `#sse` | [MDN: SSE ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) |
-| Polling vs long-polling vs push | 🟡 | 45m | `#realtime` `#patterns` | [Ably: long-polling ⭐](https://ably.com/topic/long-polling) |
+| [Server-Sent Events (SSE)](topics/server-sent-events-sse.md) | 🟡 | 45m | `#realtime` `#sse` | [MDN: SSE ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) |
+| [Polling vs long-polling vs push](topics/polling-vs-long-polling-vs-push.md) | 🟡 | 45m | `#realtime` `#patterns` | [Ably: long-polling ⭐](https://ably.com/topic/long-polling) |
 | WebRTC (P2P) | 🔴 | 1h | `#realtime` `#webrtc` | [WebRTC ⭐](https://webrtc.org/getting-started/overview) |
 | WebTransport | 🔴 | 45m | `#realtime` `#modern` | [web.dev: WebTransport ⭐](https://web.dev/articles/webtransport) |
 
