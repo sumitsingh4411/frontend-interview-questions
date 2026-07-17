@@ -29,17 +29,17 @@ Increasingly a scored dimension in system-design and machine-coding rounds. "Mak
 | [ARIA Authoring Practices (patterns)](topics/aria-authoring-practices-patterns.md) | 🔴 | 1.5h | `#aria` `#patterns` | [ARIA APG patterns ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/) |
 | [When NOT to use ARIA](topics/when-not-to-use-aria.md) | 🟡 | 30m | `#aria` | [W3C: first rule of ARIA ⭐](https://www.w3.org/TR/using-aria/#firstrule) |
 | [Keyboard navigation & tab order](topics/keyboard-navigation-tab-order.md) | 🟡 | 1h | `#keyboard` | [web.dev: keyboard ⭐](https://web.dev/articles/keyboard-access) |
-| Focus management | 🔴 | 1h | `#focus` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard) |
-| Focus trapping (modals) | 🔴 | 45m | `#focus` `#dialog` | [ARIA APG: dialog ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) |
-| Live regions & announcements | 🔴 | 45m | `#aria` `#dynamic` | [MDN: live regions ⭐](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) |
-| Skip links & landmarks | 🟢 | 30m | `#navigation` | [web.dev ⭐](https://web.dev/learn/accessibility/navigation) |
-| Reduced motion & `prefers-*` | 🟡 | 30m | `#motion` | [web.dev ⭐](https://web.dev/articles/prefers-reduced-motion) |
+| [Focus management](topics/focus-management.md) | 🔴 | 1h | `#focus` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard) |
+| [Focus trapping (modals)](topics/focus-trapping-modals.md) | 🔴 | 45m | `#focus` `#dialog` | [ARIA APG: dialog ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) |
+| [Live regions & announcements](topics/live-regions-announcements.md) | 🔴 | 45m | `#aria` `#dynamic` | [MDN: live regions ⭐](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) |
+| [Skip links & landmarks](topics/skip-links-landmarks.md) | 🟢 | 30m | `#navigation` | [web.dev ⭐](https://web.dev/learn/accessibility/navigation) |
+| [Reduced motion & `prefers-*`](topics/reduced-motion-prefers.md) | 🟡 | 30m | `#motion` | [web.dev ⭐](https://web.dev/articles/prefers-reduced-motion) |
 
 ## Accessible components
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Accessible forms | 🟡 | 1h | `#forms` | [web.dev: forms ⭐](https://web.dev/learn/forms) |
+| [Accessible forms](topics/accessible-forms.md) | 🟡 | 1h | `#forms` | [web.dev: forms ⭐](https://web.dev/learn/forms) |
 | Accessible dialogs / modals | 🔴 | 1h | `#dialog` | [ARIA APG: dialog ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) |
 | Accessible menus & comboboxes | 🔴 | 1h | `#aria` `#patterns` | [ARIA APG: combobox ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/) |
 | Accessible tabs | 🟡 | 45m | `#patterns` | [ARIA APG: tabs ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) |
