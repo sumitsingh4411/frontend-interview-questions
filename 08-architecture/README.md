@@ -14,7 +14,7 @@ How to structure apps that many engineers and many teams touch. The Staff-level 
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Component architecture & composition | 🟡 | 1h | `#components` `#patterns` | [patterns.dev ⭐](https://www.patterns.dev/) |
+| [Component architecture & composition](topics/component-architecture-composition.md) | 🟡 | 1h | `#components` `#patterns` | [patterns.dev ⭐](https://www.patterns.dev/) |
 | Container vs presentational | 🟢 | 30m | `#patterns` | [patterns.dev ⭐](https://www.patterns.dev/react) |
 | Atomic Design | 🟢 | 45m | `#design-systems` | [Atomic Design (Brad Frost) ⭐](https://atomicdesign.bradfrost.com/) |
 | Feature-based / feature-sliced structure | 🟡 | 45m | `#structure` | [Feature-Sliced Design ⭐](https://feature-sliced.design/) |

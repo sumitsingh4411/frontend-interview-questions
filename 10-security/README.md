@@ -14,14 +14,14 @@ The threats you're expected to name and defend against. "How would you prevent X
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| OWASP Top 10 overview | 🟡 | 1h | `#overview` | [OWASP Top 10 ⭐](https://owasp.org/www-project-top-ten/) |
-| XSS (stored/reflected/DOM) | 🔴 | 1.5h | `#xss` `#injection` | [OWASP: XSS ⭐](https://owasp.org/www-community/attacks/xss/) |
-| XSS defenses (escaping, sanitization) | 🔴 | 1h | `#xss` | [OWASP: XSS prevention ⭐](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) |
-| CSRF | 🔴 | 1h | `#csrf` | [OWASP: CSRF ⭐](https://owasp.org/www-community/attacks/csrf) |
-| Clickjacking & frame protection | 🟡 | 45m | `#clickjacking` | [OWASP: clickjacking ⭐](https://owasp.org/www-community/attacks/Clickjacking) |
-| Injection & input validation | 🟡 | 45m | `#injection` | [OWASP: input validation ⭐](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) |
-| Prototype pollution | 🔴 | 45m | `#injection` `#advanced` | [OWASP ⭐](https://learn.snyk.io/lesson/prototype-pollution/) |
-| Dependency & supply-chain security | 🟡 | 45m | `#supply-chain` | [OWASP: dependency check ⭐](https://owasp.org/www-project-dependency-check/) |
+| [OWASP Top 10 overview](topics/owasp-top-10-overview.md) | 🟡 | 1h | `#overview` | [OWASP Top 10 ⭐](https://owasp.org/www-project-top-ten/) |
+| [XSS (stored/reflected/DOM)](topics/xss-stored-reflected-dom.md) | 🔴 | 1.5h | `#xss` `#injection` | [OWASP: XSS ⭐](https://owasp.org/www-community/attacks/xss/) |
+| [XSS defenses (escaping, sanitization)](topics/xss-defenses-escaping-sanitization.md) | 🔴 | 1h | `#xss` | [OWASP: XSS prevention ⭐](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) |
+| [CSRF](topics/csrf.md) | 🔴 | 1h | `#csrf` | [OWASP: CSRF ⭐](https://owasp.org/www-community/attacks/csrf) |
+| [Clickjacking & frame protection](topics/clickjacking-frame-protection.md) | 🟡 | 45m | `#clickjacking` | [OWASP: clickjacking ⭐](https://owasp.org/www-community/attacks/Clickjacking) |
+| [Injection & input validation](topics/injection-input-validation.md) | 🟡 | 45m | `#injection` | [OWASP: input validation ⭐](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) |
+| [Prototype pollution](topics/prototype-pollution.md) | 🔴 | 45m | `#injection` `#advanced` | [OWASP ⭐](https://learn.snyk.io/lesson/prototype-pollution/) |
+| [Dependency & supply-chain security](topics/dependency-supply-chain-security.md) | 🟡 | 45m | `#supply-chain` | [OWASP: dependency check ⭐](https://owasp.org/www-project-dependency-check/) |
 
 ## Headers & policies
 
