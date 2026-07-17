@@ -14,9 +14,9 @@ Every system-design answer is judged on this. Know the metrics, know how to move
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Core Web Vitals overview | 🟡 | 45m | `#metrics` | [web.dev: Web Vitals ⭐](https://web.dev/articles/vitals) |
-| LCP (Largest Contentful Paint) | 🟡 | 45m | `#metrics` `#lcp` | [web.dev: LCP ⭐](https://web.dev/articles/lcp) |
-| CLS (Cumulative Layout Shift) | 🟡 | 45m | `#metrics` `#cls` | [web.dev: CLS ⭐](https://web.dev/articles/cls) |
+| [Core Web Vitals overview](topics/core-web-vitals-overview.md) | 🟡 | 45m | `#metrics` | [web.dev: Web Vitals ⭐](https://web.dev/articles/vitals) |
+| [LCP (Largest Contentful Paint)](topics/lcp-largest-contentful-paint.md) | 🟡 | 45m | `#metrics` `#lcp` | [web.dev: LCP ⭐](https://web.dev/articles/lcp) |
+| [CLS (Cumulative Layout Shift)](topics/cls-cumulative-layout-shift.md) | 🟡 | 45m | `#metrics` `#cls` | [web.dev: CLS ⭐](https://web.dev/articles/cls) |
 | INP (Interaction to Next Paint) | 🔴 | 1h | `#metrics` `#inp` | [web.dev: INP ⭐](https://web.dev/articles/inp) |
 | TTFB | 🟡 | 30m | `#metrics` | [web.dev: TTFB ⭐](https://web.dev/articles/ttfb) |
 | FCP & FID (legacy) | 🟢 | 30m | `#metrics` | [web.dev: FCP ⭐](https://web.dev/articles/fcp) |

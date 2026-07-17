@@ -15,20 +15,20 @@ How to structure apps that many engineers and many teams touch. The Staff-level 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
 | [Component architecture & composition](topics/component-architecture-composition.md) | 🟡 | 1h | `#components` `#patterns` | [patterns.dev ⭐](https://www.patterns.dev/) |
-| Container vs presentational | 🟢 | 30m | `#patterns` | [patterns.dev ⭐](https://www.patterns.dev/react) |
-| Atomic Design | 🟢 | 45m | `#design-systems` | [Atomic Design (Brad Frost) ⭐](https://atomicdesign.bradfrost.com/) |
+| [Container vs presentational](topics/container-vs-presentational.md) | 🟢 | 30m | `#patterns` | [patterns.dev ⭐](https://www.patterns.dev/react) |
+| [Atomic Design](topics/atomic-design.md) | 🟢 | 45m | `#design-systems` | [Atomic Design (Brad Frost) ⭐](https://atomicdesign.bradfrost.com/) |
 | Feature-based / feature-sliced structure | 🟡 | 45m | `#structure` | [Feature-Sliced Design ⭐](https://feature-sliced.design/) |
 | MVC / MVVM in the frontend | 🟡 | 45m | `#patterns` | [MDN: MVC ⭐](https://developer.mozilla.org/en-US/docs/Glossary/MVC) |
 | Clean architecture / layering | 🔴 | 1h | `#architecture` | [The Clean Architecture ⭐](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) |
 | Domain-Driven Design (frontend) | 🔴 | 1.5h | `#ddd` | [DDD reference ⭐](https://www.domainlanguage.com/ddd/reference/) |
 | Dependency injection | 🟡 | 45m | `#patterns` | [patterns.dev ⭐](https://www.patterns.dev/) |
-| State architecture (where state lives) | 🔴 | 1h | `#state` `#architecture` | [State management ⭐](../13-state-management/) |
+| [State architecture (where state lives)](topics/state-architecture-where-state-lives.md) | 🔴 | 1h | `#state` `#architecture` | [State management ⭐](../13-state-management/) |
 
 ## Scaling to many teams
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Micro-frontends | 🔴 | 2h | `#micro-frontends` `#scale` | [martinfowler.com: micro frontends ⭐](https://martinfowler.com/articles/micro-frontends.html) |
+| [Micro-frontends](topics/micro-frontends.md) | 🔴 | 2h | `#micro-frontends` `#scale` | [martinfowler.com: micro frontends ⭐](https://martinfowler.com/articles/micro-frontends.html) |
 | Module Federation | 🔴 | 1.5h | `#micro-frontends` `#bundling` | [Module Federation ⭐](https://module-federation.io/) |
 | Monorepos (Nx / Turborepo) | 🔴 | 1.5h | `#monorepo` `#scale` | [Turborepo ⭐](https://turborepo.com/docs) |
 | Design systems | 🔴 | 1.5h | `#design-systems` | [Design Systems Handbook ⭐](https://www.designbetter.co/design-systems-handbook) |

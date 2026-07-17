@@ -27,9 +27,9 @@ The threats you're expected to name and defend against. "How would you prevent X
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Content Security Policy (CSP) | 🔴 | 1h | `#csp` `#headers` | [MDN: CSP ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) |
-| CORS (security view) | 🟡 | 45m | `#cors` | [MDN: CORS ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) |
-| Security headers (HSTS, X-Frame-Options…) | 🟡 | 45m | `#headers` | [OWASP: secure headers ⭐](https://owasp.org/www-project-secure-headers/) |
+| [Content Security Policy (CSP)](topics/content-security-policy-csp.md) | 🔴 | 1h | `#csp` `#headers` | [MDN: CSP ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) |
+| [CORS (security view)](topics/cors-security-view.md) | 🟡 | 45m | `#cors` | [MDN: CORS ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) |
+| [Security headers (HSTS, X-Frame-Options…)](topics/security-headers-hsts-x-frame-options.md) | 🟡 | 45m | `#headers` | [OWASP: secure headers ⭐](https://owasp.org/www-project-secure-headers/) |
 | Subresource Integrity (SRI) | 🟡 | 30m | `#sri` `#headers` | [MDN: SRI ⭐](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) |
 | Trusted Types | 🔴 | 45m | `#xss` `#modern` | [web.dev: Trusted Types ⭐](https://web.dev/articles/trusted-types) |
 | Permissions-Policy | 🟡 | 30m | `#headers` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy) |
