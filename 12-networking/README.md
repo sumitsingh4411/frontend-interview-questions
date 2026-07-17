@@ -28,13 +28,13 @@ The pipe between your app and the data. Real-time, protocols, and caching decisi
 | [REST API design](topics/rest-api-design.md) | 🟡 | 1h | `#rest` `#api` | [MDN: REST ⭐](https://developer.mozilla.org/en-US/docs/Glossary/REST) |
 | [GraphQL](topics/graphql.md) | 🟡 | 1.5h | `#graphql` `#api` | [graphql.org: learn ⭐](https://graphql.org/learn/) |
 | [gRPC / gRPC-Web](topics/grpc-grpc-web.md) | 🔴 | 45m | `#grpc` `#api` | [grpc.io ⭐](https://grpc.io/docs/what-is-grpc/introduction/) |
-| Pagination (cursor vs offset) | 🟡 | 45m | `#api` `#large-data` | [Flagship ⭐](../15-system-design/design-news-feed.md) |
+| [Pagination (cursor vs offset)](topics/pagination-cursor-vs-offset.md) | 🟡 | 45m | `#api` `#large-data` | [Flagship ⭐](../15-system-design/design-news-feed.md) |
 
 ## Real-time
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| WebSocket | 🔴 | 1h | `#realtime` `#websocket` | [MDN: WebSocket ⭐](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) |
+| [WebSocket](topics/websocket.md) | 🔴 | 1h | `#realtime` `#websocket` | [MDN: WebSocket ⭐](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) |
 | [Server-Sent Events (SSE)](topics/server-sent-events-sse.md) | 🟡 | 45m | `#realtime` `#sse` | [MDN: SSE ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) |
 | [Polling vs long-polling vs push](topics/polling-vs-long-polling-vs-push.md) | 🟡 | 45m | `#realtime` `#patterns` | [Ably: long-polling ⭐](https://ably.com/topic/long-polling) |
 | [WebRTC (P2P)](topics/webrtc-p2p.md) | 🔴 | 1h | `#realtime` `#webrtc` | [WebRTC ⭐](https://webrtc.org/getting-started/overview) |
@@ -49,7 +49,7 @@ The pipe between your app and the data. Real-time, protocols, and caching decisi
 | [Compression (gzip/brotli)](topics/compression-gzip-brotli.md) | 🟢 | 30m | `#performance` | [web.dev ⭐](https://web.dev/articles/reduce-network-payloads-using-text-compression) |
 | [Load balancing (client view)](topics/load-balancing-client-view.md) | 🟡 | 45m | `#scale` | [Cloudflare ⭐](https://www.cloudflare.com/learning/performance/what-is-load-balancing/) |
 | [Rate limiting & retries/backoff](topics/rate-limiting-retries-backoff.md) | 🟡 | 45m | `#reliability` | [AWS: backoff & jitter ⭐](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/) |
-| Idempotency & request dedupe | 🟡 | 45m | `#reliability` | [Stripe: idempotency ⭐](https://docs.stripe.com/api/idempotent_requests) |
+| [Idempotency & request dedupe](topics/idempotency-request-dedupe.md) | 🟡 | 45m | `#reliability` | [Stripe: idempotency ⭐](https://docs.stripe.com/api/idempotent_requests) |
 
 ## ❓ Rapid-fire networking interview questions
 
