@@ -23,10 +23,10 @@ How you prove the thing works. Expect "how would you test this?" after any machi
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Unit testing with Jest | 🟢 | 1h | `#unit` `#jest` | [Jest ⭐](https://jestjs.io/docs/getting-started) |
-| Vitest | 🟢 | 45m | `#unit` `#vitest` | [Vitest ⭐](https://vitest.dev/guide/) |
-| React Testing Library (RTL) | 🟡 | 1.5h | `#component` `#rtl` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/intro/) |
-| Query priorities & user-centric tests | 🟡 | 45m | `#rtl` `#a11y` | [Testing Library: queries ⭐](https://testing-library.com/docs/queries/about/) |
+| [Unit testing with Jest](topics/unit-testing-with-jest.md) | 🟢 | 1h | `#unit` `#jest` | [Jest ⭐](https://jestjs.io/docs/getting-started) |
+| [Vitest](topics/vitest.md) | 🟢 | 45m | `#unit` `#vitest` | [Vitest ⭐](https://vitest.dev/guide/) |
+| [React Testing Library (RTL)](topics/react-testing-library-rtl.md) | 🟡 | 1.5h | `#component` `#rtl` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/intro/) |
+| [Query priorities & user-centric tests](topics/query-priorities-user-centric-tests.md) | 🟡 | 45m | `#rtl` `#a11y` | [Testing Library: queries ⭐](https://testing-library.com/docs/queries/about/) |
 | Testing hooks | 🟡 | 45m | `#rtl` `#hooks` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/api/#renderhook) |
 | Snapshot testing (and its traps) | 🟡 | 30m | `#unit` | [Jest: snapshots ⭐](https://jestjs.io/docs/snapshot-testing) |
 
@@ -43,9 +43,9 @@ How you prove the thing works. Expect "how would you test this?" after any machi
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
 | [Integration testing](topics/integration-testing.md) | 🟡 | 1h | `#integration` | [Kent C. Dodds ⭐](https://kentcdodds.com/blog/write-tests) |
-| E2E with Playwright | 🔴 | 1.5h | `#e2e` `#playwright` | [Playwright ⭐](https://playwright.dev/docs/intro) |
-| E2E with Cypress | 🟡 | 1h | `#e2e` `#cypress` | [Cypress ⭐](https://docs.cypress.io/guides/overview/why-cypress) |
-| Visual regression testing | 🟡 | 45m | `#visual` | [Playwright: snapshots ⭐](https://playwright.dev/docs/test-snapshots) |
+| [E2E with Playwright](topics/e2e-with-playwright.md) | 🔴 | 1.5h | `#e2e` `#playwright` | [Playwright ⭐](https://playwright.dev/docs/intro) |
+| [E2E with Cypress](topics/e2e-with-cypress.md) | 🟡 | 1h | `#e2e` `#cypress` | [Cypress ⭐](https://docs.cypress.io/guides/overview/why-cypress) |
+| [Visual regression testing](topics/visual-regression-testing.md) | 🟡 | 45m | `#visual` | [Playwright: snapshots ⭐](https://playwright.dev/docs/test-snapshots) |
 | Accessibility testing | 🟡 | 45m | `#a11y` | [jest-axe ⭐](https://github.com/nickcolley/jest-axe) |
 | Performance testing / budgets | 🔴 | 45m | `#performance` | [web.dev: budgets ⭐](https://web.dev/articles/performance-budgets-101) |
 | Component testing (Storybook) | 🟡 | 45m | `#component` | [Storybook: testing ⭐](https://storybook.js.org/docs/writing-tests) |

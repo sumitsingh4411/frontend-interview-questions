@@ -17,9 +17,9 @@ How to structure apps that many engineers and many teams touch. The Staff-level 
 | [Component architecture & composition](topics/component-architecture-composition.md) | 🟡 | 1h | `#components` `#patterns` | [patterns.dev ⭐](https://www.patterns.dev/) |
 | [Container vs presentational](topics/container-vs-presentational.md) | 🟢 | 30m | `#patterns` | [patterns.dev ⭐](https://www.patterns.dev/react) |
 | [Atomic Design](topics/atomic-design.md) | 🟢 | 45m | `#design-systems` | [Atomic Design (Brad Frost) ⭐](https://atomicdesign.bradfrost.com/) |
-| Feature-based / feature-sliced structure | 🟡 | 45m | `#structure` | [Feature-Sliced Design ⭐](https://feature-sliced.design/) |
-| MVC / MVVM in the frontend | 🟡 | 45m | `#patterns` | [MDN: MVC ⭐](https://developer.mozilla.org/en-US/docs/Glossary/MVC) |
-| Clean architecture / layering | 🔴 | 1h | `#architecture` | [The Clean Architecture ⭐](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) |
+| [Feature-based / feature-sliced structure](topics/feature-based-feature-sliced-structure.md) | 🟡 | 45m | `#structure` | [Feature-Sliced Design ⭐](https://feature-sliced.design/) |
+| [MVC / MVVM in the frontend](topics/mvc-mvvm-in-the-frontend.md) | 🟡 | 45m | `#patterns` | [MDN: MVC ⭐](https://developer.mozilla.org/en-US/docs/Glossary/MVC) |
+| [Clean architecture / layering](topics/clean-architecture-layering.md) | 🔴 | 1h | `#architecture` | [The Clean Architecture ⭐](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) |
 | Domain-Driven Design (frontend) | 🔴 | 1.5h | `#ddd` | [DDD reference ⭐](https://www.domainlanguage.com/ddd/reference/) |
 | Dependency injection | 🟡 | 45m | `#patterns` | [patterns.dev ⭐](https://www.patterns.dev/) |
 | [State architecture (where state lives)](topics/state-architecture-where-state-lives.md) | 🔴 | 1h | `#state` `#architecture` | [State management ⭐](../13-state-management/) |
@@ -34,14 +34,14 @@ How to structure apps that many engineers and many teams touch. The Staff-level 
 | Design systems | 🔴 | 1.5h | `#design-systems` | [Design Systems Handbook ⭐](https://www.designbetter.co/design-systems-handbook) |
 | Component libraries & API design | 🟡 | 1h | `#components` `#design-systems` | [react.dev ⭐](https://react.dev/learn/sharing-state-between-components) |
 | Design tokens | 🟡 | 45m | `#design-systems` `#theming` | [W3C: design tokens ⭐](https://tr.designtokens.org/format/) |
-| Plugin / extension systems | 🔴 | 1h | `#extensibility` | [VS Code extension API ⭐](https://code.visualstudio.com/api) |
-| Versioning & release strategy | 🟡 | 45m | `#tooling` | [Changesets ⭐](https://github.com/changesets/changesets) |
+| [Plugin / extension systems](topics/plugin-extension-systems.md) | 🔴 | 1h | `#extensibility` | [VS Code extension API ⭐](https://code.visualstudio.com/api) |
+| [Versioning & release strategy](topics/versioning-release-strategy.md) | 🟡 | 45m | `#tooling` | [Changesets ⭐](https://github.com/changesets/changesets) |
 
 ## Delivery & cross-cutting
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Rendering strategy selection (CSR/SSR/SSG/ISR) | 🔴 | 1h | `#rendering` | [web.dev: rendering on the web ⭐](https://web.dev/articles/rendering-on-the-web) |
+| [Rendering strategy selection (CSR/SSR/SSG/ISR)](topics/rendering-strategy-selection-csr-ssr-ssg-isr.md) | 🔴 | 1h | `#rendering` | [web.dev: rendering on the web ⭐](https://web.dev/articles/rendering-on-the-web) |
 | Backend-for-Frontend (BFF) | 🟡 | 45m | `#api` `#architecture` | [samnewman.io: BFF ⭐](https://samnewman.io/patterns/architectural/bff/) |
 | Build tooling (Vite/Webpack/esbuild) | 🟡 | 1h | `#bundling` `#tooling` | [Vite ⭐](https://vitejs.dev/guide/why.html) |
 | Error handling & observability | 🟡 | 45m | `#reliability` | [Sentry docs ⭐](https://docs.sentry.io/) |

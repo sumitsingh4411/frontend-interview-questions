@@ -18,9 +18,9 @@ Server state vs client state, and picking the right tool. A favorite "walk me th
 | [Local component state & lifting](topics/local-component-state-lifting.md) | 🟢 | 30m | `#basics` `#react` | [react.dev ⭐](https://react.dev/learn/sharing-state-between-components) |
 | [Context as state (and its limits)](topics/context-as-state-and-its-limits.md) | 🟡 | 45m | `#react` `#performance` | [react.dev ⭐](https://react.dev/learn/scaling-up-with-reducer-and-context) |
 | [Flux / unidirectional data flow](topics/flux-unidirectional-data-flow.md) | 🟡 | 45m | `#concepts` | [Redux: three principles ⭐](https://redux.js.org/understanding/thinking-in-redux/three-principles) |
-| Normalization | 🔴 | 1h | `#patterns` `#caching` | [Redux: normalizing state ⭐](https://redux.js.org/usage/structuring-reducers/normalizing-state-shape) |
-| Derived state & selectors | 🟡 | 45m | `#patterns` | [Reselect ⭐](https://github.com/reduxjs/reselect) |
-| Immutability & structural sharing | 🟡 | 45m | `#patterns` | [Immer ⭐](https://immerjs.github.io/immer/) |
+| [Normalization](topics/normalization.md) | 🔴 | 1h | `#patterns` `#caching` | [Redux: normalizing state ⭐](https://redux.js.org/usage/structuring-reducers/normalizing-state-shape) |
+| [Derived state & selectors](topics/derived-state-selectors.md) | 🟡 | 45m | `#patterns` | [Reselect ⭐](https://github.com/reduxjs/reselect) |
+| [Immutability & structural sharing](topics/immutability-structural-sharing.md) | 🟡 | 45m | `#patterns` | [Immer ⭐](https://immerjs.github.io/immer/) |
 
 ## Client-state libraries
 
@@ -32,7 +32,7 @@ Server state vs client state, and picking the right tool. A favorite "walk me th
 | Recoil | 🟡 | 45m | `#recoil` `#atoms` | [Recoil ⭐](https://recoiljs.org/) |
 | [Signals](topics/signals.md) | 🔴 | 1h | `#signals` `#reactivity` | [Preact signals ⭐](https://preactjs.com/guide/v10/signals/) |
 | [MobX](topics/mobx.md) | 🟡 | 1h | `#mobx` `#reactivity` | [MobX ⭐](https://mobx.js.org/README.html) |
-| XState (state machines) | 🔴 | 1h | `#state-machine` | [XState ⭐](https://stately.ai/docs) |
+| [XState (state machines)](topics/xstate-state-machines.md) | 🔴 | 1h | `#state-machine` | [XState ⭐](https://stately.ai/docs) |
 
 ## Server-state & data
 
@@ -40,8 +40,8 @@ Server state vs client state, and picking the right tool. A favorite "walk me th
 |-------|:----------:|:----:|------|----------------|
 | [React Query / TanStack Query](topics/react-query-tanstack-query.md) | 🔴 | 1.5h | `#server-state` `#caching` | [TanStack Query ⭐](https://tanstack.com/query/latest) |
 | [SWR](topics/swr.md) | 🟡 | 45m | `#server-state` `#caching` | [SWR ⭐](https://swr.vercel.app/) |
-| Apollo Client (GraphQL cache) | 🔴 | 1h | `#graphql` `#caching` | [Apollo Client ⭐](https://www.apollographql.com/docs/react/) |
-| RxJS & streams | 🔴 | 1.5h | `#rxjs` `#streams` | [RxJS ⭐](https://rxjs.dev/guide/overview) |
+| [Apollo Client (GraphQL cache)](topics/apollo-client-graphql-cache.md) | 🔴 | 1h | `#graphql` `#caching` | [Apollo Client ⭐](https://www.apollographql.com/docs/react/) |
+| [RxJS & streams](topics/rxjs-streams.md) | 🔴 | 1.5h | `#rxjs` `#streams` | [RxJS ⭐](https://rxjs.dev/guide/overview) |
 | Optimistic updates | 🔴 | 1h | `#patterns` `#ux` | [TanStack: optimistic ⭐](https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates) |
 | Caching & invalidation strategies | 🔴 | 1h | `#caching` | [TanStack: caching ⭐](https://tanstack.com/query/latest/docs/framework/react/guides/caching) |
 | Offline support & persistence | 🔴 | 1.5h | `#offline` `#pwa` | [web.dev: offline ⭐](https://web.dev/articles/offline-cookbook) |

@@ -35,7 +35,7 @@ Type-level thinking. Senior+ interviews increasingly ask you to design APIs with
 | [Mapped types](topics/mapped-types.md) | 🔴 | 1h | `#type-ops` | [TS Handbook: mapped types ⭐](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html) |
 | [Conditional types & `infer`](topics/conditional-types-infer.md) | 🔴 | 1.5h | `#type-ops` `#advanced` | [TS Handbook: conditional types ⭐](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) |
 | [Template literal types](topics/template-literal-types.md) | 🔴 | 1h | `#type-ops` `#advanced` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html) |
-| Variance & assignability | 🔴 | 1h | `#advanced` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) |
+| [Variance & assignability](topics/variance-assignability.md) | 🔴 | 1h | `#advanced` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) |
 | [Type-level programming](topics/type-level-programming.md) | 🔴 | 2h | `#advanced` | [Type Challenges ⭐](https://github.com/type-challenges/type-challenges) |
 
 ## Tooling & practice
@@ -45,7 +45,7 @@ Type-level thinking. Senior+ interviews increasingly ask you to design APIs with
 | [Declaration files (`.d.ts`)](topics/declaration-files-d-ts.md) | 🟡 | 45m | `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) |
 | [Decorators](topics/decorators.md) | 🟡 | 45m | `#advanced` | [TS Handbook: decorators ⭐](https://www.typescriptlang.org/docs/handbook/decorators.html) |
 | [`tsconfig` deep dive](topics/tsconfig-deep-dive.md) | 🟡 | 45m | `#config` | [TSConfig reference ⭐](https://www.typescriptlang.org/tsconfig) |
-| `strict` mode & flags | 🟡 | 30m | `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/tsconfig#strict) |
+| [`strict` mode & flags](topics/strict-mode-flags.md) | 🟡 | 30m | `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/tsconfig#strict) |
 | Project references & monorepos | 🔴 | 1h | `#monorepo` `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/project-references.html) |
 | Typing React components & hooks | 🟡 | 1h | `#react` | [React TS cheatsheet ⭐](https://react-typescript-cheatsheet.netlify.app/) |
 | Typing async & generics in APIs | 🟡 | 45m | `#patterns` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
