@@ -1,6 +1,6 @@
 ---
 import { GROUP_ORDER, SECTIONS } from '@lib/sections.ts';
-import { getBanks } from '@lib/content.ts';
+import { getBanks, getDeepDives } from '@lib/content.ts';
 import { url } from '@lib/url.ts';
 
 const banks = getBanks();
@@ -10,6 +10,16 @@ const isActive = (href: string) => {
   const h = href.replace(/\/$/, '');
   return current === h || current.startsWith(h + '/');
 };
+/** Exact match — used for the topic you're actually reading. */
+const isHere = (href: string) => current === href.replace(/\/$/, '');
+
+/**
+ * Every section's deep dives are rendered, collapsed, so the chevron can open any of
+ * them in place — no page load. Only written dives are listed, so every entry is a
+ * real link. The section you're in starts expanded.
+ */
+const divesFor = (sectionSlug: string) => getDeepDives(sectionSlug);
+const isOpen = (sectionSlug: string) => isActive(url(`sections/${sectionSlug}/`));
 ---
 
 <aside class="sidebar" id="sidebar">
@@ -38,19 +48,68 @@ const isActive = (href: string) => {
         <div class="group">
           <p class="eyebrow g-title">{group}</p>
           <ul>
-            {SECTIONS.filter((s) => s.group === group).map((s) => (
-              <li>
-                <a
-                  href={url(`sections/${s.slug}/`)}
-                  class:list={['link', { active: isActive(url(`sections/${s.slug}/`)) }]}
-                >
-                  <span class="num mono" aria-hidden="true">
-                    {s.num}
-                  </span>
-                  <span class="txt">{s.title}</span>
-                </a>
-              </li>
-            ))}
+            {SECTIONS.filter((s) => s.group === group).map((s) => {
+              const dives = divesFor(s.slug);
+              const groups = [...new Set(dives.map((d) => d.group))];
+              const href = url(`sections/${s.slug}/`);
+              const open = isOpen(s.slug);
+              const panelId = `dives-${s.slug}`;
+              return (
+                <li class="sec" data-section={s.slug}>
+                  <div class="row">
+                    <a href={href} class:list={['link', { active: isActive(href) }]} data-sec-link>
+                      <span class="num mono" aria-hidden="true">
+                        {s.num}
+                      </span>
+                      <span class="txt">{s.title}</span>
+                      {dives.length > 0 && <span class="count mono">{dives.length}</span>}
+                    </a>
+
+                    {dives.length > 0 && (
+                      <button
+                        type="button"
+                        class="chev"
+                        data-chev
+                        aria-expanded={String(open)}
+                        aria-controls={panelId}
+                        aria-label={`${open ? 'Hide' : 'Show'} topics in ${s.title}`}
+                      >
+                        <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                          <path d="m6 3.5 5 4.5-5 4.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
+
+                  {dives.length > 0 && (
+                    <ul class="dives" id={panelId} hidden={!open}>
+                      {groups.map((g) => (
+                        <>
+                          {groups.length > 1 && <li class="d-group">{g}</li>}
+                          {dives
+                            .filter((d) => d.group === g)
+                            .map((d) => {
+                              const dHref = url(`sections/${s.slug}/topics/${d.slug}/`);
+                              return (
+                                <li>
+                                  <a
+                                    href={dHref}
+                                    class:list={['dive', { here: isHere(dHref) }]}
+                                    aria-current={isHere(dHref) ? 'page' : undefined}
+                                  >
+                                    <span class={`dot diff-${d.difficulty}`} aria-hidden="true" />
+                                    <span class="d-txt">{d.title}</span>
+                                  </a>
+                                </li>
+                              );
+                            })}
+                        </>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       ))
@@ -115,6 +174,132 @@ const isActive = (href: string) => {
   .link:hover {
     background: var(--surface);
     color: var(--text);
+  }
+
+  /* The section link navigates; the chevron beside it expands in place. */
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  .row .link {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .chev {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    margin-left: 2px;
+    padding: 0;
+    border: 0;
+    border-radius: 6px;
+    background: none;
+    color: var(--text-faint);
+    cursor: pointer;
+    transition:
+      background 0.13s var(--ease),
+      color 0.13s var(--ease);
+  }
+  .chev svg {
+    transition: rotate 0.16s var(--ease);
+  }
+  .chev:hover {
+    background: var(--surface);
+    color: var(--text);
+  }
+  .chev[aria-expanded='true'] svg {
+    rotate: 90deg;
+  }
+  .chev[aria-expanded='true'] {
+    color: var(--text-dim);
+  }
+  .sec:has(.link.active) .chev {
+    color: var(--accent);
+  }
+
+  /* Deep dives nested under the open section — the "where am I" rail. */
+  .dives {
+    list-style: none;
+    margin: 2px 0 6px;
+    padding: 0 0 0 21px;
+    position: relative;
+  }
+  .dives::before {
+    content: '';
+    position: absolute;
+    left: 21px;
+    top: 2px;
+    bottom: 2px;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .d-group {
+    padding: 7px 10px 3px 13px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  .dive {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px 5px 13px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--text-dim);
+    font-size: var(--step--1);
+    line-height: 1.35;
+    position: relative;
+  }
+  .dive:hover {
+    color: var(--text);
+    background: var(--surface);
+  }
+
+  /* The topic you're reading: accent text + a segment that overlays the rail. */
+  .dive.here {
+    color: var(--accent);
+    background: var(--surface);
+  }
+  .dive.here::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    border-radius: 2px;
+    background: var(--accent);
+  }
+
+  .dive .dot {
+    flex: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.75;
+  }
+  .dive .dot.diff-easy {
+    background: var(--easy);
+  }
+  .dive .dot.diff-medium {
+    background: var(--medium);
+  }
+  .dive .dot.diff-hard {
+    background: var(--hard);
+  }
+  .d-txt {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .link.active {
@@ -194,8 +379,126 @@ const isActive = (href: string) => {
 </style>
 
 <script>
-  document.querySelector('[data-nav-close]')?.addEventListener('click', () => {
+  // The sidebar node survives navigation (transition:persist), so its highlighting is
+  // no longer whatever the server rendered — it has to be recomputed on each page.
+  const KEY_OPEN = 'fip:sidebar:open';
+  const KEY_SCROLL = 'fip:sidebar:scroll';
+
+  const norm = (p: string) => p.replace(/\/$/, '');
+
+  const readOpen = (): Set<string> => {
+    try {
+      return new Set(JSON.parse(sessionStorage.getItem(KEY_OPEN) ?? '[]') as string[]);
+    } catch {
+      return new Set();
+    }
+  };
+  const writeOpen = (s: Set<string>) => {
+    try {
+      sessionStorage.setItem(KEY_OPEN, JSON.stringify([...s]));
+    } catch {}
+  };
+
+  const setOpen = (sec: HTMLElement, open: boolean) => {
+    const btn = sec.querySelector<HTMLButtonElement>('[data-chev]');
+    const panel = sec.querySelector<HTMLElement>('.dives');
+    if (!btn || !panel) return;
+    btn.setAttribute('aria-expanded', String(open));
+    const title = sec.querySelector('.txt')?.textContent?.trim() ?? 'section';
+    btn.setAttribute('aria-label', `${open ? 'Hide' : 'Show'} topics in ${title}`);
+    panel.hidden = !open;
+  };
+
+  /** Scroll only the sidebar — scrollIntoView would drag the page with it. */
+  const reveal = (el: HTMLElement, box: HTMLElement) => {
+    const e = el.getBoundingClientRect();
+    const b = box.getBoundingClientRect();
+    if (e.top >= b.top && e.bottom <= b.bottom) return;
+    box.scrollTop += e.top - b.top - (b.height - e.height) / 2;
+  };
+
+  const sync = (aside: HTMLElement) => {
+    const here = norm(location.pathname);
+    const active = (href: string) => here === href || here.startsWith(href + '/');
+
+    for (const a of aside.querySelectorAll<HTMLAnchorElement>('.link')) {
+      a.classList.toggle('active', active(norm(new URL(a.href).pathname)));
+    }
+    for (const a of aside.querySelectorAll<HTMLAnchorElement>('.dive')) {
+      const on = norm(new URL(a.href).pathname) === here;
+      a.classList.toggle('here', on);
+      if (on) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    }
+
+    // Open the section you landed in, and bring the current item into view — but only
+    // when it isn't already visible, so a normal click never yanks the sidebar around.
+    const current = aside.querySelector<HTMLElement>('.dive.here') ?? aside.querySelector<HTMLElement>('.link.active');
+    const sec = current?.closest<HTMLElement>('.sec');
+    if (sec) setOpen(sec, true);
+    if (current) reveal(current, aside);
+  };
+
+  const init = () => {
+    const aside = document.querySelector<HTMLElement>('#sidebar');
+    if (!aside) return;
+
+    // A persisted node keeps its listeners; a fresh one (first load, or arriving from a
+    // page that has no sidebar) needs them, plus its remembered scroll and open sections.
+    if (!aside.dataset.bound) {
+      aside.dataset.bound = '1';
+
+      aside.addEventListener('click', (e) => {
+        const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-chev]');
+        if (!btn) return;
+        const sec = btn.closest<HTMLElement>('.sec');
+        if (!sec) return;
+        const open = btn.getAttribute('aria-expanded') !== 'true';
+        setOpen(sec, open);
+        const slug = sec.dataset.section!;
+        const set = readOpen();
+        if (open) set.add(slug);
+        else set.delete(slug);
+        writeOpen(set);
+      });
+
+      let t: ReturnType<typeof setTimeout>;
+      aside.addEventListener(
+        'scroll',
+        () => {
+          clearTimeout(t);
+          t = setTimeout(() => {
+            try {
+              sessionStorage.setItem(KEY_SCROLL, String(aside.scrollTop));
+            } catch {}
+          }, 120);
+        },
+        { passive: true },
+      );
+
+      const open = readOpen();
+      for (const sec of aside.querySelectorAll<HTMLElement>('.sec')) {
+        if (open.has(sec.dataset.section!)) setOpen(sec, true);
+      }
+      const saved = Number(sessionStorage.getItem(KEY_SCROLL) ?? '0');
+      if (saved > 0) aside.scrollTop = saved;
+    }
+
+    sync(aside);
+  };
+
+  const closeDrawer = () => {
     document.body.classList.remove('nav-open');
     document.querySelector('[data-menu-toggle]')?.setAttribute('aria-expanded', 'false');
+  };
+
+  // Module scripts run once; the router fires astro:page-load on first load and on
+  // every swap, so all per-page work hangs off it. Document listeners bind once here.
+  document.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).closest('[data-nav-close]')) closeDrawer();
+  });
+  document.addEventListener('astro:page-load', () => {
+    closeDrawer();
+    init();
   });
 </script>

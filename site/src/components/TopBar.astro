@@ -387,69 +387,86 @@ const on = (seg: string) => path.startsWith(url(seg));
 </style>
 
 <script>
-  const root = document.documentElement;
-  document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
-    const next = root.dataset.theme === 'light' ? 'dark' : 'light';
-    root.dataset.theme = next;
-    try {
-      localStorage.setItem('fip-theme', next);
-    } catch {}
-  });
+  // The topbar is re-rendered on every navigation, so element listeners are re-bound
+  // against the fresh nodes. Only the window-level listeners are bound once — they
+  // re-resolve their target each time they fire, and would otherwise stack up.
+  let windowBound = false;
+  let replaceGlider: () => void = () => {};
 
-  const menuBtn = document.querySelector('[data-menu-toggle]');
-  menuBtn?.addEventListener('click', () => {
-    const open = document.body.classList.toggle('nav-open');
-    menuBtn.setAttribute('aria-expanded', String(open));
-  });
+  const syncTopbar = () => {
+    document.querySelector('[data-topbar]')?.classList.toggle('is-scrolled', window.scrollY > 8);
+  };
 
-  const topbar = document.querySelector('[data-topbar]');
-  if (topbar) {
-    const onScroll = () => topbar.classList.toggle('is-scrolled', window.scrollY > 8);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
-
-  // Segmented nav: slide the glider to the active item, and let it follow hover.
-  const nav = document.querySelector<HTMLElement>('[data-nav]');
-  const glider = document.querySelector<HTMLElement>('[data-glider]');
-  if (nav && glider) {
-    const links = [...nav.querySelectorAll<HTMLAnchorElement>('a')];
-    const active = links.find((l) => l.classList.contains('on')) ?? null;
-
-    const place = (el: HTMLElement | null, isActive: boolean, animate = true) => {
-      if (!el) return;
-      const navRect = nav.getBoundingClientRect();
-      const border = parseFloat(getComputedStyle(nav).borderLeftWidth) || 0;
-      const rect = el.getBoundingClientRect();
-      if (!animate) glider.classList.add('no-anim');
-      glider.style.setProperty('--x', `${rect.left - navRect.left - border}px`);
-      glider.style.setProperty('--w', `${rect.width}px`);
-      glider.classList.toggle('is-active', isActive);
-      if (!animate) requestAnimationFrame(() => glider.classList.remove('no-anim'));
-    };
-
-    if (active) {
-      place(active, true, false);
-      nav.classList.add('has-active');
-      // Link widths change when the webfont swaps in, so measure again then.
-      document.fonts?.ready.then(() => place(active, true, false));
-    }
-
-    links.forEach((l) =>
-      l.addEventListener('mouseenter', () => {
-        // With no active item the glider is hidden; drop it in place rather
-        // than sliding it across from x=0 on first hover.
-        const wasVisible = nav.classList.contains('has-active');
-        place(l, l === active, wasVisible);
-        nav.classList.add('has-active');
-      }),
-    );
-
-    nav.addEventListener('mouseleave', () => {
-      if (active) place(active, true);
-      else nav.classList.remove('has-active');
+  const init = () => {
+    const root = document.documentElement;
+    document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
+      const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+      root.dataset.theme = next;
+      try {
+        localStorage.setItem('fip-theme', next);
+      } catch {}
     });
 
-    addEventListener('resize', () => place(active, true, false));
-  }
+    const menuBtn = document.querySelector('[data-menu-toggle]');
+    menuBtn?.addEventListener('click', () => {
+      const open = document.body.classList.toggle('nav-open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+
+    syncTopbar();
+
+    // Segmented nav: slide the glider to the active item, and let it follow hover.
+    const nav = document.querySelector<HTMLElement>('[data-nav]');
+    const glider = document.querySelector<HTMLElement>('[data-glider]');
+    replaceGlider = () => {};
+
+    if (nav && glider) {
+      const links = [...nav.querySelectorAll<HTMLAnchorElement>('a')];
+      const active = links.find((l) => l.classList.contains('on')) ?? null;
+
+      const place = (el: HTMLElement | null, isActive: boolean, animate = true) => {
+        if (!el) return;
+        const navRect = nav.getBoundingClientRect();
+        const border = parseFloat(getComputedStyle(nav).borderLeftWidth) || 0;
+        const rect = el.getBoundingClientRect();
+        if (!animate) glider.classList.add('no-anim');
+        glider.style.setProperty('--x', `${rect.left - navRect.left - border}px`);
+        glider.style.setProperty('--w', `${rect.width}px`);
+        glider.classList.toggle('is-active', isActive);
+        if (!animate) requestAnimationFrame(() => glider.classList.remove('no-anim'));
+      };
+
+      if (active) {
+        place(active, true, false);
+        nav.classList.add('has-active');
+        // Link widths change when the webfont swaps in, so measure again then.
+        document.fonts?.ready.then(() => place(active, true, false));
+      }
+
+      links.forEach((l) =>
+        l.addEventListener('mouseenter', () => {
+          // With no active item the glider is hidden; drop it in place rather
+          // than sliding it across from x=0 on first hover.
+          const wasVisible = nav.classList.contains('has-active');
+          place(l, l === active, wasVisible);
+          nav.classList.add('has-active');
+        }),
+      );
+
+      nav.addEventListener('mouseleave', () => {
+        if (active) place(active, true);
+        else nav.classList.remove('has-active');
+      });
+
+      replaceGlider = () => place(active, true, false);
+    }
+
+    if (!windowBound) {
+      windowBound = true;
+      window.addEventListener('scroll', syncTopbar, { passive: true });
+      window.addEventListener('resize', () => replaceGlider());
+    }
+  };
+
+  document.addEventListener('astro:page-load', init);
 </script>

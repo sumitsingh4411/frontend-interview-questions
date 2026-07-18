@@ -23,22 +23,22 @@ Yes, frontend interviews have a DSA round — but it's a **specific slice**. You
 
 | Topic | Difficulty | Time | Tags | Best Resource |
 |-------|:----------:|:----:|------|---------------|
-| Big-O notation (time & space) | 🟢 | 45m | `#complexity` | [Big-O cheat sheet ⭐](https://www.bigocheatsheet.com/) |
-| Analyzing loops & recursion | 🟡 | 45m | `#complexity` | [NeetCode ⭐](https://neetcode.io/courses) |
-| Amortized analysis (dynamic arrays) | 🟡 | 30m | `#complexity` | [MDN: arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) |
+| [Big-O notation (time & space)](topics/big-o-notation-time-space.md) | 🟢 | 45m | `#complexity` | [Big-O cheat sheet ⭐](https://www.bigocheatsheet.com/) |
+| [Analyzing loops & recursion](topics/analyzing-loops-recursion.md) | 🟡 | 45m | `#complexity` | [NeetCode ⭐](https://neetcode.io/courses) |
+| [Amortized analysis (dynamic arrays)](topics/amortized-analysis-dynamic-arrays.md) | 🟡 | 30m | `#complexity` | [MDN: arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) |
 
 ## 🧱 Core data structures
 
 | Topic | Difficulty | Time | Tags | Best Resource |
 |-------|:----------:|:----:|------|---------------|
-| Arrays & string manipulation | 🟢 | 1h | `#arrays` `#strings` | [NeetCode: arrays ⭐](https://neetcode.io/practice) |
-| Hash maps & sets | 🟢 | 1h | `#hashmap` | [MDN: Map/Set ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) |
-| Stacks & queues | 🟢 | 45m | `#stack` `#queue` | [NeetCode: stack ⭐](https://neetcode.io/practice) |
-| Linked lists | 🟡 | 1h | `#linked-list` | [NeetCode ⭐](https://neetcode.io/practice) |
-| Trees & binary trees | 🟡 | 1.5h | `#trees` | [NeetCode: trees ⭐](https://neetcode.io/practice) |
-| Tries (autocomplete!) | 🔴 | 1h | `#trie` `#search` | [NeetCode ⭐](https://neetcode.io/practice) |
-| Heaps / priority queues | 🔴 | 1h | `#heap` | [NeetCode ⭐](https://neetcode.io/practice) |
-| Graphs (BFS/DFS basics) | 🔴 | 1.5h | `#graphs` | [NeetCode: graphs ⭐](https://neetcode.io/practice) |
+| [Arrays & string manipulation](topics/arrays-string-manipulation.md) | 🟢 | 1h | `#arrays` `#strings` | [NeetCode: arrays ⭐](https://neetcode.io/practice) |
+| [Hash maps & sets](topics/hash-maps-sets.md) | 🟢 | 1h | `#hashmap` | [MDN: Map/Set ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) |
+| [Stacks & queues](topics/stacks-queues.md) | 🟢 | 45m | `#stack` `#queue` | [NeetCode: stack ⭐](https://neetcode.io/practice) |
+| [Linked lists](topics/linked-lists.md) | 🟡 | 1h | `#linked-list` | [NeetCode ⭐](https://neetcode.io/practice) |
+| [Trees & binary trees](topics/trees-binary-trees.md) | 🟡 | 1.5h | `#trees` | [NeetCode: trees ⭐](https://neetcode.io/practice) |
+| [Tries (autocomplete!)](topics/tries-autocomplete.md) | 🔴 | 1h | `#trie` `#search` | [NeetCode ⭐](https://neetcode.io/practice) |
+| [Heaps / priority queues](topics/heaps-priority-queues.md) | 🔴 | 1h | `#heap` | [NeetCode ⭐](https://neetcode.io/practice) |
+| [Graphs (BFS/DFS basics)](topics/graphs-bfs-dfs-basics.md) | 🔴 | 1.5h | `#graphs` | [NeetCode: graphs ⭐](https://neetcode.io/practice) |
 
 ## 🔁 Patterns you must know
 

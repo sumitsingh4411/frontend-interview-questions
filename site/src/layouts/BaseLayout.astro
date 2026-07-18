@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
 import TopBar from '@components/TopBar.astro';
 import SearchPalette from '@components/SearchPalette.astro';
 import { url } from '@lib/url.ts';
@@ -45,15 +46,30 @@ const ogImage = new URL(url('og.png'), origin).href;
 
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
 
-    {/* Set the theme before first paint to avoid a flash. */}
+    <ViewTransitions />
+
+    {/*
+      Set the theme before first paint to avoid a flash. The router swaps in the
+      incoming document's <html> attributes, which would reset data-theme to the
+      hardcoded default on every navigation — astro:after-swap runs before paint,
+      so re-applying there keeps the choice without a flicker.
+    */}
     <script is:inline>
       (() => {
-        try {
-          const stored = localStorage.getItem('fip-theme');
-          const theme =
-            stored ?? (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-          document.documentElement.dataset.theme = theme;
-        } catch {}
+        const apply = () => {
+          try {
+            const stored = localStorage.getItem('fip-theme');
+            const theme =
+              stored ?? (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            document.documentElement.dataset.theme = theme;
+          } catch {}
+        };
+        apply();
+        // The router re-executes inline scripts on every swap; register only once.
+        if (!window.__fipThemeBound) {
+          window.__fipThemeBound = true;
+          document.addEventListener('astro:after-swap', apply);
+        }
       })();
     </script>
   </head>

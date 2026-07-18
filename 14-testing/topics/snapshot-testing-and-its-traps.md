@@ -1,0 +1,95 @@
+<div align="center">
+
+# Snapshot testing (and its traps)
+
+<sub>🧪 Testing · 🟡 Medium · ⏱ 30m · `#unit`</sub>
+
+<a href="../README.md">⬅ Testing</a> &nbsp;·&nbsp; <a href="../../README.md">Home</a>
+
+</div>
+
+> ⚡ **TL;DR** — A snapshot asserts "the output is byte-identical to last time", which is not a specification — it's a **change detector**, and because the fix for a failure is pressing `u`, large snapshots reliably decay into rubber-stamped noise that catches nothing.
+
+---
+
+## 🧠 Mental model
+
+A normal assertion encodes **intent**: `expect(price).toBe('$12.00')` says *this is what should happen*. A snapshot encodes **incumbency**: *whatever happened last time is now correct.* Nobody ever decided the snapshot was right — it was recorded.
+
+That inversion is the whole problem. When a real assertion fails, you must think about which side is wrong. When a snapshot fails, there's a one-keystroke escape (`jest -u`) that makes the failure disappear. Under deadline pressure, on a 400-line DOM dump nobody can review, that key gets pressed. The snapshot then dutifully records the bug as the new truth.
+
+So the useful reframe: **a snapshot's value is inversely proportional to its size.** A 5-line inline snapshot of a formatted output is a genuinely great assertion — compact, readable, and a diff you can actually judge. A full component tree is a liability wearing the costume of a test.
+
+## ⚙️ How it actually works
+
+`toMatchSnapshot()` serialises the value with a **pretty-format** printer, hashes it against `__snapshots__/<file>.snap` keyed by test name, and either writes it (first run) or diffs it. Custom serialisers (`jest-serializer-html`, emotion's) control that output; React elements get the React serialiser automatically.
+
+**On CI, `--ci` refuses to write new snapshots** — a missing snapshot fails instead of silently passing. Without that flag, a test that never ran locally writes its snapshot on CI and passes trivially. This is the config detail interviewers like.
+
+**`toMatchInlineSnapshot()`** writes the snapshot into the test file itself. This is the important variant: the expected value lives next to the assertion, so reviewers see the diff in the PR instead of in an unread `.snap` file.
+
+**Obsolete snapshots** accumulate when tests are renamed or deleted; `--ci` won't clean them, `-u` will.
+
+## 💻 Code
+
+```jsx
+// ❌ The classic anti-pattern: a whole component tree.
+// Any class rename, wrapper div, or library upgrade fails this test.
+// Nobody reviews the 300-line diff; everyone runs `jest -u`.
+test('renders the dashboard', () => {
+  const { container } = render(<Dashboard user={user} />);
+  expect(container).toMatchSnapshot();
+});
+
+// ✅ Assert the behaviour you actually care about.
+test('shows the user greeting and unread count', () => {
+  render(<Dashboard user={user} unread={3} />);
+  expect(screen.getByRole('heading', { name: /welcome, ada/i })).toBeVisible();
+  expect(screen.getByRole('status')).toHaveTextContent('3 unread');
+});
+```
+
+```js
+// ✅ Where snapshots genuinely shine: small, stable, serialisable output.
+// Inline keeps the expectation reviewable in the PR diff.
+test('formats a receipt', () => {
+  expect(formatReceipt({ items: 2, total: 1250 })).toMatchInlineSnapshot(`
+    "2 items
+     Total: $12.50"
+  `);
+});
+
+// Property matchers tame non-determinism without abandoning the snapshot:
+expect(user).toMatchSnapshot({
+  id: expect.any(String),      // uuid changes every run
+  createdAt: expect.any(Date), // so would a timestamp
+});
+```
+
+## ⚖️ Trade-offs
+
+- **Cheap to write, expensive to own.** A snapshot costs one line today and an unreviewable diff on every unrelated refactor. Judge it on total cost, not authoring speed.
+- **Great for stable serialisable output:** error messages, generated SQL/CSS, a compiler's AST, a reducer's state shape, API response contracts. These change rarely and *intentionally*, so a diff is meaningful signal.
+- **Bad for anything rendered.** Component markup churns constantly for reasons that have nothing to do with behaviour. Use RTL assertions for behaviour and a real **visual regression** tool (Playwright/Chromatic screenshots) if you actually want to catch visual change — a DOM snapshot catches neither behaviour nor appearance.
+- **When NOT to use it:** as a substitute for knowing what to assert. "I don't know what to test, so I'll snapshot it" is exactly the reasoning that produces worthless suites.
+
+## 💣 Gotchas interviewers probe
+
+- **"Snapshots test behaviour."** They don't. They test *serialised output identity*. A component can render identically and be completely broken — no click handlers, no accessibility.
+- **`-u` culture.** The real failure mode is social, not technical: the update flag makes false failures free to dismiss, so the test stops being a test. Name this and you sound senior.
+- **Missing `--ci` on CI.** Without it, brand-new snapshots are *written* on CI and pass. The assertion is auto-generated by the very run meant to check it.
+- **Non-determinism.** Dates, UUIDs, random ordering, locale/timezone differences, and animation state make snapshots flaky. Fix with property matchers and fake timers, not by retrying.
+- **Committing `.snap` files is mandatory.** They're the expectation. Gitignoring them means every CI run regenerates and trivially passes.
+- **Obsolete snapshots.** Renaming a test orphans its entry; the suite still passes while dead expectations accumulate. `--ci` reports them.
+- **Inline vs external.** Inline snapshots get reviewed because they're in the diff. That single property makes them meaningfully better for anything small.
+
+## 🎯 Say this in the interview
+
+> "A snapshot isn't a specification — it's a change detector. It asserts the output is identical to whatever was recorded last time, and nobody ever decided that recording was correct. The failure mode is social: when a snapshot fails, the fix is one keystroke, `-u`, so on a 300-line component dump that nobody reviews, real regressions get rubber-stamped in as the new baseline. So I use them where output is small, stable, and serialisable — formatted strings, error messages, generated CSS, a reducer's state shape — and I prefer inline snapshots so the expectation shows up in the PR diff. For components I write explicit RTL assertions about behaviour instead, and if I genuinely want to catch visual change I use screenshot-based visual regression, because a DOM snapshot catches neither behaviour nor appearance. I'd also make sure CI runs with `--ci` so new snapshots can't be auto-written by the run that's supposed to verify them."
+
+## 🔗 Go deeper
+
+- [Jest — Snapshot testing](https://jestjs.io/docs/snapshot-testing) — the API, inline snapshots, and property matchers.
+- [Jest — CLI options](https://jestjs.io/docs/cli) — `--ci`, `-u`, and obsolete-snapshot reporting.
+- [Vitest — Snapshot](https://vitest.dev/guide/snapshot) — the same model with custom serialiser hooks.
+- [Kent C. Dodds — Effective snapshot testing](https://kentcdodds.com/blog/effective-snapshot-testing) — the definitive case for small, intentional snapshots.

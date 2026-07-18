@@ -1,0 +1,248 @@
+---
+// Premium deep-dive view for a single topic row.
+// Body comes from <section>/topics/<slug>.md; the badges (difficulty/time/tags) come from
+// the section README's table row — one source each, no duplicated metadata.
+import DocLayout from '@layouts/DocLayout.astro';
+import { getProseDoc, getDeepDives } from '@lib/content.ts';
+import { SECTIONS, SECTION_BY_SLUG } from '@lib/sections.ts';
+import { resolveHref, repoPathToRoute } from '@lib/transform.ts';
+import { BASE, url } from '@lib/url.ts';
+
+const GH_BLOB = 'https://github.com/sumitsingh4411/frontend-interview-questions/blob/main/';
+
+/**
+ * The "Best Resources" cell is usually an external URL, but some rows point at a
+ * repo-relative page (e.g. a flagship .md). Resolve those to their on-site route so
+ * the primary-source card never renders a dead .md link.
+ */
+function resolveResource(sectionSlug: string, raw: string): { href: string; external: boolean } {
+  if (/^https?:\/\//i.test(raw)) return { href: raw, external: true };
+  const r = resolveHref(`${sectionSlug}/README.md`, raw);
+  if (r.kind === 'external') return { href: r.value, external: true };
+  if (r.kind === 'repo') {
+    const route = repoPathToRoute(r.value, BASE);
+    return route ? { href: route, external: false } : { href: GH_BLOB + r.value, external: true };
+  }
+  return { href: raw, external: true };
+}
+
+export async function getStaticPaths() {
+  return SECTIONS.flatMap((section) => {
+    const dives = getDeepDives(section.slug);
+    return dives.map((topic, i) => ({
+      params: { section: section.slug, topic: topic.slug },
+      props: {
+        topic,
+        prev: dives[i - 1] ?? null,
+        next: dives[i + 1] ?? null,
+      },
+    }));
+  });
+}
+
+const { topic, prev, next } = Astro.props;
+const section = SECTION_BY_SLUG.get(topic.sectionSlug)!;
+const doc = await getProseDoc(`${topic.sectionSlug}/topics/${topic.slug}.md`, BASE, {
+  dropH1: true,
+});
+
+const DIFF_LABEL = { easy: 'Easy', medium: 'Medium', hard: 'Hard', none: '' } as const;
+const resource = topic.resource
+  ? { label: topic.resource.label, ...resolveResource(topic.sectionSlug, topic.resource.url) }
+  : null;
+---
+
+<DocLayout
+  title={topic.title}
+  eyebrow={`${section.title} · ${topic.group}`}
+  description={`${topic.title} — a staff-level deep dive: the mental model, how it actually works, the trade-offs, and what to say in the interview.`}
+  headings={doc.headings}
+>
+  <div slot="subhead" class="meta">
+    <span class={`pill diff-${topic.difficulty}`}>
+      <span class="dot" aria-hidden="true"></span>{DIFF_LABEL[topic.difficulty]}
+    </span>
+    {topic.time && <span class="pill mono">⏱ {topic.time}</span>}
+    {topic.tags.map((t) => <span class="tag mono">#{t}</span>)}
+  </div>
+
+  <p class="crumb">
+    <a href={url(`sections/${section.slug}/`)}>← {section.title}</a>
+  </p>
+
+  <div class="prose" set:html={doc.html} />
+
+  {
+    resource && (
+      <a
+        class="source"
+        href={resource.href}
+        target={resource.external ? '_blank' : undefined}
+        rel={resource.external ? 'noopener noreferrer' : undefined}
+      >
+        <span class="s-label">
+          <b>Primary source</b> — the single best place to go deeper
+        </span>
+        <span class="s-link">
+          {resource.label} <span aria-hidden="true">{resource.external ? '↗' : '→'}</span>
+        </span>
+      </a>
+    )
+  }
+
+  <nav class="pager" aria-label="Topics">
+    {
+      prev ? (
+        <a class="pg prev" href={url(`sections/${section.slug}/topics/${prev.slug}/`)}>
+          <span class="pg-dir">← Previous</span>
+          <span class="pg-title">{prev.title}</span>
+        </a>
+      ) : (
+        <span />
+      )
+    }
+    {
+      next && (
+        <a class="pg next" href={url(`sections/${section.slug}/topics/${next.slug}/`)}>
+          <span class="pg-dir">Next →</span>
+          <span class="pg-title">{next.title}</span>
+        </a>
+      )
+    }
+  </nav>
+</DocLayout>
+
+<style>
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    font-size: 11px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-dim);
+  }
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+  .diff-easy {
+    color: var(--easy);
+  }
+  .diff-medium {
+    color: var(--medium);
+  }
+  .diff-hard {
+    color: var(--hard);
+  }
+  .tag {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .crumb {
+    margin: 22px 0 0;
+    font-size: var(--step--1);
+  }
+  .crumb a {
+    color: var(--text-dim);
+    text-decoration: none;
+  }
+  .crumb a:hover {
+    color: var(--accent);
+  }
+
+  .source {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 34px;
+    padding: 15px 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    background: var(--surface);
+    text-decoration: none;
+    color: var(--text-dim);
+    font-size: var(--step--1);
+    transition: border-color 0.14s var(--ease);
+  }
+  .source:hover {
+    border-color: var(--accent-line);
+  }
+  .source b {
+    color: var(--text);
+    font-weight: 500;
+  }
+  .s-link {
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .pager {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .pg {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    background: var(--surface);
+    text-decoration: none;
+    transition:
+      border-color 0.14s var(--ease),
+      transform 0.14s var(--ease);
+  }
+  .pg:hover {
+    border-color: var(--accent-line);
+  }
+  .pg.prev:hover {
+    transform: translateX(-2px);
+  }
+  .pg.next:hover {
+    transform: translateX(2px);
+  }
+  .pg.next {
+    text-align: right;
+    grid-column: 2;
+  }
+  .pg-dir {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+  .pg-title {
+    font-size: var(--step--1);
+    color: var(--text);
+  }
+  .pg:hover .pg-title {
+    color: var(--accent);
+  }
+
+  @media (max-width: 720px) {
+    .pager {
+      grid-template-columns: 1fr;
+    }
+    .pg.next {
+      grid-column: 1;
+    }
+  }
+</style>

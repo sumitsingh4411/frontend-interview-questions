@@ -75,12 +75,21 @@ const { headings } = Astro.props;
 </style>
 
 <script>
-  const links = [...document.querySelectorAll<HTMLAnchorElement>('[data-toc-link]')];
-  if (links.length) {
+  // The observer watches headings that are discarded on navigation, so the previous
+  // page's observer is torn down before a new one is built for the new headings.
+  let observer: IntersectionObserver | null = null;
+
+  const init = () => {
+    observer?.disconnect();
+    observer = null;
+
+    const links = [...document.querySelectorAll<HTMLAnchorElement>('[data-toc-link]')];
+    if (!links.length) return;
+
     const byId = new Map(links.map((l) => [l.dataset.tocLink!, l]));
     const targets = [...byId.keys()].map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[];
 
-    const observer = new IntersectionObserver(
+    observer = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
           if (!e.isIntersecting) continue;
@@ -90,6 +99,8 @@ const { headings } = Astro.props;
       },
       { rootMargin: '-80px 0px -70% 0px', threshold: 0 },
     );
-    targets.forEach((t) => observer.observe(t));
-  }
+    targets.forEach((t) => observer!.observe(t));
+  };
+
+  document.addEventListener('astro:page-load', init);
 </script>

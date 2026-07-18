@@ -14,41 +14,41 @@ How you prove the thing works. Expect "how would you test this?" after any machi
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| The testing pyramid / trophy | 🟢 | 30m | `#strategy` | [Kent C. Dodds: testing trophy ⭐](https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications) |
-| What to test (and what not to) | 🟡 | 45m | `#strategy` | [Kent C. Dodds: write tests ⭐](https://kentcdodds.com/blog/write-tests) |
-| Test-driven development | 🟡 | 45m | `#tdd` | [Martin Fowler: TDD ⭐](https://martinfowler.com/bliki/TestDrivenDevelopment.html) |
-| Flaky tests & determinism | 🟡 | 45m | `#strategy` | [Playwright: retries ⭐](https://playwright.dev/docs/test-retries) |
+| [The testing pyramid / trophy](topics/the-testing-pyramid-trophy.md) | 🟢 | 30m | `#strategy` | [Kent C. Dodds: testing trophy ⭐](https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications) |
+| [What to test (and what not to)](topics/what-to-test-and-what-not-to.md) | 🟡 | 45m | `#strategy` | [Kent C. Dodds: write tests ⭐](https://kentcdodds.com/blog/write-tests) |
+| [Test-driven development](topics/test-driven-development.md) | 🟡 | 45m | `#tdd` | [Martin Fowler: TDD ⭐](https://martinfowler.com/bliki/TestDrivenDevelopment.html) |
+| [Flaky tests & determinism](topics/flaky-tests-determinism.md) | 🟡 | 45m | `#strategy` | [Playwright: retries ⭐](https://playwright.dev/docs/test-retries) |
 
 ## Unit & component
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Unit testing with Jest | 🟢 | 1h | `#unit` `#jest` | [Jest ⭐](https://jestjs.io/docs/getting-started) |
-| Vitest | 🟢 | 45m | `#unit` `#vitest` | [Vitest ⭐](https://vitest.dev/guide/) |
-| React Testing Library (RTL) | 🟡 | 1.5h | `#component` `#rtl` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/intro/) |
-| Query priorities & user-centric tests | 🟡 | 45m | `#rtl` `#a11y` | [Testing Library: queries ⭐](https://testing-library.com/docs/queries/about/) |
-| Testing hooks | 🟡 | 45m | `#rtl` `#hooks` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/api/#renderhook) |
-| Snapshot testing (and its traps) | 🟡 | 30m | `#unit` | [Jest: snapshots ⭐](https://jestjs.io/docs/snapshot-testing) |
+| [Unit testing with Jest](topics/unit-testing-with-jest.md) | 🟢 | 1h | `#unit` `#jest` | [Jest ⭐](https://jestjs.io/docs/getting-started) |
+| [Vitest](topics/vitest.md) | 🟢 | 45m | `#unit` `#vitest` | [Vitest ⭐](https://vitest.dev/guide/) |
+| [React Testing Library (RTL)](topics/react-testing-library-rtl.md) | 🟡 | 1.5h | `#component` `#rtl` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/intro/) |
+| [Query priorities & user-centric tests](topics/query-priorities-user-centric-tests.md) | 🟡 | 45m | `#rtl` `#a11y` | [Testing Library: queries ⭐](https://testing-library.com/docs/queries/about/) |
+| [Testing hooks](topics/testing-hooks.md) | 🟡 | 45m | `#rtl` `#hooks` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/api/#renderhook) |
+| [Snapshot testing (and its traps)](topics/snapshot-testing-and-its-traps.md) | 🟡 | 30m | `#unit` | [Jest: snapshots ⭐](https://jestjs.io/docs/snapshot-testing) |
 
 ## Mocking
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Mocking (modules, timers, functions) | 🟡 | 45m | `#mocking` | [Jest: mock functions ⭐](https://jestjs.io/docs/mock-functions) |
-| Mocking network with MSW | 🟡 | 1h | `#mocking` `#msw` | [MSW ⭐](https://mswjs.io/docs/) |
-| Fake timers & async testing | 🟡 | 45m | `#mocking` `#async` | [Jest: timer mocks ⭐](https://jestjs.io/docs/timer-mocks) |
+| [Mocking (modules, timers, functions)](topics/mocking-modules-timers-functions.md) | 🟡 | 45m | `#mocking` | [Jest: mock functions ⭐](https://jestjs.io/docs/mock-functions) |
+| [Mocking network with MSW](topics/mocking-network-with-msw.md) | 🟡 | 1h | `#mocking` `#msw` | [MSW ⭐](https://mswjs.io/docs/) |
+| [Fake timers & async testing](topics/fake-timers-async-testing.md) | 🟡 | 45m | `#mocking` `#async` | [Jest: timer mocks ⭐](https://jestjs.io/docs/timer-mocks) |
 
 ## Integration, E2E & specialized
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Integration testing | 🟡 | 1h | `#integration` | [Kent C. Dodds ⭐](https://kentcdodds.com/blog/write-tests) |
-| E2E with Playwright | 🔴 | 1.5h | `#e2e` `#playwright` | [Playwright ⭐](https://playwright.dev/docs/intro) |
-| E2E with Cypress | 🟡 | 1h | `#e2e` `#cypress` | [Cypress ⭐](https://docs.cypress.io/guides/overview/why-cypress) |
-| Visual regression testing | 🟡 | 45m | `#visual` | [Playwright: snapshots ⭐](https://playwright.dev/docs/test-snapshots) |
-| Accessibility testing | 🟡 | 45m | `#a11y` | [jest-axe ⭐](https://github.com/nickcolley/jest-axe) |
-| Performance testing / budgets | 🔴 | 45m | `#performance` | [web.dev: budgets ⭐](https://web.dev/articles/performance-budgets-101) |
-| Component testing (Storybook) | 🟡 | 45m | `#component` | [Storybook: testing ⭐](https://storybook.js.org/docs/writing-tests) |
+| [Integration testing](topics/integration-testing.md) | 🟡 | 1h | `#integration` | [Kent C. Dodds ⭐](https://kentcdodds.com/blog/write-tests) |
+| [E2E with Playwright](topics/e2e-with-playwright.md) | 🔴 | 1.5h | `#e2e` `#playwright` | [Playwright ⭐](https://playwright.dev/docs/intro) |
+| [E2E with Cypress](topics/e2e-with-cypress.md) | 🟡 | 1h | `#e2e` `#cypress` | [Cypress ⭐](https://docs.cypress.io/guides/overview/why-cypress) |
+| [Visual regression testing](topics/visual-regression-testing.md) | 🟡 | 45m | `#visual` | [Playwright: snapshots ⭐](https://playwright.dev/docs/test-snapshots) |
+| [Accessibility testing](topics/accessibility-testing.md) | 🟡 | 45m | `#a11y` | [jest-axe ⭐](https://github.com/nickcolley/jest-axe) |
+| [Performance testing / budgets](topics/performance-testing-budgets.md) | 🔴 | 45m | `#performance` | [web.dev: budgets ⭐](https://web.dev/articles/performance-budgets-101) |
+| [Component testing (Storybook)](topics/component-testing-storybook.md) | 🟡 | 45m | `#component` | [Storybook: testing ⭐](https://storybook.js.org/docs/writing-tests) |
 
 ## ❓ Rapid-fire testing interview questions
 

@@ -253,6 +253,96 @@ await page.goto(`${ORIGIN}/banks/dsa/`, { waitUntil: 'networkidle0' });
 const groupLabels = await page.$$eval('.resources .r-group h3', (els) => els.map((e) => e.textContent.trim()));
 ok('hands-on bank shows a Practice group', groupLabels.some((t) => /Practice/.test(t)), JSON.stringify(groupLabels));
 
+// ---------------------------------------------------------------- topic deep dives
+console.log('\ntopic deep dives');
+// The section table row must navigate to the on-site deep dive (not a raw .md file).
+await page.goto(`${ORIGIN}/sections/01-fundamentals/`, { waitUntil: 'networkidle0' });
+const topicHref = await page.$eval('.prose table a[href*="/topics/"]', (a) => a.getAttribute('href'));
+ok('section table links topics to on-site deep dives', /\/topics\/[a-z-]+\/$/.test(topicHref ?? ''), String(topicHref));
+
+await page.goto(`${ORIGIN}/sections/01-fundamentals/topics/event-handling-bubbling-delegation/`, {
+  waitUntil: 'networkidle0',
+});
+ok('deep dive renders', (await page.$$('h1')).length === 1);
+
+// The full staff-level anatomy must be present.
+const h2s = await page.$$eval('.prose h2', (els) => els.map((e) => e.textContent.trim()));
+for (const want of ['Mental model', 'How it actually works', 'Trade-offs', 'Gotchas', 'Say this in the interview']) {
+  ok(`has "${want}" section`, h2s.some((h) => h.includes(want)), JSON.stringify(h2s));
+}
+ok('has a TL;DR callout', await page.$eval('.prose blockquote', (e) => /TL;DR/.test(e.textContent)));
+
+// Metadata badges come from the README table row, not the markdown file.
+const badges = await page.evaluate(() => ({
+  diff: document.querySelector('.pill[class*="diff-"]')?.textContent.trim(),
+  time: [...document.querySelectorAll('.pill')].map((e) => e.textContent).join(' '),
+  tags: [...document.querySelectorAll('.tag')].map((e) => e.textContent.trim()),
+}));
+ok('shows difficulty from the table row', badges.diff === 'Medium', JSON.stringify(badges));
+ok('shows time estimate', /1h/.test(badges.time), badges.time);
+ok('shows tags', badges.tags.includes('#events'), JSON.stringify(badges.tags));
+
+// Prev/next paging within the section.
+const pager = await page.$$eval('.pager .pg', (els) => els.map((e) => e.getAttribute('href')));
+ok('has prev and next links', pager.length === 2, JSON.stringify(pager));
+// The router swaps pages in place, so this is a same-document navigation —
+// waitForNavigation resolves before the URL updates. Wait on the URL itself.
+await page.click('.pager .pg.next');
+await page
+  .waitForFunction(() => location.pathname.endsWith('/topics/virtual-dom/'), { timeout: 5000 })
+  .catch(() => {});
+ok(
+  'next goes to the following topic',
+  page.url().endsWith('/topics/virtual-dom/'),
+  page.url(),
+);
+
+// Deep dives are searchable.
+const inIndex = await page.evaluate(async (origin) => {
+  const r = await fetch(`${origin}/search-index.json`);
+  const j = await r.json();
+  return j.pages.filter((p) => p[2] === 'Deep dive').length;
+}, ORIGIN);
+ok('deep dives are in the search index', inIndex >= 8, `n=${inIndex}`);
+
+// ---------------------------------------------------------------- sidebar orientation
+console.log('\nsidebar: where am I');
+await page.goto(`${ORIGIN}/sections/01-fundamentals/topics/event-handling-bubbling-delegation/`, {
+  waitUntil: 'networkidle0',
+});
+// Every section's dives are in the markup so the chevron can expand any of them without
+// a page load — so what matters is how many are *revealed*, not how many exist.
+const expanded = () => page.$$eval('#sidebar .dives', (els) => els.filter((e) => !e.hidden).length);
+ok('open section reveals its deep dives', (await page.$$('#sidebar .dives:not([hidden]) .dive')).length >= 8);
+ok('only the active section is expanded', (await expanded()) === 1);
+const here = await page.$$eval('#sidebar .dive.here', (els) => els.map((e) => e.textContent.trim()));
+ok('exactly one topic is marked "you are here"', here.length === 1, JSON.stringify(here));
+ok('it is the topic being read', here[0]?.includes('Event handling'), String(here[0]));
+ok(
+  'current topic is announced to assistive tech',
+  (await page.$eval('#sidebar .dive.here', (e) => e.getAttribute('aria-current'))) === 'page',
+);
+// Every listed dive must be a real link — we only list written ones. Slugs carry digits
+// (v8-jit-compilation, this-binding-4-rules), so the pattern has to allow them.
+const diveHrefs = await page.$$eval('#sidebar .dive', (els) => els.map((e) => e.getAttribute('href')));
+ok(
+  'every listed dive links somewhere',
+  diveHrefs.length > 0 && diveHrefs.every((h) => /\/topics\/[a-z0-9-]+\/$/.test(h ?? '')),
+  JSON.stringify(diveHrefs.filter((h) => !/\/topics\/[a-z0-9-]+\/$/.test(h ?? '')).slice(0, 3)),
+);
+
+// A chevron expands its section in place, with no navigation.
+const beforeUrl = page.url();
+await page.click('#sidebar .sec .dives[hidden] ~ .row [data-chev], #sidebar .row [data-chev][aria-expanded="false"]');
+await new Promise((r) => setTimeout(r, 150));
+ok('chevron expands a second section without navigating', (await expanded()) === 2 && page.url() === beforeUrl);
+
+// When no section is active (e.g. a bank page), nothing is revealed — no stray rails.
+await page.goto(`${ORIGIN}/banks/css/`, { waitUntil: 'networkidle0' });
+await page.evaluate(() => sessionStorage.clear());
+await page.reload({ waitUntil: 'networkidle0' });
+ok('nothing expands when no section is active', (await expanded()) === 0);
+
 await browser.close();
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

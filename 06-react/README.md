@@ -16,56 +16,56 @@ The framework most FAANG frontend loops assume. They'll ask *how it works*, not 
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| JSX & `createElement` | 🟢 | 30m | `#basics` | [react.dev: JSX ⭐](https://react.dev/learn/writing-markup-with-jsx) |
-| Components, props, composition | 🟢 | 45m | `#basics` | [react.dev: components ⭐](https://react.dev/learn/your-first-component) |
-| Rendering & re-render mental model | 🟡 | 1h | `#rendering` | [react.dev: render & commit ⭐](https://react.dev/learn/render-and-commit) |
-| Reconciliation & keys | 🟡 | 45m | `#rendering` `#internals` | [react.dev: preserving state ⭐](https://react.dev/learn/preserving-and-resetting-state) |
-| Fiber architecture | 🔴 | 1.5h | `#internals` | [Lin Clark: cartoon intro to Fiber ⭐](https://www.youtube.com/watch?v=ZCuYPiUIONs) |
-| Controlled vs uncontrolled inputs | 🟡 | 45m | `#forms` | [react.dev: forms ⭐](https://react.dev/reference/react-dom/components/input) |
-| Lists, keys & reconciliation pitfalls | 🟡 | 45m | `#rendering` | [react.dev: rendering lists ⭐](https://react.dev/learn/rendering-lists) |
+| [JSX & `createElement`](topics/jsx-createelement.md) | 🟢 | 30m | `#basics` | [react.dev: JSX ⭐](https://react.dev/learn/writing-markup-with-jsx) |
+| [Components, props, composition](topics/components-props-composition.md) | 🟢 | 45m | `#basics` | [react.dev: components ⭐](https://react.dev/learn/your-first-component) |
+| [Rendering & re-render mental model](topics/rendering-re-render-mental-model.md) | 🟡 | 1h | `#rendering` | [react.dev: render & commit ⭐](https://react.dev/learn/render-and-commit) |
+| [Reconciliation & keys](topics/reconciliation-keys.md) | 🟡 | 45m | `#rendering` `#internals` | [react.dev: preserving state ⭐](https://react.dev/learn/preserving-and-resetting-state) |
+| [Fiber architecture](topics/fiber-architecture.md) | 🔴 | 1.5h | `#internals` | [Lin Clark: cartoon intro to Fiber ⭐](https://www.youtube.com/watch?v=ZCuYPiUIONs) |
+| [Controlled vs uncontrolled inputs](topics/controlled-vs-uncontrolled-inputs.md) | 🟡 | 45m | `#forms` | [react.dev: forms ⭐](https://react.dev/reference/react-dom/components/input) |
+| [Lists, keys & reconciliation pitfalls](topics/lists-keys-reconciliation-pitfalls.md) | 🟡 | 45m | `#rendering` | [react.dev: rendering lists ⭐](https://react.dev/learn/rendering-lists) |
 
 ## Hooks
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Rules of hooks | 🟢 | 30m | `#hooks` | [react.dev: rules ⭐](https://react.dev/reference/rules/rules-of-hooks) |
-| `useState` & batching | 🟢 | 45m | `#hooks` `#state` | [react.dev: useState ⭐](https://react.dev/reference/react/useState) |
-| `useEffect` & effect timing | 🟡 | 1h | `#hooks` | [react.dev: you might not need an effect ⭐](https://react.dev/learn/you-might-not-need-an-effect) |
-| `useLayoutEffect` vs `useEffect` | 🟡 | 30m | `#hooks` | [react.dev: useLayoutEffect ⭐](https://react.dev/reference/react/useLayoutEffect) |
-| `useMemo` / `useCallback` | 🟡 | 45m | `#hooks` `#performance` | [react.dev: useMemo ⭐](https://react.dev/reference/react/useMemo) |
-| `useRef` & imperative handles | 🟡 | 45m | `#hooks` | [react.dev: useRef ⭐](https://react.dev/reference/react/useRef) |
-| `useContext` & context perf | 🟡 | 1h | `#hooks` `#state` | [react.dev: useContext ⭐](https://react.dev/reference/react/useContext) |
-| `useReducer` & state machines | 🟡 | 45m | `#hooks` `#state` | [react.dev: useReducer ⭐](https://react.dev/reference/react/useReducer) |
-| `useTransition` / `useDeferredValue` | 🔴 | 1h | `#concurrent` | [react.dev: useTransition ⭐](https://react.dev/reference/react/useTransition) |
-| `useSyncExternalStore` | 🔴 | 45m | `#hooks` `#state` | [react.dev ⭐](https://react.dev/reference/react/useSyncExternalStore) |
-| `useId`, `useImperativeHandle` | 🟡 | 30m | `#hooks` | [react.dev: useId ⭐](https://react.dev/reference/react/useId) |
-| Custom hooks | 🟡 | 45m | `#hooks` `#patterns` | [react.dev: reusing logic ⭐](https://react.dev/learn/reusing-logic-with-custom-hooks) |
+| [Rules of hooks](topics/rules-of-hooks.md) | 🟢 | 30m | `#hooks` | [react.dev: rules ⭐](https://react.dev/reference/rules/rules-of-hooks) |
+| [`useState` & batching](topics/usestate-batching.md) | 🟢 | 45m | `#hooks` `#state` | [react.dev: useState ⭐](https://react.dev/reference/react/useState) |
+| [`useEffect` & effect timing](topics/useeffect-effect-timing.md) | 🟡 | 1h | `#hooks` | [react.dev: you might not need an effect ⭐](https://react.dev/learn/you-might-not-need-an-effect) |
+| [`useLayoutEffect` vs `useEffect`](topics/uselayouteffect-vs-useeffect.md) | 🟡 | 30m | `#hooks` | [react.dev: useLayoutEffect ⭐](https://react.dev/reference/react/useLayoutEffect) |
+| [`useMemo` / `useCallback`](topics/usememo-usecallback.md) | 🟡 | 45m | `#hooks` `#performance` | [react.dev: useMemo ⭐](https://react.dev/reference/react/useMemo) |
+| [`useRef` & imperative handles](topics/useref-imperative-handles.md) | 🟡 | 45m | `#hooks` | [react.dev: useRef ⭐](https://react.dev/reference/react/useRef) |
+| [`useContext` & context perf](topics/usecontext-context-perf.md) | 🟡 | 1h | `#hooks` `#state` | [react.dev: useContext ⭐](https://react.dev/reference/react/useContext) |
+| [`useReducer` & state machines](topics/usereducer-state-machines.md) | 🟡 | 45m | `#hooks` `#state` | [react.dev: useReducer ⭐](https://react.dev/reference/react/useReducer) |
+| [`useTransition` / `useDeferredValue`](topics/usetransition-usedeferredvalue.md) | 🔴 | 1h | `#concurrent` | [react.dev: useTransition ⭐](https://react.dev/reference/react/useTransition) |
+| [`useSyncExternalStore`](topics/usesyncexternalstore.md) | 🔴 | 45m | `#hooks` `#state` | [react.dev ⭐](https://react.dev/reference/react/useSyncExternalStore) |
+| [`useId`, `useImperativeHandle`](topics/useid-useimperativehandle.md) | 🟡 | 30m | `#hooks` | [react.dev: useId ⭐](https://react.dev/reference/react/useId) |
+| [Custom hooks](topics/custom-hooks.md) | 🟡 | 45m | `#hooks` `#patterns` | [react.dev: reusing logic ⭐](https://react.dev/learn/reusing-logic-with-custom-hooks) |
 
 ## Performance & patterns
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| `React.memo` & referential equality | 🟡 | 45m | `#performance` | [react.dev: memo ⭐](https://react.dev/reference/react/memo) |
-| Code splitting & `lazy`/`Suspense` | 🟡 | 45m | `#performance` `#bundling` | [react.dev: lazy ⭐](https://react.dev/reference/react/lazy) |
-| Virtualization / windowing | 🔴 | 1.5h | `#performance` `#large-data` | [Flagship ⭐](build-a-virtualized-list.md) |
-| Avoiding unnecessary re-renders | 🔴 | 1h | `#performance` | [react.dev ⭐](https://react.dev/learn/render-and-commit) |
-| Error boundaries | 🟡 | 30m | `#errors` | [react.dev ⭐](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary) |
-| Portals | 🟢 | 30m | `#patterns` | [react.dev: createPortal ⭐](https://react.dev/reference/react-dom/createPortal) |
-| Refs & `forwardRef` | 🟡 | 30m | `#patterns` | [react.dev: forwardRef ⭐](https://react.dev/reference/react/forwardRef) |
-| Compound components / render props | 🔴 | 45m | `#patterns` | [patterns.dev: React patterns ⭐](https://www.patterns.dev/react) |
-| HOCs | 🟡 | 30m | `#patterns` | [patterns.dev ⭐](https://www.patterns.dev/react/hoc-pattern) |
-| React Compiler | 🟡 | 45m | `#performance` `#modern` | [react.dev: compiler ⭐](https://react.dev/learn/react-compiler) |
+| [`React.memo` & referential equality](topics/react-memo-referential-equality.md) | 🟡 | 45m | `#performance` | [react.dev: memo ⭐](https://react.dev/reference/react/memo) |
+| [Code splitting & `lazy`/`Suspense`](topics/code-splitting-lazy-suspense.md) | 🟡 | 45m | `#performance` `#bundling` | [react.dev: lazy ⭐](https://react.dev/reference/react/lazy) |
+| [Virtualization / windowing](topics/virtualization-windowing.md) | 🔴 | 1.5h | `#performance` `#large-data` | [Flagship ⭐](build-a-virtualized-list.md) |
+| [Avoiding unnecessary re-renders](topics/avoiding-unnecessary-re-renders.md) | 🔴 | 1h | `#performance` | [react.dev ⭐](https://react.dev/learn/render-and-commit) |
+| [Error boundaries](topics/error-boundaries.md) | 🟡 | 30m | `#errors` | [react.dev ⭐](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary) |
+| [Portals](topics/portals.md) | 🟢 | 30m | `#patterns` | [react.dev: createPortal ⭐](https://react.dev/reference/react-dom/createPortal) |
+| [Refs & `forwardRef`](topics/refs-forwardref.md) | 🟡 | 30m | `#patterns` | [react.dev: forwardRef ⭐](https://react.dev/reference/react/forwardRef) |
+| [Compound components / render props](topics/compound-components-render-props.md) | 🔴 | 45m | `#patterns` | [patterns.dev: React patterns ⭐](https://www.patterns.dev/react) |
+| [HOCs](topics/hocs.md) | 🟡 | 30m | `#patterns` | [patterns.dev ⭐](https://www.patterns.dev/react/hoc-pattern) |
+| [React Compiler](topics/react-compiler.md) | 🟡 | 45m | `#performance` `#modern` | [react.dev: compiler ⭐](https://react.dev/learn/react-compiler) |
 
 ## Rendering strategies & advanced
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Concurrent rendering | 🔴 | 1h | `#concurrent` | [react.dev ⭐](https://react.dev/blog/2022/03/29/react-v18) |
-| Suspense & streaming | 🔴 | 1h | `#concurrent` `#data` | [react.dev: Suspense ⭐](https://react.dev/reference/react/Suspense) |
-| React Server Components (RSC) | 🔴 | 1.5h | `#rsc` `#rendering` | [react.dev: server components ⭐](https://react.dev/reference/rsc/server-components) |
-| SSR & hydration | 🔴 | 1h | `#ssr` | [react.dev: hydrateRoot ⭐](https://react.dev/reference/react-dom/client/hydrateRoot) |
-| Server Actions | 🟡 | 45m | `#rsc` `#data` | [react.dev: 'use server' ⭐](https://react.dev/reference/rsc/use-server) |
-| Testing React | 🟡 | 1h | `#testing` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/intro/) |
+| [Concurrent rendering](topics/concurrent-rendering.md) | 🔴 | 1h | `#concurrent` | [react.dev ⭐](https://react.dev/blog/2022/03/29/react-v18) |
+| [Suspense & streaming](topics/suspense-streaming.md) | 🔴 | 1h | `#concurrent` `#data` | [react.dev: Suspense ⭐](https://react.dev/reference/react/Suspense) |
+| [React Server Components (RSC)](topics/react-server-components-rsc.md) | 🔴 | 1.5h | `#rsc` `#rendering` | [react.dev: server components ⭐](https://react.dev/reference/rsc/server-components) |
+| [SSR & hydration](topics/ssr-hydration.md) | 🔴 | 1h | `#ssr` | [react.dev: hydrateRoot ⭐](https://react.dev/reference/react-dom/client/hydrateRoot) |
+| [Server Actions](topics/server-actions.md) | 🟡 | 45m | `#rsc` `#data` | [react.dev: 'use server' ⭐](https://react.dev/reference/rsc/use-server) |
+| [Testing React](topics/testing-react.md) | 🟡 | 1h | `#testing` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/intro/) |
 
 ## ❓ Rapid-fire React interview questions
 

@@ -14,41 +14,41 @@ Type-level thinking. Senior+ interviews increasingly ask you to design APIs with
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Type basics & inference | 🟢 | 45m | `#basics` | [TS Handbook: everyday types ⭐](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) |
-| Interfaces vs type aliases | 🟢 | 30m | `#basics` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#interfaces-vs-type-aliases) |
-| Union & intersection types | 🟢 | 30m | `#basics` | [TS Handbook: unions ⭐](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) |
-| Literal & enum types | 🟢 | 30m | `#basics` | [TS Handbook: enums ⭐](https://www.typescriptlang.org/docs/handbook/enums.html) |
-| Functions & overloads | 🟡 | 45m | `#basics` | [TS Handbook: functions ⭐](https://www.typescriptlang.org/docs/handbook/2/functions.html) |
-| Narrowing & type guards | 🟡 | 45m | `#guards` | [TS Handbook: narrowing ⭐](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) |
-| Discriminated unions | 🟡 | 45m | `#patterns` `#state` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#discriminated-unions) |
-| `unknown` vs `any` vs `never` | 🟡 | 30m | `#basics` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/functions.html#never) |
+| [Type basics & inference](topics/type-basics-inference.md) | 🟢 | 45m | `#basics` | [TS Handbook: everyday types ⭐](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) |
+| [Interfaces vs type aliases](topics/interfaces-vs-type-aliases.md) | 🟢 | 30m | `#basics` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#interfaces-vs-type-aliases) |
+| [Union & intersection types](topics/union-intersection-types.md) | 🟢 | 30m | `#basics` | [TS Handbook: unions ⭐](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) |
+| [Literal & enum types](topics/literal-enum-types.md) | 🟢 | 30m | `#basics` | [TS Handbook: enums ⭐](https://www.typescriptlang.org/docs/handbook/enums.html) |
+| [Functions & overloads](topics/functions-overloads.md) | 🟡 | 45m | `#basics` | [TS Handbook: functions ⭐](https://www.typescriptlang.org/docs/handbook/2/functions.html) |
+| [Narrowing & type guards](topics/narrowing-type-guards.md) | 🟡 | 45m | `#guards` | [TS Handbook: narrowing ⭐](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) |
+| [Discriminated unions](topics/discriminated-unions.md) | 🟡 | 45m | `#patterns` `#state` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#discriminated-unions) |
+| [`unknown` vs `any` vs `never`](topics/unknown-vs-any-vs-never.md) | 🟡 | 30m | `#basics` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/functions.html#never) |
 
 ## Advanced types
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Generics | 🟡 | 1h | `#generics` | [TS Handbook: generics ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
-| Generic constraints & defaults | 🟡 | 45m | `#generics` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html#generic-constraints) |
-| Utility types (Partial/Pick/Omit/Record…) | 🟡 | 45m | `#utility-types` | [TS Handbook: utility types ⭐](https://www.typescriptlang.org/docs/handbook/utility-types.html) |
-| `keyof` & `typeof` | 🟡 | 30m | `#type-ops` | [TS Handbook: keyof ⭐](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html) |
-| Indexed access types | 🟡 | 30m | `#type-ops` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html) |
-| Mapped types | 🔴 | 1h | `#type-ops` | [TS Handbook: mapped types ⭐](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html) |
-| Conditional types & `infer` | 🔴 | 1.5h | `#type-ops` `#advanced` | [TS Handbook: conditional types ⭐](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) |
-| Template literal types | 🔴 | 1h | `#type-ops` `#advanced` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html) |
-| Variance & assignability | 🔴 | 1h | `#advanced` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) |
-| Type-level programming | 🔴 | 2h | `#advanced` | [Type Challenges ⭐](https://github.com/type-challenges/type-challenges) |
+| [Generics](topics/generics.md) | 🟡 | 1h | `#generics` | [TS Handbook: generics ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
+| [Generic constraints & defaults](topics/generic-constraints-defaults.md) | 🟡 | 45m | `#generics` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html#generic-constraints) |
+| [Utility types (Partial/Pick/Omit/Record…)](topics/utility-types-partial-pick-omit-record.md) | 🟡 | 45m | `#utility-types` | [TS Handbook: utility types ⭐](https://www.typescriptlang.org/docs/handbook/utility-types.html) |
+| [`keyof` & `typeof`](topics/keyof-typeof.md) | 🟡 | 30m | `#type-ops` | [TS Handbook: keyof ⭐](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html) |
+| [Indexed access types](topics/indexed-access-types.md) | 🟡 | 30m | `#type-ops` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html) |
+| [Mapped types](topics/mapped-types.md) | 🔴 | 1h | `#type-ops` | [TS Handbook: mapped types ⭐](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html) |
+| [Conditional types & `infer`](topics/conditional-types-infer.md) | 🔴 | 1.5h | `#type-ops` `#advanced` | [TS Handbook: conditional types ⭐](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) |
+| [Template literal types](topics/template-literal-types.md) | 🔴 | 1h | `#type-ops` `#advanced` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html) |
+| [Variance & assignability](topics/variance-assignability.md) | 🔴 | 1h | `#advanced` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) |
+| [Type-level programming](topics/type-level-programming.md) | 🔴 | 2h | `#advanced` | [Type Challenges ⭐](https://github.com/type-challenges/type-challenges) |
 
 ## Tooling & practice
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Declaration files (`.d.ts`) | 🟡 | 45m | `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) |
-| Decorators | 🟡 | 45m | `#advanced` | [TS Handbook: decorators ⭐](https://www.typescriptlang.org/docs/handbook/decorators.html) |
-| `tsconfig` deep dive | 🟡 | 45m | `#config` | [TSConfig reference ⭐](https://www.typescriptlang.org/tsconfig) |
-| `strict` mode & flags | 🟡 | 30m | `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/tsconfig#strict) |
-| Project references & monorepos | 🔴 | 1h | `#monorepo` `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/project-references.html) |
-| Typing React components & hooks | 🟡 | 1h | `#react` | [React TS cheatsheet ⭐](https://react-typescript-cheatsheet.netlify.app/) |
-| Typing async & generics in APIs | 🟡 | 45m | `#patterns` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
+| [Declaration files (`.d.ts`)](topics/declaration-files-d-ts.md) | 🟡 | 45m | `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) |
+| [Decorators](topics/decorators.md) | 🟡 | 45m | `#advanced` | [TS Handbook: decorators ⭐](https://www.typescriptlang.org/docs/handbook/decorators.html) |
+| [`tsconfig` deep dive](topics/tsconfig-deep-dive.md) | 🟡 | 45m | `#config` | [TSConfig reference ⭐](https://www.typescriptlang.org/tsconfig) |
+| [`strict` mode & flags](topics/strict-mode-flags.md) | 🟡 | 30m | `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/tsconfig#strict) |
+| [Project references & monorepos](topics/project-references-monorepos.md) | 🔴 | 1h | `#monorepo` `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/project-references.html) |
+| [Typing React components & hooks](topics/typing-react-components-hooks.md) | 🟡 | 1h | `#react` | [React TS cheatsheet ⭐](https://react-typescript-cheatsheet.netlify.app/) |
+| [Typing async & generics in APIs](topics/typing-async-generics-in-apis.md) | 🟡 | 45m | `#patterns` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
 
 ## ❓ Rapid-fire TypeScript interview questions
 

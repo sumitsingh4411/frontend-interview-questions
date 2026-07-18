@@ -14,51 +14,51 @@ The bedrock. If any of these are shaky, everything above them wobbles in an inte
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| How the web works (request → render) | 🟢 | 30m | `#networking` `#basics` | [MDN: how the web works ⭐](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works) |
-| Semantic HTML | 🟢 | 30m | `#html` `#a11y` `#seo` | [web.dev: HTML ⭐](https://web.dev/learn/html) |
-| The DOM | 🟢 | 45m | `#dom` `#basics` | [javascript.info: DOM ⭐](https://javascript.info/document) |
-| DOM manipulation & traversal | 🟢 | 45m | `#dom` | [javascript.info ⭐](https://javascript.info/modifying-document) |
-| Event handling, bubbling & delegation | 🟡 | 1h | `#dom` `#events` | [javascript.info: bubbling ⭐](https://javascript.info/bubbling-and-capturing) |
-| Virtual DOM | 🟡 | 45m | `#dom` `#react` | [React: rendering ⭐](https://react.dev/learn/render-and-commit) |
-| Shadow DOM & Web Components | 🟡 | 1h | `#dom` `#components` | [MDN: web components ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) |
-| Forms & validation | 🟡 | 45m | `#forms` | [MDN: forms ⭐](https://developer.mozilla.org/en-US/docs/Learn/Forms) |
+| [How the web works (request → render)](topics/how-the-web-works-request-render.md) | 🟢 | 30m | `#networking` `#basics` | [MDN: how the web works ⭐](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works) |
+| [Semantic HTML](topics/semantic-html.md) | 🟢 | 30m | `#html` `#a11y` `#seo` | [web.dev: HTML ⭐](https://web.dev/learn/html) |
+| [The DOM](topics/the-dom.md) | 🟢 | 45m | `#dom` `#basics` | [javascript.info: DOM ⭐](https://javascript.info/document) |
+| [DOM manipulation & traversal](topics/dom-manipulation-traversal.md) | 🟢 | 45m | `#dom` | [javascript.info ⭐](https://javascript.info/modifying-document) |
+| [Event handling, bubbling & delegation](topics/event-handling-bubbling-delegation.md) | 🟡 | 1h | `#dom` `#events` | [javascript.info: bubbling ⭐](https://javascript.info/bubbling-and-capturing) |
+| [Virtual DOM](topics/virtual-dom.md) | 🟡 | 45m | `#dom` `#react` | [React: rendering ⭐](https://react.dev/learn/render-and-commit) |
+| [Shadow DOM & Web Components](topics/shadow-dom-web-components.md) | 🟡 | 1h | `#dom` `#components` | [MDN: web components ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) |
+| [Forms & validation](topics/forms-validation.md) | 🟡 | 45m | `#forms` | [MDN: forms ⭐](https://developer.mozilla.org/en-US/docs/Learn/Forms) |
 
 ## Rendering & delivery
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Rendering strategies (CSR/SSR/SSG/ISR) | 🟡 | 1h | `#rendering` `#seo` | [web.dev: rendering on the web ⭐](https://web.dev/articles/rendering-on-the-web) |
-| Critical Rendering Path | 🟡 | 1h | `#rendering` `#performance` | [web.dev: CRP ⭐](https://web.dev/articles/critical-rendering-path) |
-| Event Loop | 🟡 | 1h | `#async` `#internals` | [javascript.info: event loop ⭐](https://javascript.info/event-loop) |
-| SEO fundamentals | 🟡 | 1h | `#seo` | [Google Search Central ⭐](https://developers.google.com/search/docs) |
-| Progressive Web Apps (PWA) | 🟡 | 1h | `#pwa` `#offline` | [web.dev: PWA ⭐](https://web.dev/explore/progressive-web-apps) |
-| Progressive enhancement | 🟡 | 30m | `#basics` `#a11y` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement) |
-| Responsive design | 🟢 | 1h | `#css` `#responsive` | [web.dev: responsive ⭐](https://web.dev/articles/responsive-web-design-basics) |
+| [Rendering strategies (CSR/SSR/SSG/ISR)](topics/rendering-strategies-csr-ssr-ssg-isr.md) | 🟡 | 1h | `#rendering` `#seo` | [web.dev: rendering on the web ⭐](https://web.dev/articles/rendering-on-the-web) |
+| [Critical Rendering Path](topics/critical-rendering-path.md) | 🟡 | 1h | `#rendering` `#performance` | [web.dev: CRP ⭐](https://web.dev/articles/critical-rendering-path) |
+| [Event Loop](topics/event-loop.md) | 🟡 | 1h | `#async` `#internals` | [javascript.info: event loop ⭐](https://javascript.info/event-loop) |
+| [SEO fundamentals](topics/seo-fundamentals.md) | 🟡 | 1h | `#seo` | [Google Search Central ⭐](https://developers.google.com/search/docs) |
+| [Progressive Web Apps (PWA)](topics/progressive-web-apps-pwa.md) | 🟡 | 1h | `#pwa` `#offline` | [web.dev: PWA ⭐](https://web.dev/explore/progressive-web-apps) |
+| [Progressive enhancement](topics/progressive-enhancement.md) | 🟡 | 30m | `#basics` `#a11y` | [MDN ⭐](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement) |
+| [Responsive design](topics/responsive-design.md) | 🟢 | 1h | `#css` `#responsive` | [web.dev: responsive ⭐](https://web.dev/articles/responsive-web-design-basics) |
 
 ## Networking & storage
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| HTTP fundamentals | 🟢 | 45m | `#networking` `#http` | [MDN: HTTP overview ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) |
-| HTTPS & TLS | 🟡 | 45m | `#networking` `#security` | [Cloudflare: HTTPS ⭐](https://www.cloudflare.com/learning/ssl/what-is-https/) |
-| REST & JSON APIs | 🟢 | 45m | `#api` | [MDN: REST ⭐](https://developer.mozilla.org/en-US/docs/Glossary/REST) |
-| Fetch & AJAX | 🟢 | 45m | `#fetch` `#api` | [MDN: Fetch ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) |
-| CORS | 🟡 | 45m | `#networking` `#security` | [MDN: CORS ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) |
-| Caching (HTTP + browser) | 🟡 | 1h | `#networking` `#performance` | [MDN: HTTP caching ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) |
-| Browser storage (cookies/localStorage/IndexedDB) | 🟡 | 1h | `#storage` `#offline` | [web.dev: storage ⭐](https://web.dev/articles/storage-for-the-web) |
-| Cookies (attributes, SameSite) | 🟡 | 45m | `#storage` `#security` | [MDN: cookies ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) |
-| Web APIs (Intersection/Resize/Mutation Observer) | 🟡 | 1h | `#web-api` | [MDN: Web APIs ⭐](https://developer.mozilla.org/en-US/docs/Web/API) |
-| Geolocation, Notifications, Clipboard APIs | 🟢 | 45m | `#web-api` | [MDN: Web APIs ⭐](https://developer.mozilla.org/en-US/docs/Web/API) |
+| [HTTP fundamentals](topics/http-fundamentals.md) | 🟢 | 45m | `#networking` `#http` | [MDN: HTTP overview ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) |
+| [HTTPS & TLS](topics/https-tls.md) | 🟡 | 45m | `#networking` `#security` | [Cloudflare: HTTPS ⭐](https://www.cloudflare.com/learning/ssl/what-is-https/) |
+| [REST & JSON APIs](topics/rest-json-apis.md) | 🟢 | 45m | `#api` | [MDN: REST ⭐](https://developer.mozilla.org/en-US/docs/Glossary/REST) |
+| [Fetch & AJAX](topics/fetch-ajax.md) | 🟢 | 45m | `#fetch` `#api` | [MDN: Fetch ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) |
+| [CORS](topics/cors.md) | 🟡 | 45m | `#networking` `#security` | [MDN: CORS ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) |
+| [Caching (HTTP + browser)](topics/caching-http-browser.md) | 🟡 | 1h | `#networking` `#performance` | [MDN: HTTP caching ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) |
+| [Browser storage (cookies/localStorage/IndexedDB)](topics/browser-storage-cookies-localstorage-indexeddb.md) | 🟡 | 1h | `#storage` `#offline` | [web.dev: storage ⭐](https://web.dev/articles/storage-for-the-web) |
+| [Cookies (attributes, SameSite)](topics/cookies-attributes-samesite.md) | 🟡 | 45m | `#storage` `#security` | [MDN: cookies ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) |
+| [Web APIs (Intersection/Resize/Mutation Observer)](topics/web-apis-intersection-resize-mutation-observer.md) | 🟡 | 1h | `#web-api` | [MDN: Web APIs ⭐](https://developer.mozilla.org/en-US/docs/Web/API) |
+| [Geolocation, Notifications, Clipboard APIs](topics/geolocation-notifications-clipboard-apis.md) | 🟢 | 45m | `#web-api` | [MDN: Web APIs ⭐](https://developer.mozilla.org/en-US/docs/Web/API) |
 
 ## Cross-cutting
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Accessibility basics | 🟡 | 1h | `#a11y` | [web.dev: accessibility ⭐](https://web.dev/learn/accessibility) |
-| Performance basics (Core Web Vitals) | 🟡 | 1h | `#performance` | [web.dev: vitals ⭐](https://web.dev/articles/vitals) |
-| Security basics (XSS/CSRF overview) | 🟡 | 1h | `#security` | [OWASP top 10 ⭐](https://owasp.org/www-project-top-ten/) |
-| Internationalization (i18n) basics | 🟡 | 45m | `#i18n` | [MDN: Intl ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) |
-| Character encoding (UTF-8/Unicode) | 🟢 | 30m | `#basics` | [MDN: Unicode ⭐](https://developer.mozilla.org/en-US/docs/Glossary/Unicode) |
+| [Accessibility basics](topics/accessibility-basics.md) | 🟡 | 1h | `#a11y` | [web.dev: accessibility ⭐](https://web.dev/learn/accessibility) |
+| [Performance basics (Core Web Vitals)](topics/performance-basics-core-web-vitals.md) | 🟡 | 1h | `#performance` | [web.dev: vitals ⭐](https://web.dev/articles/vitals) |
+| [Security basics (XSS/CSRF overview)](topics/security-basics-xss-csrf-overview.md) | 🟡 | 1h | `#security` | [OWASP top 10 ⭐](https://owasp.org/www-project-top-ten/) |
+| [Internationalization (i18n) basics](topics/internationalization-i18n-basics.md) | 🟡 | 45m | `#i18n` | [MDN: Intl ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) |
+| [Character encoding (UTF-8/Unicode)](topics/character-encoding-utf-8-unicode.md) | 🟢 | 30m | `#basics` | [MDN: Unicode ⭐](https://developer.mozilla.org/en-US/docs/Glossary/Unicode) |
 
 ## 🧩 Key Web APIs (must-know)
 

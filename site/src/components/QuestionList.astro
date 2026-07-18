@@ -366,8 +366,11 @@ const pad = String(questions.length).length;
 </style>
 
 <script>
-  const root = document.querySelector<HTMLElement>('[data-qlist]');
-  if (root) {
+  // Every element here is rebuilt on navigation, so init re-runs per page and binds
+  // to the fresh nodes; nothing outlives the page, so no listener can stack up.
+  const init = () => {
+    const root = document.querySelector<HTMLElement>('[data-qlist]');
+    if (!root) return;
     const KEY = root.dataset.key!;
     const items = [...root.querySelectorAll<HTMLLIElement>('.q')];
     const doneCountEl = root.querySelector<HTMLElement>('[data-done-count]')!;
@@ -469,5 +472,7 @@ const pad = String(questions.length).length;
 
     paint();
     applyFilters();
-  }
+  };
+
+  document.addEventListener('astro:page-load', init);
 </script>

@@ -14,45 +14,45 @@ How the browser turns bytes into pixels — and why your app is slow. The "expla
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Browser high-level architecture (multi-process) | 🟡 | 1h | `#internals` | [Inside a modern browser (part 1) ⭐](https://developer.chrome.com/blog/inside-browser-part1) |
-| Process/thread model (renderer, GPU, network) | 🟡 | 45m | `#internals` | [Inside a modern browser (part 2) ⭐](https://developer.chrome.com/blog/inside-browser-part2) |
-| Blink rendering engine | 🟡 | 30m | `#internals` | [Chromium: Blink ⭐](https://www.chromium.org/blink/) |
-| V8 & JIT compilation | 🔴 | 1.5h | `#internals` `#v8` | [V8 blog ⭐](https://v8.dev/blog) |
-| SpiderMonkey / JavaScriptCore (other engines) | 🟡 | 30m | `#internals` | [MDN: JS engines ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/JavaScript_technologies_overview) |
-| Hidden classes & inline caches | 🔴 | 1h | `#v8` `#performance` | [V8: hidden classes ⭐](https://v8.dev/docs/hidden-classes) |
+| [Browser high-level architecture (multi-process)](topics/browser-high-level-architecture-multi-process.md) | 🟡 | 1h | `#internals` | [Inside a modern browser (part 1) ⭐](https://developer.chrome.com/blog/inside-browser-part1) |
+| [Process/thread model (renderer, GPU, network)](topics/process-thread-model-renderer-gpu-network.md) | 🟡 | 45m | `#internals` | [Inside a modern browser (part 2) ⭐](https://developer.chrome.com/blog/inside-browser-part2) |
+| [Blink rendering engine](topics/blink-rendering-engine.md) | 🟡 | 30m | `#internals` | [Chromium: Blink ⭐](https://www.chromium.org/blink/) |
+| [V8 & JIT compilation](topics/v8-jit-compilation.md) | 🔴 | 1.5h | `#internals` `#v8` | [V8 blog ⭐](https://v8.dev/blog) |
+| [SpiderMonkey / JavaScriptCore (other engines)](topics/spidermonkey-javascriptcore-other-engines.md) | 🟡 | 30m | `#internals` | [MDN: JS engines ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/JavaScript_technologies_overview) |
+| [Hidden classes & inline caches](topics/hidden-classes-inline-caches.md) | 🔴 | 1h | `#v8` `#performance` | [V8: hidden classes ⭐](https://v8.dev/docs/hidden-classes) |
 
 ## The rendering pipeline
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Critical rendering path (overview) | 🔴 | 1.5h | `#rendering` | [web.dev: CRP ⭐](https://web.dev/articles/critical-rendering-path) |
-| HTML parsing & the DOM tree | 🟡 | 45m | `#parsing` `#dom` | [MDN: how browsers work ⭐](https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work) |
-| CSS parsing & the CSSOM | 🟡 | 45m | `#parsing` `#css` | [web.dev: CSSOM ⭐](https://web.dev/articles/critical-rendering-path-constructing-the-object-model) |
-| Render tree, Layout & Reflow | 🔴 | 1h | `#rendering` `#performance` | [Inside a modern browser (part 3) ⭐](https://developer.chrome.com/blog/inside-browser-part3) |
-| Paint & layers | 🟡 | 45m | `#rendering` | [web.dev: rendering perf ⭐](https://web.dev/articles/rendering-performance) |
-| Compositing & the compositor thread | 🔴 | 1h | `#rendering` `#performance` | [Inside a modern browser (part 3) ⭐](https://developer.chrome.com/blog/inside-browser-part3) |
-| Rasterization & the GPU | 🔴 | 45m | `#rendering` `#gpu` | [web.dev: animations guide ⭐](https://web.dev/articles/animations-guide) |
-| Main thread vs compositor thread | 🔴 | 45m | `#performance` | [web.dev: long tasks ⭐](https://web.dev/articles/optimize-long-tasks) |
-| Render-blocking resources | 🟡 | 45m | `#rendering` `#performance` | [web.dev ⭐](https://web.dev/articles/critical-rendering-path-render-blocking-css) |
+| [Critical rendering path (overview)](topics/critical-rendering-path-overview.md) | 🔴 | 1.5h | `#rendering` | [web.dev: CRP ⭐](https://web.dev/articles/critical-rendering-path) |
+| [HTML parsing & the DOM tree](topics/html-parsing-the-dom-tree.md) | 🟡 | 45m | `#parsing` `#dom` | [MDN: how browsers work ⭐](https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work) |
+| [CSS parsing & the CSSOM](topics/css-parsing-the-cssom.md) | 🟡 | 45m | `#parsing` `#css` | [web.dev: CSSOM ⭐](https://web.dev/articles/critical-rendering-path-constructing-the-object-model) |
+| [Render tree, Layout & Reflow](topics/render-tree-layout-reflow.md) | 🔴 | 1h | `#rendering` `#performance` | [Inside a modern browser (part 3) ⭐](https://developer.chrome.com/blog/inside-browser-part3) |
+| [Paint & layers](topics/paint-layers.md) | 🟡 | 45m | `#rendering` | [web.dev: rendering perf ⭐](https://web.dev/articles/rendering-performance) |
+| [Compositing & the compositor thread](topics/compositing-the-compositor-thread.md) | 🔴 | 1h | `#rendering` `#performance` | [Inside a modern browser (part 3) ⭐](https://developer.chrome.com/blog/inside-browser-part3) |
+| [Rasterization & the GPU](topics/rasterization-the-gpu.md) | 🔴 | 45m | `#rendering` `#gpu` | [web.dev: animations guide ⭐](https://web.dev/articles/animations-guide) |
+| [Main thread vs compositor thread](topics/main-thread-vs-compositor-thread.md) | 🔴 | 45m | `#performance` | [web.dev: long tasks ⭐](https://web.dev/articles/optimize-long-tasks) |
+| [Render-blocking resources](topics/render-blocking-resources.md) | 🟡 | 45m | `#rendering` `#performance` | [web.dev ⭐](https://web.dev/articles/critical-rendering-path-render-blocking-css) |
 
 ## Event loop & scheduling
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Event loop (browser) | 🟡 | 1h | `#async` `#internals` | [Jake Archibald: in the loop ⭐](https://www.youtube.com/watch?v=cCOL7MC4Pl0) |
-| Microtasks vs macrotasks | 🟡 | 45m | `#async` | [MDN: microtasks ⭐](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) |
-| `requestAnimationFrame` | 🟡 | 30m | `#rendering` `#async` | [MDN: rAF ⭐](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) |
-| `requestIdleCallback` & scheduling | 🟡 | 30m | `#async` `#performance` | [MDN: rIC ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback) |
-| `scheduler.postTask` / yielding | 🔴 | 45m | `#async` `#modern` | [web.dev: optimize long tasks ⭐](https://web.dev/articles/optimize-long-tasks) |
+| [Event loop (browser)](topics/event-loop-browser.md) | 🟡 | 1h | `#async` `#internals` | [Jake Archibald: in the loop ⭐](https://www.youtube.com/watch?v=cCOL7MC4Pl0) |
+| [Microtasks vs macrotasks](topics/microtasks-vs-macrotasks.md) | 🟡 | 45m | `#async` | [MDN: microtasks ⭐](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) |
+| [`requestAnimationFrame`](topics/requestanimationframe.md) | 🟡 | 30m | `#rendering` `#async` | [MDN: rAF ⭐](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) |
+| [`requestIdleCallback` & scheduling](topics/requestidlecallback-scheduling.md) | 🟡 | 30m | `#async` `#performance` | [MDN: rIC ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback) |
+| [`scheduler.postTask` / yielding](topics/scheduler-posttask-yielding.md) | 🔴 | 45m | `#async` `#modern` | [web.dev: optimize long tasks ⭐](https://web.dev/articles/optimize-long-tasks) |
 
 ## Memory & storage
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Memory management | 🔴 | 1h | `#memory` | [MDN: memory management ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management) |
-| Garbage collection (mark & sweep) | 🔴 | 45m | `#memory` `#v8` | [V8: trash talk ⭐](https://v8.dev/blog/trash-talk) |
-| Memory leaks & detection | 🔴 | 1h | `#memory` `#performance` | [Chrome DevTools: memory ⭐](https://developer.chrome.com/docs/devtools/memory-problems) |
-| Storage internals (cache/quota) | 🟡 | 45m | `#storage` | [web.dev: storage ⭐](https://web.dev/articles/storage-for-the-web) |
+| [Memory management](topics/memory-management.md) | 🔴 | 1h | `#memory` | [MDN: memory management ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management) |
+| [Garbage collection (mark & sweep)](topics/garbage-collection-mark-sweep.md) | 🔴 | 45m | `#memory` `#v8` | [V8: trash talk ⭐](https://v8.dev/blog/trash-talk) |
+| [Memory leaks & detection](topics/memory-leaks-detection.md) | 🔴 | 1h | `#memory` `#performance` | [Chrome DevTools: memory ⭐](https://developer.chrome.com/docs/devtools/memory-problems) |
+| [Storage internals (cache/quota)](topics/storage-internals-cache-quota.md) | 🟡 | 45m | `#storage` | [web.dev: storage ⭐](https://web.dev/articles/storage-for-the-web) |
 
 ## ❓ Rapid-fire browser internals interview questions
 

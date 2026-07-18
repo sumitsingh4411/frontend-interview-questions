@@ -200,6 +200,8 @@ const stats = getStats();
 </style>
 
 <script>
+  import { fetchJson } from '@lib/fetch-json.ts';
+
   type Cat = [string, string, string, string, string];
   type Q = [string, number, string];
   type Page = [string, string, string];
@@ -209,21 +211,37 @@ const stats = getStats();
     pages: Page[];
   }
 
-  const dialog = document.querySelector<HTMLDialogElement>('[data-palette]');
-  const input = document.querySelector<HTMLInputElement>('[data-palette-input]');
-  const results = document.querySelector<HTMLDivElement>('[data-palette-results]');
-  if (dialog && input && results) {
-    let index: Index | null = null;
-    let loading: Promise<Index> | null = null;
+  // The palette is re-rendered on every navigation, so its elements are re-queried per
+  // page. The fetched index lives in module scope and is downloaded once per session,
+  // not once per page. The global ⌘K/"/" handler binds once and reaches the *current*
+  // palette through these two refs, so it never points at a discarded dialog.
+  let index: Index | null = null;
+  let loading: Promise<Index> | null = null;
+  let liveDialog: HTMLDialogElement | null = null;
+  let openPalette: () => void = () => {};
+  let keysBound = false;
+
+  const init = () => {
+    const dialog = document.querySelector<HTMLDialogElement>('[data-palette]');
+    const input = document.querySelector<HTMLInputElement>('[data-palette-input]');
+    const results = document.querySelector<HTMLDivElement>('[data-palette-results]');
+    liveDialog = dialog;
+    openPalette = () => {};
+    if (!dialog || !input || !results) return;
+
     let items: HTMLElement[] = [];
     let cursor = 0;
 
     const loadIndex = () => {
       if (index) return Promise.resolve(index);
       if (!loading) {
-        loading = fetch(dialog.dataset.indexUrl!)
-          .then((r) => r.json())
-          .then((d: Index) => (index = d));
+        loading = fetchJson<Index>(dialog.dataset.indexUrl!)
+          .then((d) => (index = d))
+          // Don't cache a rejection — a failed load would poison every later search.
+          .catch((e) => {
+            loading = null;
+            throw e;
+          });
       }
       return loading;
     };
@@ -353,21 +371,10 @@ const stats = getStats();
       if (input.value) render(input.value);
     };
 
-    document.querySelectorAll('[data-search-open]').forEach((b) => b.addEventListener('click', open));
+    openPalette = open;
 
-    document.addEventListener('keydown', (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
-        e.preventDefault();
-        dialog.open ? dialog.close() : open();
-        return;
-      }
-      const target = e.target as HTMLElement;
-      const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName) || target.isContentEditable;
-      if (e.key === '/' && !dialog.open && !typing) {
-        e.preventDefault();
-        open();
-      }
-    });
+    // The search buttons live in the topbar, which is rebuilt each page — rebind them.
+    document.querySelectorAll('[data-search-open]').forEach((b) => b.addEventListener('click', open));
 
     let t: ReturnType<typeof setTimeout>;
     input.addEventListener('input', async () => {
@@ -391,7 +398,10 @@ const stats = getStats();
         const el = items[cursor] as HTMLAnchorElement | undefined;
         if (el) {
           e.preventDefault();
-          window.location.href = el.href;
+          dialog.close();
+          // Click it rather than assigning location, so the router handles the
+          // navigation like any other link instead of forcing a full reload.
+          el.click();
         }
       }
     });
@@ -400,5 +410,28 @@ const stats = getStats();
     dialog.addEventListener('click', (e) => {
       if (e.target === dialog) dialog.close();
     });
+  };
+
+  // Bound once: the shortcut is global and must survive every navigation.
+  if (!keysBound) {
+    keysBound = true;
+    document.addEventListener('keydown', (e) => {
+      const dialog = liveDialog;
+      if (!dialog) return;
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        if (dialog.open) dialog.close();
+        else openPalette();
+        return;
+      }
+      const target = e.target as HTMLElement;
+      const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName) || target.isContentEditable;
+      if (e.key === '/' && !dialog.open && !typing) {
+        e.preventDefault();
+        openPalette();
+      }
+    });
   }
+
+  document.addEventListener('astro:page-load', init);
 </script>
