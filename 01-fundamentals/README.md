@@ -57,8 +57,8 @@ The bedrock. If any of these are shaky, everything above them wobbles in an inte
 | [Accessibility basics](topics/accessibility-basics.md) | 🟡 | 1h | `#a11y` | [web.dev: accessibility ⭐](https://web.dev/learn/accessibility) |
 | [Performance basics (Core Web Vitals)](topics/performance-basics-core-web-vitals.md) | 🟡 | 1h | `#performance` | [web.dev: vitals ⭐](https://web.dev/articles/vitals) |
 | [Security basics (XSS/CSRF overview)](topics/security-basics-xss-csrf-overview.md) | 🟡 | 1h | `#security` | [OWASP top 10 ⭐](https://owasp.org/www-project-top-ten/) |
-| Internationalization (i18n) basics | 🟡 | 45m | `#i18n` | [MDN: Intl ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) |
-| Character encoding (UTF-8/Unicode) | 🟢 | 30m | `#basics` | [MDN: Unicode ⭐](https://developer.mozilla.org/en-US/docs/Glossary/Unicode) |
+| [Internationalization (i18n) basics](topics/internationalization-i18n-basics.md) | 🟡 | 45m | `#i18n` | [MDN: Intl ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) |
+| [Character encoding (UTF-8/Unicode)](topics/character-encoding-utf-8-unicode.md) | 🟢 | 30m | `#basics` | [MDN: Unicode ⭐](https://developer.mozilla.org/en-US/docs/Glossary/Unicode) |
 
 ## 🧩 Key Web APIs (must-know)
 

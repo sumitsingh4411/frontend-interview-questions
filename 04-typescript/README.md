@@ -46,9 +46,9 @@ Type-level thinking. Senior+ interviews increasingly ask you to design APIs with
 | [Decorators](topics/decorators.md) | 🟡 | 45m | `#advanced` | [TS Handbook: decorators ⭐](https://www.typescriptlang.org/docs/handbook/decorators.html) |
 | [`tsconfig` deep dive](topics/tsconfig-deep-dive.md) | 🟡 | 45m | `#config` | [TSConfig reference ⭐](https://www.typescriptlang.org/tsconfig) |
 | [`strict` mode & flags](topics/strict-mode-flags.md) | 🟡 | 30m | `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/tsconfig#strict) |
-| Project references & monorepos | 🔴 | 1h | `#monorepo` `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/project-references.html) |
-| Typing React components & hooks | 🟡 | 1h | `#react` | [React TS cheatsheet ⭐](https://react-typescript-cheatsheet.netlify.app/) |
-| Typing async & generics in APIs | 🟡 | 45m | `#patterns` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
+| [Project references & monorepos](topics/project-references-monorepos.md) | 🔴 | 1h | `#monorepo` `#config` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/project-references.html) |
+| [Typing React components & hooks](topics/typing-react-components-hooks.md) | 🟡 | 1h | `#react` | [React TS cheatsheet ⭐](https://react-typescript-cheatsheet.netlify.app/) |
+| [Typing async & generics in APIs](topics/typing-async-generics-in-apis.md) | 🟡 | 45m | `#patterns` | [TS Handbook ⭐](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
 
 ## ❓ Rapid-fire TypeScript interview questions
 

@@ -39,10 +39,10 @@ The production meta-framework. Interviewers use it to probe rendering strategies
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
 | [Middleware](topics/middleware.md) | 🟡 | 45m | `#routing` `#auth` | [Next.js: middleware ⭐](https://nextjs.org/docs/app/building-your-application/routing/middleware) |
-| Edge runtime | 🔴 | 45m | `#edge` `#performance` | [Next.js: edge ⭐](https://nextjs.org/docs/app/api-reference/edge) |
-| Metadata & SEO | 🟡 | 45m | `#seo` | [Next.js: metadata ⭐](https://nextjs.org/docs/app/building-your-application/optimizing/metadata) |
-| Image optimization | 🟡 | 45m | `#performance` `#images` | [Next.js: Image ⭐](https://nextjs.org/docs/app/building-your-application/optimizing/images) |
-| Font optimization | 🟢 | 30m | `#performance` `#fonts` | [Next.js: fonts ⭐](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) |
+| [Edge runtime](topics/edge-runtime.md) | 🔴 | 45m | `#edge` `#performance` | [Next.js: edge ⭐](https://nextjs.org/docs/app/api-reference/edge) |
+| [Metadata & SEO](topics/metadata-seo.md) | 🟡 | 45m | `#seo` | [Next.js: metadata ⭐](https://nextjs.org/docs/app/building-your-application/optimizing/metadata) |
+| [Image optimization](topics/image-optimization.md) | 🟡 | 45m | `#performance` `#images` | [Next.js: Image ⭐](https://nextjs.org/docs/app/building-your-application/optimizing/images) |
+| [Font optimization](topics/font-optimization.md) | 🟢 | 30m | `#performance` `#fonts` | [Next.js: fonts ⭐](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) |
 | Authentication patterns | 🔴 | 1h | `#auth` | [Next.js: auth ⭐](https://nextjs.org/docs/app/building-your-application/authentication) |
 | Deployment & performance | 🟡 | 45m | `#deployment` `#performance` | [Next.js: deploying ⭐](https://nextjs.org/docs/app/building-your-application/deploying) |
 

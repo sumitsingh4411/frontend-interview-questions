@@ -34,15 +34,15 @@ Every system-design answer is judged on this. Know the metrics, know how to move
 | [Preload / prefetch / preconnect](topics/preload-prefetch-preconnect.md) | 🟡 | 45m | `#loading` | [web.dev: resource hints ⭐](https://web.dev/articles/preload-critical-assets) |
 | [Compression (gzip/brotli)](topics/compression-gzip-brotli.md) | 🟢 | 30m | `#networking` | [web.dev: compression ⭐](https://web.dev/articles/reduce-network-payloads-using-text-compression) |
 | [Critical CSS & above-the-fold](topics/critical-css-above-the-fold.md) | 🟡 | 45m | `#rendering` | [web.dev: critical CSS ⭐](https://web.dev/articles/extract-critical-css) |
-| HTTP caching & service worker cache | 🟡 | 1h | `#caching` | [web.dev: HTTP cache ⭐](https://web.dev/articles/http-cache) |
-| CDN & edge delivery | 🟡 | 45m | `#cdn` | [Cloudflare: CDN ⭐](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) |
+| [HTTP caching & service worker cache](topics/http-caching-service-worker-cache.md) | 🟡 | 1h | `#caching` | [web.dev: HTTP cache ⭐](https://web.dev/articles/http-cache) |
+| [CDN & edge delivery](topics/cdn-edge-delivery.md) | 🟡 | 45m | `#cdn` | [Cloudflare: CDN ⭐](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) |
 
 ## Runtime performance
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| List virtualization / windowing | 🔴 | 1.5h | `#large-data` `#rendering` | [Flagship ⭐](../06-react/build-a-virtualized-list.md) |
-| Infinite scroll vs pagination | 🟡 | 45m | `#large-data` `#ux` | [Flagship ⭐](../15-system-design/design-news-feed.md) |
+| [List virtualization / windowing](topics/list-virtualization-windowing.md) | 🔴 | 1.5h | `#large-data` `#rendering` | [Flagship ⭐](../06-react/build-a-virtualized-list.md) |
+| [Infinite scroll vs pagination](topics/infinite-scroll-vs-pagination.md) | 🟡 | 45m | `#large-data` `#ux` | [Flagship ⭐](../15-system-design/design-news-feed.md) |
 | Debounce/throttle & long-task splitting | 🟡 | 45m | `#interaction` | [web.dev: long tasks ⭐](https://web.dev/articles/optimize-long-tasks) |
 | Rendering performance (reflow/repaint) | 🔴 | 1h | `#rendering` | [web.dev: rendering perf ⭐](https://web.dev/articles/rendering-performance) |
 | [Avoid layout thrashing](topics/avoid-layout-thrashing.md) | 🔴 | 45m | `#rendering` | [web.dev ⭐](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) |

@@ -65,10 +65,10 @@ Layout, the cascade, and making it fast. "Center a div" is a meme; "explain the 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
 | [CSS architecture (BEM, ITCSS)](topics/css-architecture-bem-itcss.md) | 🟡 | 45m | `#architecture` | [BEM ⭐](https://getbem.com/) |
-| CSS-in-JS vs utility CSS (Tailwind) | 🟡 | 45m | `#architecture` | [patterns.dev: CSS-in-JS ⭐](https://www.patterns.dev/vanilla/css-in-js) |
-| CSS Modules & scoping | 🟢 | 30m | `#architecture` | [CSS Modules ⭐](https://github.com/css-modules/css-modules) |
-| Design tokens | 🟡 | 45m | `#design-systems` `#theming` | [W3C: design tokens ⭐](https://tr.designtokens.org/format/) |
-| Accessibility in CSS (focus, contrast) | 🟡 | 45m | `#a11y` | [web.dev: a11y ⭐](https://web.dev/learn/accessibility) |
+| [CSS-in-JS vs utility CSS (Tailwind)](topics/css-in-js-vs-utility-css-tailwind.md) | 🟡 | 45m | `#architecture` | [patterns.dev: CSS-in-JS ⭐](https://www.patterns.dev/vanilla/css-in-js) |
+| [CSS Modules & scoping](topics/css-modules-scoping.md) | 🟢 | 30m | `#architecture` | [CSS Modules ⭐](https://github.com/css-modules/css-modules) |
+| [Design tokens](topics/design-tokens.md) | 🟡 | 45m | `#design-systems` `#theming` | [W3C: design tokens ⭐](https://tr.designtokens.org/format/) |
+| [Accessibility in CSS (focus, contrast)](topics/accessibility-in-css-focus-contrast.md) | 🟡 | 45m | `#a11y` | [web.dev: a11y ⭐](https://web.dev/learn/accessibility) |
 
 ## ❓ Rapid-fire CSS interview questions
 

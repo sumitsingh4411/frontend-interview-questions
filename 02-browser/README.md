@@ -49,10 +49,10 @@ How the browser turns bytes into pixels — and why your app is slow. The "expla
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Memory management | 🔴 | 1h | `#memory` | [MDN: memory management ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management) |
-| Garbage collection (mark & sweep) | 🔴 | 45m | `#memory` `#v8` | [V8: trash talk ⭐](https://v8.dev/blog/trash-talk) |
-| Memory leaks & detection | 🔴 | 1h | `#memory` `#performance` | [Chrome DevTools: memory ⭐](https://developer.chrome.com/docs/devtools/memory-problems) |
-| Storage internals (cache/quota) | 🟡 | 45m | `#storage` | [web.dev: storage ⭐](https://web.dev/articles/storage-for-the-web) |
+| [Memory management](topics/memory-management.md) | 🔴 | 1h | `#memory` | [MDN: memory management ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management) |
+| [Garbage collection (mark & sweep)](topics/garbage-collection-mark-sweep.md) | 🔴 | 45m | `#memory` `#v8` | [V8: trash talk ⭐](https://v8.dev/blog/trash-talk) |
+| [Memory leaks & detection](topics/memory-leaks-detection.md) | 🔴 | 1h | `#memory` `#performance` | [Chrome DevTools: memory ⭐](https://developer.chrome.com/docs/devtools/memory-problems) |
+| [Storage internals (cache/quota)](topics/storage-internals-cache-quota.md) | 🟡 | 45m | `#storage` | [web.dev: storage ⭐](https://web.dev/articles/storage-for-the-web) |
 
 ## ❓ Rapid-fire browser internals interview questions
 

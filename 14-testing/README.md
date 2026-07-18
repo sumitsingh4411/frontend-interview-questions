@@ -46,9 +46,9 @@ How you prove the thing works. Expect "how would you test this?" after any machi
 | [E2E with Playwright](topics/e2e-with-playwright.md) | 🔴 | 1.5h | `#e2e` `#playwright` | [Playwright ⭐](https://playwright.dev/docs/intro) |
 | [E2E with Cypress](topics/e2e-with-cypress.md) | 🟡 | 1h | `#e2e` `#cypress` | [Cypress ⭐](https://docs.cypress.io/guides/overview/why-cypress) |
 | [Visual regression testing](topics/visual-regression-testing.md) | 🟡 | 45m | `#visual` | [Playwright: snapshots ⭐](https://playwright.dev/docs/test-snapshots) |
-| Accessibility testing | 🟡 | 45m | `#a11y` | [jest-axe ⭐](https://github.com/nickcolley/jest-axe) |
-| Performance testing / budgets | 🔴 | 45m | `#performance` | [web.dev: budgets ⭐](https://web.dev/articles/performance-budgets-101) |
-| Component testing (Storybook) | 🟡 | 45m | `#component` | [Storybook: testing ⭐](https://storybook.js.org/docs/writing-tests) |
+| [Accessibility testing](topics/accessibility-testing.md) | 🟡 | 45m | `#a11y` | [jest-axe ⭐](https://github.com/nickcolley/jest-axe) |
+| [Performance testing / budgets](topics/performance-testing-budgets.md) | 🔴 | 45m | `#performance` | [web.dev: budgets ⭐](https://web.dev/articles/performance-budgets-101) |
+| [Component testing (Storybook)](topics/component-testing-storybook.md) | 🟡 | 45m | `#component` | [Storybook: testing ⭐](https://storybook.js.org/docs/writing-tests) |
 
 ## ❓ Rapid-fire testing interview questions
 

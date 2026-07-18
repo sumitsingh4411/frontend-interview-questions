@@ -71,7 +71,7 @@ The language, deeply. These are the questions that get asked in *every* frontend
 | [Regular expressions](topics/regular-expressions.md) | 🟡 | 1h | `#regex` | [javascript.info: regexp ⭐](https://javascript.info/regular-expressions) |
 | [`structuredClone` & deep clone](topics/structuredclone-deep-clone.md) | 🟡 | 30m | `#patterns` | [MDN: structuredClone ⭐](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone) |
 | [Polyfills (map/filter/reduce/bind/Promise)](topics/polyfills-map-filter-reduce-bind-promise.md) | 🔴 | 2h | `#polyfill` | [Flagship ⭐](promise-polyfills-and-throttle-debounce.md) |
-| Numbers, `BigInt`, floating point | 🟡 | 30m | `#basics` | [javascript.info: numbers ⭐](https://javascript.info/number) |
+| [Numbers, `BigInt`, floating point](topics/numbers-bigint-floating-point.md) | 🟡 | 30m | `#basics` | [javascript.info: numbers ⭐](https://javascript.info/number) |
 | Date & time handling | 🟢 | 30m | `#basics` | [MDN: Date ⭐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) |
 
 ## ❓ Rapid-fire JavaScript interview questions

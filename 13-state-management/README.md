@@ -26,10 +26,10 @@ Server state vs client state, and picking the right tool. A favorite "walk me th
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Redux & Redux Toolkit | 🟡 | 1.5h | `#redux` | [Redux Toolkit ⭐](https://redux-toolkit.js.org/introduction/getting-started) |
-| Zustand | 🟢 | 45m | `#zustand` | [Zustand ⭐](https://zustand.docs.pmnd.rs/) |
-| Jotai (atomic) | 🟡 | 45m | `#jotai` `#atoms` | [Jotai ⭐](https://jotai.org/) |
-| Recoil | 🟡 | 45m | `#recoil` `#atoms` | [Recoil ⭐](https://recoiljs.org/) |
+| [Redux & Redux Toolkit](topics/redux-redux-toolkit.md) | 🟡 | 1.5h | `#redux` | [Redux Toolkit ⭐](https://redux-toolkit.js.org/introduction/getting-started) |
+| [Zustand](topics/zustand.md) | 🟢 | 45m | `#zustand` | [Zustand ⭐](https://zustand.docs.pmnd.rs/) |
+| [Jotai (atomic)](topics/jotai-atomic.md) | 🟡 | 45m | `#jotai` `#atoms` | [Jotai ⭐](https://jotai.org/) |
+| [Recoil](topics/recoil.md) | 🟡 | 45m | `#recoil` `#atoms` | [Recoil ⭐](https://recoiljs.org/) |
 | [Signals](topics/signals.md) | 🔴 | 1h | `#signals` `#reactivity` | [Preact signals ⭐](https://preactjs.com/guide/v10/signals/) |
 | [MobX](topics/mobx.md) | 🟡 | 1h | `#mobx` `#reactivity` | [MobX ⭐](https://mobx.js.org/README.html) |
 | [XState (state machines)](topics/xstate-state-machines.md) | 🔴 | 1h | `#state-machine` | [XState ⭐](https://stately.ai/docs) |
@@ -42,7 +42,7 @@ Server state vs client state, and picking the right tool. A favorite "walk me th
 | [SWR](topics/swr.md) | 🟡 | 45m | `#server-state` `#caching` | [SWR ⭐](https://swr.vercel.app/) |
 | [Apollo Client (GraphQL cache)](topics/apollo-client-graphql-cache.md) | 🔴 | 1h | `#graphql` `#caching` | [Apollo Client ⭐](https://www.apollographql.com/docs/react/) |
 | [RxJS & streams](topics/rxjs-streams.md) | 🔴 | 1.5h | `#rxjs` `#streams` | [RxJS ⭐](https://rxjs.dev/guide/overview) |
-| Optimistic updates | 🔴 | 1h | `#patterns` `#ux` | [TanStack: optimistic ⭐](https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates) |
+| [Optimistic updates](topics/optimistic-updates.md) | 🔴 | 1h | `#patterns` `#ux` | [TanStack: optimistic ⭐](https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates) |
 | Caching & invalidation strategies | 🔴 | 1h | `#caching` | [TanStack: caching ⭐](https://tanstack.com/query/latest/docs/framework/react/guides/caching) |
 | Offline support & persistence | 🔴 | 1.5h | `#offline` `#pwa` | [web.dev: offline ⭐](https://web.dev/articles/offline-cookbook) |
 | Undo/redo | 🟡 | 45m | `#patterns` | [Command pattern ⭐](../18-design-patterns/) |

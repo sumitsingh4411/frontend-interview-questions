@@ -127,5 +127,5 @@ mutate((key) => Array.isArray(key) && key[0] === 'todos', undefined, { revalidat
 - [SWR — Docs](https://swr.vercel.app/) — short enough to read end to end in an hour, and worth doing exactly that.
 - [SWR — Global Configuration & Options](https://swr.vercel.app/docs/api) — the full options table; `dedupingInterval`, `revalidateIfStale` and `keepPreviousData` are where the behaviour actually lives.
 - [SWR — Mutation](https://swr.vercel.app/docs/mutation) — `optimisticData`, `rollbackOnError`, `populateCache`, and the filter-function form of `mutate`.
-- [RFC 5861 — HTTP Cache-Control stale-while-revalidate](https://datatracker.ietf.org/doc/html/rfc5861) — the原 spec the pattern is named after. Understanding it at the HTTP layer makes the hook obvious.
+- [RFC 5861 — HTTP Cache-Control stale-while-revalidate](https://datatracker.ietf.org/doc/html/rfc5861) — the original spec the pattern is named after. Understanding it at the HTTP layer makes the hook obvious.
 - [web.dev — Keeping things fresh with stale-while-revalidate](https://web.dev/articles/stale-while-revalidate) — the same idea applied to the browser cache and service workers.

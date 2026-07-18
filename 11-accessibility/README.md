@@ -40,10 +40,10 @@ Increasingly a scored dimension in system-design and machine-coding rounds. "Mak
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
 | [Accessible forms](topics/accessible-forms.md) | 🟡 | 1h | `#forms` | [web.dev: forms ⭐](https://web.dev/learn/forms) |
-| Accessible dialogs / modals | 🔴 | 1h | `#dialog` | [ARIA APG: dialog ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) |
-| Accessible menus & comboboxes | 🔴 | 1h | `#aria` `#patterns` | [ARIA APG: combobox ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/) |
-| Accessible tabs | 🟡 | 45m | `#patterns` | [ARIA APG: tabs ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) |
-| Accessible tables | 🟡 | 45m | `#tables` | [ARIA APG: table ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/table/) |
+| [Accessible dialogs / modals](topics/accessible-dialogs-modals.md) | 🔴 | 1h | `#dialog` | [ARIA APG: dialog ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) |
+| [Accessible menus & comboboxes](topics/accessible-menus-comboboxes.md) | 🔴 | 1h | `#aria` `#patterns` | [ARIA APG: combobox ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/) |
+| [Accessible tabs](topics/accessible-tabs.md) | 🟡 | 45m | `#patterns` | [ARIA APG: tabs ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) |
+| [Accessible tables](topics/accessible-tables.md) | 🟡 | 45m | `#tables` | [ARIA APG: table ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/table/) |
 | Accessible carousels | 🔴 | 45m | `#patterns` | [ARIA APG: carousel ⭐](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/) |
 
 ## Testing

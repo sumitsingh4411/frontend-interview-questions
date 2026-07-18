@@ -38,10 +38,10 @@ The threats you're expected to name and defend against. "How would you prevent X
 
 | Topic | Difficulty | Time | Tags | Best Resources |
 |-------|:----------:|:----:|------|----------------|
-| Authentication patterns | 🔴 | 1.5h | `#auth` | [Auth0: auth flows ⭐](https://auth0.com/docs/get-started/authentication-and-authorization-flow) |
-| Authorization (RBAC/ABAC) | 🟡 | 1h | `#authz` | [OWASP: access control ⭐](https://owasp.org/www-community/Access_Control) |
-| JWT: usage & pitfalls | 🔴 | 1h | `#jwt` `#auth` | [jwt.io intro ⭐](https://jwt.io/introduction) |
-| OAuth 2.0 & OIDC | 🔴 | 1.5h | `#oauth` `#auth` | [OAuth 2.0 simplified ⭐](https://aaronparecki.com/oauth-2-simplified/) |
+| [Authentication patterns](topics/authentication-patterns.md) | 🔴 | 1.5h | `#auth` | [Auth0: auth flows ⭐](https://auth0.com/docs/get-started/authentication-and-authorization-flow) |
+| [Authorization (RBAC/ABAC)](topics/authorization-rbac-abac.md) | 🟡 | 1h | `#authz` | [OWASP: access control ⭐](https://owasp.org/www-community/Access_Control) |
+| [JWT: usage & pitfalls](topics/jwt-usage-pitfalls.md) | 🔴 | 1h | `#jwt` `#auth` | [jwt.io intro ⭐](https://jwt.io/introduction) |
+| [OAuth 2.0 & OIDC](topics/oauth-2-0-oidc.md) | 🔴 | 1.5h | `#oauth` `#auth` | [OAuth 2.0 simplified ⭐](https://aaronparecki.com/oauth-2-simplified/) |
 | Session management | 🟡 | 45m | `#session` | [OWASP: session cheat sheet ⭐](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) |
 | Token storage (cookie vs localStorage) | 🔴 | 45m | `#auth` `#storage` | [OWASP: JWT cheat sheet ⭐](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html) |
 | Cookies & session security (SameSite, HttpOnly) | 🟡 | 45m | `#cookies` | [MDN: SameSite ⭐](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) |
