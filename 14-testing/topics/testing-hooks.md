@@ -59,11 +59,12 @@ test('reacts to changed props', () => {
 });
 
 test('cleans up its subscription on unmount', () => {
-  const off = vi.fn();
-  vi.spyOn(window, 'addEventListener');
-  const { unmount } = renderHook(() => useOnResize(off));
-  unmount();
-  expect(window.removeEventListener).toHaveBeenCalled();
+  const remove = vi.spyOn(window, 'removeEventListener');
+  const { unmount } = renderHook(() => useOnResize(vi.fn()));
+
+  expect(remove).not.toHaveBeenCalledWith('resize', expect.any(Function));
+  unmount(); // triggers the effect cleanup
+  expect(remove).toHaveBeenCalledWith('resize', expect.any(Function));
 });
 ```
 

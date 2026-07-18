@@ -27,8 +27,8 @@ How you prove the thing works. Expect "how would you test this?" after any machi
 | [Vitest](topics/vitest.md) | 🟢 | 45m | `#unit` `#vitest` | [Vitest ⭐](https://vitest.dev/guide/) |
 | [React Testing Library (RTL)](topics/react-testing-library-rtl.md) | 🟡 | 1.5h | `#component` `#rtl` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/intro/) |
 | [Query priorities & user-centric tests](topics/query-priorities-user-centric-tests.md) | 🟡 | 45m | `#rtl` `#a11y` | [Testing Library: queries ⭐](https://testing-library.com/docs/queries/about/) |
-| Testing hooks | 🟡 | 45m | `#rtl` `#hooks` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/api/#renderhook) |
-| Snapshot testing (and its traps) | 🟡 | 30m | `#unit` | [Jest: snapshots ⭐](https://jestjs.io/docs/snapshot-testing) |
+| [Testing hooks](topics/testing-hooks.md) | 🟡 | 45m | `#rtl` `#hooks` | [Testing Library ⭐](https://testing-library.com/docs/react-testing-library/api/#renderhook) |
+| [Snapshot testing (and its traps)](topics/snapshot-testing-and-its-traps.md) | 🟡 | 30m | `#unit` | [Jest: snapshots ⭐](https://jestjs.io/docs/snapshot-testing) |
 
 ## Mocking
 
