@@ -3,7 +3,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import SpectrumBar from '@components/SpectrumBar.astro';
 import { getBanks, getStats } from '@lib/content.ts';
 import { GROUP_ORDER, SECTIONS } from '@lib/sections.ts';
-import { url, GITHUB_URL } from '@lib/url.ts';
+import { url, GITHUB_URL, frontendProUrl } from '@lib/url.ts';
 
 const stats = getStats();
 const banks = getBanks();
@@ -51,7 +51,15 @@ const stopMed = stopEasy + (stats.counts.medium / t) * 100;
           <span class="btn-arrow" aria-hidden="true">→</span>
         </a>
         <a class="btn" href={url('banks/')}>Browse question banks</a>
+        <a class="btn btn-pro" href={frontendProUrl('hero')} target="_blank" rel="noopener">
+          Practice with tested answers on FrontendPro
+          <span class="btn-arrow" aria-hidden="true">↗</span>
+        </a>
       </div>
+      <p class="pro-note">
+        FrontendPro is the companion site: curated FAANG-level questions you solve in the browser, with tests, step-by-step
+        answers and follow-ups.
+      </p>
 
       <ul class="stat-strip">
         <li><b class="mono">{stats.sections}</b><span>sections</span></li>
@@ -426,6 +434,23 @@ const stopMed = stopEasy + (stats.counts.medium / t) * 100;
   }
   .btn-arrow {
     transition: translate 0.16s var(--ease);
+  }
+  /* The outbound button wears the spectrum as its border. */
+  .btn-pro {
+    border-color: transparent;
+    background:
+      linear-gradient(var(--surface), var(--surface)) padding-box,
+      linear-gradient(90deg, var(--easy), var(--medium), var(--hard)) border-box;
+  }
+  .btn-pro:hover {
+    border-color: transparent;
+    box-shadow: 0 10px 32px -10px var(--accent-glow);
+  }
+  .pro-note {
+    margin: 14px auto 0;
+    max-width: 52ch;
+    color: var(--text-faint);
+    font-size: var(--step--1);
   }
   .btn:hover .btn-arrow {
     translate: 3px 0;
