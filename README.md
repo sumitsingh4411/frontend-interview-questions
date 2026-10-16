@@ -22,6 +22,8 @@
 
 [![Website](https://img.shields.io/badge/🌐-Browse_as_a_website-101825?style=flat-square&labelColor=8b8cff)](https://sumitsingh4411.github.io/frontend-interview-questions/)
 &nbsp;
+[![FrontendPro](https://img.shields.io/badge/🚀-Practice_with_tested_answers_on_FrontendPro-101825?style=flat-square&labelColor=e3a72c)](https://frontend.nextjoblist.com/?utm_source=github&utm_medium=readme&utm_campaign=badge)
+&nbsp;
 [![FAQ](https://img.shields.io/badge/❓-FAQ-101825?style=flat-square&labelColor=7aa2f7)](FAQ.md)
 &nbsp;
 [![Roadmap](https://img.shields.io/badge/📍-Roadmap-101825?style=flat-square&labelColor=7aa2f7)](ROADMAP.md)
@@ -39,6 +41,8 @@
 </a>
 
 <sub>**[Browse the handbook as a website →](https://sumitsingh4411.github.io/frontend-interview-questions/)**&nbsp;&nbsp;·&nbsp;&nbsp;search every question with `⌘K`, filter by difficulty, track what you've finished.</sub>
+
+<sub>**[Practice with tested answers on FrontendPro →](https://frontend.nextjoblist.com/?utm_source=github&utm_medium=readme&utm_campaign=callout)**&nbsp;&nbsp;·&nbsp;&nbsp;curated FAANG-level questions you solve in the browser, with tests, step-by-step answers and follow-ups.</sub>
 
 </div>
 

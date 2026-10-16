@@ -1,6 +1,6 @@
 ---
 import { getStats } from '@lib/content.ts';
-import { url, GITHUB_URL } from '@lib/url.ts';
+import { url, GITHUB_URL, frontendProUrl } from '@lib/url.ts';
 
 const stats = getStats();
 const t = stats.counts.total || 1;
@@ -48,6 +48,12 @@ const on = (seg: string) => path.startsWith(url(seg));
     </nav>
 
     <div class="right">
+      <a class="pro-link" href={frontendProUrl('topbar')} target="_blank" rel="noopener">
+        <span class="pro-spark" aria-hidden="true">✦</span>
+        <span class="pro-full">Practice on&nbsp;</span>FrontendPro
+        <span class="pro-arrow" aria-hidden="true">↗</span>
+      </a>
+
       <button class="search-btn" data-search-open aria-label="Search questions">
         <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6">
           <circle cx="7" cy="7" r="4.5"></circle>
@@ -283,6 +289,42 @@ const on = (seg: string) => path.startsWith(url(seg));
     margin: 0 4px;
   }
 
+  /* FrontendPro: the one outbound call to action, lit with the spectrum. */
+  .pro-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 34px;
+    padding: 0 13px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    background:
+      linear-gradient(var(--surface), var(--surface)) padding-box,
+      linear-gradient(90deg, var(--easy), var(--medium), var(--hard)) border-box;
+    color: var(--text);
+    font-size: var(--step--1);
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: box-shadow 0.16s var(--ease), transform 0.16s var(--ease);
+  }
+  .pro-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 22px -6px var(--accent-glow);
+  }
+  .pro-spark {
+    font-size: 11px;
+    color: var(--accent);
+  }
+  .pro-arrow {
+    color: var(--text-faint);
+    transition: translate 0.16s var(--ease);
+  }
+  .pro-link:hover .pro-arrow {
+    translate: 2px -2px;
+    color: var(--text);
+  }
+
   /* Search ------------------------------------------------------------- */
   .search-btn {
     display: flex;
@@ -360,6 +402,31 @@ const on = (seg: string) => path.startsWith(url(seg));
     }
     .bar {
       grid-template-columns: 1fr auto;
+    }
+  }
+
+  /* The right side shares its third of the bar with the FrontendPro link:
+     shorten that link first, then the search label, so nothing wraps. */
+  .search-btn {
+    white-space: nowrap;
+  }
+  @media (max-width: 1680px) {
+    .pro-full {
+      display: none;
+    }
+  }
+  @media (max-width: 1500px) {
+    .search-label {
+      display: none;
+    }
+    .search-btn {
+      padding: 0 10px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .pro-link {
+      display: none;
     }
   }
 
