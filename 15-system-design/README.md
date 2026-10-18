@@ -17,7 +17,7 @@ The main event. "Design X" — where you drive the whole conversation: requireme
 4. **Deep-dive the hard parts** — the interviewer steers here.
 5. **Call out trade-offs** proactively (perf, a11y, offline, scale).
 
-📖 General frameworks: [GreatFrontEnd: system design guide ⭐](https://www.greatfrontend.com/front-end-system-design-playbook) · [Frontend Interview Handbook](https://www.frontendinterviewhandbook.com/) · [systemdesign.one](https://systemdesign.one/)
+📖 General frameworks: [GreatFrontEnd: system design guide ⭐](https://www.greatfrontend.com/front-end-system-design-playbook) · [Frontend Interview Handbook](https://www.frontendinterviewhandbook.com/) · [FrontendAtlas: frontend system design practice](https://frontendatlas.com/system-design) _(7 free full solutions; 16 additional breakdowns require premium access)_
 
 ---
 
