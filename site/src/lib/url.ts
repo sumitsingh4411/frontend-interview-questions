@@ -12,5 +12,5 @@ export const GITHUB_URL = 'https://github.com/sumitsingh4411/frontend-interview-
 
 /** UIRound: the companion site with runnable, tested answers. `placement` tags the visit in its analytics. */
 export function uiRoundUrl(placement: string): string {
-  return `https://frontend.nextjoblist.com/?utm_source=handbook&utm_medium=site&utm_campaign=${encodeURIComponent(placement)}`;
+  return `https://uiround.com/?utm_source=handbook&utm_medium=site&utm_campaign=${encodeURIComponent(placement)}`;
 }
