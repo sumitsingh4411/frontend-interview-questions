@@ -1,6 +1,6 @@
 ---
 import { getStats } from '@lib/content.ts';
-import { url, GITHUB_URL, frontendProUrl } from '@lib/url.ts';
+import { url, GITHUB_URL, uiRoundUrl } from '@lib/url.ts';
 
 const stats = getStats();
 const t = stats.counts.total || 1;
@@ -48,9 +48,9 @@ const on = (seg: string) => path.startsWith(url(seg));
     </nav>
 
     <div class="right">
-      <a class="pro-link" href={frontendProUrl('topbar')} target="_blank" rel="noopener">
+      <a class="pro-link" href={uiRoundUrl('topbar')} target="_blank" rel="noopener">
         <span class="pro-spark" aria-hidden="true">✦</span>
-        <span class="pro-full">Practice on&nbsp;</span>FrontendPro
+        <span class="pro-full">Practice on&nbsp;</span>UIRound
         <span class="pro-arrow" aria-hidden="true">↗</span>
       </a>
 
@@ -289,7 +289,7 @@ const on = (seg: string) => path.startsWith(url(seg));
     margin: 0 4px;
   }
 
-  /* FrontendPro: the one outbound call to action, lit with the spectrum. */
+  /* UIRound: the one outbound call to action, lit with the spectrum. */
   .pro-link {
     display: inline-flex;
     align-items: center;
@@ -405,7 +405,7 @@ const on = (seg: string) => path.startsWith(url(seg));
     }
   }
 
-  /* The right side shares its third of the bar with the FrontendPro link:
+  /* The right side shares its third of the bar with the UIRound link:
      shorten that link first, then the search label, so nothing wraps. */
   .search-btn {
     white-space: nowrap;
