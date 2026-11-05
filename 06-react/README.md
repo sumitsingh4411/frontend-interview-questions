@@ -124,6 +124,8 @@ The "how would you actually build/fix this" questions senior React interviews le
 
 ---
 
+**Practise with tests:** solve [React interview questions](https://uiround.com/interview-questions/react?utm_source=github&utm_medium=handbook&utm_campaign=06-react) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [13-state-management](../13-state-management/) · [07-nextjs](../07-nextjs/) · [09-performance](../09-performance/) · [19-build-your-own](../19-build-your-own/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

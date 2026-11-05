@@ -120,6 +120,8 @@ Real HTML / web-fundamentals interview questions. Answer out loud, then verify a
 
 ---
 
+**Practise with tests:** solve [HTML interview questions](https://uiround.com/interview-questions/html?utm_source=github&utm_medium=handbook&utm_campaign=01-fundamentals) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [02-browser](../02-browser/) · [09-performance](../09-performance/) · [12-networking](../12-networking/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

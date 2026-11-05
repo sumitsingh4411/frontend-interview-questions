@@ -73,6 +73,8 @@ Real networking questions asked at the SDE-2 / senior level. Answer out loud, th
 
 ---
 
+**Practise with tests:** solve [networking and HTTP interview questions](https://uiround.com/interview-questions/web-networking?utm_source=github&utm_medium=handbook&utm_campaign=12-networking) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [09-performance](../09-performance/) · [13-state-management](../13-state-management/) · [17-interview-patterns](../17-interview-patterns/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

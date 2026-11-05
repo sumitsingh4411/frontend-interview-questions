@@ -150,6 +150,8 @@ Classic implement-from-scratch prompts — see the [flagship](promise-polyfills-
 
 ---
 
+**Practise with tests:** solve [JavaScript interview questions](https://uiround.com/interview-questions/javascript?utm_source=github&utm_medium=handbook&utm_campaign=03-javascript) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [02-browser](../02-browser/) · [04-typescript](../04-typescript/) · [18-design-patterns](../18-design-patterns/) · [16-machine-coding](../16-machine-coding/#-js-utilities-implement-these)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

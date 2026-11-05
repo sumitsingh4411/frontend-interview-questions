@@ -77,6 +77,8 @@ Real TypeScript interview questions. Answer out loud, then verify above.
 
 ---
 
+**Practise with tests:** solve [TypeScript interview questions and type challenges](https://uiround.com/interview-questions/typescript?utm_source=github&utm_medium=handbook&utm_campaign=04-typescript) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [03-javascript](../03-javascript/) · [06-react](../06-react/) · [08-architecture](../08-architecture/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

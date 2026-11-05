@@ -48,6 +48,8 @@ Nothing teaches internals like rebuilding the tools. These projects turn "I use 
 
 📖 The mega-index: [build-your-own-x ⭐](https://github.com/codecrafters-io/build-your-own-x)
 
+**Practise with tests:** solve [polyfill and build-your-own questions](https://uiround.com/interview-questions/javascript-polyfills?utm_source=github&utm_medium=handbook&utm_campaign=19-build-your-own) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [06-react](../06-react/) · [13-state-management](../13-state-management/) · [02-browser](../02-browser/)
 
 _Built a great clone tutorial? [Link it](../CONTRIBUTING.md)._

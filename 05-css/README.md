@@ -102,6 +102,8 @@ Real CSS interview questions. Answer out loud, then verify against the resources
 
 ---
 
+**Practise with tests:** solve [CSS interview questions](https://uiround.com/interview-questions/css?utm_source=github&utm_medium=handbook&utm_campaign=05-css) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [02-browser](../02-browser/) · [09-performance](../09-performance/) · [11-accessibility](../11-accessibility/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

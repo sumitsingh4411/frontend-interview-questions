@@ -96,6 +96,8 @@ The DSA problems that show up **specifically** in frontend interviews — data s
 5. **Two pointers, sliding window, binary search** → common mediums.
 6. **Graphs, heaps, DP** → only if targeting Staff / heavy-DSA companies.
 
+**Practise with tests:** solve [DSA in JavaScript questions](https://uiround.com/interview-questions/data-structures-and-algorithms?utm_source=github&utm_medium=handbook&utm_campaign=21-dsa-for-frontend) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [03-javascript](../03-javascript/) · [16-machine-coding](../16-machine-coding/) · [19-build-your-own](../19-build-your-own/)
 
 _Know a frontend-flavored DSA problem we're missing? [Add it](../CONTRIBUTING.md)._

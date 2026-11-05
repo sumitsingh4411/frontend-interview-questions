@@ -42,6 +42,8 @@ Classic GoF patterns and how they actually appear in frontend code. Expect "what
 
 📖 The best single resource: [patterns.dev ⭐](https://www.patterns.dev/) · [Refactoring Guru](https://refactoring.guru/design-patterns)
 
+**Practise with tests:** solve [design patterns interview questions](https://uiround.com/interview-questions/frontend-architecture?utm_source=github&utm_medium=handbook&utm_campaign=18-design-patterns) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [08-architecture](../08-architecture/) · [06-react](../06-react/) · [03-javascript](../03-javascript/)
 
 _Missing a pattern? [Add a row](../CONTRIBUTING.md)._

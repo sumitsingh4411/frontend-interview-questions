@@ -76,6 +76,8 @@ Real "how does the browser work" interview questions. Answer out loud, then veri
 
 ---
 
+**Practise with tests:** solve [DOM and browser interview questions](https://uiround.com/interview-questions/dom?utm_source=github&utm_medium=handbook&utm_campaign=02-browser) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [01-fundamentals](../01-fundamentals/) · [03-javascript](../03-javascript/) · [09-performance](../09-performance/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

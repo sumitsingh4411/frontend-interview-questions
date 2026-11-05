@@ -71,6 +71,8 @@ Real architecture questions asked at the SDE-2 / senior / staff level. Answer ou
 
 ---
 
+**Practise with tests:** solve [frontend architecture interview questions](https://uiround.com/interview-questions/frontend-architecture?utm_source=github&utm_medium=handbook&utm_campaign=08-architecture) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [06-react](../06-react/) · [13-state-management](../13-state-management/) · [18-design-patterns](../18-design-patterns/) · [19-build-your-own](../19-build-your-own/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

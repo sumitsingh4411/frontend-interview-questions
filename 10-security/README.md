@@ -106,6 +106,8 @@ These go beyond definitions into judgment, design, and real-world incidents — 
 
 ---
 
+**Practise with tests:** solve [frontend security interview questions](https://uiround.com/interview-questions/web-security?utm_source=github&utm_medium=handbook&utm_campaign=10-security) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [01-fundamentals](../01-fundamentals/) · [12-networking](../12-networking/) · [13-state-management](../13-state-management/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

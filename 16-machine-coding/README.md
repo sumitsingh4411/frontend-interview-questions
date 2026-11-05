@@ -199,6 +199,8 @@
 | Autosave / draft form | 🟡 | 45m | [debounce flagship](../03-javascript/promise-polyfills-and-throttle-debounce.md) |
 | Live search results dropdown | 🟡 | 45m | [Autocomplete flagship](autocomplete-component.md) |
 
+**Practise with tests:** solve [machine coding questions](https://uiround.com/interview-questions/machine-coding?utm_source=github&utm_medium=handbook&utm_campaign=16-machine-coding) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [15-system-design](../15-system-design/) · [11-accessibility](../11-accessibility/) · [14-testing](../14-testing/)
 
 _This list grows with the community — [add a component](../CONTRIBUTING.md) or turn one into a full flagship._

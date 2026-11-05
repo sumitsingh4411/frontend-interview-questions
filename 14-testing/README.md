@@ -72,6 +72,8 @@ Real testing questions asked at the SDE-2 / senior level. Answer out loud, then 
 
 ---
 
+**Practise with tests:** solve [frontend testing interview questions](https://uiround.com/interview-questions/frontend-testing?utm_source=github&utm_medium=handbook&utm_campaign=14-testing) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [06-react](../06-react/) · [11-accessibility](../11-accessibility/) · [16-machine-coding](../16-machine-coding/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

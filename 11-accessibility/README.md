@@ -75,6 +75,8 @@ Real a11y questions asked at the SDE-2 / senior level. Answer out loud, then ver
 
 ---
 
+**Practise with tests:** solve [accessibility interview questions](https://uiround.com/interview-questions/accessibility?utm_source=github&utm_medium=handbook&utm_campaign=11-accessibility) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [05-css](../05-css/) · [16-machine-coding](../16-machine-coding/) · [14-testing](../14-testing/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

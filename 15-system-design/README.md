@@ -190,6 +190,8 @@ The main event. "Design X" — where you drive the whole conversation: requireme
 | Design a real-time collaborative cursor | 🔴 | 1h | [Google Docs flagship](design-google-docs.md) |
 | Design a Airbnb-style map + list sync | 🔴 | 1.5h | [15-system-design](README.md) |
 
+**Practise with tests:** solve [frontend system design questions](https://uiround.com/questions/system-design?utm_source=github&utm_medium=handbook&utm_campaign=15-system-design) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [17-interview-patterns](../17-interview-patterns/) · [16-machine-coding](../16-machine-coding/) · [09-performance](../09-performance/)
 
 _This list grows with the community — [add a "Design X"](../CONTRIBUTING.md) or turn one into a full flagship._

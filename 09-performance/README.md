@@ -82,6 +82,8 @@ Real performance interview questions. Answer out loud, then verify above.
 
 ---
 
+**Practise with tests:** solve [frontend performance interview questions](https://uiround.com/interview-questions/frontend-performance?utm_source=github&utm_medium=handbook&utm_campaign=09-performance) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [02-browser](../02-browser/) · [12-networking](../12-networking/) · [17-interview-patterns](../17-interview-patterns/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._

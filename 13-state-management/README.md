@@ -69,6 +69,8 @@ Real state-management questions asked at the SDE-2 / senior level. Answer out lo
 
 ---
 
+**Practise with tests:** solve [Redux and state management interview questions](https://uiround.com/interview-questions/redux?utm_source=github&utm_medium=handbook&utm_campaign=13-state-management) in a browser editor on UIRound, with step-by-step answers and follow-ups.
+
 **Related:** [06-react](../06-react/) · [12-networking](../12-networking/) · [17-interview-patterns](../17-interview-patterns/)
 
 _Missing something? [Add a row](../CONTRIBUTING.md)._
